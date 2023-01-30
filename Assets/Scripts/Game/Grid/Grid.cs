@@ -13,6 +13,8 @@ public class Grid : MonoBehaviour
     public float squareScale = 0.5f;
     public float everySquareOffset = 0.0f;
     public SquareTextureData squareTextureData;
+    public AudioSource audioSource;
+    public AudioClip completed;
 
     private Vector2 _offset = new Vector2(0.0f, 0.0f);
     private List<GameObject> _gridSquares = new List<GameObject>();
@@ -199,12 +201,21 @@ public class Grid : MonoBehaviour
         colorsInTheGrid_ = GetAllSquareColorInTheGrid();
 
         var completedLines = CheckIfSquaresAreCompleted(lines);
+        var totalScores = 0;
 
-        if (completedLines >= 2) {
+        if (completedLines == 1) {
+            audioSource.PlayOneShot(completed);
+            totalScores = 10 * completedLines;
+        } else if (completedLines == 2) {
+            //audioSource.PlayOneShot(completed);
+            totalScores = 10 * completedLines + 20;
+            GameEvents.ShowCongratulationWritings();
+        } else if (completedLines >= 3) {
+            //audioSource.PlayOneShot(completed);
+            totalScores = 10 * completedLines + 50;
             GameEvents.ShowCongratulationWritings();
         }
 
-        var totalScores = 10 * completedLines;
         var bonusScores = ShouldPlayColorBonusAnimation();
         GameEvents.AddScores(totalScores + bonusScores);
         CheckIfPlayLost();

@@ -8,6 +8,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public GameObject squareShapeImage;
     public Vector3 shapeSelectedScale;
     public Vector2 offset = new Vector2(0f, 700f);
+    public AudioSource audioSource;
+    public AudioClip clip;
 
     [HideInInspector]
     public ShapeData CurrentShapeData;
@@ -275,6 +277,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        audioSource.PlayOneShot(clip);
         this.GetComponent<RectTransform>().localScale = shapeSelectedScale;
     }
 
