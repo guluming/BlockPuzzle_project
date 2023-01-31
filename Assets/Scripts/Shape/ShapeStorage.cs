@@ -45,4 +45,14 @@ public class ShapeStorage : MonoBehaviour
             shape.RequestNewShape(shapeData[shapeIndex]);
         }
     }
+
+    public bool IsShapeStorageEmpty()
+    {
+        foreach (var shape in shapeList) {
+            if (shape.IsAnyOfShapeSqaureActive()) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

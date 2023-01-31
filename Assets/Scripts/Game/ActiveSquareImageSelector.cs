@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ActiveSquareImageSelector : MonoBehaviour
 {
     public SquareTextureData SquareTextureData;
+    public JewelSquareTextureData jewelSquareTextureData;
     public bool updateImageOnRechedTreshold = false;
 
     private void OnEnable()
@@ -40,6 +41,29 @@ public class ActiveSquareImageSelector : MonoBehaviour
         foreach (var squareTexture in SquareTextureData.activeSquareTextures) {
             if (color == squareTexture.squareColor) {
                 GetComponent<Image>().sprite = squareTexture.texture;
+            }
+        }
+    }
+
+    private void UpdateJewelSquareBaseOnCurrentPoints()
+    {
+        foreach (var jewelSquareTexture in jewelSquareTextureData.activeJewelSquareTextures)
+        {
+            if (jewelSquareTextureData.currentjewel == jewelSquareTexture.jewelSquare)
+            {
+                GetComponent<Image>().sprite = jewelSquareTexture.texture;
+            }
+        }
+    }
+
+
+    private void UpdateJewelSquares(Config.jewelSquare jewel)
+    {
+        foreach (var jewelSquareTexture in jewelSquareTextureData.activeJewelSquareTextures)
+        {
+            if (jewel == jewelSquareTexture.jewelSquare)
+            {
+                GetComponent<Image>().sprite = jewelSquareTexture.texture;
             }
         }
     }

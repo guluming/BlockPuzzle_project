@@ -13,6 +13,7 @@ public class Scores : MonoBehaviour
 {
     public SquareTextureData SquareTextureData;
     public Text scoreText;
+    public ShapeStorage shapeStorage;
 
     private bool newBestScore_ = false;
     private BestScoreData bestScores_ = new BestScoreData();
@@ -76,7 +77,8 @@ public class Scores : MonoBehaviour
     private void UpdateSquareColor()
     {
         if (GameEvents.UpdateSquareColor != null && currentScores_ >= SquareTextureData.tresholdVal) {
-            SquareTextureData.UpdateColors(currentScores_);
+            //SquareTextureData.UpdateColors(currentScores_);
+            SquareTextureData.UpdateColors(shapeStorage.IsShapeStorageEmpty());
             GameEvents.UpdateSquareColor(SquareTextureData.currentColor);
         }
     }

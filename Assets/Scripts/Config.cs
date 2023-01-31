@@ -16,4 +16,13 @@ public class Config : MonoBehaviour
         Pink,
         Purple
     };
+
+    public enum jewelSquare
+    {
+        NotjewelSet,
+        Diamond,
+        Ruby,
+        Sapphire,
+        Emerald
+    };
 }

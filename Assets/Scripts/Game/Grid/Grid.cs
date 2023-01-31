@@ -82,7 +82,7 @@ public class Grid : MonoBehaviour
                 _gridSquares[_gridSquares.Count - 1].GetComponent<GridSquare>().SquareIndex = square_index;
                 _gridSquares[_gridSquares.Count - 1].transform.SetParent(this.transform);
                 _gridSquares[_gridSquares.Count - 1].transform.localScale = new Vector3(squareScale, squareScale, squareScale);
-                _gridSquares[_gridSquares.Count - 1].GetComponent<GridSquare>().SetImage(_lineIndicator.GetGridSquareIndex(square_index) % 2 == 0);
+                //_gridSquares[_gridSquares.Count - 1].GetComponent<GridSquare>().SetImage(_lineIndicator.GetGridSquareIndex(square_index) / 2 == 0);
                 square_index++;
             }
         }
@@ -129,7 +129,7 @@ public class Grid : MonoBehaviour
     }
 
     private void CheckIfShapeCanBePlaced()
-    {    
+    {
         var squareIndexes = new List<int>();
 
         foreach (var square in _gridSquares) {
@@ -139,7 +139,6 @@ public class Grid : MonoBehaviour
             {
                 squareIndexes.Add(gridSquare.SquareIndex);
                 gridSquare.Selected = false;
-                //gridSquare.ActivateSquare();
             }
         }
 
@@ -189,9 +188,9 @@ public class Grid : MonoBehaviour
             lines.Add(_lineIndicator.GetVerticalLine(column));
         }
 
-        for (var row=0; row < 9; row++) {
-            List<int> data = new List<int>(9);
-            for (var index=0; index < 9; index++) {
+        for (var row=0; row < 8; row++) {
+            List<int> data = new List<int>(8);
+            for (var index=0; index < 8; index++) {
                 data.Add(_lineIndicator.line_data[row, index]);
             }
 
@@ -361,7 +360,7 @@ public class Grid : MonoBehaviour
 
         int safeIndex = 0;
 
-        while (lastRowIndex + (rows - 1) < 9) {
+        while (lastRowIndex + (rows - 1) < 8) {
             var rowData = new List<int>();
 
             for (var row = lastRowIndex; row < lastRowIndex + rows; row++) {
@@ -374,7 +373,7 @@ public class Grid : MonoBehaviour
 
             lastColumnIndex++;
 
-            if (lastColumnIndex + (columns - 1) >= 9) {
+            if (lastColumnIndex + (columns - 1) >= 8) {
                 lastRowIndex++;
                 lastColumnIndex = 0;
             }
