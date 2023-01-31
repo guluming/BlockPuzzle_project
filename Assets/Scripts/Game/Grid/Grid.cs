@@ -220,29 +220,66 @@ public class Grid : MonoBehaviour
         CheckIfPlayLost();
     }
 
+    //private int ShouldPlayColorBonusAnimation()
+    //{
+    //    var colorsInTheGridAfterLineRemoved = GetAllSquareColorInTheGrid();
+    //    Config.SquareColor colorToPlayBonusFor = Config.SquareColor.NotSet;
+
+    //    foreach (var squareColor in colorsInTheGrid_) {
+    //        if (colorsInTheGridAfterLineRemoved.Contains(squareColor) == false) {
+    //            colorToPlayBonusFor = squareColor;
+    //        }
+    //    }
+
+    //    if (colorToPlayBonusFor == Config.SquareColor.NotSet) {
+    //        Debug.Log("Cannot find Color for bonus");
+    //        return 0;
+    //    }
+
+    //    if (colorToPlayBonusFor == currentActiveSquareColor_) {
+    //        return 0;
+    //    }
+
+    //    GameEvents.ShowBonusScreen(colorToPlayBonusFor);
+
+    //    return 50;
+    //}
+
     private int ShouldPlayColorBonusAnimation()
     {
         var colorsInTheGridAfterLineRemoved = GetAllSquareColorInTheGrid();
+        //var LineIsCompletedColor = ;
         Config.SquareColor colorToPlayBonusFor = Config.SquareColor.NotSet;
 
-        foreach (var squareColor in colorsInTheGrid_) {
-            if (colorsInTheGridAfterLineRemoved.Contains(squareColor) == false) {
+        foreach (var squareColor in colorsInTheGrid_)
+        {
+            if (colorsInTheGridAfterLineRemoved.Contains(squareColor) == false)
+            {
                 colorToPlayBonusFor = squareColor;
             }
         }
 
-        if (colorToPlayBonusFor == Config.SquareColor.NotSet) {
+        if (colorToPlayBonusFor == Config.SquareColor.NotSet)
+        {
             Debug.Log("Cannot find Color for bonus");
             return 0;
         }
 
-        if (colorToPlayBonusFor == currentActiveSquareColor_) {
+        if (colorToPlayBonusFor == currentActiveSquareColor_)
+        {
             return 0;
         }
 
-        GameEvents.ShowBonusScreen(colorToPlayBonusFor);
-
+        Debug.Log("Find Color for bonus");
         return 50;
+
+        //if () {
+
+        //    return 0;
+        //} else {
+        //    GameEvents.ShowBonusScreen(colorToPlayBonusFor);
+        //    return 50;
+        //}
     }
 
     private int CheckIfSquaresAreCompleted(List<int[]> data)

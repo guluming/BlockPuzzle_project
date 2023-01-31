@@ -21,7 +21,7 @@ public class JewelSquareTextureData : ScriptableObject
     public Config.jewelSquare currentjewel;
     private Config.jewelSquare _nextJewel;
 
-    public int GetCurrentColorIndex()
+    public int GetCurrentJewelIndex()
     {
         var currentIndex = 0;
 
@@ -34,9 +34,9 @@ public class JewelSquareTextureData : ScriptableObject
         return currentIndex;
     }
 
-    public void UpdateColors(int current_score) {
+    public void UpdateJewels(int current_score) {
         currentjewel = _nextJewel;
-        var currentColorIndex = GetCurrentColorIndex();
+        var currentColorIndex = GetCurrentJewelIndex();
 
         if (currentColorIndex == activeJewelSquareTextures.Count - 1)
         {
@@ -49,7 +49,7 @@ public class JewelSquareTextureData : ScriptableObject
         tresholdVal = StartTresholdVal + current_score;
     }
 
-    public void SetStartColor()
+    public void SetStartJewel()
     {
         tresholdVal = StartTresholdVal;
         currentjewel = activeJewelSquareTextures[0].jewelSquare;
@@ -58,11 +58,11 @@ public class JewelSquareTextureData : ScriptableObject
 
     private void Awake()
     {
-        SetStartColor();
+        SetStartJewel();
     }
 
     private void OnEnable()
     {
-        SetStartColor();
+        SetStartJewel();
     }
 }

@@ -6,6 +6,7 @@ public class ShapeStorage : MonoBehaviour
 {
     public List<ShapeData> shapeData;
     public List<Shape> shapeList;
+    public Scores scores;
 
     private void OnEnable()
     {
@@ -44,6 +45,8 @@ public class ShapeStorage : MonoBehaviour
             var shapeIndex = UnityEngine.Random.Range(0, shapeData.Count);
             shape.RequestNewShape(shapeData[shapeIndex]);
         }
+
+        scores.UpdateSquareColor();
     }
 
     public bool IsShapeStorageEmpty()

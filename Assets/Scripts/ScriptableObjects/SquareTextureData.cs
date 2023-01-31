@@ -14,8 +14,8 @@ public class SquareTextureData : ScriptableObject
         public Config.SquareColor squareColor;
     }
 
-    public int tresholdVal = 10;
-    private const int StartTresholdVal = 0;
+    //public int tresholdVal = 0;
+    //private const int StartTresholdVal = 0;
     public List<TextureData> activeSquareTextures;
 
     public Config.SquareColor currentColor;
@@ -34,22 +34,7 @@ public class SquareTextureData : ScriptableObject
         return currentIndex;
     }
 
-    //public void UpdateColors(int current_score) {
-    //    currentColor = _nextColor;
-    //    var currentColorIndex = GetCurrentColorIndex();
-
-    //    if (currentColorIndex == activeSquareTextures.Count - 1)
-    //    {
-    //        _nextColor = activeSquareTextures[0].squareColor;
-    //    }
-    //    else {
-    //        _nextColor = activeSquareTextures[currentColorIndex + 1].squareColor;
-    //    }
-
-    //    tresholdVal = StartTresholdVal + current_score;
-    //}
-
-    public void UpdateColors(bool IsShapeStorageEmpty)
+    public void UpdateColors()
     {
         currentColor = _nextColor;
         var currentColorIndex = GetCurrentColorIndex();
@@ -62,11 +47,13 @@ public class SquareTextureData : ScriptableObject
         {
             _nextColor = activeSquareTextures[currentColorIndex + 1].squareColor;
         }
+
+        //tresholdVal = StartTresholdVal + current_score;
     }
 
     public void SetStartColor()
     {
-        tresholdVal = StartTresholdVal;
+        //tresholdVal = StartTresholdVal;
         currentColor = activeSquareTextures[0].squareColor;
         _nextColor = activeSquareTextures[1].squareColor;
     }

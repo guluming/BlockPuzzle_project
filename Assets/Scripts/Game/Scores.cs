@@ -13,7 +13,6 @@ public class Scores : MonoBehaviour
 {
     public SquareTextureData SquareTextureData;
     public Text scoreText;
-    public ShapeStorage shapeStorage;
 
     private bool newBestScore_ = false;
     private BestScoreData bestScores_ = new BestScoreData();
@@ -69,16 +68,15 @@ public class Scores : MonoBehaviour
             SaveBestScores(true);
         }
 
-        UpdateSquareColor();
+        //UpdateSquareColor();
         GameEvents.UpdateBestScoreBar(currentScores_, bestScores_.score);
         UpdateScoreText();
     }
 
-    private void UpdateSquareColor()
+    public void UpdateSquareColor()
     {
-        if (GameEvents.UpdateSquareColor != null && currentScores_ >= SquareTextureData.tresholdVal) {
-            //SquareTextureData.UpdateColors(currentScores_);
-            SquareTextureData.UpdateColors(shapeStorage.IsShapeStorageEmpty());
+        if (GameEvents.UpdateSquareColor != null) {
+            SquareTextureData.UpdateColors();
             GameEvents.UpdateSquareColor(SquareTextureData.currentColor);
         }
     }
