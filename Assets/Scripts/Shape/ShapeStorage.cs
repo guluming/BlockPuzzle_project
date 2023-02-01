@@ -6,7 +6,7 @@ public class ShapeStorage : MonoBehaviour
 {
     public List<ShapeData> shapeData;
     public List<Shape> shapeList;
-    public Scores scores;
+    public SquareTextureData SquareTextureData;
 
     private void OnEnable()
     {
@@ -46,7 +46,25 @@ public class ShapeStorage : MonoBehaviour
             shape.RequestNewShape(shapeData[shapeIndex]);
         }
 
-        scores.UpdateSquareColor();
+        if (Grid.gamemode == "ClassicGame")
+        {
+            Debug.Log("클래식게임 게임오버");
+            UpdateSquareColor();
+        }
+        else if (Grid.gamemode == "ChallengeGame")
+        {
+            Debug.Log("챌린지게임 게임오버");
+            UpdateSquareColor();
+        }
+    }
+
+    public void UpdateSquareColor()
+    {
+        if (GameEvents.UpdateSquareColor != null)
+        {
+            SquareTextureData.UpdateColors();
+            GameEvents.UpdateSquareColor(SquareTextureData.currentColor);
+        }
     }
 
     public bool IsShapeStorageEmpty()

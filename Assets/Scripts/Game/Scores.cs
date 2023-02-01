@@ -68,17 +68,8 @@ public class Scores : MonoBehaviour
             SaveBestScores(true);
         }
 
-        //UpdateSquareColor();
         GameEvents.UpdateBestScoreBar(currentScores_, bestScores_.score);
         UpdateScoreText();
-    }
-
-    public void UpdateSquareColor()
-    {
-        if (GameEvents.UpdateSquareColor != null) {
-            SquareTextureData.UpdateColors();
-            GameEvents.UpdateSquareColor(SquareTextureData.currentColor);
-        }
     }
 
     private void UpdateScoreText()

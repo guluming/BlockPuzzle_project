@@ -220,12 +220,9 @@ public class Grid : MonoBehaviour
             GameEvents.ShowCongratulationWritings();
         }
 
-        Debug.Log("일반" + completedLines[0]);
-        Debug.Log("컬러" + completedLines[1]);
-
         if (completedLines[1] >= 1)
         {
-            Debug.Log("컬러보너스 들어오냐?");
+            GameEvents.ShowCongratulationWritings();
             bonusScores = completedLines[1] * 50;
         }
 
@@ -335,9 +332,18 @@ public class Grid : MonoBehaviour
             }
         }
 
-        if (validShapes == 0) {
-            GameEvents.GameOver(false);
-            //Debug.Log("GAME OVER");
+        if (gamemode == "ClassicGame") {
+            Debug.Log("클래식게임 게임오버");
+            if (validShapes == 0)
+            {
+                GameEvents.GameOver(false);
+            }
+        } else if (gamemode == "ChallengeGame") {
+            Debug.Log("챌린지게임 게임오버");
+            if (validShapes == 0)
+            {
+                GameEvents.GameOver(false);
+            }
         }
     }
 

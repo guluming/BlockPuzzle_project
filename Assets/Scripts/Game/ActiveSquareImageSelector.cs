@@ -45,26 +45,18 @@ public class ActiveSquareImageSelector : MonoBehaviour
         }
     }
 
-    private void UpdateJewelSquareBaseOnCurrentPoints()
-    {
-        foreach (var jewelSquareTexture in jewelSquareTextureData.activeJewelSquareTextures)
-        {
-            if (jewelSquareTextureData.currentjewel == jewelSquareTexture.jewelSquare)
-            {
-                GetComponent<Image>().sprite = jewelSquareTexture.texture;
-            }
-        }
-    }
+    //private void UpdateJewelSquareBaseOnCurrentPoints()
+    //{
+    //    //int index = Random.Range(0, 5);
 
-
-    private void UpdateJewelSquares(Config.jewelSquare jewel)
-    {
-        foreach (var jewelSquareTexture in jewelSquareTextureData.activeJewelSquareTextures)
-        {
-            if (jewel == jewelSquareTexture.jewelSquare)
-            {
-                GetComponent<Image>().sprite = jewelSquareTexture.texture;
-            }
-        }
-    }
+    //    //jewelSquareTextureData.currentjewel = jewelSquareTextureData.activeJewelSquareTextures[index].jewelSquare;
+        
+    //    foreach (var jewelSquareTexture in jewelSquareTextureData.activeJewelSquareTextures)
+    //    {
+    //        if (jewelSquareTextureData.currentjewel == jewelSquareTexture.jewelSquare)
+    //        {
+    //            GetComponent<Image>().sprite = jewelSquareTexture.texture;
+    //        }
+    //    }
+    //}
 }

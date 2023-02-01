@@ -1921,7 +1921,7 @@ MonoBehaviour:
   - {fileID: 554917199}
   - {fileID: 1021661649}
   - {fileID: 1875494888}
-  scores: {fileID: 1992078462}
+  SquareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
 --- !u!1 &767145933
 GameObject:
   m_ObjectHideFlags: 0

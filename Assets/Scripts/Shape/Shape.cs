@@ -267,25 +267,25 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerUp(PointerEventData eventData)
     {
-
+        this.GetComponent<RectTransform>().localScale = new Vector3(0.6f, 0.6f, 0.6f);
     }
 
     public void OnPointerDown(PointerEventData eventData)
-    {
-
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
     {
         audioSource.PlayOneShot(clip);
         this.GetComponent<RectTransform>().localScale = shapeSelectedScale;
     }
 
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
-        _transform.anchorMin = new Vector2(0, 0);
-        _transform.anchorMax = new Vector2(0, 0);
-        _transform.pivot = new Vector2(0, 0);
+        _transform.anchorMin = new Vector2(0.5f, 0.5f);
+        _transform.anchorMax = new Vector2(0.5f, 0.5f);
+        _transform.pivot = new Vector2(0.5f, 0.5f);
 
         Vector2 pos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.transform as RectTransform,
