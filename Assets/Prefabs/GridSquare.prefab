@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SquareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
+  jewelSquareTextureData: {fileID: 0}
   updateImageOnRechedTreshold: 0
 --- !u!1 &6233343506277997622
 GameObject:

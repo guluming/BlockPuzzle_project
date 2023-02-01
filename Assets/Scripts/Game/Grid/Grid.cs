@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Grid : MonoBehaviour
 {
@@ -201,21 +202,31 @@ public class Grid : MonoBehaviour
 
         var completedLines = CheckIfSquaresAreCompleted(lines);
         var totalScores = 0;
-
-        if (completedLines == 1) {
+        var bonusScores = 0;
+        
+        if (completedLines[0] == 1) {
             audioSource.PlayOneShot(completed);
-            totalScores = 10 * completedLines;
-        } else if (completedLines == 2) {
+            totalScores = 10 * completedLines[0];
+        } else if (completedLines[0] == 2) {
             //audioSource.PlayOneShot(completed);
-            totalScores = 10 * completedLines + 20;
+            totalScores = 10 * completedLines[0] + 20;
             GameEvents.ShowCongratulationWritings();
-        } else if (completedLines >= 3) {
+        } else if (completedLines[0] >= 3) {
             //audioSource.PlayOneShot(completed);
-            totalScores = 10 * completedLines + 50;
+            totalScores = 10 * completedLines[0] + 50;
             GameEvents.ShowCongratulationWritings();
         }
 
-        var bonusScores = ShouldPlayColorBonusAnimation();
+        Debug.Log("일반" + completedLines[0]);
+        Debug.Log("컬러" + completedLines[1]);
+
+        if (completedLines[1] >= 1)
+        {
+            Debug.Log("컬러보너스 들어오냐?");
+            bonusScores = completedLines[1] * 50;
+        }
+
+        //var bonusScores = ShouldPlayColorBonusAnimation();
         GameEvents.AddScores(totalScores + bonusScores);
         CheckIfPlayLost();
     }
@@ -245,48 +256,12 @@ public class Grid : MonoBehaviour
     //    return 50;
     //}
 
-    private int ShouldPlayColorBonusAnimation()
+    private int[] CheckIfSquaresAreCompleted(List<int[]> data)
     {
-        var colorsInTheGridAfterLineRemoved = GetAllSquareColorInTheGrid();
-        //var LineIsCompletedColor = ;
-        Config.SquareColor colorToPlayBonusFor = Config.SquareColor.NotSet;
-
-        foreach (var squareColor in colorsInTheGrid_)
-        {
-            if (colorsInTheGridAfterLineRemoved.Contains(squareColor) == false)
-            {
-                colorToPlayBonusFor = squareColor;
-            }
-        }
-
-        if (colorToPlayBonusFor == Config.SquareColor.NotSet)
-        {
-            Debug.Log("Cannot find Color for bonus");
-            return 0;
-        }
-
-        if (colorToPlayBonusFor == currentActiveSquareColor_)
-        {
-            return 0;
-        }
-
-        Debug.Log("Find Color for bonus");
-        return 50;
-
-        //if () {
-
-        //    return 0;
-        //} else {
-        //    GameEvents.ShowBonusScreen(colorToPlayBonusFor);
-        //    return 50;
-        //}
-    }
-
-    private int CheckIfSquaresAreCompleted(List<int[]> data)
-    {
+        int linesCompleted = 0;
+        
         List<int[]> completedLines = new List<int[]>();
-
-        var linesCompleted = 0;
+        List<int[]> completeColorBonusLines = new List<int[]>();
 
         foreach (var line in data) {
             var lineCompleted = true;
@@ -299,6 +274,24 @@ public class Grid : MonoBehaviour
             }
 
             if (lineCompleted) {
+                var lineColorBonusCompleted = true;
+                var comp = _gridSquares[line[0]].transform.GetChild(2).GetComponent<Image>().sprite;
+                foreach (var _squareIndex in line)
+                {
+                    var compColor = _gridSquares[_squareIndex].transform.GetChild(2).GetComponent<Image>().sprite;
+
+                    if (comp != compColor)
+                    {
+                        lineColorBonusCompleted = false;
+                        break;
+                    }
+                }
+
+                if (lineColorBonusCompleted)
+                {
+                    completeColorBonusLines.Add(line);
+                }
+
                 completedLines.Add(line);
             }
         }
@@ -323,7 +316,8 @@ public class Grid : MonoBehaviour
             }
         }
 
-        return linesCompleted;
+        int[] answer = { linesCompleted, completeColorBonusLines.Count };
+        return answer;
     }
 
     private void CheckIfPlayLost()
