@@ -2007,7 +2007,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 699124776}
         m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadMainScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3433,14 +3433,14 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 699124776}
         m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: ReTryGame
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: ClassicGame
+          m_StringArgument: Game
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1314921113
@@ -4206,7 +4206,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 699124776}
         m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
-        m_MethodName: LoadScene
+        m_MethodName: LoadMainScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

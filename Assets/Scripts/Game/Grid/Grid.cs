@@ -25,8 +25,11 @@ public class Grid : MonoBehaviour
     private Config.SquareColor currentActiveSquareColor_ = Config.SquareColor.NotSet;
     private List<Config.SquareColor> colorsInTheGrid_ = new List<Config.SquareColor>();
 
+    public static string gamemode;
+
     private void OnEnable()
     {
+        Debug.Log(gamemode);
         GameEvents.CheckIfShapeCanBePlaced += CheckIfShapeCanBePlaced;
         GameEvents.UpdateSquareColor += OnUpdateSquareColor;
     }

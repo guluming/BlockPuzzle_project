@@ -12,7 +12,25 @@ public class MenuButtons : MonoBehaviour
         }
     }
 
-    public void LoadScene(string name)
+    public void LoadClassicGame(string name)
+    {
+        SceneManager.LoadScene(name);
+        Grid.gamemode = "ClassicGame";
+    }
+
+    public void LoadChallengeGame(string name)
+    {
+        SceneManager.LoadScene(name);
+        Grid.gamemode = "ChallengeGame";
+    }
+
+    public void LoadMainScene(string name)
+    {
+        SceneManager.LoadScene(name);
+        Grid.gamemode = "";
+    }
+
+    public void ReTryGame(string name)
     {
         SceneManager.LoadScene(name);
     }
