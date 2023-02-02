@@ -204,30 +204,32 @@ public class Grid : MonoBehaviour
         colorsInTheGrid_ = GetAllSquareColorInTheGrid();
 
         var completedLines = CheckIfSquaresAreCompleted(lines);
-        var totalScores = 0;
-        var bonusScores = 0;
-        
-        if (completedLines[0] == 1) {
-            audioSource.PlayOneShot(completed);
-            totalScores = 10 * completedLines[0];
-        } else if (completedLines[0] == 2) {
-            //audioSource.PlayOneShot(completed);
-            totalScores = 10 * completedLines[0] + 20;
-            GameEvents.ShowCongratulationWritings();
-        } else if (completedLines[0] >= 3) {
-            //audioSource.PlayOneShot(completed);
-            totalScores = 10 * completedLines[0] + 50;
-            GameEvents.ShowCongratulationWritings();
-        }
+        int combo = 0;
+        var totalScores = ( 10 * (1 + combo) * completedLines[0] );
+        //var bonusScores = 0;
 
-        if (completedLines[1] >= 1)
-        {
-            GameEvents.ShowCongratulationWritings();
-            bonusScores = completedLines[1] * 50;
-        }
+        //if (completedLines[0] == 1) {
+        //    audioSource.PlayOneShot(completed);
+        //    totalScores = 10 * completedLines[0];
+        //} else if (completedLines[0] == 2) {
+        //    //audioSource.PlayOneShot(completed);
+        //    totalScores = 10 * completedLines[0] + 20;
+        //    GameEvents.ShowCongratulationWritings();
+        //} else if (completedLines[0] >= 3) {
+        //    //audioSource.PlayOneShot(completed);
+        //    totalScores = 10 * completedLines[0] + 50;
+        //    GameEvents.ShowCongratulationWritings();
+        //}
+
+        //if (completedLines[1] >= 1)
+        //{
+        //    GameEvents.ShowCongratulationWritings();
+        //    bonusScores = completedLines[1] * 50;
+        //}
 
         //var bonusScores = ShouldPlayColorBonusAnimation();
-        GameEvents.AddScores(totalScores + bonusScores);
+        //GameEvents.AddScores(totalScores + bonusScores);
+        GameEvents.AddScores(totalScores);
         CheckIfPlayLost();
     }
 

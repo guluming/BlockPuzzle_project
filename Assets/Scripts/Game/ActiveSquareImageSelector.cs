@@ -13,7 +13,8 @@ public class ActiveSquareImageSelector : MonoBehaviour
     {
         UpdateSquareColorBaseOnCurrentPoints();
 
-        if (updateImageOnRechedTreshold) {
+        if (updateImageOnRechedTreshold)
+        {
             GameEvents.UpdateSquareColor += UpdateSquaresColor;
         }
     }

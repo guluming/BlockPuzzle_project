@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public GameObject squareShapeImage;
+    public GameObject jewelShapeImage;
     public Vector3 shapeSelectedScale;
     public Vector2 offset = new Vector2(0f, 700f);
     public AudioSource audioSource;
@@ -102,9 +103,29 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public void CreateShape(ShapeData shapeData)
     {
         CurrentShapeData = shapeData;
-        TotalSquareNumber = GetNumberOfSquares(shapeData);
+        TotalSquareNumber = GetNumberOfSquares(CurrentShapeData);
 
-        while (_currentShape.Count <= TotalSquareNumber) {
+        //if (Grid.gamemode == "ClassicGame") {
+        //    while (_currentShape.Count <= TotalSquareNumber)
+        //    {
+        //        _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
+        //    }
+        //} else if (Grid.gamemode == "ChallengeGame") {
+        //    for (int i=0; i <= TotalSquareNumber; i++) {
+        //        if (Random.Range(0, 5) == 0)
+        //        {
+        //            //보석이 들어가는 루트
+        //            Debug.Log("보석 생성");
+        //            _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
+        //        }
+        //        else {
+        //            _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
+        //        }
+        //    }
+        //}
+
+        while (_currentShape.Count <= TotalSquareNumber)
+        {
             _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
         }
 
@@ -137,12 +158,12 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         float shiftOnY = 0f;
 
-        if (shapeData.rows > 1)
+        if (shapeData.rows > 1 && shapeData.rows <= 3)
         {
             if (shapeData.rows % 2 != 0)
             {
-                var middleSquareIndex = (shapeData.rows - 1) / 2;
-                var multiplier = (shapeData.rows - 1) / 2;
+                var middleSquareIndex = ((shapeData.rows - 1) / 2);
+                var multiplier = ((shapeData.rows - 1) / 2);
                 if (row < middleSquareIndex)
                 {
                     shiftOnY = moveDistance.y * 1;
@@ -184,8 +205,19 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                     shiftOnY *= multiplier;
                 }
             }
-        }
+        } else if (shapeData.rows > 3) {
+            var basicYpoint = moveDistance.y;
 
+            if (row % 2 == 0)
+            {
+                shiftOnY = (basicYpoint / 2) * (row + 1) * 1;
+
+            }
+            else if (row % 2 == 1)
+            {
+                shiftOnY = (basicYpoint / 2) * row * -1;
+            }
+        }
         return shiftOnY;
     }
 
@@ -193,7 +225,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         float shiftOnX = 0f;
 
-        if (shapeData.columns > 1)
+        if (shapeData.columns > 1 && shapeData.columns <= 3)
         {
             if (shapeData.columns % 2 != 0)
             {
@@ -239,6 +271,18 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                     shiftOnX = moveDistance.x * 1;
                     shiftOnX *= multiplier;
                 }
+            }
+        } else if (shapeData.columns > 3) {
+            var basicYpoint = moveDistance.x;
+
+            if (column % 2 == 0)
+            {
+                shiftOnX = (basicYpoint / 2) * (column + 1) * 1;
+
+            }
+            else if (column % 2 == 1)
+            {
+                shiftOnX = (basicYpoint / 2) * column * -1;
             }
         }
 
