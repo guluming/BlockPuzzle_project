@@ -23,8 +23,10 @@ public class SquareTextureData : ScriptableObject
     {
         var currentIndex = 0;
 
-        for (int index =0; index < activeSquareTextures.Count; index++) {
-            if (activeSquareTextures[index].squareColor == currentColor) {
+        for (int index =0; index < activeSquareTextures.Count; index++)
+        {
+            if (activeSquareTextures[index].squareColor == currentColor)
+            {
                 currentIndex = index;
             }
         }

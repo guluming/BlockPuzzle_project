@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class Grid : MonoBehaviour
     public int columns = 0;
     public int rows = 0;
     public float squaresGap = 0.1f;
+    public GameObject grid;
     public GameObject gridSquare;
     public Vector2 startPosition = new Vector2(0.0f, 0.0f);
     public float squareScale = 0.5f;
@@ -22,6 +24,7 @@ public class Grid : MonoBehaviour
 
     private LineIndicator _lineIndicator;
 
+    //private Sprite currentActiveSquareColor_;
     private Config.SquareColor currentActiveSquareColor_ = Config.SquareColor.NotSet;
     private List<Config.SquareColor> colorsInTheGrid_ = new List<Config.SquareColor>();
 
@@ -48,7 +51,13 @@ public class Grid : MonoBehaviour
         currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
     }
 
-    private void OnUpdateSquareColor(Config.SquareColor color) {
+    //private void OnUpdateSquareColor()
+    //{
+    //    currentActiveSquareColor_ = Shape.seletedshapesprite;
+    //}
+
+    private void OnUpdateSquareColor(Config.SquareColor color)
+    {
         currentActiveSquareColor_ = color;
     }
 
@@ -146,7 +155,7 @@ public class Grid : MonoBehaviour
             }
         }
 
-        var currentSelectedShape = shapeStorage.GetCurrentSelectedShape();
+        Shape currentSelectedShape = shapeStorage.GetCurrentSelectedShape();
         if (currentSelectedShape == null)
         {
             return;
@@ -155,12 +164,12 @@ public class Grid : MonoBehaviour
         if (currentSelectedShape.TotalSquareNumber == squareIndexes.Count)
         {
             
-            foreach (var squareIndex in squareIndexes)
+            foreach (int squareIndex in squareIndexes)
             {
                 _gridSquares[squareIndex].GetComponent<GridSquare>().PlaceShapeOnBoard(currentActiveSquareColor_);
             }
 
-            var shapeLeft = 0;
+            int shapeLeft = 0;
 
             foreach (var shape in shapeStorage.shapeList) {
                 if (shape.IsOnStartPosition() && shape.IsAnyOfShapeSqaureActive()) {
@@ -176,7 +185,7 @@ public class Grid : MonoBehaviour
                 GameEvents.SetShapeInactive();
             }
 
-            CheckIfAnyLineIsCompleted();
+            CheckIfAnyLineIsCompleted(currentSelectedShape.TotalSquareNumber);
         }
         else
         {
@@ -184,115 +193,107 @@ public class Grid : MonoBehaviour
         }
     }
 
-    void CheckIfAnyLineIsCompleted()
+    void CheckIfAnyLineIsCompleted(int currentSelectedShape)
     {
         List<int[]> lines = new List<int[]>();
 
-        foreach (var column in _lineIndicator.columnIndexes) {
-            lines.Add(_lineIndicator.GetVerticalLine(column));
+        for (var colum = 0; colum < 8; colum++)
+        {
+            List<int> data = new List<int>(8);
+            for (var index = 0; index < 8; index++)
+            {
+                data.Add(_lineIndicator.line_data[index, colum]);
+            }
+
+            lines.Add(data.ToArray());
         }
 
-        for (var row=0; row < 8; row++) {
+        for (var row=0; row < 8; row++)
+        {
             List<int> data = new List<int>(8);
-            for (var index=0; index < 8; index++) {
+            for (var index=0; index < 8; index++)
+            {
                 data.Add(_lineIndicator.line_data[row, index]);
             }
 
             lines.Add(data.ToArray());
         }
 
-        colorsInTheGrid_ = GetAllSquareColorInTheGrid();
+        //colorsInTheGrid_ = GetAllSquareColorInTheGrid();
 
         var completedLines = CheckIfSquaresAreCompleted(lines);
         int combo = 0;
-        var totalScores = ( 10 * (1 + combo) * completedLines[0] );
+        var totalScores = ( 10 * (1 + combo) * completedLines );
+        GameEvents.AddScores(currentSelectedShape + totalScores);
+
         //var bonusScores = 0;
 
-        //if (completedLines[0] == 1) {
-        //    audioSource.PlayOneShot(completed);
-        //    totalScores = 10 * completedLines[0];
-        //} else if (completedLines[0] == 2) {
-        //    //audioSource.PlayOneShot(completed);
-        //    totalScores = 10 * completedLines[0] + 20;
-        //    GameEvents.ShowCongratulationWritings();
-        //} else if (completedLines[0] >= 3) {
-        //    //audioSource.PlayOneShot(completed);
-        //    totalScores = 10 * completedLines[0] + 50;
-        //    GameEvents.ShowCongratulationWritings();
-        //}
-
-        //if (completedLines[1] >= 1)
-        //{
-        //    GameEvents.ShowCongratulationWritings();
-        //    bonusScores = completedLines[1] * 50;
-        //}
-
-        //var bonusScores = ShouldPlayColorBonusAnimation();
-        //GameEvents.AddScores(totalScores + bonusScores);
-        GameEvents.AddScores(totalScores);
+        if (completedLines == 1)
+        {
+            audioSource.PlayOneShot(completed);
+            GameEvents.ShowCongratulationWritings(completedLines);
+        }
+        else if (completedLines == 2)
+        {
+            GameEvents.ShowCongratulationWritings(completedLines);
+        }
+        else if (completedLines >= 3)
+        {
+            GameEvents.ShowCongratulationWritings(completedLines);
+        }
+        
         CheckIfPlayLost();
     }
 
-    //private int ShouldPlayColorBonusAnimation()
-    //{
-    //    var colorsInTheGridAfterLineRemoved = GetAllSquareColorInTheGrid();
-    //    Config.SquareColor colorToPlayBonusFor = Config.SquareColor.NotSet;
+    private bool AllBlockClear()
+    {
+        bool allClearCheck = false;
 
-    //    foreach (var squareColor in colorsInTheGrid_) {
-    //        if (colorsInTheGridAfterLineRemoved.Contains(squareColor) == false) {
-    //            colorToPlayBonusFor = squareColor;
-    //        }
-    //    }
+        for (int i=0; i<63; i++) {
+            if (grid.transform.GetChild(i)) {
 
-    //    if (colorToPlayBonusFor == Config.SquareColor.NotSet) {
-    //        Debug.Log("Cannot find Color for bonus");
-    //        return 0;
-    //    }
+            }
+        }
+        var index = grid.GetComponentInChildren<GridSquare>();
 
-    //    if (colorToPlayBonusFor == currentActiveSquareColor_) {
-    //        return 0;
-    //    }
+        return allClearCheck;
+    }
 
-    //    GameEvents.ShowBonusScreen(colorToPlayBonusFor);
-
-    //    return 50;
-    //}
-
-    private int[] CheckIfSquaresAreCompleted(List<int[]> data)
+    private int CheckIfSquaresAreCompleted(List<int[]> data)
     {
         int linesCompleted = 0;
-        
         List<int[]> completedLines = new List<int[]>();
-        List<int[]> completeColorBonusLines = new List<int[]>();
 
-        foreach (var line in data) {
-            var lineCompleted = true;
+        //List<int[]> completeColorBonusLines = new List<int[]>();
 
-            foreach (var squareIndex in line) {
-                var comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
+        foreach (int[] line in data) {
+            bool lineCompleted = true;
+
+            foreach (int squareIndex in line) {
+                GridSquare comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
                 if (comp.SquareOccupied == false) {
                     lineCompleted = false;
                 }
             }
 
             if (lineCompleted) {
-                var lineColorBonusCompleted = true;
-                var comp = _gridSquares[line[0]].transform.GetChild(2).GetComponent<Image>().sprite;
-                foreach (var _squareIndex in line)
-                {
-                    var compColor = _gridSquares[_squareIndex].transform.GetChild(2).GetComponent<Image>().sprite;
+                //var lineColorBonusCompleted = true;
+                //var comp = _gridSquares[line[0]].transform.GetChild(2).GetComponent<Image>().sprite;
+                //foreach (var _squareIndex in line)
+                //{
+                //    var compColor = _gridSquares[_squareIndex].transform.GetChild(2).GetComponent<Image>().sprite;
 
-                    if (comp != compColor)
-                    {
-                        lineColorBonusCompleted = false;
-                        break;
-                    }
-                }
+                //    if (comp != compColor)
+                //    {
+                //        lineColorBonusCompleted = false;
+                //        break;
+                //    }
+                //}
 
-                if (lineColorBonusCompleted)
-                {
-                    completeColorBonusLines.Add(line);
-                }
+                //if (lineColorBonusCompleted)
+                //{
+                //    completeColorBonusLines.Add(line);
+                //}
 
                 completedLines.Add(line);
             }
@@ -318,8 +319,10 @@ public class Grid : MonoBehaviour
             }
         }
 
-        int[] answer = { linesCompleted, completeColorBonusLines.Count };
-        return answer;
+        return linesCompleted;
+
+        //int[] answer = { linesCompleted, completeColorBonusLines.Count };
+        //return answer;
     }
 
     private void CheckIfPlayLost()
@@ -334,14 +337,24 @@ public class Grid : MonoBehaviour
             }
         }
 
-        if (gamemode == "ClassicGame") {
+        if (gamemode == "ClassicGame")
+        {
             Debug.Log("클래식게임 게임오버");
             if (validShapes == 0)
             {
                 GameEvents.GameOver(false);
             }
-        } else if (gamemode == "ChallengeGame") {
+        }
+        else if (gamemode == "ChallengeGame")
+        {
             Debug.Log("챌린지게임 게임오버");
+            if (validShapes == 0)
+            {
+                GameEvents.GameOver(false);
+            }
+        }
+        else {
+            Debug.Log("테스트 게임오버");
             if (validShapes == 0)
             {
                 GameEvents.GameOver(false);

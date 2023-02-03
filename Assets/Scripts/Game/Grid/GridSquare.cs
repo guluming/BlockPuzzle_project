@@ -34,7 +34,7 @@ public class GridSquare : MonoBehaviour
 
     public void PlaceShapeOnBoard(Config.SquareColor color)
     {
-        currentSquareColor_ = color;
+        //currentSquareColor_ = color;
         ActivateSquare();
     }
 
@@ -69,9 +69,11 @@ public class GridSquare : MonoBehaviour
         if (SquareOccupied == false)
         {
             Selected = true;
+            hooverImage.sprite = Shape.seletedshapesprite;
             hooverImage.gameObject.SetActive(true);
         }
-        else if (collision.GetComponent<ShapeSquare>() != null) {
+        else if (collision.GetComponent<ShapeSquare>() != null)
+        {
             collision.GetComponent<ShapeSquare>().SetOccupied();
         }
     }
@@ -80,8 +82,11 @@ public class GridSquare : MonoBehaviour
     {
         Selected = true;
 
-        if (SquareOccupied == false) {
+        if (SquareOccupied == false)
+        {
+            hooverImage.sprite = Shape.seletedshapesprite;
             hooverImage.gameObject.SetActive(true);
+            ActiveImage.sprite = Shape.seletedshapesprite;
         }
         else if (collision.GetComponent<ShapeSquare>() != null)
         {

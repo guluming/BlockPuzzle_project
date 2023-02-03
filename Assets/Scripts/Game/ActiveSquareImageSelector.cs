@@ -36,28 +36,15 @@ public class ActiveSquareImageSelector : MonoBehaviour
         }
     }
 
-
     private void UpdateSquaresColor(Config.SquareColor color)
     {
-        foreach (var squareTexture in SquareTextureData.activeSquareTextures) {
-            if (color == squareTexture.squareColor) {
+        foreach (var squareTexture in SquareTextureData.activeSquareTextures)
+        {
+            if (color == squareTexture.squareColor)
+            {
                 GetComponent<Image>().sprite = squareTexture.texture;
             }
         }
     }
 
-    //private void UpdateJewelSquareBaseOnCurrentPoints()
-    //{
-    //    //int index = Random.Range(0, 5);
-
-    //    //jewelSquareTextureData.currentjewel = jewelSquareTextureData.activeJewelSquareTextures[index].jewelSquare;
-        
-    //    foreach (var jewelSquareTexture in jewelSquareTextureData.activeJewelSquareTextures)
-    //    {
-    //        if (jewelSquareTextureData.currentjewel == jewelSquareTexture.jewelSquare)
-    //        {
-    //            GetComponent<Image>().sprite = jewelSquareTexture.texture;
-    //        }
-    //    }
-    //}
 }

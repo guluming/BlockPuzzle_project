@@ -26,11 +26,6 @@ public class ShapeStorage : MonoBehaviour
 
     void Start()
     {
-        //foreach (var shape in shapeList)
-        //{
-        //    var shapeIndex = UnityEngine.Random.Range(0, shapeData.Count);
-        //    shape.CreateShape(shapeData[shapeIndex]);
-        //}
         List<int> shapeIndexList = new List<int>();
         ShapeIndexSeleted(shapeIndexList);
 
@@ -111,7 +106,7 @@ public class ShapeStorage : MonoBehaviour
         if (GameEvents.UpdateSquareColor != null)
         {
             SquareTextureData.UpdateColors();
-            GameEvents.UpdateSquareColor(SquareTextureData.currentColor);
+            //GameEvents.UpdateSquareColor(SquareTextureData.currentColor);
         }
     }
 

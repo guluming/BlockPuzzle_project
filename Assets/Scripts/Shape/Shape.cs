@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -14,6 +15,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     [HideInInspector]
     public ShapeData CurrentShapeData;
+    public static Sprite seletedshapesprite;
+    public static Texture seletedshapetexture;
 
     public int TotalSquareNumber { get; set; }
 
@@ -24,6 +27,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     private Canvas _canvas;
     private Vector3 _startPosition;
     private bool _shapeActive = true;
+    private SquareTextureData squareTexture;
 
     public void Awake()
     {
@@ -327,6 +331,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnDrag(PointerEventData eventData)
     {
+        seletedshapesprite = this.transform.GetChild(0).GetComponent<Image>().sprite;
         _transform.anchorMin = new Vector2(0.5f, 0.5f);
         _transform.anchorMax = new Vector2(0.5f, 0.5f);
         _transform.pivot = new Vector2(0.5f, 0.5f);
