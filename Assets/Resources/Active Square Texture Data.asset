@@ -12,20 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd4e5c11cf4d4fd1892dcc2d8e2553f, type: 3}
   m_Name: Active Square Texture Data
   m_EditorClassIdentifier: 
-  tresholdVal: 100
   activeSquareTextures:
   - texture: {fileID: 21300000, guid: 72bf5bcfd9c9040d6bdb01093c8ac889, type: 3}
+    color: {r: 0, g: 0.41176474, b: 0.67058825, a: 1}
     squareColor: 2
   - texture: {fileID: 21300000, guid: 8d715a113d2ac41c5bee5b361887233e, type: 3}
+    color: {r: 0.9450981, g: 0.59607846, b: 0.003921569, a: 1}
     squareColor: 3
   - texture: {fileID: 21300000, guid: 27ea78b07d5254de8852929e17f94c76, type: 3}
+    color: {r: 0.058823533, g: 0.67058825, b: 0.62352943, a: 1}
     squareColor: 4
   - texture: {fileID: 21300000, guid: 44fa79a4e088f465a883f02f1b53f187, type: 3}
+    color: {r: 0.97647065, g: 0.8078432, b: 0.1254902, a: 1}
     squareColor: 5
   - texture: {fileID: 21300000, guid: 7cacda0b6dccb4a0ba47bad3f6b0acbe, type: 3}
+    color: {r: 0.6117647, g: 0.7490196, b: 0.14117648, a: 1}
     squareColor: 6
   - texture: {fileID: 21300000, guid: da5cd4e9c30944abc80216f97ccea7ec, type: 3}
+    color: {r: 0.86666673, g: 0.2784314, b: 0.5803922, a: 1}
     squareColor: 7
   - texture: {fileID: 21300000, guid: ecd05054126834e97a1dd8a7c3367589, type: 3}
+    color: {r: 0.5568628, g: 0.2392157, b: 0.5647059, a: 1}
     squareColor: 8
   currentColor: 2

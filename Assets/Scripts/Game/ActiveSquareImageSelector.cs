@@ -32,6 +32,7 @@ public class ActiveSquareImageSelector : MonoBehaviour
         foreach (var squareTexture in SquareTextureData.activeSquareTextures) {
             if (SquareTextureData.currentColor == squareTexture.squareColor) {
                 GetComponent<Image>().sprite = squareTexture.texture;
+                GetComponent<Image>().color = squareTexture.color;
             }
         }
     }
@@ -43,6 +44,7 @@ public class ActiveSquareImageSelector : MonoBehaviour
             if (color == squareTexture.squareColor)
             {
                 GetComponent<Image>().sprite = squareTexture.texture;
+                GetComponent<Image>().color = squareTexture.color;
             }
         }
     }

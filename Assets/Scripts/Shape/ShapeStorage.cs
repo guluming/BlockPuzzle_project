@@ -34,28 +34,62 @@ public class ShapeStorage : MonoBehaviour
             shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
             UpdateSquareColor();
         }
+
+        foreach (Shape shape in shapeList) {
+            int i = Random.Range(0, 4);
+            shape.transform.eulerAngles = new Vector3(0, 0, 90 * i);
+        }
     }
 
-    private void ShapeIndexSeleted(List<int> shapeIndexList) {
+    private void RequestNewShapes()
+    {
+        List<int> shapeIndexList = new List<int>();
+        ShapeIndexSeleted(shapeIndexList);
 
-        while (shapeIndexList.Count <= 3) {
-            int percentage = Random.Range(0, 10);
-            int shapeIndex;
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
+            UpdateSquareColor();
+        }
 
-            if (percentage < 5)
-            {
-                shapeIndex = UnityEngine.Random.Range(0, 10);
-            }
-            else if (5 <= percentage && percentage <= 7)
-            {
-                shapeIndex = UnityEngine.Random.Range(10, 12);
-            }
-            else
-            {
-                shapeIndex = UnityEngine.Random.Range(12, 17);
-            }
+        foreach (Shape shape in shapeList)
+        {
+            int i = Random.Range(0, 4);
+            shape.transform.eulerAngles = new Vector3(0, 0, 90 * i);
+        }
+    }
 
-            if (!shapeIndexList.Contains(shapeIndex)) {
+    private void ShapeIndexSeleted(List<int> shapeIndexList)
+    {
+
+        //while (shapeIndexList.Count <= 3) {
+        //    int percentage = Random.Range(0, 10);
+        //    int shapeIndex;
+
+        //    if (percentage < 5)
+        //    {
+        //        shapeIndex = UnityEngine.Random.Range(0, 10);
+        //    }
+        //    else if (5 <= percentage && percentage <= 7)
+        //    {
+        //        shapeIndex = UnityEngine.Random.Range(10, 12);
+        //    }
+        //    else
+        //    {
+        //        shapeIndex = UnityEngine.Random.Range(12, 17);
+        //    }
+
+        //    if (!shapeIndexList.Contains(shapeIndex)) {
+        //        shapeIndexList.Add(shapeIndex);
+        //    }
+        //}
+
+        while (shapeIndexList.Count <= 3)
+        {
+            int shapeIndex = UnityEngine.Random.Range(0, shapeData.Count); ;
+
+            if (!shapeIndexList.Contains(shapeIndex))
+            {
                 shapeIndexList.Add(shapeIndex);
             }
         }
@@ -73,32 +107,14 @@ public class ShapeStorage : MonoBehaviour
         return null;
     }
 
-    private void RequestNewShapes()
+    public bool IsShapeStorageEmpty()
     {
-        List<int> shapeIndexList = new List<int>();
-        ShapeIndexSeleted(shapeIndexList);
-
-        for (int i = 0; i < shapeList.Count; i++)
-        {
-            shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
-            UpdateSquareColor();
+        foreach (var shape in shapeList) {
+            if (shape.IsAnyOfShapeSqaureActive()) {
+                return false;
+            }
         }
-
-        //foreach (var shape in shapeList) {
-        //    var shapeIndex = UnityEngine.Random.Range(0, shapeData.Count);
-        //    shape.RequestNewShape(shapeData[shapeIndex]);
-        //}
-
-        //if (Grid.gamemode == "ClassicGame")
-        //{
-        //    Debug.Log("클래식게임 게임오버");
-        //    UpdateSquareColor();
-        //}
-        //else if (Grid.gamemode == "ChallengeGame")
-        //{
-        //    Debug.Log("챌린지게임 게임오버");
-        //    UpdateSquareColor();
-        //}
+        return true;
     }
 
     public void UpdateSquareColor()
@@ -108,15 +124,5 @@ public class ShapeStorage : MonoBehaviour
             SquareTextureData.UpdateColors();
             //GameEvents.UpdateSquareColor(SquareTextureData.currentColor);
         }
-    }
-
-    public bool IsShapeStorageEmpty()
-    {
-        foreach (var shape in shapeList) {
-            if (shape.IsAnyOfShapeSqaureActive()) {
-                return false;
-            }
-        }
-        return true;
     }
 }

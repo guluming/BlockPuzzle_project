@@ -11,6 +11,7 @@ public class SquareTextureData : ScriptableObject
     public class TextureData
     {
         public Sprite texture;
+        public Color color;
         public Config.SquareColor squareColor;
     }
 
