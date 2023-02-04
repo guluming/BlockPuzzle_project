@@ -241,22 +241,33 @@ public class Grid : MonoBehaviour
         {
             GameEvents.ShowCongratulationWritings(completedLines);
         }
-        
+        AllBlockClear();
+
         CheckIfPlayLost();
     }
 
-    private bool AllBlockClear()
+    private void AllBlockClear()
     {
-        bool allClearCheck = false;
+        bool allClearCheck = true;
+
+        //Debug.Log(this.transform.GetChild(0).transform.GetChild(2).gameObject.activeSelf);
 
         for (int i=0; i<63; i++) {
-            if (grid.transform.GetChild(i)) {
-
+            if (this.transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf) {
+                allClearCheck = false;
+                //Debug.Log("퍼즐판에 블록이 있습니다.");
             }
         }
-        var index = grid.GetComponentInChildren<GridSquare>();
 
-        return allClearCheck;
+        if (allClearCheck)
+        {
+            GameEvents.AddScores(300);
+            Debug.Log("퍼즐판에 블록이 없습니다.");
+        }
+        else
+        {
+            Debug.Log("퍼즐판에 블록이 있습니다.");
+        }
     }
 
     private int CheckIfSquaresAreCompleted(List<int[]> data)

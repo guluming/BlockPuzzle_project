@@ -35,10 +35,15 @@ public class ShapeStorage : MonoBehaviour
             UpdateSquareColor();
         }
 
-        foreach (Shape shape in shapeList) {
+        foreach (Shape shape in shapeList)
+        {
             int i = Random.Range(0, 4);
             shape.transform.eulerAngles = new Vector3(0, 0, 90 * i);
         }
+
+        //shapeList[0].CreateShape(shapeData[3]);
+        //shapeList[1].CreateShape(shapeData[3]);
+        //shapeList[2].CreateShape(shapeData[3]);
     }
 
     private void RequestNewShapes()
