@@ -25,5 +25,7 @@ public class GameEvents : MonoBehaviour
 
     public static Action<int> ShowCongratulationWritings;
 
+    public static Action<int> ShowLineCompletedWritings;
+
     public static Action<Config.SquareColor> ShowBonusScreen;
 }

@@ -88,7 +88,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -163,14 +163,14 @@ MonoBehaviour:
     y: 0
     width: 678.5
     height: 389
-  m_MinSize: {x: 100, y: 100}
+  m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 6}
+  m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
   - {fileID: 6}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -451,9 +451,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.0646951, y: -0.35821792, z: 362.84253}
+    m_Target: {x: -2.092992, y: 0.016890604, z: 468.59546}
     speed: 2
-    m_Value: {x: -2.0646951, y: -0.35821792, z: 362.84253}
+    m_Value: {x: -2.092992, y: 0.016890604, z: 468.59546}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -504,9 +504,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.369869
+    m_Target: 5.6770163
     speed: 2
-    m_Value: 4.369869
+    m_Value: 5.6770163
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -578,8 +578,8 @@ MonoBehaviour:
     y: 389
     width: 678.5
     height: 358
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -660,7 +660,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -735,7 +735,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 26650000
     m_LastClickedID: 25894
-    m_ExpandedIDs: ffffffff000000007c6200007e62000080620000826200008462000086620000886200008c6200008e62000090620000926200009462000096620000986200009a6200009c6200009e620000a0620000a2620000a4620000a6620000dc620000
+    m_ExpandedIDs: b2befeff86cefeffffffffff000000007c6200007e62000080620000826200008462000086620000886200008a6200008c6200008e62000090620000926200009462000096620000986200009a6200009c6200009e620000a0620000a2620000a4620000a6620000dc620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -780,15 +780,15 @@ MonoBehaviour:
     m_ExpandedIDs: b2befeff86cefeffffffffff000000007c6200007e62000080620000826200008462000086620000886200008a6200008c6200008e62000090620000926200009462000096620000986200009a6200009c6200009e620000a0620000a2620000a4620000a6620000dc620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Game
-      m_OriginalName: Game
+      m_Name: GridSquare
+      m_OriginalName: GridSquare
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 25342
+      m_UserData: 24942
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0

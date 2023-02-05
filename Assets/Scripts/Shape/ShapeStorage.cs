@@ -14,6 +14,9 @@ public class ShapeStorage : MonoBehaviour
     public List<Shape> shapeList;
     public SquareTextureData SquareTextureData;
 
+    public static bool isCombo;
+    public static int ComboCount;
+
     private void OnEnable()
     {
         GameEvents.RequestNewShapes += RequestNewShapes;
@@ -26,6 +29,10 @@ public class ShapeStorage : MonoBehaviour
 
     void Start()
     {
+        isCombo = false;
+        ComboCount = 0;
+        Debug.Log(ComboCount);
+
         List<int> shapeIndexList = new List<int>();
         ShapeIndexSeleted(shapeIndexList);
 
@@ -48,6 +55,15 @@ public class ShapeStorage : MonoBehaviour
 
     private void RequestNewShapes()
     {
+        if (!isCombo)
+        {
+            ComboCount = 0;
+        }
+        else {
+            isCombo = false;
+        }
+        Debug.Log(ComboCount);
+
         List<int> shapeIndexList = new List<int>();
         ShapeIndexSeleted(shapeIndexList);
 

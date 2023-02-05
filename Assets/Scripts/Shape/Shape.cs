@@ -332,7 +332,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public void OnDrag(PointerEventData eventData)
     {
         seletedshapesprite = this.transform.GetChild(0).GetComponent<Image>().sprite;
-        seletedshapecolor = this.transform.GetChild(0).GetComponent<Image>().color;
         _transform.anchorMin = new Vector2(0.5f, 0.5f);
         _transform.anchorMax = new Vector2(0.5f, 0.5f);
         _transform.pivot = new Vector2(0.5f, 0.5f);

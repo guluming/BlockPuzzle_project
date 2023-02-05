@@ -219,28 +219,29 @@ public class Grid : MonoBehaviour
             lines.Add(data.ToArray());
         }
 
-        //colorsInTheGrid_ = GetAllSquareColorInTheGrid();
+        int completedLines = CheckIfSquaresAreCompleted(lines);
 
-        var completedLines = CheckIfSquaresAreCompleted(lines);
-        int combo = 0;
-        var totalScores = ( 10 * (1 + combo) * completedLines );
+        if (completedLines > 0) {
+            ShapeStorage.isCombo = true;
+            ShapeStorage.ComboCount++;
+        }
+
+        int totalScores = ( 10 * (1 + ShapeStorage.ComboCount) * completedLines );
         GameEvents.AddScores(currentSelectedShape + totalScores);
 
-        //var bonusScores = 0;
-
-        if (completedLines == 1)
+        if (completedLines >= 2)
         {
             audioSource.PlayOneShot(completed);
-            GameEvents.ShowCongratulationWritings(completedLines);
+            GameEvents.ShowLineCompletedWritings(completedLines);
         }
-        else if (completedLines == 2)
-        {
-            GameEvents.ShowCongratulationWritings(completedLines);
-        }
-        else if (completedLines >= 3)
-        {
-            GameEvents.ShowCongratulationWritings(completedLines);
-        }
+        //else if (completedLines == 2)
+        //{
+        //    GameEvents.ShowLineCompletedWritings(completedLines);
+        //}
+        //else if (completedLines >= 3)
+        //{
+        //    GameEvents.ShowLineCompletedWritings(completedLines);
+        //}
         AllBlockClear();
 
         CheckIfPlayLost();
