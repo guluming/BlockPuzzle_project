@@ -34,7 +34,6 @@ public class GridSquare : MonoBehaviour
 
     public void PlaceShapeOnBoard(Config.SquareColor color)
     {
-        //currentSquareColor_ = color;
         ActivateSquare();
     }
 

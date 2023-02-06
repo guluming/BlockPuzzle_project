@@ -30,8 +30,27 @@ public class MenuButtons : MonoBehaviour
         Grid.gamemode = "";
     }
 
+    public static void LoadAdsMainScene()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Grid.gamemode = "";
+    }
+
+    public static void LoadRewardAds()
+    {
+        adsManager.I.ShowRewardAd();
+        Grid.gamemode = "";
+    }
+
+    public static void LoadAds()
+    {
+        adsManager.I.ShowAd();
+        Grid.gamemode = "";
+    }
+
     public void ReTryGame(string name)
     {
+        //adsManager.I.ShowRewardAd();
         SceneManager.LoadScene(name);
     }
 }

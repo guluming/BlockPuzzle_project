@@ -10,10 +10,11 @@ public class Grid : MonoBehaviour
     public int columns = 0;
     public int rows = 0;
     public float squaresGap = 0.1f;
-    public GameObject grid;
     public GameObject gridSquare;
+    public Scores score;
+    public GameOverPopup gameOverPopup;
     public Vector2 startPosition = new Vector2(0.0f, 0.0f);
-    public float squareScale = 0.5f;
+    public float squareScale = 0.9f;
     public float everySquareOffset = 0.0f;
     public SquareTextureData squareTextureData;
     public AudioSource audioSource;
@@ -23,8 +24,8 @@ public class Grid : MonoBehaviour
     private List<GameObject> _gridSquares = new List<GameObject>();
 
     private LineIndicator _lineIndicator;
+    public static int Playerlife;
 
-    //private Sprite currentActiveSquareColor_;
     private Config.SquareColor currentActiveSquareColor_ = Config.SquareColor.NotSet;
     private List<Config.SquareColor> colorsInTheGrid_ = new List<Config.SquareColor>();
 
@@ -45,38 +46,34 @@ public class Grid : MonoBehaviour
 
     void Start()
     {
+        Playerlife = 1;
         _lineIndicator = GetComponent<LineIndicator>();
         CreateGrid();
 
         currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
     }
 
-    //private void OnUpdateSquareColor()
-    //{
-    //    currentActiveSquareColor_ = Shape.seletedshapesprite;
-    //}
-
     private void OnUpdateSquareColor(Config.SquareColor color)
     {
         currentActiveSquareColor_ = color;
     }
 
-    private List<Config.SquareColor> GetAllSquareColorInTheGrid()
-    {
-        var colors = new List<Config.SquareColor>();
+    //private List<Config.SquareColor> GetAllSquareColorInTheGrid()
+    //{
+    //    var colors = new List<Config.SquareColor>();
 
-        foreach (var square in _gridSquares) {
-            var gridsquare = square.GetComponent<GridSquare>();
-            if (gridsquare.SquareOccupied) {
-                var color = gridsquare.GetCurrentColor();
-                if (colors.Contains(color) == false) {
-                    colors.Add(color);
-                }
-            }
-        }
+    //    foreach (var square in _gridSquares) {
+    //        var gridsquare = square.GetComponent<GridSquare>();
+    //        if (gridsquare.SquareOccupied) {
+    //            var color = gridsquare.GetCurrentColor();
+    //            if (colors.Contains(color) == false) {
+    //                colors.Add(color);
+    //            }
+    //        }
+    //    }
 
-        return colors;
-    }
+    //    return colors;
+    //}
 
     private void CreateGrid()
     {
@@ -234,14 +231,7 @@ public class Grid : MonoBehaviour
             audioSource.PlayOneShot(completed);
             GameEvents.ShowLineCompletedWritings(completedLines);
         }
-        //else if (completedLines == 2)
-        //{
-        //    GameEvents.ShowLineCompletedWritings(completedLines);
-        //}
-        //else if (completedLines >= 3)
-        //{
-        //    GameEvents.ShowLineCompletedWritings(completedLines);
-        //}
+        
         AllBlockClear();
 
         CheckIfPlayLost();
@@ -251,12 +241,9 @@ public class Grid : MonoBehaviour
     {
         bool allClearCheck = true;
 
-        //Debug.Log(this.transform.GetChild(0).transform.GetChild(2).gameObject.activeSelf);
-
         for (int i=0; i<63; i++) {
-            if (this.transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf) {
+            if (transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf) {
                 allClearCheck = false;
-                //Debug.Log("퍼즐판에 블록이 있습니다.");
             }
         }
 
@@ -264,10 +251,6 @@ public class Grid : MonoBehaviour
         {
             GameEvents.AddScores(300);
             Debug.Log("퍼즐판에 블록이 없습니다.");
-        }
-        else
-        {
-            Debug.Log("퍼즐판에 블록이 있습니다.");
         }
     }
 
@@ -337,7 +320,7 @@ public class Grid : MonoBehaviour
         //return answer;
     }
 
-    private void CheckIfPlayLost()
+    public void CheckIfPlayLost()
     {
         var validShapes = 0;
 
@@ -349,29 +332,50 @@ public class Grid : MonoBehaviour
             }
         }
 
-        if (gamemode == "ClassicGame")
+        if (validShapes == 0)
         {
-            Debug.Log("클래식게임 게임오버");
-            if (validShapes == 0)
+            if (Playerlife > 0 && score.currentScores_ >= score.bestScores_.score * 0.75)
             {
+                gameOverPopup.RetryPopupActive();
+            }
+            else if (score.currentScores_ > score.bestScores_.score)
+            {
+                gameOverPopup.NewBestScoreActive();
                 GameEvents.GameOver(false);
             }
-        }
-        else if (gamemode == "ChallengeGame")
-        {
-            Debug.Log("챌린지게임 게임오버");
-            if (validShapes == 0)
-            {
+            else {
+                gameOverPopup.GameOverActive();
                 GameEvents.GameOver(false);
             }
+            
         }
-        else {
-            Debug.Log("테스트 게임오버");
-            if (validShapes == 0)
-            {
-                GameEvents.GameOver(false);
-            }
-        }
+
+        //if (gamemode == "ClassicGame")
+        //{
+        //    Debug.Log("클래식게임 게임오버 체크");
+        //    if (validShapes == 0)
+        //    {
+        //        adsManager.I.ShowRewardAd();
+        //        GameEvents.GameOver(false);
+        //    }
+        //}
+        //else if (gamemode == "ChallengeGame")
+        //{
+        //    Debug.Log("챌린지게임 게임오버 체크");
+        //    if (validShapes == 0)
+        //    {
+        //        adsManager.I.ShowRewardAd();
+        //        GameEvents.GameOver(false);
+        //    }
+        //}
+        //else {
+        //    Debug.Log("테스트 게임오버 체크");
+        //    if (validShapes == 0)
+        //    {
+        //        adsManager.I.ShowRewardAd();
+        //        GameEvents.GameOver(false);
+        //    }
+        //}
     }
 
     private bool CheckIfShapeCanBePlacedOnGrid(Shape currentShape)

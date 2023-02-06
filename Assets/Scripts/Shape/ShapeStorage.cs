@@ -13,6 +13,7 @@ public class ShapeStorage : MonoBehaviour
     public List<ShapeData> shapeData;
     public List<Shape> shapeList;
     public SquareTextureData SquareTextureData;
+    public Grid grid;
 
     public static bool isCombo;
     public static int ComboCount;
@@ -55,6 +56,8 @@ public class ShapeStorage : MonoBehaviour
 
     private void RequestNewShapes()
     {
+        grid.CheckIfPlayLost();
+
         if (!isCombo)
         {
             ComboCount = 0;
@@ -62,7 +65,6 @@ public class ShapeStorage : MonoBehaviour
         else {
             isCombo = false;
         }
-        Debug.Log(ComboCount);
 
         List<int> shapeIndexList = new List<int>();
         ShapeIndexSeleted(shapeIndexList);
@@ -143,7 +145,6 @@ public class ShapeStorage : MonoBehaviour
         if (GameEvents.UpdateSquareColor != null)
         {
             SquareTextureData.UpdateColors();
-            //GameEvents.UpdateSquareColor(SquareTextureData.currentColor);
         }
     }
 }

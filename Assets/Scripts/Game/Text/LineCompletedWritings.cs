@@ -7,6 +7,8 @@ public class LineCompletedWritings : MonoBehaviour
 {
     public List<GameObject> Linewritings;
 
+    private int childIndex;
+
     void Start()
     {
         GameEvents.ShowLineCompletedWritings += ShowLineCompletedWritings;
@@ -19,18 +21,6 @@ public class LineCompletedWritings : MonoBehaviour
 
     private void ShowLineCompletedWritings(int completedLines)
     {
-        //switch(completedLines) {
-        //    case 1:
-        //        ShowOneLineCompletedWritings();
-        //        break;
-        //    case 2:
-        //        ShowTwoLineCompletedWritings();
-        //        break;
-        //    case 3:
-        //        ShowThreeLineCompletedWritings();
-        //        break;
-        //}
-
         if (completedLines == 2)
         {
             ShowTwoLineCompletedWritings();
@@ -46,31 +36,29 @@ public class LineCompletedWritings : MonoBehaviour
         }
     }
 
-    //private void ShowOneLineCompletedWritings()
-    //{
-    //    writings[3].SetActive(true);
-    //}
-
     private void ShowTwoLineCompletedWritings()
     {
+        childIndex = 0;
         Linewritings[0].SetActive(true);
         Invoke("DeactivateWritings", 1.5f);
     }
 
     private void ShowThreeLineCompletedWritings()
     {
+        childIndex = 1;
         Linewritings[1].SetActive(true);
         Invoke("DeactivateWritings", 1.5f);
     }
 
     private void ShowFourLineCompletedWritings()
     {
+        childIndex = 2;
         Linewritings[2].SetActive(true);
         Invoke("DeactivateWritings", 1.5f);
     }
 
     private void DeactivateWritings()
     {
-        gameObject.SetActive(false);
+        gameObject.transform.GetChild(childIndex).gameObject.SetActive(false);
     }
 }

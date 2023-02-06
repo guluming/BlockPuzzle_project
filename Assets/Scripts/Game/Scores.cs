@@ -15,8 +15,10 @@ public class Scores : MonoBehaviour
     public Text scoreText;
 
     private bool newBestScore_ = false;
-    private BestScoreData bestScores_ = new BestScoreData();
-    private int currentScores_;
+
+    [HideInInspector]
+    public int currentScores_;
+    public BestScoreData bestScores_ = new BestScoreData();
 
     private string bestScoreKey_ = "bsdat";
 

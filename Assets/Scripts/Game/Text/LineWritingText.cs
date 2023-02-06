@@ -15,7 +15,7 @@ public class LineWritingText : MonoBehaviour
     private void CompletedColor() {
         foreach (var textureData in squareTextureData.activeSquareTextures) {
             if (textureData.texture == Shape.seletedshapesprite) {
-                this.GetComponent<Text>().color = textureData.color;
+                GetComponent<Text>().color = textureData.color;
             }
         }
     }

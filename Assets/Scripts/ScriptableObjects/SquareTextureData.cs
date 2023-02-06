@@ -40,20 +40,23 @@ public class SquareTextureData : ScriptableObject
         currentColor = _nextColor;
         var currentColorIndex = GetCurrentColorIndex();
 
-        if (currentColorIndex == activeSquareTextures.Count - 1)
-        {
-            _nextColor = activeSquareTextures[0].squareColor;
-        }
-        else
-        {
-            _nextColor = activeSquareTextures[currentColorIndex + 1].squareColor;
-        }
+        int index = Random.Range(0, activeSquareTextures.Count);
+        _nextColor = activeSquareTextures[index].squareColor;
+
     }
 
     public void SetStartColor()
     {
-        currentColor = activeSquareTextures[0].squareColor;
-        _nextColor = activeSquareTextures[1].squareColor;
+        int index = Random.Range(0, activeSquareTextures.Count);
+        currentColor = activeSquareTextures[index].squareColor;
+
+        if (index == activeSquareTextures.Count - 1)
+        {
+            _nextColor = activeSquareTextures[0].squareColor;
+        }
+        else {
+            _nextColor = activeSquareTextures[index + 1].squareColor;
+        }
     }
 
     private void Awake()

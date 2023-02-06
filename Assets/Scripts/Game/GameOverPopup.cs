@@ -4,29 +4,36 @@ using UnityEngine;
 
 public class GameOverPopup : MonoBehaviour
 {
-    public GameObject gameOverPopup;
-    public GameObject loosePopup;
-    public GameObject newBestScorePopup;
+    public GameObject RetryPopup;
+    public GameObject NewBestScore;
+    public GameObject GameOver;
 
     void Start()
     {
-        gameOverPopup.SetActive(false);
+        RetryPopup.SetActive(false);
+        NewBestScore.SetActive(false);
+        GameOver.SetActive(false);
     }
 
-    private void OnEnable()
+    public void RetryPopupActive()
     {
-        GameEvents.GameOver += OnGameOver;
+        RetryPopup.SetActive(true);
     }
 
-    private void OnDisable()
+    public void NewBestScoreActive()
     {
-        GameEvents.GameOver -= OnGameOver;
+        adsManager.I.ShowAd();
+        NewBestScore.SetActive(true);
     }
 
-    private void OnGameOver(bool newBestScore)
+    public void GameOverActive()
     {
-        gameOverPopup.SetActive(true);
-        loosePopup.SetActive(false);
-        newBestScorePopup.SetActive(true);
+        adsManager.I.ShowAd();
+        GameOver.SetActive(true);
+    }
+
+    public void RetryPopupDeactive()
+    {
+        RetryPopup.SetActive(false);
     }
 }
