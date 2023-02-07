@@ -6,13 +6,13 @@ public class GameOverPopup : MonoBehaviour
 {
     public GameObject RetryPopup;
     public GameObject NewBestScore;
-    public GameObject GameOver;
+    public GameObject MaintainScore;
 
     void Start()
     {
         RetryPopup.SetActive(false);
         NewBestScore.SetActive(false);
-        GameOver.SetActive(false);
+        MaintainScore.SetActive(false);
     }
 
     public void RetryPopupActive()
@@ -29,7 +29,7 @@ public class GameOverPopup : MonoBehaviour
     public void GameOverActive()
     {
         adsManager.I.ShowInterstitialAd();
-        GameOver.SetActive(true);
+        MaintainScore.SetActive(true);
     }
 
     public void RetryPopupDeactive()

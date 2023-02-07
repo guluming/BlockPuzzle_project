@@ -334,8 +334,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 75149018}
+  - component: {fileID: 75149019}
   m_Layer: 5
-  m_Name: GameOver
+  m_Name: MaintainScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -368,6 +369,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &75149019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75149017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b872e982244a546e5829a5c9ca9cac39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scores: {fileID: 1992078462}
+  scoreText: {fileID: 552261015}
+  bestScoreText: {fileID: 1525252368}
 --- !u!1001 &86476611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1087,7 +1103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RetryPopup: {fileID: 1746992155}
   NewBestScore: {fileID: 470601275}
-  GameOver: {fileID: 75149017}
+  MaintainScore: {fileID: 75149017}
 --- !u!1 &435640399 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3015135333909633071, guid: 70434a806a1be4302aa31bf825ba56e9, type: 3}
@@ -1102,6 +1118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 470601276}
+  - component: {fileID: 470601277}
   m_Layer: 5
   m_Name: NewBestScore
   m_TagString: Untagged
@@ -1136,6 +1153,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &470601277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470601275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b872e982244a546e5829a5c9ca9cac39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scores: {fileID: 1992078462}
+  scoreText: {fileID: 894490614}
+  bestScoreText: {fileID: 114925104}
 --- !u!1 &552261013
 GameObject:
   m_ObjectHideFlags: 0
