@@ -12,11 +12,13 @@ public class LineCompletedWritings : MonoBehaviour
     void Start()
     {
         GameEvents.ShowLineCompletedWritings += ShowLineCompletedWritings;
+        GameEvents.ShowAllLineCompletedWritings += ShowAllLineCompletedWritings;
     }
 
     private void OnDisable()
     {
         GameEvents.ShowLineCompletedWritings -= ShowLineCompletedWritings;
+        GameEvents.ShowAllLineCompletedWritings -= ShowAllLineCompletedWritings;
     }
 
     private void ShowLineCompletedWritings(int completedLines)
@@ -39,21 +41,35 @@ public class LineCompletedWritings : MonoBehaviour
     private void ShowTwoLineCompletedWritings()
     {
         childIndex = 0;
+        GetComponent<RectTransform>().position = Shape.seletedshapeglobalPosition;
         Linewritings[0].SetActive(true);
+        
         Invoke("DeactivateWritings", 1.5f);
     }
 
     private void ShowThreeLineCompletedWritings()
     {
         childIndex = 1;
+        GetComponent<RectTransform>().position = Shape.seletedshapeglobalPosition;
         Linewritings[1].SetActive(true);
+        
         Invoke("DeactivateWritings", 1.5f);
     }
 
     private void ShowFourLineCompletedWritings()
     {
         childIndex = 2;
+        GetComponent<RectTransform>().position = Shape.seletedshapeglobalPosition;
         Linewritings[2].SetActive(true);
+        
+        Invoke("DeactivateWritings", 1.5f);
+    }
+
+    private void ShowAllLineCompletedWritings()
+    {
+        childIndex = 3;
+        GetComponent<RectTransform>().position = Shape.seletedshapeglobalPosition;
+        Linewritings[3].SetActive(true);
         Invoke("DeactivateWritings", 1.5f);
     }
 

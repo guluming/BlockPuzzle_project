@@ -41,8 +41,7 @@ public class RadialProgress : MonoBehaviour
         }
         else
         {
-            gameOverPopup.RetryPopupDeactive();
-            
+            adsManager.I.ShowInterstitialAd();
             ProgressIndicator.text = "0";
         }
 

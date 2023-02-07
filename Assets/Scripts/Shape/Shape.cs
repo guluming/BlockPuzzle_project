@@ -17,6 +17,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public ShapeData CurrentShapeData;
     public static Sprite seletedshapesprite;
     public static Color seletedshapecolor;
+    public static Vector3 seletedshapeglobalPosition;
 
     public int TotalSquareNumber { get; set; }
 
@@ -344,6 +345,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        Debug.Log(GetComponent<RectTransform>().position);
+        seletedshapeglobalPosition = GetComponent<RectTransform>().position;
         this.GetComponent<RectTransform>().localScale = _shapeStartScale;
         GameEvents.CheckIfShapeCanBePlaced();
     }

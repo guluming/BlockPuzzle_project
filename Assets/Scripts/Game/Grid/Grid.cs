@@ -251,8 +251,8 @@ public class Grid : MonoBehaviour
 
         if (allClearCheck)
         {
+            GameEvents.ShowAllLineCompletedWritings();
             GameEvents.AddScores(300);
-            Debug.Log("퍼즐판에 블록이 없습니다.");
         }
     }
 

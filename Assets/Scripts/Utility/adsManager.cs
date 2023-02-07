@@ -91,9 +91,13 @@ public class adsManager : MonoBehaviour
                 Debug.LogError("광고 보기에 실패했습니다.");
                 break;
             case ShowResult.Skipped:
+                Grid.Playerlife = 0;
+                gameOverPopup.RetryPopupDeactive();
                 Debug.Log("광고를 스킵했습니다.");
                 break;
             case ShowResult.Finished:
+                Grid.Playerlife = 0;
+                gameOverPopup.RetryPopupDeactive();
                 Debug.Log("광고 보기를 완료했습니다.");
                 break;
         }

@@ -23,7 +23,9 @@ public class GameEvents : MonoBehaviour
 
     //public static Action UpdateSquareColor;
 
-    public static Action<int> ShowCongratulationWritings;
+    //public static Action<int> ShowCongratulationWritings;
+
+    public static Action ShowAllLineCompletedWritings;
 
     public static Action<int> ShowLineCompletedWritings;
 
