@@ -5,15 +5,30 @@ using UnityEngine.UI;
 
 public class RadialProgress : MonoBehaviour
 {
+    public Scores score;
+    public GameOverPopup gameOverPopup;
     public Text ProgressIndicator;
     public Image LoadingBar;
-    float currentValue;
+    float currentValue = 0;
     float currentValuetext = 5f;
-    public float speed;
 
-    private void OnEnable()
+    private void OnDisable()
     {
-        Update();
+        Time.timeScale = 1;
+        if (Grid.Playerlife > 0)
+        {
+            Grid.Playerlife = 0;
+        }
+        else {
+            if (score.currentScores_ >= score.bestScores_.score)
+            {
+                gameOverPopup.NewBestScoreActive();
+            }
+            else
+            {
+                gameOverPopup.GameOverActive();
+            }
+        }
     }
 
     void Update()
@@ -24,11 +39,18 @@ public class RadialProgress : MonoBehaviour
             currentValuetext -= Time.deltaTime;
             ProgressIndicator.text = ((int)currentValuetext).ToString();
         }
-        else {
-
-            ProgressIndicator.text = "end";
+        else
+        {
+            gameOverPopup.RetryPopupDeactive();
+            
+            ProgressIndicator.text = "0";
         }
 
         LoadingBar.fillAmount = currentValue / 5;
+    }
+
+    public void LoadRewardAds() {
+        Time.timeScale = 0;
+        adsManager.I.ShowRewardAd();
     }
 }

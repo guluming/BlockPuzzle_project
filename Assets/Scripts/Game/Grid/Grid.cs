@@ -231,7 +231,9 @@ public class Grid : MonoBehaviour
             audioSource.PlayOneShot(completed);
             GameEvents.ShowLineCompletedWritings(completedLines);
         }
-        
+
+        shapeStorage.IsComboObject();
+
         AllBlockClear();
 
         CheckIfPlayLost();
@@ -338,7 +340,7 @@ public class Grid : MonoBehaviour
             {
                 gameOverPopup.RetryPopupActive();
             }
-            else if (score.currentScores_ > score.bestScores_.score)
+            else if (score.currentScores_ >= score.bestScores_.score)
             {
                 gameOverPopup.NewBestScoreActive();
                 GameEvents.GameOver(false);
@@ -380,12 +382,12 @@ public class Grid : MonoBehaviour
 
     private bool CheckIfShapeCanBePlacedOnGrid(Shape currentShape)
     {
-        var currentShapeData = currentShape.CurrentShapeData;
-        var shapeColumns = currentShapeData.columns;
-        var shapeRows = currentShapeData.rows;
+        ShapeData currentShapeData = currentShape.CurrentShapeData;
+        int shapeColumns = currentShapeData.columns;
+        int shapeRows = currentShapeData.rows;
 
         List<int> originalShapeFilledUpSquares = new List<int>();
-        var squareIndex = 0;
+        int squareIndex = 0;
 
         for (var rowIndex=0; rowIndex < shapeRows; rowIndex++) {
             for (var columnIndex=0; columnIndex < shapeColumns; columnIndex++) {

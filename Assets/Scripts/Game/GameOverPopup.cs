@@ -22,13 +22,13 @@ public class GameOverPopup : MonoBehaviour
 
     public void NewBestScoreActive()
     {
-        adsManager.I.ShowAd();
+        adsManager.I.ShowInterstitialAd();
         NewBestScore.SetActive(true);
     }
 
     public void GameOverActive()
     {
-        adsManager.I.ShowAd();
+        adsManager.I.ShowInterstitialAd();
         GameOver.SetActive(true);
     }
 
