@@ -9,7 +9,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public GameObject squareShapeImage;
     public GameObject jewelShapeImage;
     public Vector3 shapeSelectedScale;
-    public Vector2 offset = new Vector2(0f, 700f);
+    public Vector2 offset;
+    //public Vector2 offset = new Vector2(0f, 700f);
     public AudioSource audioSource;
     public AudioClip clip;
 
@@ -316,6 +317,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        
+
         this.GetComponent<RectTransform>().localScale = new Vector3(0.6f, 0.6f, 0.6f);
     }
 

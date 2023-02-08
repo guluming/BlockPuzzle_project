@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
+    public GameObject SettingsPopup;
+
     private void Awake()
     {
         if (Application.isEditor == false) {
@@ -44,5 +46,15 @@ public class MenuButtons : MonoBehaviour
     public void ReTryGame(string name)
     {
         SceneManager.LoadScene(name);
+    }
+
+    public void OnSettingsPopup()
+    {
+        SettingsPopup.SetActive(true);
+    }
+
+    public void OffSettingsPopup()
+    {
+        SettingsPopup.SetActive(false);
     }
 }

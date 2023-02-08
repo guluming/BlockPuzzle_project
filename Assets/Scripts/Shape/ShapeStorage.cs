@@ -30,11 +30,6 @@ public class ShapeStorage : MonoBehaviour
         10,11,12,13, 14,15,16,17, 20,21,22,23, 24,25,26,27, 30,31,32,33, 35,36,37,38
     };
 
-    //public int[] OriginTwoRotationSquare = new int[]
-    //{
-    //    1, 3, 5, 8, 18, 28, 39, 41
-    //};
-
     private void OnEnable()
     {
         GameEvents.RequestNewShapes += RequestNewShapes;
