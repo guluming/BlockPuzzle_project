@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class audioManager : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public AudioClip bgmusic;
+    public GameObject bgmSource;
+    public GameObject sfxSource;
 
-    void Start()
+    private void Update()
     {
-        audioSource.clip = bgmusic;
-        audioSource.Play();
+        bgmSource.SetActive(SwitchToggle.bgmsetting);
     }
 }

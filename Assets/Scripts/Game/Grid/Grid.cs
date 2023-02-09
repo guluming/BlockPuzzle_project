@@ -17,8 +17,6 @@ public class Grid : MonoBehaviour
     public float squareScale = 0.9f;
     public float everySquareOffset = 0.0f;
     public SquareTextureData squareTextureData;
-    public AudioSource audioSource;
-    public AudioClip completed;
 
     private Vector2 _offset = new Vector2(0.0f, 0.0f);
     private List<GameObject> _gridSquares = new List<GameObject>();
@@ -33,8 +31,6 @@ public class Grid : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log(SwitchToggle.bgmsetting);
-        Debug.Log(SwitchToggle.sfxsetting);
         Debug.Log(gamemode);
         GameEvents.CheckIfShapeCanBePlaced += CheckIfShapeCanBePlaced;
         GameEvents.UpdateSquareColor += OnUpdateSquareColor;
@@ -230,7 +226,9 @@ public class Grid : MonoBehaviour
 
         if (completedLines >= 2)
         {
-            audioSource.PlayOneShot(completed);
+            if (SwitchToggle.sfxsetting) {
+                GameEvents.blockCompleted();
+            }
             GameEvents.ShowLineCompletedWritings(completedLines);
         }
 
@@ -253,6 +251,7 @@ public class Grid : MonoBehaviour
 
         if (allClearCheck)
         {
+            GameEvents.blockCompleted();
             GameEvents.ShowAllLineCompletedWritings();
             GameEvents.AddScores(300);
         }

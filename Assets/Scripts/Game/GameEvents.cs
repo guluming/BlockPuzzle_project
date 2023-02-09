@@ -21,13 +21,13 @@ public class GameEvents : MonoBehaviour
 
     public static Action<Config.SquareColor> UpdateSquareColor;
 
-    //public static Action UpdateSquareColor;
-
-    //public static Action<int> ShowCongratulationWritings;
-
     public static Action ShowAllLineCompletedWritings;
 
     public static Action<int> ShowLineCompletedWritings;
 
-    public static Action<Config.SquareColor> ShowBonusScreen;
+    //public static Action bgmOnOff;
+
+    public static Action blockDown;
+
+    public static Action blockCompleted;
 }

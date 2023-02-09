@@ -10,9 +10,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public GameObject jewelShapeImage;
     public Vector3 shapeSelectedScale;
     public Vector2 offset;
-    //public Vector2 offset = new Vector2(0f, 700f);
-    public AudioSource audioSource;
-    public AudioClip clip;
 
     [HideInInspector]
     public ShapeData CurrentShapeData;
@@ -322,7 +319,10 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        audioSource.PlayOneShot(clip);
+        if (SwitchToggle.sfxsetting) {
+            GameEvents.blockDown();
+        }
+        
         this.GetComponent<RectTransform>().localScale = shapeSelectedScale;
     }
 
