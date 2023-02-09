@@ -33,6 +33,8 @@ public class Grid : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log(SwitchToggle.bgmsetting);
+        Debug.Log(SwitchToggle.sfxsetting);
         Debug.Log(gamemode);
         GameEvents.CheckIfShapeCanBePlaced += CheckIfShapeCanBePlaced;
         GameEvents.UpdateSquareColor += OnUpdateSquareColor;

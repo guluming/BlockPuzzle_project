@@ -317,8 +317,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        
-
         this.GetComponent<RectTransform>().localScale = new Vector3(0.6f, 0.6f, 0.6f);
     }
 

@@ -32,6 +32,11 @@ public class MenuButtons : MonoBehaviour
         Grid.gamemode = "";
     }
 
+    public void LoadReplayScene()
+    {
+        SceneManager.LoadScene("Game");
+    }
+
     public static void LoadAdsMainScene()
     {
         SceneManager.LoadScene("MainMenu");
