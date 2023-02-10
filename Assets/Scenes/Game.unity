@@ -4511,8 +4511,6 @@ MonoBehaviour:
   squareScale: 1
   everySquareOffset: 0.5
   squareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
-  audioSource: {fileID: 1156734089}
-  completed: {fileID: 8300000, guid: 250603450ce664ec08081f999f0050f4, type: 3}
 --- !u!114 &1156734088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5413,11 +5411,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.x
@@ -5606,11 +5604,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.x
@@ -5676,14 +5674,6 @@ PrefabInstance:
       propertyPath: CurrentShapeData
       value: 
       objectReference: {fileID: 11400000, guid: 5fde3c373135344fc9036d7d1a252cbe, type: 2}
-    - target: {fileID: 7217085207468735103, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
-      propertyPath: Mute
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7217085207468735103, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
 --- !u!1 &1445674557
@@ -7813,11 +7803,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.x
@@ -7883,5 +7873,21 @@ PrefabInstance:
       propertyPath: CurrentShapeData
       value: 
       objectReference: {fileID: 11400000, guid: 5fde3c373135344fc9036d7d1a252cbe, type: 2}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: curve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: curve.m_Curve.Array.data[1].inSlope
+      value: 0.0662849
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: curve.m_Curve.Array.data[1].inWeight
+      value: 0.5025681
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: curve.m_Curve.Array.data[1].outSlope
+      value: 0.0662849
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}

@@ -25,8 +25,6 @@ public class GameEvents : MonoBehaviour
 
     public static Action<int> ShowLineCompletedWritings;
 
-    //public static Action bgmOnOff;
-
     public static Action blockDown;
 
     public static Action blockCompleted;

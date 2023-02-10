@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPointerDownHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    public AnimationCurve curve;
     public GameObject squareShapeImage;
     public GameObject jewelShapeImage;
     public Vector3 shapeSelectedScale;
@@ -20,13 +21,14 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public int TotalSquareNumber { get; set; }
 
     private List<GameObject> _currentShape = new List<GameObject>();
-    private Vector3 _shapeStartScale;
+    private SquareTextureData squareTexture;
     private RectTransform _transform;
-    private bool _shapeDraggable = true;
     private Canvas _canvas;
     private Vector3 _startPosition;
+    private Vector3 _shapeStartScale;
     private bool _shapeActive = true;
-    private SquareTextureData squareTexture;
+    private bool _shapeDraggable = true;
+    
 
     public void Awake()
     {
@@ -346,14 +348,29 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log(GetComponent<RectTransform>().position);
         seletedshapeglobalPosition = GetComponent<RectTransform>().position;
-        this.GetComponent<RectTransform>().localScale = _shapeStartScale;
+        GetComponent<RectTransform>().localScale = _shapeStartScale;
+
         GameEvents.CheckIfShapeCanBePlaced();
     }
 
     private void MoveShapeToStartPosition()
     {
-        _transform.transform.localPosition = _startPosition;
+        StartCoroutine(MoveShape());
+    }
+
+    IEnumerator MoveShape()
+    {
+        Vector3 targetPosition = _transform.transform.localPosition;
+        float timer = 0.0f;
+        float duration = 0.8f;
+        float percentage;
+        while (timer < duration)
+        {
+            timer += Time.deltaTime;
+            percentage = timer / duration;
+            _transform.transform.localPosition = Vector3.Lerp(targetPosition, _startPosition, curve.Evaluate(percentage));
+            yield return null;
+        }
     }
 }

@@ -115,9 +115,21 @@ public class ShapeStorage : MonoBehaviour
 
     private void ShapeIndexSeleted(List<int> shapeIndexList)
     {
+        bool hardShapepik = false;
+
         while (shapeIndexList.Count <= 3)
         {
-            int shapeIndex = UnityEngine.Random.Range(0, shapeData.Count); ;
+            int shapeIndex;
+            if (hardShapepik)
+            {
+                shapeIndex = UnityEngine.Random.Range(0, 30);
+            }
+            else {
+                shapeIndex = UnityEngine.Random.Range(0, shapeData.Count);
+                if (shapeIndex > 29) {
+                    hardShapepik = true;
+                }
+            }
 
             if (!shapeIndexList.Contains(shapeIndex))
             {
