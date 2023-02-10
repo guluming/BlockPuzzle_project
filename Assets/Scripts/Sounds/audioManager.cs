@@ -14,6 +14,9 @@ public class audioManager : MonoBehaviour
     public GameObject bgmSource;
     public GameObject sfxSource;
 
+    public static bool sfxsetting;
+    public static bool bgmsetting;
+
     [HideInInspector]
     public playerGameSettingData playerGameSettings_ = new playerGameSettingData();
 
@@ -25,28 +28,22 @@ public class audioManager : MonoBehaviour
         {
             playerGameSettings_ = BinaryDataStream.Read<playerGameSettingData>(playerGameSettingskey);
 
-            SwitchToggle.sfxsetting = playerGameSettings_.sfxsetting;
-            SwitchToggle.bgmsetting = playerGameSettings_.bgmsetting;
+            sfxsetting = playerGameSettings_.sfxsetting;
+            bgmsetting = playerGameSettings_.bgmsetting;
         }
         else {
-            SwitchToggle.bgmsetting = true;
-            SwitchToggle.sfxsetting = true;
+            bgmsetting = true;
+            sfxsetting = true;
         }
 
-        bgmSource.SetActive(SwitchToggle.bgmsetting);
-        sfxSource.SetActive(SwitchToggle.sfxsetting);
+        bgmSource.SetActive(bgmsetting);
+        sfxSource.SetActive(sfxsetting);
     }
 
     public void saveGameSettings()
     {
-        playerGameSettings_.sfxsetting = SwitchToggle.sfxsetting;
-        playerGameSettings_.bgmsetting = SwitchToggle.bgmsetting;
+        playerGameSettings_.sfxsetting = sfxsetting;
+        playerGameSettings_.bgmsetting = bgmsetting;
         BinaryDataStream.Save<playerGameSettingData>(playerGameSettings_, playerGameSettingskey);
-    }
-
-    private void Update()
-    {
-        bgmSource.SetActive(SwitchToggle.bgmsetting);
-        sfxSource.SetActive(SwitchToggle.sfxsetting);
     }
 }

@@ -15,6 +15,7 @@ public class ShapeStorage : MonoBehaviour
     public List<Shape> shapeList;
     public SquareTextureData SquareTextureData;
     public Grid grid;
+    public Scores scores;
     public GameObject ComboObject;
 
     public static bool isCombo;
@@ -115,20 +116,51 @@ public class ShapeStorage : MonoBehaviour
 
     private void ShapeIndexSeleted(List<int> shapeIndexList)
     {
-        bool hardShapepik = false;
-
         while (shapeIndexList.Count <= 3)
         {
-            int shapeIndex;
-            if (hardShapepik)
+            int shapeIndex = 0;
+            if (scores.currentScores_ < 3000)
             {
-                shapeIndex = UnityEngine.Random.Range(0, 30);
+                int activeGridSpuare = 0;
+                for (int i=0; i< grid.transform.childCount; i++) {
+                    if (grid.transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf) {
+                        activeGridSpuare++;
+                    }
+                }
+
+                if (activeGridSpuare < 25) {
+                    int temp = UnityEngine.Random.Range(0, 6);
+                    if (temp == 0)
+                    {
+                        shapeIndex = UnityEngine.Random.Range(24, 30);
+                    }
+                    else
+                    {
+                        shapeIndex = UnityEngine.Random.Range(0, 24);
+                    }
+                } else if (activeGridSpuare >= 25 && activeGridSpuare < 36) {
+                    int temp = UnityEngine.Random.Range(0, 3);
+                    if (temp == 0)
+                    {
+                        shapeIndex = UnityEngine.Random.Range(24, 30);
+                    }
+                    else
+                    {
+                        shapeIndex = UnityEngine.Random.Range(0, 24);
+                    }
+                } else if (activeGridSpuare >= 36) {
+                    int temp = UnityEngine.Random.Range(0, 2);
+                    if (temp == 0)
+                    {
+                        shapeIndex = UnityEngine.Random.Range(24, 30);
+                    }
+                    else {
+                        shapeIndex = UnityEngine.Random.Range(0, 24);
+                    }
+                }
             }
             else {
                 shapeIndex = UnityEngine.Random.Range(0, shapeData.Count);
-                if (shapeIndex > 29) {
-                    hardShapepik = true;
-                }
             }
 
             if (!shapeIndexList.Contains(shapeIndex))

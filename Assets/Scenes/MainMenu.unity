@@ -1571,7 +1571,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 717212426}
-        m_TargetAssemblyTypeName: SwitchToggle, Assembly-CSharp
+        m_TargetAssemblyTypeName: SfxSwitchToggle, Assembly-CSharp
         m_MethodName: OnSFXSwitch
         m_Mode: 1
         m_Arguments:
@@ -1592,13 +1592,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 717212423}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85975f70b78094d63b593545ebe59ce1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6baa29baef25f4220b736ca330e605ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   uiHandleRectTransform: {fileID: 73307544}
-  backgroundActiveColor: {r: 0.78431374, g: 0.8627451, b: 1, a: 1}
+  backgroundActiveColor: {r: 0.7843138, g: 0.86274517, b: 0.9960785, a: 1}
   handleActiveColor: {r: 0.44705886, g: 0.85098046, b: 1, a: 1}
   audioManager: {fileID: 1943904292}
+  sfxSource: {fileID: 985591973}
 --- !u!1 &749597953
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,7 +1766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 759163521}
   - component: {fileID: 759163522}
-  - component: {fileID: 759163520}
+  - component: {fileID: 759163523}
   m_Layer: 5
   m_Name: BGMToggle
   m_TagString: Untagged
@@ -1773,22 +1774,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &759163520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759163519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85975f70b78094d63b593545ebe59ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiHandleRectTransform: {fileID: 791712329}
-  backgroundActiveColor: {r: 0.78431374, g: 0.859655, b: 1, a: 1}
-  handleActiveColor: {r: 0.44705886, g: 0.85098046, b: 1, a: 1}
-  audioManager: {fileID: 1943904292}
 --- !u!224 &759163521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1857,8 +1842,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 759163520}
-        m_TargetAssemblyTypeName: SwitchToggle, Assembly-CSharp
+      - m_Target: {fileID: 759163523}
+        m_TargetAssemblyTypeName: BgmSwitchToggle, Assembly-CSharp
         m_MethodName: OnBGMSwitch
         m_Mode: 1
         m_Arguments:
@@ -1870,6 +1855,23 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
+--- !u!114 &759163523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759163519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d4319f71724410bf53a2c9bc90a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiHandleRectTransform: {fileID: 791712329}
+  backgroundActiveColor: {r: 0.7843138, g: 0.8588236, b: 0.9960785, a: 1}
+  handleActiveColor: {r: 0.44705886, g: 0.85098046, b: 1, a: 1}
+  audioManager: {fileID: 1943904292}
+  bgmSource: {fileID: 1251801174}
 --- !u!1 &789793648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2270,7 +2272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &985591974
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2762,7 +2764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1251801175
 AudioSource:
   m_ObjectHideFlags: 0

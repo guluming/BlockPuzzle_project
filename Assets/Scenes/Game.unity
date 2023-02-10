@@ -1422,7 +1422,7 @@ RectTransform:
   - {fileID: 470601276}
   - {fileID: 75149018}
   m_Father: {fileID: 556052508}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2086,8 +2086,8 @@ RectTransform:
   - {fileID: 726592071}
   - {fileID: 2088004033}
   - {fileID: 874233407}
-  - {fileID: 427162089}
   - {fileID: 2071630044}
+  - {fileID: 427162089}
   - {fileID: 794321416}
   - {fileID: 1596002405}
   m_Father: {fileID: 0}
@@ -2536,6 +2536,7 @@ MonoBehaviour:
   - {fileID: 1875494888}
   SquareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
   grid: {fileID: 1156734087}
+  scores: {fileID: 1992078462}
   ComboObject: {fileID: 1227226045}
   TwoRotationSquare: 010000000200000003000000040000000500000006000000080000000900000012000000130000001c0000001d0000002700000028000000290000002a000000
   FourRotationSquare: 0a0000000b0000000c0000000d0000000e0000000f00000010000000110000001400000015000000160000001700000018000000190000001a0000001b0000001e0000001f000000200000002100000023000000240000002500000026000000
@@ -3380,7 +3381,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 894534584}
-        m_TargetAssemblyTypeName: SwitchToggle, Assembly-CSharp
+        m_TargetAssemblyTypeName: SfxSwitchToggle, Assembly-CSharp
         m_MethodName: OnSFXSwitch
         m_Mode: 1
         m_Arguments:
@@ -3401,13 +3402,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 894534581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85975f70b78094d63b593545ebe59ce1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6baa29baef25f4220b736ca330e605ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   uiHandleRectTransform: {fileID: 610002790}
-  backgroundActiveColor: {r: 0.78431374, g: 0.8627451, b: 1, a: 1}
+  backgroundActiveColor: {r: 0.7843138, g: 0.86274517, b: 0.9960785, a: 1}
   handleActiveColor: {r: 0.44705886, g: 0.85098046, b: 1, a: 1}
   audioManager: {fileID: 1091036230}
+  sfxSource: {fileID: 973725120}
 --- !u!1 &961019516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4309,8 +4311,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 1237873817}
   sfxSource: {fileID: 973725120}
-  switchsfxToggle: {fileID: 894534584}
-  switchbgmToggle: {fileID: 1122012129}
   playerGameSettings_:
     sfxsetting: 1
     bgmsetting: 1
@@ -4351,7 +4351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1122012128}
   - component: {fileID: 1122012130}
-  - component: {fileID: 1122012129}
+  - component: {fileID: 1122012131}
   m_Layer: 5
   m_Name: BGMToggle
   m_TagString: Untagged
@@ -4380,22 +4380,6 @@ RectTransform:
   m_AnchoredPosition: {x: 240, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1122012129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122012127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85975f70b78094d63b593545ebe59ce1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiHandleRectTransform: {fileID: 2094762945}
-  backgroundActiveColor: {r: 0.78431374, g: 0.859655, b: 1, a: 1}
-  handleActiveColor: {r: 0.44705886, g: 0.85098046, b: 1, a: 1}
-  audioManager: {fileID: 1091036230}
 --- !u!114 &1122012130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4443,8 +4427,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1122012129}
-        m_TargetAssemblyTypeName: SwitchToggle, Assembly-CSharp
+      - m_Target: {fileID: 1122012131}
+        m_TargetAssemblyTypeName: BgmSwitchToggle, Assembly-CSharp
         m_MethodName: OnBGMSwitch
         m_Mode: 1
         m_Arguments:
@@ -4456,6 +4440,23 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
+--- !u!114 &1122012131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122012127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9d4319f71724410bf53a2c9bc90a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiHandleRectTransform: {fileID: 2094762945}
+  backgroundActiveColor: {r: 0.7843138, g: 0.8588236, b: 0.9960785, a: 1}
+  handleActiveColor: {r: 0.44705886, g: 0.85098046, b: 1, a: 1}
+  audioManager: {fileID: 1091036230}
+  bgmSource: {fileID: 1237873817}
 --- !u!1 &1156734085
 GameObject:
   m_ObjectHideFlags: 0
@@ -4507,17 +4508,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cca381cd108ba417abf4f5cd08554d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverPopup: {fileID: 427162090}
+  squareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
   shapeStorage: {fileID: 726592072}
+  score: {fileID: 1992078462}
+  gridSquare: {fileID: 7841732357911365219, guid: ea6ed23b6bde7432fa7c8c1aba40ad69, type: 3}
   columns: 8
   rows: 8
-  squaresGap: 0.1
-  gridSquare: {fileID: 7841732357911365219, guid: ea6ed23b6bde7432fa7c8c1aba40ad69, type: 3}
-  score: {fileID: 1992078462}
-  gameOverPopup: {fileID: 427162090}
   startPosition: {x: -461.5, y: 461.5}
+  squaresGap: 0.1
   squareScale: 1
   everySquareOffset: 0.5
-  squareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
+  playerSaveGame_:
+    gameOver: 0
+    playerlife: 0
+    score: 0
+    activeGridSquares: []
+    shapeList: []
 --- !u!114 &1156734088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4883,7 +4890,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6f71a29d93fef467db815ba7d51493c9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0f47b429c42e8457ab3b9458fd9d855e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -7296,7 +7303,7 @@ RectTransform:
   - {fileID: 1045924851}
   - {fileID: 611936028}
   m_Father: {fileID: 556052508}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

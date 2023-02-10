@@ -4,30 +4,42 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
+public class playerGameData
+{
+    public bool gameOver;
+    public int playerlife;
+    public int score;
+    public List<GridSquare> activeGridSquares;
+    public List<Shape> shapeList;
+}
+
 public class Grid : MonoBehaviour
 {
+    public GameOverPopup gameOverPopup;
+    public SquareTextureData squareTextureData;
     public ShapeStorage shapeStorage;
+    public Scores score;
+    public GameObject gridSquare;
     public int columns = 0;
     public int rows = 0;
+    public Vector2 startPosition = new Vector2(-461.5f, 461.5f);
     public float squaresGap = 0.1f;
-    public GameObject gridSquare;
-    public Scores score;
-    public GameOverPopup gameOverPopup;
-    public Vector2 startPosition = new Vector2(0.0f, 0.0f);
-    public float squareScale = 0.9f;
-    public float everySquareOffset = 0.0f;
-    public SquareTextureData squareTextureData;
+    public float squareScale = 1.0f;
+    public float everySquareOffset = 0.5f;
 
     private Vector2 _offset = new Vector2(0.0f, 0.0f);
     private List<GameObject> _gridSquares = new List<GameObject>();
-
     private LineIndicator _lineIndicator;
-    public static int Playerlife;
 
     private Config.SquareColor currentActiveSquareColor_ = Config.SquareColor.NotSet;
-    private List<Config.SquareColor> colorsInTheGrid_ = new List<Config.SquareColor>();
+    private string playerSaveGamekey = "playerSaveGame";
+
+    [HideInInspector]
+    public playerGameData playerSaveGame_ = new playerGameData();
 
     public static string gamemode;
+    public static int Playerlife;
 
     private void OnEnable()
     {
@@ -44,34 +56,25 @@ public class Grid : MonoBehaviour
 
     void Start()
     {
-        Playerlife = 1;
         _lineIndicator = GetComponent<LineIndicator>();
         CreateGrid();
 
-        currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
+        if (BinaryDataStream.Exist(playerSaveGamekey)) {
+            playerSaveGame_ = BinaryDataStream.Read<playerGameData>(playerSaveGamekey);
+            Playerlife = playerSaveGame_.playerlife;
+
+
+
+        } else {
+            Playerlife = 1;
+            currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
+        }
     }
 
     private void OnUpdateSquareColor(Config.SquareColor color)
     {
         currentActiveSquareColor_ = color;
     }
-
-    //private List<Config.SquareColor> GetAllSquareColorInTheGrid()
-    //{
-    //    var colors = new List<Config.SquareColor>();
-
-    //    foreach (var square in _gridSquares) {
-    //        var gridsquare = square.GetComponent<GridSquare>();
-    //        if (gridsquare.SquareOccupied) {
-    //            var color = gridsquare.GetCurrentColor();
-    //            if (colors.Contains(color) == false) {
-    //                colors.Add(color);
-    //            }
-    //        }
-    //    }
-
-    //    return colors;
-    //}
 
     private void CreateGrid()
     {
@@ -136,6 +139,11 @@ public class Grid : MonoBehaviour
         }
     }
 
+    private void CheckSaveActiveGridSquares()
+    {
+
+    }
+
     private void CheckIfShapeCanBePlaced()
     {
         var squareIndexes = new List<int>();
@@ -179,8 +187,9 @@ public class Grid : MonoBehaviour
             else {
                 GameEvents.SetShapeInactive();
             }
-
             CheckIfAnyLineIsCompleted(currentSelectedShape.TotalSquareNumber);
+
+            //게임 임시 저장 함수호출장
         }
         else
         {
@@ -226,7 +235,7 @@ public class Grid : MonoBehaviour
 
         if (completedLines >= 2)
         {
-            if (SwitchToggle.sfxsetting) {
+            if (audioManager.sfxsetting) {
                 GameEvents.blockCompleted();
             }
             GameEvents.ShowLineCompletedWritings(completedLines);

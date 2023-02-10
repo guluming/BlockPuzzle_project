@@ -321,7 +321,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (SwitchToggle.sfxsetting) {
+        if (audioManager.sfxsetting) {
             GameEvents.blockDown();
         }
         
