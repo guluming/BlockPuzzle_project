@@ -13,11 +13,14 @@ public class SwitchToggle : MonoBehaviour
 
     Color backgroundDefaultActiveColor, handleDefaultActiveColor;
 
-    Toggle toggle;
+    
     Vector2 handlePosition;
 
-    public static bool sfxsetting = true;
-    public static bool bgmsetting = true;
+    public audioManager audioManager;
+
+    Toggle toggle;
+    public static bool sfxsetting;
+    public static bool bgmsetting;
 
     void Awake()
     {
@@ -32,21 +35,22 @@ public class SwitchToggle : MonoBehaviour
         handleDefaultActiveColor = handleImage.color;
     }
 
-    public void OnBGMSwitch()
-    {
-        uiHandleRectTransform.anchoredPosition = toggle.isOn ? handlePosition : handlePosition * -1;
-        backgroundImage.color = toggle.isOn ? backgroundDefaultActiveColor : backgroundActiveColor;
-        handleImage.color = toggle.isOn ? handleDefaultActiveColor : handleActiveColor;
-        bgmsetting = toggle.isOn ? true : false;
-        Debug.Log("bgm setting : " + bgmsetting);
-    }
-
     public void OnSFXSwitch()
     {
         uiHandleRectTransform.anchoredPosition = toggle.isOn ? handlePosition : handlePosition * -1;
         backgroundImage.color = toggle.isOn ? backgroundDefaultActiveColor : backgroundActiveColor;
         handleImage.color = toggle.isOn ? handleDefaultActiveColor : handleActiveColor;
         sfxsetting = toggle.isOn ? true : false;
-        Debug.Log("sfx setting : " + sfxsetting);
+        audioManager.saveGameSettings();
     }
+
+    public void OnBGMSwitch()
+    {
+        uiHandleRectTransform.anchoredPosition = toggle.isOn ? handlePosition : handlePosition * -1;
+        backgroundImage.color = toggle.isOn ? backgroundDefaultActiveColor : backgroundActiveColor;
+        handleImage.color = toggle.isOn ? handleDefaultActiveColor : handleActiveColor;
+        bgmsetting = toggle.isOn ? true : false;
+        audioManager.saveGameSettings();
+    }
+
 }

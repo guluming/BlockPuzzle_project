@@ -14,13 +14,13 @@ public class Scores : MonoBehaviour
     public SquareTextureData SquareTextureData;
     public Text scoreText;
 
-    private bool newBestScore_ = false;
+    //private bool newBestScore_ = false;
 
     [HideInInspector]
     public int currentScores_;
     public BestScoreData bestScores_ = new BestScoreData();
 
-    private string bestScoreKey_ = "bsdat";
+    private string bestScoreKey_ = "blockpuzzlescore";
 
     private void Awake()
     {
@@ -39,7 +39,7 @@ public class Scores : MonoBehaviour
     void Start()
     {
         currentScores_ = 0;
-        newBestScore_ = false;
+        //newBestScore_ = false;
         SquareTextureData.SetStartColor();
         UpdateScoreText();
     }
@@ -56,7 +56,7 @@ public class Scores : MonoBehaviour
         GameEvents.GameOver -= SaveBestScores;
     }
 
-    public void SaveBestScores(bool newBestScores)
+    public void SaveBestScores()
     {
         BinaryDataStream.Save<BestScoreData>(bestScores_, bestScoreKey_);
     }
@@ -65,9 +65,9 @@ public class Scores : MonoBehaviour
     {
         currentScores_ += scores;
         if (currentScores_ > bestScores_.score) {
-            newBestScore_ = true;
+            //newBestScore_ = true;
             bestScores_.score = currentScores_;
-            SaveBestScores(true);
+            SaveBestScores();
         }
 
         GameEvents.UpdateBestScoreBar(currentScores_, bestScores_.score);

@@ -3407,6 +3407,7 @@ MonoBehaviour:
   uiHandleRectTransform: {fileID: 610002790}
   backgroundActiveColor: {r: 0.78431374, g: 0.8627451, b: 1, a: 1}
   handleActiveColor: {r: 0.44705886, g: 0.85098046, b: 1, a: 1}
+  audioManager: {fileID: 1091036230}
 --- !u!1 &961019516
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,6 +4309,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 1237873817}
   sfxSource: {fileID: 973725120}
+  switchsfxToggle: {fileID: 894534584}
+  switchbgmToggle: {fileID: 1122012129}
+  playerGameSettings_:
+    sfxsetting: 1
+    bgmsetting: 1
 --- !u!4 &1091036231
 Transform:
   m_ObjectHideFlags: 0
@@ -4389,6 +4395,7 @@ MonoBehaviour:
   uiHandleRectTransform: {fileID: 2094762945}
   backgroundActiveColor: {r: 0.78431374, g: 0.859655, b: 1, a: 1}
   handleActiveColor: {r: 0.44705886, g: 0.85098046, b: 1, a: 1}
+  audioManager: {fileID: 1091036230}
 --- !u!114 &1122012130
 MonoBehaviour:
   m_ObjectHideFlags: 0

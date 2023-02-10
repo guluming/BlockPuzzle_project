@@ -344,11 +344,11 @@ public class Grid : MonoBehaviour
             else if (score.currentScores_ >= score.bestScores_.score)
             {
                 gameOverPopup.NewBestScoreActive();
-                GameEvents.GameOver(false);
+                GameEvents.GameOver();
             }
             else {
                 gameOverPopup.GameOverActive();
-                GameEvents.GameOver(false);
+                GameEvents.GameOver();
             }
             
         }
