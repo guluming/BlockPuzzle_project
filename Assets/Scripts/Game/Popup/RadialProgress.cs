@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class RadialProgress : MonoBehaviour
 {
+    public Grid grid;
     public Scores score;
     public GameOverPopup gameOverPopup;
     public Text ProgressIndicator;
@@ -42,6 +43,7 @@ public class RadialProgress : MonoBehaviour
         else
         {
             adsManager.I.ShowInterstitialAd();
+            grid.playerSaveGame_.saveGameOver = true;
             ProgressIndicator.text = "0";
         }
 

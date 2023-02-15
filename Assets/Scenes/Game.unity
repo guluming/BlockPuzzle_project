@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPopup: {fileID: 427162090}
+  grid: {fileID: 1156734087}
   shapeStorage: {fileID: 726592072}
 --- !u!4 &42742444
 Transform:
@@ -746,6 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 475c41fe31fa640f58080e39f4a141fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grid: {fileID: 1156734087}
   score: {fileID: 1992078462}
   gameOverPopup: {fileID: 427162090}
   ProgressIndicator: {fileID: 1413481009}

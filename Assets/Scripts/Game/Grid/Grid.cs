@@ -7,11 +7,11 @@ using UnityEngine.UI;
 [System.Serializable]
 public class playerGameData
 {
-    public bool gameOver;
-    public int playerlife;
-    public int score;
-    public List<GridSquare> activeGridSquares;
-    public List<Shape> shapeList;
+    public bool saveGameOver;
+    public int savePlayerlife;
+    public int saveScore;
+    public List<int> activeGridSquares;
+    public int[] shapeDataIndexList;
 }
 
 public class Grid : MonoBehaviour
@@ -60,12 +60,22 @@ public class Grid : MonoBehaviour
         CreateGrid();
 
         if (BinaryDataStream.Exist(playerSaveGamekey)) {
-            playerSaveGame_ = BinaryDataStream.Read<playerGameData>(playerSaveGamekey);
-            Playerlife = playerSaveGame_.playerlife;
+            Debug.Log("저장 파일이 있습니다.");
+            string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
+            playerSaveGame_ = JsonUtility.FromJson<playerGameData>(jsonPlayerSaveGame_);
 
+            if (!playerSaveGame_.saveGameOver) {
+                Playerlife = playerSaveGame_.savePlayerlife;
+                score.currentScores_ = playerSaveGame_.saveScore;
 
-
+                //for (int i = 0; i < playerSaveGame_.activeGridSquares.Count; i++)
+                //{
+                    
+                //}
+                Debug.Log("저장 파일을 불러왔습니다.");
+            }
         } else {
+            Debug.Log("저장 파일이 없습니다.");
             Playerlife = 1;
             currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
         }
@@ -139,9 +149,19 @@ public class Grid : MonoBehaviour
         }
     }
 
-    private void CheckSaveActiveGridSquares()
+    private List<int> CheckSaveActiveGridSquares()
     {
+        List<int> ActiveSquareIndexes = new();
 
+        for (int i = 0; i < 63; i++)
+        {
+            if (transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf)
+            {
+                ActiveSquareIndexes.Add(i);
+            }
+        }
+
+        return ActiveSquareIndexes;
     }
 
     private void CheckIfShapeCanBePlaced()
@@ -163,7 +183,7 @@ public class Grid : MonoBehaviour
         {
             return;
         }
-
+        
         if (currentSelectedShape.TotalSquareNumber == squareIndexes.Count)
         {
             
@@ -174,7 +194,7 @@ public class Grid : MonoBehaviour
 
             int shapeLeft = 0;
 
-            foreach (var shape in shapeStorage.shapeList) {
+            foreach (Shape shape in shapeStorage.shapeList) {
                 if (shape.IsOnStartPosition() && shape.IsAnyOfShapeSqaureActive()) {
                     shapeLeft++;
                 }
@@ -188,8 +208,6 @@ public class Grid : MonoBehaviour
                 GameEvents.SetShapeInactive();
             }
             CheckIfAnyLineIsCompleted(currentSelectedShape.TotalSquareNumber);
-
-            //게임 임시 저장 함수호출장
         }
         else
         {
@@ -271,8 +289,6 @@ public class Grid : MonoBehaviour
         int linesCompleted = 0;
         List<int[]> completedLines = new List<int[]>();
 
-        //List<int[]> completeColorBonusLines = new List<int[]>();
-
         foreach (int[] line in data) {
             bool lineCompleted = true;
 
@@ -284,24 +300,6 @@ public class Grid : MonoBehaviour
             }
 
             if (lineCompleted) {
-                //var lineColorBonusCompleted = true;
-                //var comp = _gridSquares[line[0]].transform.GetChild(2).GetComponent<Image>().sprite;
-                //foreach (var _squareIndex in line)
-                //{
-                //    var compColor = _gridSquares[_squareIndex].transform.GetChild(2).GetComponent<Image>().sprite;
-
-                //    if (comp != compColor)
-                //    {
-                //        lineColorBonusCompleted = false;
-                //        break;
-                //    }
-                //}
-
-                //if (lineColorBonusCompleted)
-                //{
-                //    completeColorBonusLines.Add(line);
-                //}
-
                 completedLines.Add(line);
             }
         }
@@ -327,9 +325,6 @@ public class Grid : MonoBehaviour
         }
 
         return linesCompleted;
-
-        //int[] answer = { linesCompleted, completeColorBonusLines.Count };
-        //return answer;
     }
 
     public void CheckIfPlayLost()
@@ -344,23 +339,41 @@ public class Grid : MonoBehaviour
             }
         }
 
+        playerSaveGame_.savePlayerlife = Playerlife;
+        playerSaveGame_.saveScore = score.currentScores_;
+
         if (validShapes == 0)
         {
-            if (Playerlife > 0 && score.currentScores_ >= score.bestScores_.score * 0.75)
+            if (Playerlife > 0 && score.bestScores_.score <= 800)
+            {
+                gameOverPopup.RetryPopupActive();
+            }
+            else if (Playerlife > 0 && score.currentScores_ >= 800)
             {
                 gameOverPopup.RetryPopupActive();
             }
             else if (score.currentScores_ >= score.bestScores_.score)
             {
+                playerSaveGame_.saveGameOver = true;
                 gameOverPopup.NewBestScoreActive();
                 GameEvents.GameOver();
             }
-            else {
+            else
+            {
+                playerSaveGame_.saveGameOver = true;
                 gameOverPopup.GameOverActive();
                 GameEvents.GameOver();
             }
-            
         }
+        else {
+            playerSaveGame_.saveGameOver = false;
+            
+            playerSaveGame_.activeGridSquares = CheckSaveActiveGridSquares();
+        }
+
+        string playerSaveGameData = JsonUtility.ToJson(playerSaveGame_);
+        //Debug.Log(playerSaveGameData);
+        BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
 
         //if (gamemode == "ClassicGame")
         //{

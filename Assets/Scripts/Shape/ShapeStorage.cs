@@ -18,6 +18,8 @@ public class ShapeStorage : MonoBehaviour
     public Scores scores;
     public GameObject ComboObject;
 
+    private string playerSaveGamekey = "playerSaveGame";
+
     public static bool isCombo;
     public static int ComboCount;
 
@@ -43,28 +45,53 @@ public class ShapeStorage : MonoBehaviour
 
     void Start()
     {
-        isCombo = false;
-        ComboCount = 0;
-        IsComboObject();
+        if (BinaryDataStream.Exist(playerSaveGamekey)) {
+            string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
+            grid.playerSaveGame_ = JsonUtility.FromJson<playerGameData>(jsonPlayerSaveGame_);
 
-        List<int> shapeIndexList = new List<int>();
-        ShapeIndexSeleted(shapeIndexList);
+            if (!grid.playerSaveGame_.saveGameOver) {
+                LoadShapes();
+            }
+        } else {
+            isCombo = false;
+            ComboCount = 0;
+            IsComboObject();
 
+            List<int> shapeIndexList = new List<int>();
+            ShapeIndexSeleted(shapeIndexList);
+
+            for (int i = 0; i < shapeList.Count; i++)
+            {
+                grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+            }
+
+            //shapeList[0].CreateShape(shapeData[5]);
+            //shapeList[1].CreateShape(shapeData[5]);
+            //shapeList[2].CreateShape(shapeData[5]);
+
+            //foreach (Shape shape in shapeList)
+            //{
+            //    int i = Random.Range(0, 4);
+            //    shape.transform.eulerAngles = new Vector3(0, 0, 90 * i);
+            //}
+        }
+    }
+
+    private void LoadShapes()
+    {
         for (int i = 0; i < shapeList.Count; i++)
         {
-            shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
-            UpdateSquareColor();
+            if (grid.playerSaveGame_.shapeDataIndexList[i] == -1)
+            {
+                continue;
+            }
+            else {
+                shapeList[i].RequestNewShape(shapeData[grid.playerSaveGame_.shapeDataIndexList[i]]);
+                UpdateSquareColor();
+            }
         }
-
-        //shapeList[0].CreateShape(shapeData[5]);
-        //shapeList[1].CreateShape(shapeData[5]);
-        //shapeList[2].CreateShape(shapeData[5]);
-
-        //foreach (Shape shape in shapeList)
-        //{
-        //    int i = Random.Range(0, 4);
-        //    shape.transform.eulerAngles = new Vector3(0, 0, 90 * i);
-        //}
     }
 
     private void RequestNewShapes()
@@ -84,6 +111,7 @@ public class ShapeStorage : MonoBehaviour
 
         for (int i = 0; i < shapeList.Count; i++)
         {
+            grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
             shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
             UpdateSquareColor();
         }

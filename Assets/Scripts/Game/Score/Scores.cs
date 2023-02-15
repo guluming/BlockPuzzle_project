@@ -12,6 +12,7 @@ public class BestScoreData
 public class Scores : MonoBehaviour
 {
     public SquareTextureData SquareTextureData;
+    public Grid grid;
     public Text scoreText;
 
     //private bool newBestScore_ = false;
@@ -20,6 +21,7 @@ public class Scores : MonoBehaviour
     public int currentScores_;
     public BestScoreData bestScores_ = new BestScoreData();
 
+    private string playerSaveGamekey = "playerSaveGame";
     private string bestScoreKey_ = "blockpuzzlescore";
 
     private void Awake()
@@ -38,7 +40,22 @@ public class Scores : MonoBehaviour
 
     void Start()
     {
-        currentScores_ = 0;
+        if (BinaryDataStream.Exist(playerSaveGamekey))
+        {
+            string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
+            grid.playerSaveGame_ = JsonUtility.FromJson<playerGameData>(jsonPlayerSaveGame_);
+            if (!grid.playerSaveGame_.saveGameOver)
+            {
+                currentScores_ = grid.playerSaveGame_.saveScore;
+            }
+            else {
+                currentScores_ = 0;
+            }
+        }
+        else {
+            currentScores_ = 0;
+        }
+        
         //newBestScore_ = false;
         SquareTextureData.SetStartColor();
         UpdateScoreText();

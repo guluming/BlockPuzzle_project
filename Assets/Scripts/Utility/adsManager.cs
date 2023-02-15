@@ -6,6 +6,7 @@ using UnityEngine.Advertisements;
 public class adsManager : MonoBehaviour
 {
     public GameOverPopup gameOverPopup;
+    public Grid grid;
     public ShapeStorage shapeStorage;
     public static adsManager I;
 
@@ -60,6 +61,7 @@ public class adsManager : MonoBehaviour
             case ShowResult.Finished:
                 gameOverPopup.RetryPopupDeactive();
                 shapeStorage.resurrectionNewShapes();
+                //grid.playerSaveGame_.shapeList = shapeStorage.shapeList;
                 Debug.Log("광고 보기를 완료했습니다.");
                 break;
         }
