@@ -19,6 +19,7 @@ public class Grid : MonoBehaviour
     public GameOverPopup gameOverPopup;
     public SquareTextureData squareTextureData;
     public ShapeStorage shapeStorage;
+    public GameObject shapes;
     public Scores score;
     public GameObject gridSquare;
     public int columns = 0;
@@ -70,7 +71,7 @@ public class Grid : MonoBehaviour
 
                 //for (int i = 0; i < playerSaveGame_.activeGridSquares.Count; i++)
                 //{
-                    
+
                 //}
                 Debug.Log("저장 파일을 불러왔습니다.");
             }
@@ -367,12 +368,18 @@ public class Grid : MonoBehaviour
         }
         else {
             playerSaveGame_.saveGameOver = false;
-            
+
+            for (int i=0; i < 3; i++) {
+                if (!shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf) {
+                    playerSaveGame_.shapeDataIndexList[i] = -1;
+                }
+            }
+
             playerSaveGame_.activeGridSquares = CheckSaveActiveGridSquares();
         }
 
         string playerSaveGameData = JsonUtility.ToJson(playerSaveGame_);
-        //Debug.Log(playerSaveGameData);
+        Debug.Log(playerSaveGameData);
         BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
 
         //if (gamemode == "ClassicGame")

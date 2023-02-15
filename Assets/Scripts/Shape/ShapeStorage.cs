@@ -13,6 +13,7 @@ public class ShapeStorage : MonoBehaviour
      */
     public List<ShapeData> shapeData;
     public List<Shape> shapeList;
+    public GameObject Shapes;
     public SquareTextureData SquareTextureData;
     public Grid grid;
     public Scores scores;
@@ -85,7 +86,9 @@ public class ShapeStorage : MonoBehaviour
         {
             if (grid.playerSaveGame_.shapeDataIndexList[i] == -1)
             {
-                continue;
+                shapeList[i].RequestNewShape(shapeData[0]);
+                Shapes.transform.GetChild(i).transform.GetChild(0).gameObject.SetActive(false);
+                //shapeList[i].transform.GetChild(0).gameObject.SetActive(false);
             }
             else {
                 shapeList[i].RequestNewShape(shapeData[grid.playerSaveGame_.shapeDataIndexList[i]]);
@@ -97,6 +100,7 @@ public class ShapeStorage : MonoBehaviour
     private void RequestNewShapes()
     {
         grid.CheckIfPlayLost();
+
         if (!isCombo)
         {
             ComboCount = 0;

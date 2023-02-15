@@ -75,7 +75,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                 square?.GetComponent<ShapeSquare>().DeactivateShape();
             }
         }
-
         _shapeActive = false;
     }
 
@@ -95,7 +94,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                 square?.GetComponent<ShapeSquare>().ActivateShape();
             }
         }
-
         _shapeActive = true;
     }
 
@@ -226,7 +224,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         return shiftOnY;
     }
 
-    public float GetXPositionForShapeSquare(ShapeData shapeData, int column, Vector2 moveDistance)
+    private float GetXPositionForShapeSquare(ShapeData shapeData, int column, Vector2 moveDistance)
     {
         float shiftOnX = 0f;
 
@@ -325,7 +323,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             GameEvents.blockDown();
         }
         
-        this.GetComponent<RectTransform>().localScale = shapeSelectedScale;
+        GetComponent<RectTransform>().localScale = shapeSelectedScale;
+        
     }
 
     public void OnBeginDrag(PointerEventData eventData)

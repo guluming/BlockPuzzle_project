@@ -2536,6 +2536,7 @@ MonoBehaviour:
   - {fileID: 554917199}
   - {fileID: 1021661649}
   - {fileID: 1875494888}
+  Shapes: {fileID: 2088004032}
   SquareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
   grid: {fileID: 1156734087}
   scores: {fileID: 1992078462}
@@ -4513,6 +4514,7 @@ MonoBehaviour:
   gameOverPopup: {fileID: 427162090}
   squareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
   shapeStorage: {fileID: 726592072}
+  shapes: {fileID: 2088004032}
   score: {fileID: 1992078462}
   gridSquare: {fileID: 7841732357911365219, guid: ea6ed23b6bde7432fa7c8c1aba40ad69, type: 3}
   columns: 8
@@ -4522,11 +4524,11 @@ MonoBehaviour:
   squareScale: 1
   everySquareOffset: 0.5
   playerSaveGame_:
-    gameOver: 0
-    playerlife: 0
-    score: 0
-    activeGridSquares: []
-    shapeList: []
+    saveGameOver: 0
+    savePlayerlife: 0
+    saveScore: 0
+    activeGridSquares: 
+    shapeDataIndexList: 000000000000000000000000
 --- !u!114 &1156734088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5494,6 +5496,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: shapeStorage
+      value: 
+      objectReference: {fileID: 726592072}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: CurrentShapeData
       value: 
       objectReference: {fileID: 11400000, guid: 5fde3c373135344fc9036d7d1a252cbe, type: 2}
@@ -5686,6 +5692,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: shapeStorage
+      value: 
+      objectReference: {fileID: 726592072}
     - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: CurrentShapeData
       value: 
@@ -7104,6 +7114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SquareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
+  grid: {fileID: 1156734087}
   scoreText: {fileID: 2982727}
   currentScores_: 0
   bestScores_:
@@ -7885,6 +7896,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: shapeStorage
+      value: 
+      objectReference: {fileID: 726592072}
     - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: CurrentShapeData
       value: 
