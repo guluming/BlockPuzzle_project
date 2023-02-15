@@ -50,8 +50,24 @@ public class ShapeStorage : MonoBehaviour
             string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
             grid.playerSaveGame_ = JsonUtility.FromJson<playerGameData>(jsonPlayerSaveGame_);
 
-            if (!grid.playerSaveGame_.saveGameOver) {
+            if (!grid.playerSaveGame_.saveGameOver)
+            {
                 LoadShapes();
+            }
+            else {
+                isCombo = false;
+                ComboCount = 0;
+                IsComboObject();
+
+                List<int> shapeIndexList = new List<int>();
+                ShapeIndexSeleted(shapeIndexList);
+
+                for (int i = 0; i < shapeList.Count; i++)
+                {
+                    grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
+                    shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+                    UpdateSquareColor();
+                }
             }
         } else {
             isCombo = false;
@@ -88,7 +104,6 @@ public class ShapeStorage : MonoBehaviour
             {
                 shapeList[i].RequestNewShape(shapeData[0]);
                 Shapes.transform.GetChild(i).transform.GetChild(0).gameObject.SetActive(false);
-                //shapeList[i].transform.GetChild(0).gameObject.SetActive(false);
             }
             else {
                 shapeList[i].RequestNewShape(shapeData[grid.playerSaveGame_.shapeDataIndexList[i]]);
