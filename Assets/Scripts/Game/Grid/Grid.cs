@@ -11,6 +11,7 @@ public class playerGameData
     public int savePlayerlife;
     public int saveScore;
     public List<int> activeGridSquares;
+    public List<string> activeGridSquareColors;
     public int[] shapeDataIndexList;
 }
 
@@ -61,18 +62,34 @@ public class Grid : MonoBehaviour
         CreateGrid();
 
         if (BinaryDataStream.Exist(playerSaveGamekey)) {
-            Debug.Log("저장 파일이 있습니다.");
+
             string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
             playerSaveGame_ = JsonUtility.FromJson<playerGameData>(jsonPlayerSaveGame_);
+
+            Debug.Log("저장 파일이 있습니다.");
 
             if (!playerSaveGame_.saveGameOver) {
                 Playerlife = playerSaveGame_.savePlayerlife;
                 score.currentScores_ = playerSaveGame_.saveScore;
 
-                //for (int i = 0; i < playerSaveGame_.activeGridSquares.Count; i++)
-                //{
+                List<Sprite> saveActiveSquareTextures = new List<Sprite>();
+                for (int i = 0; i < playerSaveGame_.activeGridSquareColors.Count; i++)
+                {
+                    for (int j = 0; j < squareTextureData.activeSquareTextures.Count; j++)
+                    {
+                        if (playerSaveGame_.activeGridSquareColors[i] == squareTextureData.activeSquareTextures[j].texture.ToString()) {
+                            saveActiveSquareTextures.Add(squareTextureData.activeSquareTextures[j].texture);
+                        }
+                    }
+                }
 
-                //}
+                for (int i = 0; i < playerSaveGame_.activeGridSquares.Count; i++)
+                {
+                    transform.GetChild(playerSaveGame_.activeGridSquares[i]).GetComponent<GridSquare>().ActivateSquare();
+                    transform.GetChild(playerSaveGame_.activeGridSquares[i]).GetComponent<GridSquare>().Selected = false;
+                    transform.GetChild(playerSaveGame_.activeGridSquares[i]).GetComponent<GridSquare>().SquareOccupied = true;
+                    transform.GetChild(playerSaveGame_.activeGridSquares[i]).transform.GetChild(2).GetComponent<Image>().sprite = saveActiveSquareTextures[i];
+                }
                 Debug.Log("저장 파일을 불러왔습니다.");
             }
         } else {
@@ -102,7 +119,7 @@ public class Grid : MonoBehaviour
                 _gridSquares.Add(Instantiate(gridSquare) as GameObject);
 
                 _gridSquares[_gridSquares.Count - 1].GetComponent<GridSquare>().SquareIndex = square_index;
-                _gridSquares[_gridSquares.Count - 1].transform.SetParent(this.transform);
+                _gridSquares[_gridSquares.Count - 1].transform.SetParent(transform);
                 _gridSquares[_gridSquares.Count - 1].transform.localScale = new Vector3(squareScale, squareScale, squareScale);
                 //_gridSquares[_gridSquares.Count - 1].GetComponent<GridSquare>().SetImage(_lineIndicator.GetGridSquareIndex(square_index) / 2 == 0);
                 square_index++;
@@ -154,7 +171,7 @@ public class Grid : MonoBehaviour
     {
         List<int> ActiveSquareIndexes = new();
 
-        for (int i = 0; i < 63; i++)
+        for (int i = 0; i < 64; i++)
         {
             if (transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf)
             {
@@ -163,6 +180,21 @@ public class Grid : MonoBehaviour
         }
 
         return ActiveSquareIndexes;
+    }
+
+    private List<string> CheckSaveActiveGridSquaresColor()
+    {
+        List<string> ActiveSquareColors = new();
+
+        for (int i = 0; i < 64; i++)
+        {
+            if (transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf)
+            {
+                ActiveSquareColors.Add(transform.GetChild(i).transform.GetChild(2).GetComponent<Image>().sprite.ToString()); 
+            }
+        }
+
+        return ActiveSquareColors;
     }
 
     private void CheckIfShapeCanBePlaced()
@@ -376,6 +408,7 @@ public class Grid : MonoBehaviour
             }
 
             playerSaveGame_.activeGridSquares = CheckSaveActiveGridSquares();
+            playerSaveGame_.activeGridSquareColors = CheckSaveActiveGridSquaresColor();
         }
 
         string playerSaveGameData = JsonUtility.ToJson(playerSaveGame_);

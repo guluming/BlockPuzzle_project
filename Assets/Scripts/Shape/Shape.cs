@@ -314,7 +314,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        this.GetComponent<RectTransform>().localScale = new Vector3(0.6f, 0.6f, 0.6f);
+        GetComponent<RectTransform>().localScale = new Vector3(0.6f, 0.6f, 0.6f);
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -334,7 +334,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnDrag(PointerEventData eventData)
     {
-        seletedshapesprite = this.transform.GetChild(0).GetComponent<Image>().sprite;
+        seletedshapesprite = transform.GetChild(0).GetComponent<Image>().sprite;
         _transform.anchorMin = new Vector2(0.5f, 0.5f);
         _transform.anchorMax = new Vector2(0.5f, 0.5f);
         _transform.pivot = new Vector2(0.5f, 0.5f);

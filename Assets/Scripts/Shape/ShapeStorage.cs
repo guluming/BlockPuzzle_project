@@ -55,34 +55,10 @@ public class ShapeStorage : MonoBehaviour
                 LoadShapes();
             }
             else {
-                isCombo = false;
-                ComboCount = 0;
-                IsComboObject();
-
-                List<int> shapeIndexList = new List<int>();
-                ShapeIndexSeleted(shapeIndexList);
-
-                for (int i = 0; i < shapeList.Count; i++)
-                {
-                    grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
-                    shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
-                    UpdateSquareColor();
-                }
+                firstShapes();
             }
         } else {
-            isCombo = false;
-            ComboCount = 0;
-            IsComboObject();
-
-            List<int> shapeIndexList = new List<int>();
-            ShapeIndexSeleted(shapeIndexList);
-
-            for (int i = 0; i < shapeList.Count; i++)
-            {
-                grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
-                shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
-                UpdateSquareColor();
-            }
+            firstShapes();
 
             //shapeList[0].CreateShape(shapeData[5]);
             //shapeList[1].CreateShape(shapeData[5]);
@@ -93,6 +69,23 @@ public class ShapeStorage : MonoBehaviour
             //    int i = Random.Range(0, 4);
             //    shape.transform.eulerAngles = new Vector3(0, 0, 90 * i);
             //}
+        }
+    }
+
+    private void firstShapes()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        List<int> shapeIndexList = new List<int>();
+        ShapeIndexSeleted(shapeIndexList);
+
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
+            shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+            UpdateSquareColor();
         }
     }
 
