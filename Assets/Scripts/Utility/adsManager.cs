@@ -28,6 +28,13 @@ public class adsManager : MonoBehaviour
         Advertisement.Initialize(gameId, true);
     }
 
+    private void Start()
+    {
+
+        StartCoroutine(ShowBannerAd());
+        
+    }
+
     public void ShowRewardAd()
     {
         adType = "Rewarded";
@@ -102,6 +109,31 @@ public class adsManager : MonoBehaviour
                 gameOverPopup.RetryPopupDeactive();
                 Debug.Log("광고 보기를 완료했습니다.");
                 break;
+        }
+    }
+
+    IEnumerator ShowBannerAd()
+    {
+        adType = "Banner";
+        if (gameId == "5150982")
+        {
+            adType += "_iOS";
+            while (Advertisement.IsReady("Banner"))
+            {
+                yield return new WaitForSeconds(0.5f);
+            }
+            Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
+            Advertisement.Banner.Show(adType);
+        }
+        else if (gameId == "5150983")
+        {
+            adType += "_Android";
+            while (Advertisement.IsReady("Banner"))
+            {
+                yield return new WaitForSeconds(0.5f);
+            }
+            Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
+            Advertisement.Banner.Show(adType);
         }
     }
 }

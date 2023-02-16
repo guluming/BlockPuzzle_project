@@ -69,7 +69,8 @@ public class Grid : MonoBehaviour
             string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
             playerSaveGame_ = JsonUtility.FromJson<playerGameData>(jsonPlayerSaveGame_);
 
-            if (!playerSaveGame_.saveGameOver) {
+            if (!playerSaveGame_.saveGameOver)
+            {
                 Debug.Log("저장 파일을 불러왔습니다.");
                 Playerlife = playerSaveGame_.savePlayerlife;
                 score.currentScores_ = playerSaveGame_.saveScore;
@@ -81,7 +82,8 @@ public class Grid : MonoBehaviour
                 {
                     for (int j = 0; j < squareTextureData.activeSquareTextures.Count; j++)
                     {
-                        if (playerSaveGame_.activeGridSquareColors[i] == squareTextureData.activeSquareTextures[j].texture.ToString()) {
+                        if (playerSaveGame_.activeGridSquareColors[i] == squareTextureData.activeSquareTextures[j].texture.ToString())
+                        {
                             saveActiveSquareTextures.Add(squareTextureData.activeSquareTextures[j].texture);
                         }
                     }
@@ -94,6 +96,9 @@ public class Grid : MonoBehaviour
                     transform.GetChild(playerSaveGame_.activeGridSquares[i]).GetComponent<GridSquare>().SquareOccupied = true;
                     transform.GetChild(playerSaveGame_.activeGridSquares[i]).transform.GetChild(2).GetComponent<Image>().sprite = saveActiveSquareTextures[i];
                 }
+            }
+            else {
+                Playerlife = 1;
             }
         } else {
             Debug.Log("저장 파일이 없습니다.");
