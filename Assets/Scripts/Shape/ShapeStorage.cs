@@ -46,7 +46,9 @@ public class ShapeStorage : MonoBehaviour
 
     void Start()
     {
-        if (BinaryDataStream.Exist(playerSaveGamekey)) {
+        Debug.Log(Grid.gamemode);
+        if (BinaryDataStream.Exist(playerSaveGamekey))
+        {
             string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
             grid.playerSaveGame_ = JsonUtility.FromJson<playerGameData>(jsonPlayerSaveGame_);
 
@@ -54,22 +56,46 @@ public class ShapeStorage : MonoBehaviour
             {
                 LoadShapes();
             }
-            else {
+            else
+            {
                 firstShapes();
             }
-        } else {
-            firstShapes();
-
-            //shapeList[0].CreateShape(shapeData[5]);
-            //shapeList[1].CreateShape(shapeData[5]);
-            //shapeList[2].CreateShape(shapeData[5]);
-
-            //foreach (Shape shape in shapeList)
-            //{
-            //    int i = Random.Range(0, 4);
-            //    shape.transform.eulerAngles = new Vector3(0, 0, 90 * i);
-            //}
         }
+        else {
+            tutorialShapes();
+        }
+    }
+
+    public void tutorialShapes()
+    {
+        if (Grid.gamemode == "tutorial1")
+        {
+            shapeList[0].RequestNewShape(shapeData[0]);
+            shapeList[1].RequestNewShape(shapeData[5]);
+            shapeList[2].RequestNewShape(shapeData[0]);
+
+            Shapes.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+            Shapes.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else if (Grid.gamemode == "tutorial2")
+        {
+            shapeList[0].RequestNewShape(shapeData[0]);
+            shapeList[1].RequestNewShape(shapeData[7]);
+            shapeList[2].RequestNewShape(shapeData[0]);
+
+            Shapes.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+            Shapes.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else {
+            shapeList[0].CreateShape(shapeData[0]);
+            shapeList[1].CreateShape(shapeData[6]);
+            shapeList[2].CreateShape(shapeData[0]);
+
+            Shapes.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+            Shapes.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);
+        }
+        
+        UpdateSquareColor();
     }
 
     private void firstShapes()
@@ -107,7 +133,10 @@ public class ShapeStorage : MonoBehaviour
 
     private void RequestNewShapes()
     {
-        grid.CheckIfPlayLost();
+        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame")
+        {
+            grid.CheckIfPlayLost();
+        }
 
         if (!isCombo)
         {
