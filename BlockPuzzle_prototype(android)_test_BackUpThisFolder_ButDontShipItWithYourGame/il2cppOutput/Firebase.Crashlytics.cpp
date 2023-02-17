@@ -4485,7 +4485,7 @@ IL_0021:
 		MatchCollection_t84805BAED3D556A405EE3FD165856045026106BC* L_6 = V_0;
 		NullCheck(L_6);
 		Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_7;
-		L_7 = VirtualFuncInvoker1< Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F*, int32_t >::Invoke(34 /* System.Text.RegularExpressions.Match System.Text.RegularExpressions.MatchCollection::get_Item(System.Int32) */, L_6, 0);
+		L_7 = VirtualFuncInvoker1< Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F*, int32_t >::Invoke(35 /* System.Text.RegularExpressions.Match System.Text.RegularExpressions.MatchCollection::get_Item(System.Int32) */, L_6, 0);
 		V_1 = L_7;
 		Match_tFBEBCF225BD8EA17BCE6CE3FE5C1BD8E3074105F* L_8 = V_1;
 		NullCheck(L_8);

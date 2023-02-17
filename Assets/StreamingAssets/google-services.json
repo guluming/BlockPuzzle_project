@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1069488256925",
+    "project_id": "block-blast-grid-puzzle-ga-240",
+    "storage_bucket": "block-blast-grid-puzzle-ga-240.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069488256925:android:087ffbd07ccc476b772174",
+        "android_client_info": {
+          "package_name": "com.SpartaCompany.BlockPuzzle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069488256925-n7f7eudnjpb9cnqd8k1ukonp1d7l1sic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVMEinVfX9X58jqhHQrACGlrbtMM94TtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069488256925-n7f7eudnjpb9cnqd8k1ukonp1d7l1sic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

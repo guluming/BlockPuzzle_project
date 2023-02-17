@@ -436,6 +436,7 @@ UnityEngine.GUIUtility::SetKeyboardControlToLastControlId
 UnityEngine.GUIUtility::set_compositionCursorPos_Injected
 UnityEngine.GUIUtility::set_imeCompositionMode
 UnityEngine.GUIUtility::set_systemCopyBuffer
+UnityEngine.ImageConversion::LoadImage
 UnityEngine.Input::CheckDisabled
 UnityEngine.Input::GetButtonDown
 UnityEngine.Input::GetMouseButton
@@ -690,6 +691,7 @@ UnityEngine.TextGenerator::GetLinesInternal
 UnityEngine.TextGenerator::GetVerticesInternal
 UnityEngine.TextGenerator::Internal_Destroy
 UnityEngine.TextGenerator::get_rectExtents_Injected
+UnityEngine.TextMesh::set_text
 UnityEngine.Texture::get_isReadable
 UnityEngine.Texture::GetDataHeight
 UnityEngine.Texture::GetDataWidth

@@ -24,10 +24,17 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Firebase_App_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Firebase_Crashlytics_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Firebase_Messaging_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Firebase_Platform_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Android_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Common_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Core_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Ump_Android_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_GoogleMobileAds_Ump_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Mono_Security_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_SampleClassLibrary_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Configuration_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Core_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Numerics_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Xml_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Advertisements_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_AndroidJNIModule_CodeGenModule;
@@ -37,6 +44,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_CoreModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_GridModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_IMGUIModule_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_ImageConversionModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_InputLegacyModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_JSONSerializeModule_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_Physics2DModule_CodeGenModule;
@@ -57,7 +65,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_UnityEngine_UnityWebRequestModule_Co
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g___Generated_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[38] = 
+const Il2CppCodeGenModule* g_CodeGenModules[46] = 
 {
 	(&g_AssemblyU2DCSharpU2Dfirstpass_CodeGenModule),
 	(&g_AssemblyU2DCSharp_CodeGenModule),
@@ -65,10 +73,17 @@ const Il2CppCodeGenModule* g_CodeGenModules[38] =
 	(&g_Firebase_Crashlytics_CodeGenModule),
 	(&g_Firebase_Messaging_CodeGenModule),
 	(&g_Firebase_Platform_CodeGenModule),
+	(&g_GoogleMobileAds_Android_CodeGenModule),
+	(&g_GoogleMobileAds_Common_CodeGenModule),
+	(&g_GoogleMobileAds_Core_CodeGenModule),
+	(&g_GoogleMobileAds_Ump_Android_CodeGenModule),
+	(&g_GoogleMobileAds_Ump_CodeGenModule),
 	(&g_Mono_Security_CodeGenModule),
+	(&g_SampleClassLibrary_CodeGenModule),
 	(&g_System_CodeGenModule),
 	(&g_System_Configuration_CodeGenModule),
 	(&g_System_Core_CodeGenModule),
+	(&g_System_Numerics_CodeGenModule),
 	(&g_System_Xml_CodeGenModule),
 	(&g_UnityEngine_Advertisements_CodeGenModule),
 	(&g_UnityEngine_AndroidJNIModule_CodeGenModule),
@@ -78,6 +93,7 @@ const Il2CppCodeGenModule* g_CodeGenModules[38] =
 	(&g_UnityEngine_CoreModule_CodeGenModule),
 	(&g_UnityEngine_GridModule_CodeGenModule),
 	(&g_UnityEngine_IMGUIModule_CodeGenModule),
+	(&g_UnityEngine_ImageConversionModule_CodeGenModule),
 	(&g_UnityEngine_InputLegacyModule_CodeGenModule),
 	(&g_UnityEngine_JSONSerializeModule_CodeGenModule),
 	(&g_UnityEngine_Physics2DModule_CodeGenModule),
@@ -101,20 +117,20 @@ const Il2CppCodeGenModule* g_CodeGenModules[38] =
 IL2CPP_EXTERN_C const Il2CppCodeRegistration g_CodeRegistration;
 const Il2CppCodeRegistration g_CodeRegistration = 
 {
-	53,
+	60,
 	g_ReversePInvokeWrapperPointers,
-	19411,
+	25303,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	5072,
+	6154,
 	g_Il2CppInvokerPointers,
-	730,
+	991,
 	g_UnresolvedVirtualMethodPointers,
-	308,
+	393,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	38,
+	46,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;

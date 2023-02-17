@@ -6662,7 +6662,7 @@ IL_0013:
 		FieldInfo_t* L_9 = V_0;
 		NullCheck(L_9);
 		RuntimeObject* L_10;
-		L_10 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(21 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_9, NULL);
+		L_10 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(24 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_9, NULL);
 		il2cpp_codegen_runtime_class_init_inline(FirebaseLogger_t17574FB770AB2CB02AF3459B2EF9D27FC9C24F42_il2cpp_TypeInfo_var);
 		bool L_11;
 		L_11 = FirebaseLogger_IsStackTraceLogTypeIncompatibleWithNativeLogs_m9D61E661685855C6CDC6C84B3DDDB1BF2754CF2B(((*(int32_t*)((int32_t*)(int32_t*)UnBox(L_10, StackTraceLogType_t2AD431F7181A4203AAE2D538963997CB3A917DF6_il2cpp_TypeInfo_var)))), NULL);
@@ -7068,7 +7068,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FirebaseEditorDispatcher_get_EditorIsPla
 		PropertyInfo_t* L_9 = V_2;
 		NullCheck(L_9);
 		RuntimeObject* L_10;
-		L_10 = VirtualFuncInvoker2< RuntimeObject*, RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(19 /* System.Object System.Reflection.PropertyInfo::GetValue(System.Object,System.Object[]) */, L_9, NULL, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL);
+		L_10 = VirtualFuncInvoker2< RuntimeObject*, RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(23 /* System.Object System.Reflection.PropertyInfo::GetValue(System.Object,System.Object[]) */, L_9, NULL, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL);
 		V_4 = ((*(bool*)((bool*)(bool*)UnBox(L_10, Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var))));
 		goto IL_0042;
 	}
@@ -7140,7 +7140,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FirebaseEditorDispatcher_get_EditorIsPla
 		PropertyInfo_t* L_9 = V_2;
 		NullCheck(L_9);
 		RuntimeObject* L_10;
-		L_10 = VirtualFuncInvoker2< RuntimeObject*, RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(19 /* System.Object System.Reflection.PropertyInfo::GetValue(System.Object,System.Object[]) */, L_9, NULL, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL);
+		L_10 = VirtualFuncInvoker2< RuntimeObject*, RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(23 /* System.Object System.Reflection.PropertyInfo::GetValue(System.Object,System.Object[]) */, L_9, NULL, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL);
 		V_4 = ((*(bool*)((bool*)(bool*)UnBox(L_10, Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_il2cpp_TypeInfo_var))));
 		goto IL_0042;
 	}
@@ -7367,7 +7367,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseEditorDispatcher_ListenToPlaySta
 		EventInfo_t* L_21 = V_2;
 		NullCheck(L_21);
 		Type_t* L_22;
-		L_22 = VirtualFuncInvoker0< Type_t* >::Invoke(19 /* System.Type System.Reflection.EventInfo::get_EventHandlerType() */, L_21);
+		L_22 = VirtualFuncInvoker0< Type_t* >::Invoke(20 /* System.Type System.Reflection.EventInfo::get_EventHandlerType() */, L_21);
 		MethodInfo_t* L_23 = V_6;
 		Delegate_t* L_24;
 		L_24 = Delegate_CreateDelegate_mE2117ED279628E4E63D357AFAB3653DD909CB2D7(L_22, NULL, L_23, NULL);
@@ -7384,7 +7384,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseEditorDispatcher_ListenToPlaySta
 		EventInfo_t* L_27 = V_2;
 		Delegate_t* L_28 = V_7;
 		NullCheck(L_27);
-		VirtualActionInvoker2< RuntimeObject*, Delegate_t* >::Invoke(21 /* System.Void System.Reflection.EventInfo::AddEventHandler(System.Object,System.Delegate) */, L_27, NULL, L_28);
+		VirtualActionInvoker2< RuntimeObject*, Delegate_t* >::Invoke(22 /* System.Void System.Reflection.EventInfo::AddEventHandler(System.Object,System.Delegate) */, L_27, NULL, L_28);
 		goto IL_00a6;
 	}
 
@@ -7393,7 +7393,7 @@ IL_009a:
 		EventInfo_t* L_29 = V_2;
 		Delegate_t* L_30 = V_7;
 		NullCheck(L_29);
-		VirtualActionInvoker2< RuntimeObject*, Delegate_t* >::Invoke(20 /* System.Void System.Reflection.EventInfo::RemoveEventHandler(System.Object,System.Delegate) */, L_29, NULL, L_30);
+		VirtualActionInvoker2< RuntimeObject*, Delegate_t* >::Invoke(21 /* System.Void System.Reflection.EventInfo::RemoveEventHandler(System.Object,System.Delegate) */, L_29, NULL, L_30);
 	}
 
 IL_00a6:
@@ -7568,7 +7568,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseEditorDispatcher_AddRemoveCallba
 		FieldInfo_t* L_3 = ___0_eventField;
 		NullCheck(L_3);
 		RuntimeObject* L_4;
-		L_4 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(21 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_3, NULL);
+		L_4 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(24 /* System.Object System.Reflection.FieldInfo::GetValue(System.Object) */, L_3, NULL);
 		V_1 = ((Delegate_t*)IsInstClass((RuntimeObject*)L_4, Delegate_t_il2cpp_TypeInfo_var));
 		bool L_5 = ___3_add;
 		V_2 = L_5;

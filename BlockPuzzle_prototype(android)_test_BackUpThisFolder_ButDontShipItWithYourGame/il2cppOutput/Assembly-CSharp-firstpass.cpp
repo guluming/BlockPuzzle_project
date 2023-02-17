@@ -9494,7 +9494,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		EventParamBase_t991A7AA768695D513BF21EF614D7EE8C2A45C8FB* L_1 = ___0_param;
 		NullCheck(L_0);
 		bool L_2;
-		L_2 = InterfaceFuncInvoker1< bool, RuntimeObject* >::Invoke(3 /* System.Boolean System.Collections.Generic.IDictionary`2<System.Object,System.String>::Remove(TKey) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1);
+		L_2 = InterfaceFuncInvoker1< bool, RuntimeObject* >::Invoke(6 /* System.Boolean System.Collections.Generic.IDictionary`2<System.Object,System.String>::Remove(TKey) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1);
 		// return this;
 		return __this;
 	}
@@ -9514,7 +9514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		String_t* L_1 = ___0_key;
 		NullCheck(L_0);
 		bool L_2;
-		L_2 = InterfaceFuncInvoker1< bool, RuntimeObject* >::Invoke(3 /* System.Boolean System.Collections.Generic.IDictionary`2<System.Object,System.String>::Remove(TKey) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1);
+		L_2 = InterfaceFuncInvoker1< bool, RuntimeObject* >::Invoke(6 /* System.Boolean System.Collections.Generic.IDictionary`2<System.Object,System.String>::Remove(TKey) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1);
 		// return this;
 		return __this;
 	}
@@ -9644,7 +9644,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		StringEventParam_t31BCFC0C463B1A1EDB59B2DF7922D55D78716477* L_1 = ___0_param;
 		String_t* L_2 = ___1_value;
 		NullCheck(L_0);
-		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(2 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
+		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(5 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
 		// return this;
 		return __this;
 	}
@@ -9664,7 +9664,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		String_t* L_1 = ___0_key;
 		String_t* L_2 = ___1_value;
 		NullCheck(L_0);
-		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(2 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
+		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(5 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
 		// return this;
 		return __this;
 	}
@@ -9685,7 +9685,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		String_t* L_2;
 		L_2 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&___1_value), NULL);
 		NullCheck(L_0);
-		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(2 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
+		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(5 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
 		// return this;
 		return __this;
 	}
@@ -9706,7 +9706,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		String_t* L_2;
 		L_2 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&___1_value), NULL);
 		NullCheck(L_0);
-		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(2 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
+		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(5 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
 		// return this;
 		return __this;
 	}
@@ -9727,7 +9727,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		String_t* L_2;
 		L_2 = Int64_ToString_m284E4E55662818E38654309A41C2B07CD436F36B((&___1_value), NULL);
 		NullCheck(L_0);
-		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(2 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
+		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(5 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
 		// return this;
 		return __this;
 	}
@@ -9748,7 +9748,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		String_t* L_2;
 		L_2 = Int64_ToString_m284E4E55662818E38654309A41C2B07CD436F36B((&___1_value), NULL);
 		NullCheck(L_0);
-		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(2 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
+		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(5 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
 		// return this;
 		return __this;
 	}
@@ -9769,7 +9769,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		String_t* L_2;
 		L_2 = Double_ToString_m7499A5D792419537DCB9470A3675CEF5117DE339((&___1_value), NULL);
 		NullCheck(L_0);
-		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(2 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
+		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(5 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
 		// return this;
 		return __this;
 	}
@@ -9790,7 +9790,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		String_t* L_2;
 		L_2 = Double_ToString_m7499A5D792419537DCB9470A3675CEF5117DE339((&___1_value), NULL);
 		NullCheck(L_0);
-		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(2 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
+		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(5 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
 		// return this;
 		return __this;
 	}
@@ -9811,7 +9811,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		String_t* L_2;
 		L_2 = Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63((&___1_value), NULL);
 		NullCheck(L_0);
-		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(2 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
+		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(5 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
 		// return this;
 		return __this;
 	}
@@ -9832,7 +9832,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventParams_tA9C56269511A4248EE265187D45FE97C
 		String_t* L_2;
 		L_2 = Boolean_ToString_m6646C8026B1DF381A1EE8CD13549175E9703CC63((&___1_value), NULL);
 		NullCheck(L_0);
-		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(2 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
+		InterfaceActionInvoker2< RuntimeObject*, String_t* >::Invoke(5 /* System.Void System.Collections.Generic.IDictionary`2<System.Object,System.String>::Add(TKey,TValue) */, IDictionary_2_t4ED9E662D27F666FB93FB9F2CE1B58FE65003A63_il2cpp_TypeInfo_var, L_0, L_1, L_2);
 		// return this;
 		return __this;
 	}

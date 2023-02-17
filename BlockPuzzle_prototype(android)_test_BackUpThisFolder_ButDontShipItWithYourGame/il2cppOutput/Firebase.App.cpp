@@ -319,6 +319,18 @@ struct TaskCompletionSource_1_t334979F66DE5C2F333F2975D91AA0EEB6E6B35D7;
 struct TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37;
 // System.Threading.Tasks.TaskCompletionSource`1<System.String>
 struct TaskCompletionSource_1_tC9FC5C6EACD2138DA270912A14414A2FCA266372;
+// System.Threading.Tasks.TaskFactory`1<System.Threading.Tasks.Task`1<Firebase.DependencyStatus>>
+struct TaskFactory_1_tA1370864EDB73BA30BF7ECF3D38054C6957BC988;
+// System.Threading.Tasks.TaskFactory`1<System.Boolean>
+struct TaskFactory_1_tFAEAC22A1E986463E6956C344A78A7C7197288E0;
+// System.Threading.Tasks.TaskFactory`1<Firebase.DependencyStatus>
+struct TaskFactory_1_tA1BF99B45C5D8E4EBA82339084E38BD2DB72E0C1;
+// System.Threading.Tasks.TaskFactory`1<System.Int32>
+struct TaskFactory_1_t0BEF06D58E44525B9135AB0B22D016856EE69FF3;
+// System.Threading.Tasks.TaskFactory`1<System.Object>
+struct TaskFactory_1_t6F188FE70F3006B0386002E392B799D85100732B;
+// System.Threading.Tasks.TaskFactory`1<System.String>
+struct TaskFactory_1_t7ABCD7F9503486A075E0B072E6EB95956CFE3106;
 // System.Threading.Tasks.Task`1<System.Threading.Tasks.Task`1<Firebase.DependencyStatus>>
 struct Task_1_t3769315417372EBDBD431895C2D9EB5B42C48672;
 // System.Threading.Tasks.Task`1<System.Threading.Tasks.Task`1<System.Int32Enum>>
@@ -3166,26 +3178,56 @@ struct U3CU3Ec_t4E60FA2425A16BB5C3A0357CAC8FCBA8C92D498C_StaticFields
 // System.Collections.Generic.KeyValuePair`2<Firebase.Variant,Firebase.Variant>
 
 // System.Threading.Tasks.Task`1<System.Threading.Tasks.Task`1<Firebase.DependencyStatus>>
+struct Task_1_t3769315417372EBDBD431895C2D9EB5B42C48672_StaticFields
+{
+	// System.Threading.Tasks.TaskFactory`1<TResult> System.Threading.Tasks.Task`1::s_defaultFactory
+	TaskFactory_1_tA1370864EDB73BA30BF7ECF3D38054C6957BC988* ___s_defaultFactory_23;
+};
 
 // System.Threading.Tasks.Task`1<System.Threading.Tasks.Task`1<Firebase.DependencyStatus>>
 
 // System.Threading.Tasks.Task`1<System.Boolean>
+struct Task_1_t824317F4B958F7512E8F7300511752937A6C6043_StaticFields
+{
+	// System.Threading.Tasks.TaskFactory`1<TResult> System.Threading.Tasks.Task`1::s_defaultFactory
+	TaskFactory_1_tFAEAC22A1E986463E6956C344A78A7C7197288E0* ___s_defaultFactory_23;
+};
 
 // System.Threading.Tasks.Task`1<System.Boolean>
 
 // System.Threading.Tasks.Task`1<Firebase.DependencyStatus>
+struct Task_1_tCDCA9B2073B1AC4ED4537A6D74742D20B122E1EF_StaticFields
+{
+	// System.Threading.Tasks.TaskFactory`1<TResult> System.Threading.Tasks.Task`1::s_defaultFactory
+	TaskFactory_1_tA1BF99B45C5D8E4EBA82339084E38BD2DB72E0C1* ___s_defaultFactory_23;
+};
 
 // System.Threading.Tasks.Task`1<Firebase.DependencyStatus>
 
 // System.Threading.Tasks.Task`1<System.Int32>
+struct Task_1_t4C228DE57804012969575431CFF12D57C875552D_StaticFields
+{
+	// System.Threading.Tasks.TaskFactory`1<TResult> System.Threading.Tasks.Task`1::s_defaultFactory
+	TaskFactory_1_t0BEF06D58E44525B9135AB0B22D016856EE69FF3* ___s_defaultFactory_23;
+};
 
 // System.Threading.Tasks.Task`1<System.Int32>
 
 // System.Threading.Tasks.Task`1<System.Object>
+struct Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2_StaticFields
+{
+	// System.Threading.Tasks.TaskFactory`1<TResult> System.Threading.Tasks.Task`1::s_defaultFactory
+	TaskFactory_1_t6F188FE70F3006B0386002E392B799D85100732B* ___s_defaultFactory_23;
+};
 
 // System.Threading.Tasks.Task`1<System.Object>
 
 // System.Threading.Tasks.Task`1<System.String>
+struct Task_1_t3D7638C82ED289AF156EDBAE76842D8DF4C4A9E0_StaticFields
+{
+	// System.Threading.Tasks.TaskFactory`1<TResult> System.Threading.Tasks.Task`1::s_defaultFactory
+	TaskFactory_1_t7ABCD7F9503486A075E0B072E6EB95956CFE3106* ___s_defaultFactory_23;
+};
 
 // System.Threading.Tasks.Task`1<System.String>
 
@@ -8793,7 +8835,7 @@ FINALLY_000c:
 		});
 		try
 		{// begin try (depth: 1)
-			VirtualActionInvoker1< bool >::Invoke(19 /* System.Void Firebase.StringStringMap::Dispose(System.Boolean) */, __this, (bool)0);
+			VirtualActionInvoker1< bool >::Invoke(22 /* System.Void Firebase.StringStringMap::Dispose(System.Boolean) */, __this, (bool)0);
 			goto IL_0014;
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -8817,7 +8859,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StringStringMap_Dispose_mFECCAB7DCE0572D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		VirtualActionInvoker1< bool >::Invoke(19 /* System.Void Firebase.StringStringMap::Dispose(System.Boolean) */, __this, (bool)1);
+		VirtualActionInvoker1< bool >::Invoke(22 /* System.Void Firebase.StringStringMap::Dispose(System.Boolean) */, __this, (bool)1);
 		il2cpp_codegen_runtime_class_init_inline(GC_t920F9CF6EBB7C787E5010A4352E1B587F356DC58_il2cpp_TypeInfo_var);
 		GC_SuppressFinalize_m71815DBD5A0CD2EA1BE43317B08B7A14949EDC65(__this, NULL);
 		return;
@@ -22020,7 +22062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FirebaseApp_WeakReferenceGetTa
 		WeakReference_tD4B0518CE911FFD9FAAB3FCD492644A354312D8E* L_2 = ___0_weakReference;
 		NullCheck(L_2);
 		RuntimeObject* L_3;
-		L_3 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(5 /* System.Object System.WeakReference::get_Target() */, L_2);
+		L_3 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(6 /* System.Object System.WeakReference::get_Target() */, L_2);
 		V_1 = L_3;
 		goto IL_001e;
 	}// end try (depth: 1)
@@ -25223,7 +25265,7 @@ FINALLY_000c:
 		});
 		try
 		{// begin try (depth: 1)
-			VirtualActionInvoker1< bool >::Invoke(19 /* System.Void Firebase.VariantVariantMap::Dispose(System.Boolean) */, __this, (bool)0);
+			VirtualActionInvoker1< bool >::Invoke(22 /* System.Void Firebase.VariantVariantMap::Dispose(System.Boolean) */, __this, (bool)0);
 			goto IL_0014;
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -25247,7 +25289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void VariantVariantMap_Dispose_m2EF5C536EF12E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		VirtualActionInvoker1< bool >::Invoke(19 /* System.Void Firebase.VariantVariantMap::Dispose(System.Boolean) */, __this, (bool)1);
+		VirtualActionInvoker1< bool >::Invoke(22 /* System.Void Firebase.VariantVariantMap::Dispose(System.Boolean) */, __this, (bool)1);
 		il2cpp_codegen_runtime_class_init_inline(GC_t920F9CF6EBB7C787E5010A4352E1B587F356DC58_il2cpp_TypeInfo_var);
 		GC_SuppressFinalize_m71815DBD5A0CD2EA1BE43317B08B7A14949EDC65(__this, NULL);
 		return;
@@ -29717,7 +29759,7 @@ IL_012d:
 		RuntimeObject* L_48 = V_15;
 		NullCheck(L_48);
 		RuntimeObject* L_49;
-		L_49 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(4 /* System.Collections.IDictionaryEnumerator System.Collections.IDictionary::GetEnumerator() */, IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220_il2cpp_TypeInfo_var, L_48);
+		L_49 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(9 /* System.Collections.IDictionaryEnumerator System.Collections.IDictionary::GetEnumerator() */, IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220_il2cpp_TypeInfo_var, L_48);
 		V_18 = L_49;
 	}
 	{
@@ -38906,7 +38948,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FirebaseAppPlatform_get_AppObj
 		L_0 = FirebaseAppPlatform_get_app_m26B9904153AC094A6BEA240F74B082EEDB9C35D7_inline(__this, NULL);
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(5 /* System.Object System.WeakReference::get_Target() */, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(6 /* System.Object System.WeakReference::get_Target() */, L_0);
 		V_0 = L_1;
 		goto IL_0016;
 	}// end try (depth: 1)
