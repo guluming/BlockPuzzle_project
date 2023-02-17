@@ -4626,10 +4626,12 @@ struct audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13  : public MonoBeha
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___bgmSource_4;
 	// UnityEngine.GameObject audioManager::sfxSource
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___sfxSource_5;
+	// System.Int32 audioManager::targetFrameRate
+	int32_t ___targetFrameRate_6;
 	// playerGameSettingData audioManager::playerGameSettings_
-	playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* ___playerGameSettings__8;
+	playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* ___playerGameSettings__9;
 	// System.String audioManager::playerGameSettingskey
-	String_t* ___playerGameSettingskey_9;
+	String_t* ___playerGameSettingskey_10;
 };
 
 // UnityEngine.UI.Graphic
@@ -6532,9 +6534,9 @@ struct adsManager_tA4354A26098E7EA1B4D8FDC0793FB391CFE5DD64_StaticFields
 struct audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields
 {
 	// System.Boolean audioManager::sfxsetting
-	bool ___sfxsetting_6;
+	bool ___sfxsetting_7;
 	// System.Boolean audioManager::bgmsetting
-	bool ___bgmsetting_7;
+	bool ___bgmsetting_8;
 };
 
 // audioManager
@@ -8235,6 +8237,8 @@ inline int32_t Array_IndexOf_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_
 }
 // System.Void SquareTextureData::UpdateColors()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SquareTextureData_UpdateColors_m683EFB4E1F5D36881E1443641CED5CF6193E4182 (SquareTextureData_t4D53B04E00F916E1F6ED7BCE6B04565D81A2CA1C* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.Application::set_targetFrameRate(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_set_targetFrameRate_mB90EEA60DAE55CD71C38D4B7DFDBE2B34EA6B46F (int32_t ___0_value, const RuntimeMethod* method) ;
 // T BinaryDataStream::Read<playerGameSettingData>(System.String)
 inline playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* BinaryDataStream_Read_TisplayerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E_m454BC1706A14A897BFBC9D241EE576B7608C05BC (String_t* ___0_fileName, const RuntimeMethod* method)
 {
@@ -16006,11 +16010,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmSwitchToggle_Start_m0BDCCB5EE59C2C689
 	{
 		// toggle.isOn = audioManager.bgmsetting;
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_0 = __this->___toggle_14;
-		bool L_1 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7;
+		bool L_1 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, L_1, NULL);
 		// OnBGMSwitchState(audioManager.bgmsetting);
-		bool L_2 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7;
+		bool L_2 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8;
 		BgmSwitchToggle_OnBGMSwitchState_mC3C39E564E9F128BE08EA269E6B9A7B547E3BB49(__this, L_2, NULL);
 		// }
 		return;
@@ -16046,10 +16050,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmSwitchToggle_OnBGMSwitch_m4AF9E5FF39E
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619_inline(L_0, NULL);
-		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7 = L_1;
+		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8 = L_1;
 		// uiHandleRectTransform.anchoredPosition = audioManager.bgmsetting ? handlePosition : handlePosition * -1;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_2 = __this->___uiHandleRectTransform_4;
-		bool L_3 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7;
+		bool L_3 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8;
 		G_B1_0 = L_2;
 		if (L_3)
 		{
@@ -16079,7 +16083,7 @@ IL_0035:
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(G_B3_1, G_B3_0, NULL);
 		// backgroundImage.color = audioManager.bgmsetting ? backgroundDefaultActiveColor : backgroundActiveColor;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_7 = __this->___backgroundImage_7;
-		bool L_8 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7;
+		bool L_8 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8;
 		G_B4_0 = L_7;
 		if (L_8)
 		{
@@ -16107,7 +16111,7 @@ IL_0055:
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, G_B6_1, G_B6_0);
 		// handleImage.color = audioManager.bgmsetting ? handleDefaultActiveColor : handleActiveColor;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_11 = __this->___handleImage_8;
-		bool L_12 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7;
+		bool L_12 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8;
 		G_B7_0 = L_11;
 		if (L_12)
 		{
@@ -16135,7 +16139,7 @@ IL_0075:
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, G_B9_1, G_B9_0);
 		// bgmSource.SetActive(audioManager.bgmsetting);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = __this->___bgmSource_13;
-		bool L_16 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7;
+		bool L_16 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8;
 		NullCheck(L_15);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_15, L_16, NULL);
 		// audioManager.saveGameSettings();
@@ -16558,11 +16562,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SfxSwitchToggle_Start_m03AE595958E5C2694
 	{
 		// toggle.isOn = audioManager.sfxsetting;
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_0 = __this->___toggle_14;
-		bool L_1 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6;
+		bool L_1 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7;
 		NullCheck(L_0);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_0, L_1, NULL);
 		// OnSFXSwitchState(audioManager.sfxsetting);
-		bool L_2 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6;
+		bool L_2 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7;
 		SfxSwitchToggle_OnSFXSwitchState_m76F2947E74B358CC62BED9FD9786F0545D1BCAB7(__this, L_2, NULL);
 		// }
 		return;
@@ -16598,10 +16602,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SfxSwitchToggle_OnSFXSwitch_m49DF1A8E7EE
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619_inline(L_0, NULL);
-		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6 = L_1;
+		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7 = L_1;
 		// uiHandleRectTransform.anchoredPosition = audioManager.sfxsetting ? handlePosition : handlePosition * -1;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_2 = __this->___uiHandleRectTransform_4;
-		bool L_3 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6;
+		bool L_3 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7;
 		G_B1_0 = L_2;
 		if (L_3)
 		{
@@ -16631,7 +16635,7 @@ IL_0035:
 		RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965(G_B3_1, G_B3_0, NULL);
 		// backgroundImage.color = audioManager.sfxsetting ? backgroundDefaultActiveColor : backgroundActiveColor;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_7 = __this->___backgroundImage_7;
-		bool L_8 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6;
+		bool L_8 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7;
 		G_B4_0 = L_7;
 		if (L_8)
 		{
@@ -16659,7 +16663,7 @@ IL_0055:
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, G_B6_1, G_B6_0);
 		// handleImage.color = audioManager.sfxsetting ? handleDefaultActiveColor : handleActiveColor;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_11 = __this->___handleImage_8;
-		bool L_12 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6;
+		bool L_12 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7;
 		G_B7_0 = L_11;
 		if (L_12)
 		{
@@ -16687,7 +16691,7 @@ IL_0075:
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, G_B9_1, G_B9_0);
 		// sfxSource.SetActive(audioManager.sfxsetting);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = __this->___sfxSource_13;
-		bool L_16 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6;
+		bool L_16 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7;
 		NullCheck(L_15);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_15, L_16, NULL);
 		// audioManager.saveGameSettings();
@@ -18709,7 +18713,7 @@ IL_00fa:
 	}
 	{
 		// if (audioManager.sfxsetting) {
-		bool L_43 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6;
+		bool L_43 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7;
 		if (!L_43)
 		{
 			goto IL_010f;
@@ -24573,7 +24577,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Shape_OnPointerDown_m5322594A9FE9AF7A2B6
 	}
 	{
 		// if (audioManager.sfxsetting) {
-		bool L_0 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6;
+		bool L_0 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7;
 		if (!L_0)
 		{
 			goto IL_0011;
@@ -27150,55 +27154,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void audioManager_Awake_m3B80DFD7BCA08D865844
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// Application.targetFrameRate = targetFrameRate;
+		int32_t L_0 = __this->___targetFrameRate_6;
+		Application_set_targetFrameRate_mB90EEA60DAE55CD71C38D4B7DFDBE2B34EA6B46F(L_0, NULL);
 		// if (BinaryDataStream.Exist(playerGameSettingskey))
-		String_t* L_0 = __this->___playerGameSettingskey_9;
-		bool L_1;
-		L_1 = BinaryDataStream_Exist_m7A602114D421E353889CEA324C07B9F41B10B230(L_0, NULL);
-		if (!L_1)
+		String_t* L_1 = __this->___playerGameSettingskey_10;
+		bool L_2;
+		L_2 = BinaryDataStream_Exist_m7A602114D421E353889CEA324C07B9F41B10B230(L_1, NULL);
+		if (!L_2)
 		{
-			goto IL_0040;
+			goto IL_004b;
 		}
 	}
 	{
 		// playerGameSettings_ = BinaryDataStream.Read<playerGameSettingData>(playerGameSettingskey);
-		String_t* L_2 = __this->___playerGameSettingskey_9;
-		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_3;
-		L_3 = BinaryDataStream_Read_TisplayerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E_m454BC1706A14A897BFBC9D241EE576B7608C05BC(L_2, BinaryDataStream_Read_TisplayerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E_m454BC1706A14A897BFBC9D241EE576B7608C05BC_RuntimeMethod_var);
-		__this->___playerGameSettings__8 = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerGameSettings__8), (void*)L_3);
+		String_t* L_3 = __this->___playerGameSettingskey_10;
+		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_4;
+		L_4 = BinaryDataStream_Read_TisplayerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E_m454BC1706A14A897BFBC9D241EE576B7608C05BC(L_3, BinaryDataStream_Read_TisplayerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E_m454BC1706A14A897BFBC9D241EE576B7608C05BC_RuntimeMethod_var);
+		__this->___playerGameSettings__9 = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerGameSettings__9), (void*)L_4);
 		// sfxsetting = playerGameSettings_.sfxsetting;
-		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_4 = __this->___playerGameSettings__8;
-		NullCheck(L_4);
-		bool L_5 = L_4->___sfxsetting_0;
-		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6 = L_5;
+		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_5 = __this->___playerGameSettings__9;
+		NullCheck(L_5);
+		bool L_6 = L_5->___sfxsetting_0;
+		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7 = L_6;
 		// bgmsetting = playerGameSettings_.bgmsetting;
-		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_6 = __this->___playerGameSettings__8;
-		NullCheck(L_6);
-		bool L_7 = L_6->___bgmsetting_1;
-		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7 = L_7;
-		goto IL_004c;
+		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_7 = __this->___playerGameSettings__9;
+		NullCheck(L_7);
+		bool L_8 = L_7->___bgmsetting_1;
+		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8 = L_8;
+		goto IL_0057;
 	}
 
-IL_0040:
+IL_004b:
 	{
 		// bgmsetting = true;
-		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7 = (bool)1;
+		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8 = (bool)1;
 		// sfxsetting = true;
-		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6 = (bool)1;
+		((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7 = (bool)1;
 	}
 
-IL_004c:
+IL_0057:
 	{
 		// bgmSource.SetActive(bgmsetting);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___bgmSource_4;
-		bool L_9 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7;
-		NullCheck(L_8);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_8, L_9, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = __this->___bgmSource_4;
+		bool L_10 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8;
+		NullCheck(L_9);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_9, L_10, NULL);
 		// sfxSource.SetActive(sfxsetting);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___sfxSource_5;
-		bool L_11 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6;
-		NullCheck(L_10);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, L_11, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___sfxSource_5;
+		bool L_12 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7;
+		NullCheck(L_11);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_11, L_12, NULL);
 		// }
 		return;
 	}
@@ -27215,18 +27222,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void audioManager_saveGameSettings_mBDABEB262
 	}
 	{
 		// playerGameSettings_.sfxsetting = sfxsetting;
-		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_0 = __this->___playerGameSettings__8;
-		bool L_1 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_6;
+		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_0 = __this->___playerGameSettings__9;
+		bool L_1 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___sfxsetting_7;
 		NullCheck(L_0);
 		L_0->___sfxsetting_0 = L_1;
 		// playerGameSettings_.bgmsetting = bgmsetting;
-		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_2 = __this->___playerGameSettings__8;
-		bool L_3 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_7;
+		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_2 = __this->___playerGameSettings__9;
+		bool L_3 = ((audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_StaticFields*)il2cpp_codegen_static_fields_for(audioManager_t4D19496126B7D00B1C38E60E3AD941595D9BEF13_il2cpp_TypeInfo_var))->___bgmsetting_8;
 		NullCheck(L_2);
 		L_2->___bgmsetting_1 = L_3;
 		// BinaryDataStream.Save<playerGameSettingData>(playerGameSettings_, playerGameSettingskey);
-		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_4 = __this->___playerGameSettings__8;
-		String_t* L_5 = __this->___playerGameSettingskey_9;
+		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_4 = __this->___playerGameSettings__9;
+		String_t* L_5 = __this->___playerGameSettingskey_10;
 		BinaryDataStream_Save_TisplayerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E_mD9090E23A51ADF40AB7443DC5E8EF0BDD1B1EF65(L_4, L_5, BinaryDataStream_Save_TisplayerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E_mD9090E23A51ADF40AB7443DC5E8EF0BDD1B1EF65_RuntimeMethod_var);
 		// }
 		return;
@@ -27243,15 +27250,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void audioManager__ctor_mD13DB70B51892DDCC8A6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// public int targetFrameRate = 60;
+		__this->___targetFrameRate_6 = ((int32_t)60);
 		// public playerGameSettingData playerGameSettings_ = new playerGameSettingData();
 		playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E* L_0 = (playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E*)il2cpp_codegen_object_new(playerGameSettingData_t3F19C53DCAFA22EFA8542FBC1B7A4C16C50BD72E_il2cpp_TypeInfo_var);
 		NullCheck(L_0);
 		playerGameSettingData__ctor_m416C43348A1E04DD05C24CEE389A0EA960AA6168(L_0, NULL);
-		__this->___playerGameSettings__8 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerGameSettings__8), (void*)L_0);
+		__this->___playerGameSettings__9 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerGameSettings__9), (void*)L_0);
 		// private string playerGameSettingskey = "playerGameSettings";
-		__this->___playerGameSettingskey_9 = _stringLiteralBCDD910D952A205C5DE5ABD73A579C94A46FF5BE;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerGameSettingskey_9), (void*)_stringLiteralBCDD910D952A205C5DE5ABD73A579C94A46FF5BE);
+		__this->___playerGameSettingskey_10 = _stringLiteralBCDD910D952A205C5DE5ABD73A579C94A46FF5BE;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerGameSettingskey_10), (void*)_stringLiteralBCDD910D952A205C5DE5ABD73A579C94A46FF5BE);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}

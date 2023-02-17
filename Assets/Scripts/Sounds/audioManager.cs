@@ -14,6 +14,8 @@ public class audioManager : MonoBehaviour
     public GameObject bgmSource;
     public GameObject sfxSource;
 
+    public int targetFrameRate = 60;
+
     public static bool sfxsetting;
     public static bool bgmsetting;
 
@@ -24,6 +26,8 @@ public class audioManager : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = targetFrameRate;
+
         if (BinaryDataStream.Exist(playerGameSettingskey))
         {
             playerGameSettings_ = BinaryDataStream.Read<playerGameSettingData>(playerGameSettingskey);

@@ -2,6 +2,7 @@
   <packages>
     <package>androidx.lifecycle:lifecycle-common-java8:2.4.1</package>
     <package>androidx.lifecycle:lifecycle-process:2.4.1</package>
+    <package>com.applovin:applovin-sdk:11.7.1</package>
     <package>com.google.android.gms:play-services-ads:21.3.0</package>
     <package>com.google.android.gms:play-services-base:18.1.0</package>
     <package>com.google.android.ump:user-messaging-platform:2.0.0</package>
@@ -56,6 +57,7 @@
     <file>Assets/Plugins/Android/androidx.versionedparcelable.versionedparcelable-1.1.1.aar</file>
     <file>Assets/Plugins/Android/androidx.viewpager.viewpager-1.0.0.aar</file>
     <file>Assets/Plugins/Android/androidx.work.work-runtime-2.7.0.aar</file>
+    <file>Assets/Plugins/Android/com.applovin.applovin-sdk-11.7.1.aar</file>
     <file>Assets/Plugins/Android/com.google.android.datatransport.transport-api-3.0.0.aar</file>
     <file>Assets/Plugins/Android/com.google.android.datatransport.transport-backend-cct-3.1.8.aar</file>
     <file>Assets/Plugins/Android/com.google.android.datatransport.transport-runtime-3.1.8.aar</file>
