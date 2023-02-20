@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
+    public AdsManager adsManager;
     public GameObject SettingsPopup;
 
     private void Awake()
@@ -43,9 +44,10 @@ public class MenuButtons : MonoBehaviour
         Grid.gamemode = "";
     }
 
-    public static void LoadRewardAds()
+    public void LoadRewardAds()
     {
-        adsManager.I.ShowRewardAd();
+        adsManager.ShowRewardedInterstitialAd();
+        //adsManager.I.ShowRewardAd();
     }
 
     public void ReTryGame(string name)

@@ -46,7 +46,6 @@ public class ShapeStorage : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(Grid.gamemode);
         if (BinaryDataStream.Exist(playerSaveGamekey))
         {
             string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
@@ -156,12 +155,6 @@ public class ShapeStorage : MonoBehaviour
             shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
             UpdateSquareColor();
         }
-
-        //foreach (Shape shape in shapeList)
-        //{
-        //    int i = Random.Range(0, 4);
-        //    shape.transform.eulerAngles = new Vector3(0, 0, 90 * i);
-        //}
     }
 
     public void resurrectionNewShapes()

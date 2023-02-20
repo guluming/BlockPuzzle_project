@@ -8,6 +8,7 @@ public class RadialProgress : MonoBehaviour
     public Grid grid;
     public Scores score;
     public GameOverPopup gameOverPopup;
+    public AdsManager adsManager;
     public Text ProgressIndicator;
     public Image LoadingBar;
     float currentValue = 0;
@@ -42,7 +43,8 @@ public class RadialProgress : MonoBehaviour
         }
         else
         {
-            adsManager.I.ShowInterstitialAd();
+            adsManager.ShowInterstitial();
+            //adsManager.I.ShowInterstitialAd();
             grid.playerSaveGame_.saveGameOver = true;
             ProgressIndicator.text = "0";
         }
@@ -52,6 +54,7 @@ public class RadialProgress : MonoBehaviour
 
     public void LoadRewardAds() {
         Time.timeScale = 0;
-        adsManager.I.ShowRewardAd();
+        adsManager.ShowRewardedInterstitialAd();
+        //adsManager.I.ShowRewardAd();
     }
 }
