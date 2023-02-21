@@ -257,6 +257,8 @@ public class Grid : MonoBehaviour
             }
 
             CheckIfAnyLineIsCompleted(currentSelectedShape.TotalSquareNumber);
+
+
         }
         else
         {

@@ -132,11 +132,6 @@ public class ShapeStorage : MonoBehaviour
 
     private void RequestNewShapes()
     {
-        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame")
-        {
-            grid.CheckIfPlayLost();
-        }
-
         if (!isCombo)
         {
             ComboCount = 0;
@@ -154,6 +149,11 @@ public class ShapeStorage : MonoBehaviour
             grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
             shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
             UpdateSquareColor();
+        }
+
+        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame")
+        {
+            grid.CheckIfPlayLost();
         }
     }
 

@@ -1,7 +1,5 @@
 <dependencies>
   <packages>
-    <package>androidx.lifecycle:lifecycle-common-java8:2.4.1</package>
-    <package>androidx.lifecycle:lifecycle-process:2.4.1</package>
     <package>androidx.recyclerview:recyclerview:1.2.1</package>
     <package>com.android.support:customtabs:28.+</package>
     <package>com.android.support:recyclerview-v7:28.+</package>
@@ -9,16 +7,15 @@
     <package>com.applovin.mediation:chartboost-adapter:9.2.0.0</package>
     <package>com.applovin.mediation:facebook-adapter:[6.12.0.2]</package>
     <package>com.applovin.mediation:fyber-adapter:8.2.2.0</package>
+    <package>com.applovin.mediation:google-adapter:[21.5.0.0]</package>
     <package>com.applovin.mediation:inmobi-adapter:10.1.2.4</package>
     <package>com.applovin.mediation:ironsource-adapter:7.2.7.0.0</package>
     <package>com.applovin.mediation:mintegral-adapter:16.3.61.0</package>
     <package>com.applovin.mediation:unityads-adapter:4.5.0.2</package>
     <package>com.applovin.mediation:verve-adapter:2.17.0.0</package>
     <package>com.applovin:applovin-sdk:11.7.1</package>
-    <package>com.google.android.gms:play-services-ads:21.3.0</package>
     <package>com.google.android.gms:play-services-base:16.1.0</package>
     <package>com.google.android.gms:play-services-base:18.1.0</package>
-    <package>com.google.android.ump:user-messaging-platform:2.0.0</package>
     <package>com.google.firebase:firebase-analytics:21.2.0</package>
     <package>com.google.firebase:firebase-analytics-unity:10.4.0</package>
     <package>com.google.firebase:firebase-app-unity:10.4.0</package>

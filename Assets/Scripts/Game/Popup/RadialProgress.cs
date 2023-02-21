@@ -21,16 +21,16 @@ public class RadialProgress : MonoBehaviour
         {
             Grid.Playerlife = 0;
         }
-        else {
-            if (score.currentScores_ >= score.bestScores_.score)
-            {
-                gameOverPopup.NewBestScoreActive();
-            }
-            else
-            {
-                gameOverPopup.GameOverActive();
-            }
-        }
+        //else {
+        //    if (score.currentScores_ >= score.bestScores_.score)
+        //    {
+        //        gameOverPopup.NewBestScoreActive();
+        //    }
+        //    else
+        //    {
+        //        gameOverPopup.GameOverActive();
+        //    }
+        //}
     }
 
     void Update()
