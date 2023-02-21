@@ -219,16 +219,8 @@ struct TextInfo_tD3BAFCFD77418851E7D5CB8D2588F47019E414B4;
 struct Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1;
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915;
-// com.adjust.sdk.AdjustAndroid/AttributionChangeListener
-struct AttributionChangeListener_t0B8C6D1DBF499C6634879A716BC3AE153527E04B;
-// com.adjust.sdk.AdjustAndroid/DeferredDeeplinkListener
-struct DeferredDeeplinkListener_tA916B993050D1BEB933F0B0D1803DB56ADD897F3;
 // com.adjust.sdk.AdjustAndroid/DeviceIdsReadListener
 struct DeviceIdsReadListener_t12950C9ED92EC62C5F47A5C06230AE558D8A509C;
-// com.adjust.sdk.AdjustAndroid/EventTrackingFailedListener
-struct EventTrackingFailedListener_t6236AFA914021CB80116982BE82693AA0BF9ECD9;
-// com.adjust.sdk.AdjustAndroid/EventTrackingSucceededListener
-struct EventTrackingSucceededListener_tFC976FD5B32EEC7DDA71D1414A7BF334A873588B;
 // com.adjust.sdk.AdjustAndroid/SessionTrackingFailedListener
 struct SessionTrackingFailedListener_t122CA3302C546C66232D03803D6CB66763F43C5D;
 // com.adjust.sdk.AdjustAndroid/SessionTrackingSucceededListener
@@ -236,10 +228,7 @@ struct SessionTrackingSucceededListener_t3A3F5AC668F534AFEA81060AC794AB0C6B2770D
 
 IL2CPP_EXTERN_C RuntimeClass* Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AdjustAndroid_t828216DA4A4060A864C544105B2240B5AC9E4016_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AdjustConfig_tD435777B1EC48602D9CE912CF174792E3039BB49_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var;
@@ -275,7 +264,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral1938FDF81D9EFE09E9786A7A7DDFFBD755961098
 IL2CPP_EXTERN_C String_t* _stringLiteral199406D22C247C128830321CCA0F0AA8B9EA8AF2;
 IL2CPP_EXTERN_C String_t* _stringLiteral1B3211DBE32867758EEF2D80E75AAE41597EA87C;
 IL2CPP_EXTERN_C String_t* _stringLiteral1C58321BD3C0DE4662E8E68A19634DEAC58F3251;
-IL2CPP_EXTERN_C String_t* _stringLiteral2357A4E0D0D00387C99FD0191A8303405A83489C;
 IL2CPP_EXTERN_C String_t* _stringLiteral2492F08BCEBC6B4E86EA52B2DAFD8538DB7CCA9C;
 IL2CPP_EXTERN_C String_t* _stringLiteral252C0671443017876C13A4B1405734D0B2A251E4;
 IL2CPP_EXTERN_C String_t* _stringLiteral25E049EC7B4CD14D8602F67EE0C37C9AB40177F0;
@@ -309,14 +297,12 @@ IL2CPP_EXTERN_C String_t* _stringLiteral87E6B368D708695D844FB24A36D0437AFFE064A0
 IL2CPP_EXTERN_C String_t* _stringLiteral8B324FCBD0A58C910F684A8AD8C8A9604A01AE5D;
 IL2CPP_EXTERN_C String_t* _stringLiteral8BD8EBBF9AAADE3A1911E0372AF7DEEFC2B7800D;
 IL2CPP_EXTERN_C String_t* _stringLiteral8D72771221931EA82C15C15FDE3ED02FC39BD069;
-IL2CPP_EXTERN_C String_t* _stringLiteral942D5AF222C530757EB868EF023A5D2B55904966;
 IL2CPP_EXTERN_C String_t* _stringLiteral94FFD26B9FC865144CCBD5729EA8FAFF93163FB4;
 IL2CPP_EXTERN_C String_t* _stringLiteral9ACD0102DF47E7CF98E660BDDEC79497C54A8EB3;
 IL2CPP_EXTERN_C String_t* _stringLiteral9AD521726EC368F034B818450ADBFE7F1C1F2CA6;
 IL2CPP_EXTERN_C String_t* _stringLiteral9C875FC5A1F359BCA3028786C3DCDC54965A6B08;
 IL2CPP_EXTERN_C String_t* _stringLiteral9EC60DDE1532572C618EA4F6F432BB526B5B9B4A;
 IL2CPP_EXTERN_C String_t* _stringLiteral9F85DBEFEA5FADBE3465375963EFAA0318BDEB3E;
-IL2CPP_EXTERN_C String_t* _stringLiteralA26D86D0E64FF78541F33B12225DBE76288D4B29;
 IL2CPP_EXTERN_C String_t* _stringLiteralA333953DEB7B3F631AE4FEB93E9C3AD7F349F8C0;
 IL2CPP_EXTERN_C String_t* _stringLiteralA7B00F7F25C375B2501A6ADBC86D092B23977085;
 IL2CPP_EXTERN_C String_t* _stringLiteralACA02A5838DA1B746B34D0B4661576E1D6ED6515;
@@ -345,18 +331,15 @@ IL2CPP_EXTERN_C String_t* _stringLiteralD67674C9A919D64A0E15E937E72F73AEB09D6787
 IL2CPP_EXTERN_C String_t* _stringLiteralD8A485D101F805D29BFCDD25C667CB04AD5CC888;
 IL2CPP_EXTERN_C String_t* _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 IL2CPP_EXTERN_C String_t* _stringLiteralE1FA7984F63F6132B83FB4302371499FCEE3AAE0;
-IL2CPP_EXTERN_C String_t* _stringLiteralE2125008434118F883C13DC3E9E546986B6C92FE;
 IL2CPP_EXTERN_C String_t* _stringLiteralE9CB7E2903576395C85EB9DC660D0B7900C29151;
 IL2CPP_EXTERN_C String_t* _stringLiteralEAAC6B2415F27BD1BFA4D768FD15E58882F44928;
 IL2CPP_EXTERN_C String_t* _stringLiteralEC54F561E7F139CCBA98C2FC655446C34C074D4C;
 IL2CPP_EXTERN_C String_t* _stringLiteralEE7F2E90C1A80816B11CAE0EA9389988CBD19F97;
-IL2CPP_EXTERN_C String_t* _stringLiteralEF744A66AF516009BB5D37D24EAE75061B97108D;
 IL2CPP_EXTERN_C String_t* _stringLiteralF64BAE12AD307231B0FE01E55EB3DE58705EAE36;
 IL2CPP_EXTERN_C String_t* _stringLiteralF931DEE4A87FE21CBBACC583499FBCF32B68B467;
 IL2CPP_EXTERN_C String_t* _stringLiteralFC0ADAE748048E8066A24C5A9E285FE94437F54C;
 IL2CPP_EXTERN_C String_t* _stringLiteralFCA74A9060DDEE6A3ECAE73E6AB96086770BE7E2;
 IL2CPP_EXTERN_C const RuntimeMethod* Adjust_appWillOpenUrl_m1E13932CE37598AA3C42C4509D2323491569A6F7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_Call_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_m980F8BA95C5B796FDACBDF865A7BAE431DE77362_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* AndroidJavaObject_Get_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m6F4712024377FBA61B40109CE304D4EA5C145016_RuntimeMethod_var;
@@ -529,11 +512,6 @@ struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD  : public RuntimeObject
 	int32_t ____version_3;
 	// System.Object System.Collections.Generic.List`1::_syncRoot
 	RuntimeObject* ____syncRoot_4;
-};
-
-// com.adjust.sdk.AdjustAndroid
-struct AdjustAndroid_t828216DA4A4060A864C544105B2240B5AC9E4016  : public RuntimeObject
-{
 };
 
 // com.adjust.sdk.AdjustAppStoreSubscription
@@ -1490,39 +1468,11 @@ struct MulticastDelegate_t_marshaled_com : public Delegate_t_marshaled_com
 	Delegate_t_marshaled_com** ___delegates_13;
 };
 
-// com.adjust.sdk.AdjustAndroid/AttributionChangeListener
-struct AttributionChangeListener_t0B8C6D1DBF499C6634879A716BC3AE153527E04B  : public AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D
-{
-	// System.Action`1<com.adjust.sdk.AdjustAttribution> com.adjust.sdk.AdjustAndroid/AttributionChangeListener::callback
-	Action_1_t83467CFE2946B43E2165628FC88E344E881C620C* ___callback_4;
-};
-
-// com.adjust.sdk.AdjustAndroid/DeferredDeeplinkListener
-struct DeferredDeeplinkListener_tA916B993050D1BEB933F0B0D1803DB56ADD897F3  : public AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D
-{
-	// System.Action`1<System.String> com.adjust.sdk.AdjustAndroid/DeferredDeeplinkListener::callback
-	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___callback_4;
-};
-
 // com.adjust.sdk.AdjustAndroid/DeviceIdsReadListener
 struct DeviceIdsReadListener_t12950C9ED92EC62C5F47A5C06230AE558D8A509C  : public AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D
 {
 	// System.Action`1<System.String> com.adjust.sdk.AdjustAndroid/DeviceIdsReadListener::onPlayAdIdReadCallback
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___onPlayAdIdReadCallback_4;
-};
-
-// com.adjust.sdk.AdjustAndroid/EventTrackingFailedListener
-struct EventTrackingFailedListener_t6236AFA914021CB80116982BE82693AA0BF9ECD9  : public AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D
-{
-	// System.Action`1<com.adjust.sdk.AdjustEventFailure> com.adjust.sdk.AdjustAndroid/EventTrackingFailedListener::callback
-	Action_1_tC00A847A0DBA2606902B0EE754AD248DB31A720B* ___callback_4;
-};
-
-// com.adjust.sdk.AdjustAndroid/EventTrackingSucceededListener
-struct EventTrackingSucceededListener_tFC976FD5B32EEC7DDA71D1414A7BF334A873588B  : public AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D
-{
-	// System.Action`1<com.adjust.sdk.AdjustEventSuccess> com.adjust.sdk.AdjustAndroid/EventTrackingSucceededListener::callback
-	Action_1_t0B174A8E9C08E244BBCBB2E6AFBC0F579FCD9ED1* ___callback_4;
 };
 
 // com.adjust.sdk.AdjustAndroid/SessionTrackingFailedListener
@@ -1692,31 +1642,6 @@ struct List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_StaticFields
 };
 
 // System.Collections.Generic.List`1<System.String>
-
-// com.adjust.sdk.AdjustAndroid
-struct AdjustAndroid_t828216DA4A4060A864C544105B2240B5AC9E4016_StaticFields
-{
-	// System.Boolean com.adjust.sdk.AdjustAndroid::launchDeferredDeeplink
-	bool ___launchDeferredDeeplink_1;
-	// UnityEngine.AndroidJavaClass com.adjust.sdk.AdjustAndroid::ajcAdjust
-	AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* ___ajcAdjust_2;
-	// UnityEngine.AndroidJavaObject com.adjust.sdk.AdjustAndroid::ajoCurrentActivity
-	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___ajoCurrentActivity_3;
-	// com.adjust.sdk.AdjustAndroid/DeferredDeeplinkListener com.adjust.sdk.AdjustAndroid::onDeferredDeeplinkListener
-	DeferredDeeplinkListener_tA916B993050D1BEB933F0B0D1803DB56ADD897F3* ___onDeferredDeeplinkListener_4;
-	// com.adjust.sdk.AdjustAndroid/AttributionChangeListener com.adjust.sdk.AdjustAndroid::onAttributionChangedListener
-	AttributionChangeListener_t0B8C6D1DBF499C6634879A716BC3AE153527E04B* ___onAttributionChangedListener_5;
-	// com.adjust.sdk.AdjustAndroid/EventTrackingFailedListener com.adjust.sdk.AdjustAndroid::onEventTrackingFailedListener
-	EventTrackingFailedListener_t6236AFA914021CB80116982BE82693AA0BF9ECD9* ___onEventTrackingFailedListener_6;
-	// com.adjust.sdk.AdjustAndroid/EventTrackingSucceededListener com.adjust.sdk.AdjustAndroid::onEventTrackingSucceededListener
-	EventTrackingSucceededListener_tFC976FD5B32EEC7DDA71D1414A7BF334A873588B* ___onEventTrackingSucceededListener_7;
-	// com.adjust.sdk.AdjustAndroid/SessionTrackingFailedListener com.adjust.sdk.AdjustAndroid::onSessionTrackingFailedListener
-	SessionTrackingFailedListener_t122CA3302C546C66232D03803D6CB66763F43C5D* ___onSessionTrackingFailedListener_8;
-	// com.adjust.sdk.AdjustAndroid/SessionTrackingSucceededListener com.adjust.sdk.AdjustAndroid::onSessionTrackingSucceededListener
-	SessionTrackingSucceededListener_t3A3F5AC668F534AFEA81060AC794AB0C6B2770DC* ___onSessionTrackingSucceededListener_9;
-};
-
-// com.adjust.sdk.AdjustAndroid
 
 // com.adjust.sdk.AdjustAppStoreSubscription
 
@@ -2113,25 +2038,9 @@ struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_StaticFields
 
 // System.MulticastDelegate
 
-// com.adjust.sdk.AdjustAndroid/AttributionChangeListener
-
-// com.adjust.sdk.AdjustAndroid/AttributionChangeListener
-
-// com.adjust.sdk.AdjustAndroid/DeferredDeeplinkListener
-
-// com.adjust.sdk.AdjustAndroid/DeferredDeeplinkListener
-
 // com.adjust.sdk.AdjustAndroid/DeviceIdsReadListener
 
 // com.adjust.sdk.AdjustAndroid/DeviceIdsReadListener
-
-// com.adjust.sdk.AdjustAndroid/EventTrackingFailedListener
-
-// com.adjust.sdk.AdjustAndroid/EventTrackingFailedListener
-
-// com.adjust.sdk.AdjustAndroid/EventTrackingSucceededListener
-
-// com.adjust.sdk.AdjustAndroid/EventTrackingSucceededListener
 
 // com.adjust.sdk.AdjustAndroid/SessionTrackingFailedListener
 
@@ -2271,18 +2180,16 @@ struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AndroidJavaObject_Get_TisRuntimeObject_mF7C8EFCB16140AB7116DAA3FCB1B585FC7A203F2_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method) ;
 // T[] System.Array::Empty<System.Object>()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) ;
-// ReturnType UnityEngine.AndroidJavaObject::Call<System.Double>(System.String,System.Object[])
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double AndroidJavaObject_Call_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_m980F8BA95C5B796FDACBDF865A7BAE431DE77362_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
-// System.Void System.Nullable`1<System.Double>::.ctor(T)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_mDE3158DD99CA7E1775A8BA276E428AF808AB8FBF_gshared (Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165* __this, double ___0_value, const RuntimeMethod* method) ;
-// System.Void System.Action`1<System.Object>::Invoke(T)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline (Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) ;
 // ReturnType UnityEngine.AndroidJavaObject::Call<System.Object>(System.String,System.Object[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AndroidJavaObject_Call_TisRuntimeObject_mA5AF1A9E0463CE91F0ACB6AC2FE0C1922B579EF7_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
+// System.Void System.Action`1<System.Object>::Invoke(T)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline (Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) ;
 // FieldType UnityEngine.AndroidJavaObject::Get<System.Boolean>(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AndroidJavaObject_Get_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m6F4712024377FBA61B40109CE304D4EA5C145016_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method) ;
 // System.Void System.Action`1<System.Object>::.ctor(System.Object,System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m2E1DFA67718FC1A0B6E5DFEB78831FFE9C059EB4_gshared (Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+// System.Void System.Nullable`1<System.Double>::.ctor(T)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_mDE3158DD99CA7E1775A8BA276E428AF808AB8FBF_gshared (Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165* __this, double ___0_value, const RuntimeMethod* method) ;
 // System.Void System.Nullable`1<System.Int32>::.ctor(T)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_gshared (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, int32_t ___0_value, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
@@ -2354,8 +2261,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaObject_Set_TisRuntimeObject_m
 
 // System.Void UnityEngine.AndroidJavaProxy::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidJavaProxy__ctor_m2832886A0E1BBF6702653A7C6A4609F11FB712C7 (AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D* __this, String_t* ___0_javaInterface, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustAttribution__ctor_m36B38620BB1475A4ACE1EDB1CCA466AB2F754307 (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustSessionSuccess::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustSessionSuccess__ctor_m5D4F0E9806EDCE8130DE98471E7ECA654B744F9A (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, const RuntimeMethod* method) ;
 // FieldType UnityEngine.AndroidJavaObject::Get<System.String>(System.String)
 inline String_t* AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method)
 {
@@ -2363,118 +2270,27 @@ inline String_t* AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0
 }
 // System.Boolean System.String::op_Equality(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1 (String_t* ___0_a, String_t* ___1_b, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::set_trackerName(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_trackerName_m731697B9763F60A9FC502CC6A1A27BDBD2574876_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::set_trackerToken(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_trackerToken_m6093F9C8CC27B2425BB1373F51EDFA26B9E2103F_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::set_network(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_network_m68ED3E4E1E6850226D667FDE9829B402AF120D20_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::set_campaign(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_campaign_m29AC5BBED526925450C7D081A5A656E9A71470E9_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::set_adgroup(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_adgroup_m04EB13F0176574C01F8E233A15E6E7AB71CDEBFB_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::set_creative(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_creative_mF0F350C3D8521BBC5D841A28428210CD9CF41183_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::set_clickLabel(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_clickLabel_mAAFCDD0362AFE2EF2F6AEC66E6973B65B75692DE_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::set_adid(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_adid_m8FF9650D73A3B30569FA924D09F2A1B5841800F6_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::set_costType(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_costType_m2B994A60E50367E752D803F431BE9B010BE784B0_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// FieldType UnityEngine.AndroidJavaObject::Get<UnityEngine.AndroidJavaObject>(System.String)
-inline AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method)
-{
-	return ((  AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, const RuntimeMethod*))AndroidJavaObject_Get_TisRuntimeObject_mF7C8EFCB16140AB7116DAA3FCB1B585FC7A203F2_gshared)(__this, ___0_fieldName, method);
-}
-// System.Void com.adjust.sdk.AdjustAttribution::set_costAmount(System.Nullable`1<System.Double>)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_costAmount_m8C20F2BD1C52F1109660D5A965B5159BA4DC5647_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165 ___0_value, const RuntimeMethod* method) ;
-// T[] System.Array::Empty<System.Object>()
-inline ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline (const RuntimeMethod* method)
-{
-	return ((  ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* (*) (const RuntimeMethod*))Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline)(method);
-}
-// ReturnType UnityEngine.AndroidJavaObject::Call<System.Double>(System.String,System.Object[])
-inline double AndroidJavaObject_Call_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_m980F8BA95C5B796FDACBDF865A7BAE431DE77362 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method)
-{
-	return ((  double (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, const RuntimeMethod*))AndroidJavaObject_Call_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_m980F8BA95C5B796FDACBDF865A7BAE431DE77362_gshared)(__this, ___0_methodName, ___1_args, method);
-}
-// System.Void System.Nullable`1<System.Double>::.ctor(T)
-inline void Nullable_1__ctor_mDE3158DD99CA7E1775A8BA276E428AF808AB8FBF (Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165* __this, double ___0_value, const RuntimeMethod* method)
-{
-	((  void (*) (Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165*, double, const RuntimeMethod*))Nullable_1__ctor_mDE3158DD99CA7E1775A8BA276E428AF808AB8FBF_gshared)(__this, ___0_value, method);
-}
-// System.Void com.adjust.sdk.AdjustAttribution::set_costCurrency(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_costCurrency_m4C83141F90E118ADEA5CCA620335B9FDD0C38D51_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustAttribution::set_fbInstallReferrer(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_fbInstallReferrer_m03CE43EE59FB3D653CB09AB9BD1DE86EE11D292D_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void System.Action`1<com.adjust.sdk.AdjustAttribution>::Invoke(T)
-inline void Action_1_Invoke_m19F5C2FCEDAF544F9CA8919E78C830EE1F0B4D46_inline (Action_1_t83467CFE2946B43E2165628FC88E344E881C620C* __this, AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* ___0_obj, const RuntimeMethod* method)
-{
-	((  void (*) (Action_1_t83467CFE2946B43E2165628FC88E344E881C620C*, AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C*, const RuntimeMethod*))Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline)(__this, ___0_obj, method);
-}
-// ReturnType UnityEngine.AndroidJavaObject::Call<System.String>(System.String,System.Object[])
-inline String_t* AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method)
-{
-	return ((  String_t* (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, const RuntimeMethod*))AndroidJavaObject_Call_TisRuntimeObject_mA5AF1A9E0463CE91F0ACB6AC2FE0C1922B579EF7_gshared)(__this, ___0_methodName, ___1_args, method);
-}
-// System.Void System.Action`1<System.String>::Invoke(T)
-inline void Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* __this, String_t* ___0_obj, const RuntimeMethod* method)
-{
-	((  void (*) (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*, String_t*, const RuntimeMethod*))Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline)(__this, ___0_obj, method);
-}
-// System.Void com.adjust.sdk.AdjustEventSuccess::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustEventSuccess__ctor_m8E95350D1027E90E42E4A890D5D8F6C683C1388C (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventSuccess::set_Adid(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_Adid_mF832EF6F1DC6FE8156A132AD42AA1060E539A7AD_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventSuccess::set_Message(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_Message_m38D9A47DB181615424C49B59C6E4A562B3E5F89F_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventSuccess::set_Timestamp(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_Timestamp_m0CCE0BEF1E47ACA8E07187A73BBE9ACFEEC6586B_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventSuccess::set_EventToken(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_EventToken_mAF539927077C6E4B98FC29622DE5D26C3A5F2C64_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventSuccess::set_CallbackId(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_CallbackId_mA49D8F4F34D8A1C9FB36A15EFB7572AC187A28C9_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventSuccess::BuildJsonResponseFromString(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustEventSuccess_BuildJsonResponseFromString_mB45093E3AE421B1E1C210318F2081EB7016C065C (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_jsonResponseString, const RuntimeMethod* method) ;
-// System.Void System.Action`1<com.adjust.sdk.AdjustEventSuccess>::Invoke(T)
-inline void Action_1_Invoke_mF62BCEC9DCD64C40821FE03ADEC2E222A89284EB_inline (Action_1_t0B174A8E9C08E244BBCBB2E6AFBC0F579FCD9ED1* __this, AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* ___0_obj, const RuntimeMethod* method)
-{
-	((  void (*) (Action_1_t0B174A8E9C08E244BBCBB2E6AFBC0F579FCD9ED1*, AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA*, const RuntimeMethod*))Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline)(__this, ___0_obj, method);
-}
-// System.Void com.adjust.sdk.AdjustEventFailure::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustEventFailure__ctor_m528922562AC18ADE49AC59EFECDF9DDDF06D9827 (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventFailure::set_Adid(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Adid_m1C9E862F9EE373D5F36B28D07F944581B4733FCC_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventFailure::set_Message(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Message_m67C166B4D02AD43A8835555633ED6A41B6470472_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// FieldType UnityEngine.AndroidJavaObject::Get<System.Boolean>(System.String)
-inline bool AndroidJavaObject_Get_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m6F4712024377FBA61B40109CE304D4EA5C145016 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method)
-{
-	return ((  bool (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, const RuntimeMethod*))AndroidJavaObject_Get_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m6F4712024377FBA61B40109CE304D4EA5C145016_gshared)(__this, ___0_fieldName, method);
-}
-// System.Void com.adjust.sdk.AdjustEventFailure::set_WillRetry(System.Boolean)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_WillRetry_m4C79E145286998F97FFFC7106C792794C06669E9_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, bool ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventFailure::set_Timestamp(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Timestamp_m144FA4FAB62F3AE2D92C8A729A4D80C78129FC8F_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventFailure::set_EventToken(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_EventToken_m0107E2C7300ECD415209E1F64A6B8AD04F33798E_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventFailure::set_CallbackId(System.String)
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_CallbackId_mE4D4EE9B87B3B947F952C7BC539A177AA609B0FD_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) ;
-// System.Void com.adjust.sdk.AdjustEventFailure::BuildJsonResponseFromString(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustEventFailure_BuildJsonResponseFromString_mFC779A74C66E513EC19EF86F780AE363B25A828A (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_jsonResponseString, const RuntimeMethod* method) ;
-// System.Void System.Action`1<com.adjust.sdk.AdjustEventFailure>::Invoke(T)
-inline void Action_1_Invoke_m70436F814175E450B896367B05771F98512F9B8E_inline (Action_1_tC00A847A0DBA2606902B0EE754AD248DB31A720B* __this, AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* ___0_obj, const RuntimeMethod* method)
-{
-	((  void (*) (Action_1_tC00A847A0DBA2606902B0EE754AD248DB31A720B*, AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26*, const RuntimeMethod*))Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline)(__this, ___0_obj, method);
-}
-// System.Void com.adjust.sdk.AdjustSessionSuccess::.ctor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustSessionSuccess__ctor_m5D4F0E9806EDCE8130DE98471E7ECA654B744F9A (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, const RuntimeMethod* method) ;
 // System.Void com.adjust.sdk.AdjustSessionSuccess::set_Adid(System.String)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionSuccess_set_Adid_m4393AA9B18910CE351BB43D1C510132B4F971573_inline (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 // System.Void com.adjust.sdk.AdjustSessionSuccess::set_Message(System.String)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionSuccess_set_Message_mD680D8861FD8EE269D0994D51498AC2210694E99_inline (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 // System.Void com.adjust.sdk.AdjustSessionSuccess::set_Timestamp(System.String)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionSuccess_set_Timestamp_m2ED4611CC016044E197BF515B3A7C81C27B207EA_inline (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// FieldType UnityEngine.AndroidJavaObject::Get<UnityEngine.AndroidJavaObject>(System.String)
+inline AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method)
+{
+	return ((  AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, const RuntimeMethod*))AndroidJavaObject_Get_TisRuntimeObject_mF7C8EFCB16140AB7116DAA3FCB1B585FC7A203F2_gshared)(__this, ___0_fieldName, method);
+}
+// T[] System.Array::Empty<System.Object>()
+inline ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline (const RuntimeMethod* method)
+{
+	return ((  ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* (*) (const RuntimeMethod*))Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline)(method);
+}
+// ReturnType UnityEngine.AndroidJavaObject::Call<System.String>(System.String,System.Object[])
+inline String_t* AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method)
+{
+	return ((  String_t* (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*, const RuntimeMethod*))AndroidJavaObject_Call_TisRuntimeObject_mA5AF1A9E0463CE91F0ACB6AC2FE0C1922B579EF7_gshared)(__this, ___0_methodName, ___1_args, method);
+}
 // System.Void com.adjust.sdk.AdjustSessionSuccess::BuildJsonResponseFromString(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustSessionSuccess_BuildJsonResponseFromString_m2CA7E40EDAD331AE6DEDF385D364682D7AC8ACCE (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, String_t* ___0_jsonResponseString, const RuntimeMethod* method) ;
 // System.Void System.Action`1<com.adjust.sdk.AdjustSessionSuccess>::Invoke(T)
@@ -2488,6 +2304,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustSessionFailure__ctor_m55084005614B
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_Adid_m9D52E417E29F03D868D2A5C1BA50578FAE232BC7_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 // System.Void com.adjust.sdk.AdjustSessionFailure::set_Message(System.String)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_Message_m84D2E372880BCEAB77F55A2D5E3228A2D0179835_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// FieldType UnityEngine.AndroidJavaObject::Get<System.Boolean>(System.String)
+inline bool AndroidJavaObject_Get_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m6F4712024377FBA61B40109CE304D4EA5C145016 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method)
+{
+	return ((  bool (*) (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*, String_t*, const RuntimeMethod*))AndroidJavaObject_Get_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m6F4712024377FBA61B40109CE304D4EA5C145016_gshared)(__this, ___0_fieldName, method);
+}
 // System.Void com.adjust.sdk.AdjustSessionFailure::set_WillRetry(System.Boolean)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_WillRetry_m891830EFFC0F200C979980F639EF51F2357E6BCF_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, bool ___0_value, const RuntimeMethod* method) ;
 // System.Void com.adjust.sdk.AdjustSessionFailure::set_Timestamp(System.String)
@@ -2498,6 +2319,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustSessionFailure_BuildJsonResponseFr
 inline void Action_1_Invoke_mE2F1EB1C255C43E7C8671D5680B428D566B8F198_inline (Action_1_tE525B4DA61B71476C7887ABBF554BB9B69EFAA8B* __this, AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* ___0_obj, const RuntimeMethod* method)
 {
 	((  void (*) (Action_1_tE525B4DA61B71476C7887ABBF554BB9B69EFAA8B*, AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23*, const RuntimeMethod*))Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline)(__this, ___0_obj, method);
+}
+// System.Void System.Action`1<System.String>::Invoke(T)
+inline void Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* __this, String_t* ___0_obj, const RuntimeMethod* method)
+{
+	((  void (*) (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*, String_t*, const RuntimeMethod*))Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline)(__this, ___0_obj, method);
 }
 // System.Void com.adjust.sdk.AdjustAndroid/DeviceIdsReadListener::onGoogleAdIdRead(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeviceIdsReadListener_onGoogleAdIdRead_m82DB269D37125FB1A6A3667454CF5B408AC179DD (DeviceIdsReadListener_t12950C9ED92EC62C5F47A5C06230AE558D8A509C* __this, String_t* ___0_playAdId, const RuntimeMethod* method) ;
@@ -2630,6 +2456,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustAndroid_SetTestOptions_m320168C98A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 // System.Void System.Object::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
+// System.Void System.Nullable`1<System.Double>::.ctor(T)
+inline void Nullable_1__ctor_mDE3158DD99CA7E1775A8BA276E428AF808AB8FBF (Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165* __this, double ___0_value, const RuntimeMethod* method)
+{
+	((  void (*) (Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165*, double, const RuntimeMethod*))Nullable_1__ctor_mDE3158DD99CA7E1775A8BA276E428AF808AB8FBF_gshared)(__this, ___0_value, method);
+}
 // System.Void System.Nullable`1<System.Int32>::.ctor(T)
 inline void Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703 (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, int32_t ___0_value, const RuntimeMethod* method)
 {
@@ -2651,10 +2482,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR JSONNode_tC53BF5744519F4E94EEFA09E2186A2783A5
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JSONNode_op_Equality_mF53AB65ABCF70E4C7D035DF059648FED12577634 (JSONNode_tC53BF5744519F4E94EEFA09E2186A2783A560D97* ___0_a, RuntimeObject* ___1_b, const RuntimeMethod* method) ;
 // System.String com.adjust.sdk.AdjustUtils::GetJsonString(com.adjust.sdk.JSONNode,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AdjustUtils_GetJsonString_m7E4ABC127B656F2CF1D6D5C2973CCDC9345477A1 (JSONNode_tC53BF5744519F4E94EEFA09E2186A2783A560D97* ___0_node, String_t* ___1_key, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_trackerName(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_trackerName_m731697B9763F60A9FC502CC6A1A27BDBD2574876_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_trackerToken(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_trackerToken_m6093F9C8CC27B2425BB1373F51EDFA26B9E2103F_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_network(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_network_m68ED3E4E1E6850226D667FDE9829B402AF120D20_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_campaign(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_campaign_m29AC5BBED526925450C7D081A5A656E9A71470E9_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_adgroup(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_adgroup_m04EB13F0176574C01F8E233A15E6E7AB71CDEBFB_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_creative(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_creative_mF0F350C3D8521BBC5D841A28428210CD9CF41183_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_clickLabel(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_clickLabel_mAAFCDD0362AFE2EF2F6AEC66E6973B65B75692DE_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_adid(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_adid_m8FF9650D73A3B30569FA924D09F2A1B5841800F6_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_costType(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_costType_m2B994A60E50367E752D803F431BE9B010BE784B0_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 // System.Globalization.CultureInfo System.Globalization.CultureInfo::get_InvariantCulture()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* CultureInfo_get_InvariantCulture_mD1E96DC845E34B10F78CB744B0CB5D7D63CEB1E6 (const RuntimeMethod* method) ;
 // System.Double System.Double::Parse(System.String,System.IFormatProvider)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Double_Parse_m4566961BEFC86A927E00D2843F98EE83162EF2AB (String_t* ___0_s, RuntimeObject* ___1_provider, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_costAmount(System.Nullable`1<System.Double>)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_costAmount_m8C20F2BD1C52F1109660D5A965B5159BA4DC5647_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165 ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_costCurrency(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_costCurrency_m4C83141F90E118ADEA5CCA620335B9FDD0C38D51_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustAttribution::set_fbInstallReferrer(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_fbInstallReferrer_m03CE43EE59FB3D653CB09AB9BD1DE86EE11D292D_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 // System.String com.adjust.sdk.AdjustUtils::TryGetValue(System.Collections.Generic.Dictionary`2<System.String,System.String>,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AdjustUtils_TryGetValue_m3BF1818C3435B2DD8794C6BF52073DE2D50A57E9 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___0_dictionary, String_t* ___1_key, const RuntimeMethod* method) ;
 // System.Void System.Nullable`1<System.Boolean>::.ctor(T)
@@ -2672,8 +2527,20 @@ inline void Nullable_1__ctor_m117BE9EF6DBC76B088B52AFB80634B9195D384A1 (Nullable
 {
 	((  void (*) (Nullable_1_t365991B3904FDA7642A788423B28692FDC7CDB17*, int64_t, const RuntimeMethod*))Nullable_1__ctor_m117BE9EF6DBC76B088B52AFB80634B9195D384A1_gshared)(__this, ___0_value, method);
 }
+// System.Void com.adjust.sdk.AdjustEventFailure::set_Adid(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Adid_m1C9E862F9EE373D5F36B28D07F944581B4733FCC_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustEventFailure::set_Message(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Message_m67C166B4D02AD43A8835555633ED6A41B6470472_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustEventFailure::set_Timestamp(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Timestamp_m144FA4FAB62F3AE2D92C8A729A4D80C78129FC8F_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustEventFailure::set_EventToken(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_EventToken_m0107E2C7300ECD415209E1F64A6B8AD04F33798E_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustEventFailure::set_CallbackId(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_CallbackId_mE4D4EE9B87B3B947F952C7BC539A177AA609B0FD_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 // System.Boolean System.Boolean::TryParse(System.String,System.Boolean&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Boolean_TryParse_m417053B6E8D3724D0EED9E87C90D143622158352 (String_t* ___0_value, bool* ___1_result, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustEventFailure::set_WillRetry(System.Boolean)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_WillRetry_m4C79E145286998F97FFFC7106C792794C06669E9_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, bool ___0_value, const RuntimeMethod* method) ;
 // System.Boolean com.adjust.sdk.JSONNode::op_Inequality(com.adjust.sdk.JSONNode,System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JSONNode_op_Inequality_m31F67DC83671EE7A334E8A1A0445AC08CFDD9BD5 (JSONNode_tC53BF5744519F4E94EEFA09E2186A2783A560D97* ___0_a, RuntimeObject* ___1_b, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.Dictionary`2<System.String,System.Object>::.ctor()
@@ -2691,6 +2558,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AdjustUtils_WriteJsonResponseDictionary_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Convert_ToBoolean_m3DEA64CC166C14DD2B3461A04C227A05BC06DFEC (String_t* ___0_value, const RuntimeMethod* method) ;
 // System.String com.adjust.sdk.AdjustUtils::GetJsonResponseCompact(System.Collections.Generic.Dictionary`2<System.String,System.Object>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AdjustUtils_GetJsonResponseCompact_mB1763C6F6A17665BAA0534CE919BCFB7D7D491F6 (Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___0_dictionary, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustEventSuccess::set_Adid(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_Adid_mF832EF6F1DC6FE8156A132AD42AA1060E539A7AD_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustEventSuccess::set_Message(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_Message_m38D9A47DB181615424C49B59C6E4A562B3E5F89F_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustEventSuccess::set_Timestamp(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_Timestamp_m0CCE0BEF1E47ACA8E07187A73BBE9ACFEEC6586B_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustEventSuccess::set_EventToken(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_EventToken_mAF539927077C6E4B98FC29622DE5D26C3A5F2C64_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
+// System.Void com.adjust.sdk.AdjustEventSuccess::set_CallbackId(System.String)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_CallbackId_mA49D8F4F34D8A1C9FB36A15EFB7572AC187A28C9_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 // System.Void com.adjust.sdk.AdjustEventSuccess::set_JsonResponse(System.Collections.Generic.Dictionary`2<System.String,System.Object>)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_JsonResponse_mCA8F4E6DE391C1D4B8BCEEFB437BA5EE1E717D90_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___0_value, const RuntimeMethod* method) ;
 // System.Collections.Generic.Dictionary`2<System.String,System.Object> com.adjust.sdk.AdjustEventSuccess::get_JsonResponse()
@@ -2903,1446 +2780,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t Int64_Parse_m466621B41F074263D83527F8
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3 (String_t* __this, int32_t ___0_index, const RuntimeMethod* method) ;
 // System.Int32 System.String::get_Length()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) ;
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void com.adjust.sdk.AdjustAndroid/AttributionChangeListener::.ctor(System.Action`1<com.adjust.sdk.AdjustAttribution>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AttributionChangeListener__ctor_mA6205D1D3A3CBA8F7FD10B413B0FD68FFFA548B8 (AttributionChangeListener_t0B8C6D1DBF499C6634879A716BC3AE153527E04B* __this, Action_1_t83467CFE2946B43E2165628FC88E344E881C620C* ___0_pCallback, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEF744A66AF516009BB5D37D24EAE75061B97108D);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// public AttributionChangeListener(Action<AdjustAttribution> pCallback) : base("com.adjust.sdk.OnAttributionChangedListener")
-		il2cpp_codegen_runtime_class_init_inline(AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D_il2cpp_TypeInfo_var);
-		AndroidJavaProxy__ctor_m2832886A0E1BBF6702653A7C6A4609F11FB712C7(__this, _stringLiteralEF744A66AF516009BB5D37D24EAE75061B97108D, NULL);
-		// this.callback = pCallback;
-		Action_1_t83467CFE2946B43E2165628FC88E344E881C620C* L_0 = ___0_pCallback;
-		__this->___callback_4 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___callback_4), (void*)L_0);
-		// }
-		return;
-	}
-}
-// System.Void com.adjust.sdk.AdjustAndroid/AttributionChangeListener::onAttributionChanged(UnityEngine.AndroidJavaObject)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AttributionChangeListener_onAttributionChanged_m8EEEC19136B64A9315CCB266EF17028994504EB8 (AttributionChangeListener_t0B8C6D1DBF499C6634879A716BC3AE153527E04B* __this, AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___0_attribution, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Call_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_m980F8BA95C5B796FDACBDF865A7BAE431DE77362_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Nullable_1__ctor_mDE3158DD99CA7E1775A8BA276E428AF808AB8FBF_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2357A4E0D0D00387C99FD0191A8303405A83489C);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		s_Il2CppMethodInitialized = true;
-	}
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* V_0 = NULL;
-	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_1 = NULL;
-	Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165 V_2;
-	memset((&V_2), 0, sizeof(V_2));
-	double V_3 = 0.0;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B4_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B3_0 = NULL;
-	String_t* G_B5_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B5_1 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B7_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B6_0 = NULL;
-	String_t* G_B8_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B8_1 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B10_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B9_0 = NULL;
-	String_t* G_B11_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B11_1 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B13_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B12_0 = NULL;
-	String_t* G_B14_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B14_1 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B16_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B15_0 = NULL;
-	String_t* G_B17_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B17_1 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B19_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B18_0 = NULL;
-	String_t* G_B20_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B20_1 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B22_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B21_0 = NULL;
-	String_t* G_B23_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B23_1 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B25_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B24_0 = NULL;
-	String_t* G_B26_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B26_1 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B28_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B27_0 = NULL;
-	String_t* G_B29_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B29_1 = NULL;
-	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B32_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B37_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B36_0 = NULL;
-	String_t* G_B38_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B38_1 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B40_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B39_0 = NULL;
-	String_t* G_B41_0 = NULL;
-	AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* G_B41_1 = NULL;
-	{
-		// if (callback == null)
-		Action_1_t83467CFE2946B43E2165628FC88E344E881C620C* L_0 = __this->___callback_4;
-		if (L_0)
-		{
-			goto IL_0009;
-		}
-	}
-	{
-		// return;
-		return;
-	}
-
-IL_0009:
-	{
-		// AdjustAttribution adjustAttribution = new AdjustAttribution();
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_1 = (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C*)il2cpp_codegen_object_new(AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C_il2cpp_TypeInfo_var);
-		NullCheck(L_1);
-		AdjustAttribution__ctor_m36B38620BB1475A4ACE1EDB1CCA466AB2F754307(L_1, NULL);
-		V_0 = L_1;
-		// adjustAttribution.trackerName = attribution.Get<string>(AdjustUtils.KeyTrackerName) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyTrackerName);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_2 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_3 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_4 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyTrackerName_11;
-		NullCheck(L_3);
-		String_t* L_5;
-		L_5 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_3, L_4, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_6;
-		L_6 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_5, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B3_0 = L_2;
-		if (L_6)
-		{
-			G_B4_0 = L_2;
-			goto IL_0034;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_7 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_8 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyTrackerName_11;
-		NullCheck(L_7);
-		String_t* L_9;
-		L_9 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_7, L_8, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B5_0 = L_9;
-		G_B5_1 = G_B3_0;
-		goto IL_0035;
-	}
-
-IL_0034:
-	{
-		G_B5_0 = ((String_t*)(NULL));
-		G_B5_1 = G_B4_0;
-	}
-
-IL_0035:
-	{
-		NullCheck(G_B5_1);
-		AdjustAttribution_set_trackerName_m731697B9763F60A9FC502CC6A1A27BDBD2574876_inline(G_B5_1, G_B5_0, NULL);
-		// adjustAttribution.trackerToken = attribution.Get<string>(AdjustUtils.KeyTrackerToken) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyTrackerToken);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_10 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_11 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_12 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyTrackerToken_12;
-		NullCheck(L_11);
-		String_t* L_13;
-		L_13 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_11, L_12, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_14;
-		L_14 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_13, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B6_0 = L_10;
-		if (L_14)
-		{
-			G_B7_0 = L_10;
-			goto IL_005f;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_15 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_16 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyTrackerToken_12;
-		NullCheck(L_15);
-		String_t* L_17;
-		L_17 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_15, L_16, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B8_0 = L_17;
-		G_B8_1 = G_B6_0;
-		goto IL_0060;
-	}
-
-IL_005f:
-	{
-		G_B8_0 = ((String_t*)(NULL));
-		G_B8_1 = G_B7_0;
-	}
-
-IL_0060:
-	{
-		NullCheck(G_B8_1);
-		AdjustAttribution_set_trackerToken_m6093F9C8CC27B2425BB1373F51EDFA26B9E2103F_inline(G_B8_1, G_B8_0, NULL);
-		// adjustAttribution.network = attribution.Get<string>(AdjustUtils.KeyNetwork) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyNetwork);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_18 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_19 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_20 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyNetwork_2;
-		NullCheck(L_19);
-		String_t* L_21;
-		L_21 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_19, L_20, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_22;
-		L_22 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_21, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B9_0 = L_18;
-		if (L_22)
-		{
-			G_B10_0 = L_18;
-			goto IL_008a;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_23 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_24 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyNetwork_2;
-		NullCheck(L_23);
-		String_t* L_25;
-		L_25 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_23, L_24, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B11_0 = L_25;
-		G_B11_1 = G_B9_0;
-		goto IL_008b;
-	}
-
-IL_008a:
-	{
-		G_B11_0 = ((String_t*)(NULL));
-		G_B11_1 = G_B10_0;
-	}
-
-IL_008b:
-	{
-		NullCheck(G_B11_1);
-		AdjustAttribution_set_network_m68ED3E4E1E6850226D667FDE9829B402AF120D20_inline(G_B11_1, G_B11_0, NULL);
-		// adjustAttribution.campaign = attribution.Get<string>(AdjustUtils.KeyCampaign) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyCampaign);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_26 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_27 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_28 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCampaign_4;
-		NullCheck(L_27);
-		String_t* L_29;
-		L_29 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_27, L_28, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_30;
-		L_30 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_29, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B12_0 = L_26;
-		if (L_30)
-		{
-			G_B13_0 = L_26;
-			goto IL_00b5;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_31 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_32 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCampaign_4;
-		NullCheck(L_31);
-		String_t* L_33;
-		L_33 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_31, L_32, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B14_0 = L_33;
-		G_B14_1 = G_B12_0;
-		goto IL_00b6;
-	}
-
-IL_00b5:
-	{
-		G_B14_0 = ((String_t*)(NULL));
-		G_B14_1 = G_B13_0;
-	}
-
-IL_00b6:
-	{
-		NullCheck(G_B14_1);
-		AdjustAttribution_set_campaign_m29AC5BBED526925450C7D081A5A656E9A71470E9_inline(G_B14_1, G_B14_0, NULL);
-		// adjustAttribution.adgroup = attribution.Get<string>(AdjustUtils.KeyAdgroup) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyAdgroup);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_34 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_35 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_36 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyAdgroup_3;
-		NullCheck(L_35);
-		String_t* L_37;
-		L_37 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_35, L_36, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_38;
-		L_38 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_37, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B15_0 = L_34;
-		if (L_38)
-		{
-			G_B16_0 = L_34;
-			goto IL_00e0;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_39 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_40 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyAdgroup_3;
-		NullCheck(L_39);
-		String_t* L_41;
-		L_41 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_39, L_40, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B17_0 = L_41;
-		G_B17_1 = G_B15_0;
-		goto IL_00e1;
-	}
-
-IL_00e0:
-	{
-		G_B17_0 = ((String_t*)(NULL));
-		G_B17_1 = G_B16_0;
-	}
-
-IL_00e1:
-	{
-		NullCheck(G_B17_1);
-		AdjustAttribution_set_adgroup_m04EB13F0176574C01F8E233A15E6E7AB71CDEBFB_inline(G_B17_1, G_B17_0, NULL);
-		// adjustAttribution.creative = attribution.Get<string>(AdjustUtils.KeyCreative) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyCreative);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_42 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_43 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_44 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCreative_5;
-		NullCheck(L_43);
-		String_t* L_45;
-		L_45 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_43, L_44, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_46;
-		L_46 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_45, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B18_0 = L_42;
-		if (L_46)
-		{
-			G_B19_0 = L_42;
-			goto IL_010b;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_47 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_48 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCreative_5;
-		NullCheck(L_47);
-		String_t* L_49;
-		L_49 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_47, L_48, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B20_0 = L_49;
-		G_B20_1 = G_B18_0;
-		goto IL_010c;
-	}
-
-IL_010b:
-	{
-		G_B20_0 = ((String_t*)(NULL));
-		G_B20_1 = G_B19_0;
-	}
-
-IL_010c:
-	{
-		NullCheck(G_B20_1);
-		AdjustAttribution_set_creative_mF0F350C3D8521BBC5D841A28428210CD9CF41183_inline(G_B20_1, G_B20_0, NULL);
-		// adjustAttribution.clickLabel = attribution.Get<string>(AdjustUtils.KeyClickLabel) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyClickLabel);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_50 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_51 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_52 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyClickLabel_10;
-		NullCheck(L_51);
-		String_t* L_53;
-		L_53 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_51, L_52, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_54;
-		L_54 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_53, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B21_0 = L_50;
-		if (L_54)
-		{
-			G_B22_0 = L_50;
-			goto IL_0136;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_55 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_56 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyClickLabel_10;
-		NullCheck(L_55);
-		String_t* L_57;
-		L_57 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_55, L_56, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B23_0 = L_57;
-		G_B23_1 = G_B21_0;
-		goto IL_0137;
-	}
-
-IL_0136:
-	{
-		G_B23_0 = ((String_t*)(NULL));
-		G_B23_1 = G_B22_0;
-	}
-
-IL_0137:
-	{
-		NullCheck(G_B23_1);
-		AdjustAttribution_set_clickLabel_mAAFCDD0362AFE2EF2F6AEC66E6973B65B75692DE_inline(G_B23_1, G_B23_0, NULL);
-		// adjustAttribution.adid = attribution.Get<string>(AdjustUtils.KeyAdid) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyAdid);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_58 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_59 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_60 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyAdid_0;
-		NullCheck(L_59);
-		String_t* L_61;
-		L_61 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_59, L_60, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_62;
-		L_62 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_61, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B24_0 = L_58;
-		if (L_62)
-		{
-			G_B25_0 = L_58;
-			goto IL_0161;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_63 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_64 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyAdid_0;
-		NullCheck(L_63);
-		String_t* L_65;
-		L_65 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_63, L_64, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B26_0 = L_65;
-		G_B26_1 = G_B24_0;
-		goto IL_0162;
-	}
-
-IL_0161:
-	{
-		G_B26_0 = ((String_t*)(NULL));
-		G_B26_1 = G_B25_0;
-	}
-
-IL_0162:
-	{
-		NullCheck(G_B26_1);
-		AdjustAttribution_set_adid_m8FF9650D73A3B30569FA924D09F2A1B5841800F6_inline(G_B26_1, G_B26_0, NULL);
-		// adjustAttribution.costType = attribution.Get<string>(AdjustUtils.KeyCostType) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyCostType);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_66 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_67 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_68 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCostType_14;
-		NullCheck(L_67);
-		String_t* L_69;
-		L_69 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_67, L_68, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_70;
-		L_70 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_69, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B27_0 = L_66;
-		if (L_70)
-		{
-			G_B28_0 = L_66;
-			goto IL_018c;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_71 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_72 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCostType_14;
-		NullCheck(L_71);
-		String_t* L_73;
-		L_73 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_71, L_72, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B29_0 = L_73;
-		G_B29_1 = G_B27_0;
-		goto IL_018d;
-	}
-
-IL_018c:
-	{
-		G_B29_0 = ((String_t*)(NULL));
-		G_B29_1 = G_B28_0;
-	}
-
-IL_018d:
-	{
-		NullCheck(G_B29_1);
-		AdjustAttribution_set_costType_m2B994A60E50367E752D803F431BE9B010BE784B0_inline(G_B29_1, G_B29_0, NULL);
-		// AndroidJavaObject ajoCostAmount = attribution.Get<AndroidJavaObject>(AdjustUtils.KeyCostAmount) == null ?
-		//     null : attribution.Get<AndroidJavaObject>(AdjustUtils.KeyCostAmount);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_74 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_75 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCostAmount_15;
-		NullCheck(L_74);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_76;
-		L_76 = AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843(L_74, L_75, AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843_RuntimeMethod_var);
-		if (!L_76)
-		{
-			goto IL_01ac;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_77 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_78 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCostAmount_15;
-		NullCheck(L_77);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_79;
-		L_79 = AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843(L_77, L_78, AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843_RuntimeMethod_var);
-		G_B32_0 = L_79;
-		goto IL_01ad;
-	}
-
-IL_01ac:
-	{
-		G_B32_0 = ((AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)(NULL));
-	}
-
-IL_01ad:
-	{
-		V_1 = G_B32_0;
-		// if (ajoCostAmount == null)
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_80 = V_1;
-		if (L_80)
-		{
-			goto IL_01c2;
-		}
-	}
-	{
-		// adjustAttribution.costAmount = null;
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_81 = V_0;
-		il2cpp_codegen_initobj((&V_2), sizeof(Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165));
-		Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165 L_82 = V_2;
-		NullCheck(L_81);
-		AdjustAttribution_set_costAmount_m8C20F2BD1C52F1109660D5A965B5159BA4DC5647_inline(L_81, L_82, NULL);
-		goto IL_01df;
-	}
-
-IL_01c2:
-	{
-		// double costAmount = ajoCostAmount.Call<double>("doubleValue");
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_83 = V_1;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_84;
-		L_84 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-		NullCheck(L_83);
-		double L_85;
-		L_85 = AndroidJavaObject_Call_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_m980F8BA95C5B796FDACBDF865A7BAE431DE77362(L_83, _stringLiteral2357A4E0D0D00387C99FD0191A8303405A83489C, L_84, AndroidJavaObject_Call_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_m980F8BA95C5B796FDACBDF865A7BAE431DE77362_RuntimeMethod_var);
-		V_3 = L_85;
-		// adjustAttribution.costAmount = costAmount;
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_86 = V_0;
-		double L_87 = V_3;
-		Nullable_1_t6E154519A812D040E3016229CD7638843A2CC165 L_88;
-		memset((&L_88), 0, sizeof(L_88));
-		Nullable_1__ctor_mDE3158DD99CA7E1775A8BA276E428AF808AB8FBF((&L_88), L_87, /*hidden argument*/Nullable_1__ctor_mDE3158DD99CA7E1775A8BA276E428AF808AB8FBF_RuntimeMethod_var);
-		NullCheck(L_86);
-		AdjustAttribution_set_costAmount_m8C20F2BD1C52F1109660D5A965B5159BA4DC5647_inline(L_86, L_88, NULL);
-	}
-
-IL_01df:
-	{
-		// adjustAttribution.costCurrency = attribution.Get<string>(AdjustUtils.KeyCostCurrency) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyCostCurrency);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_89 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_90 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_91 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCostCurrency_16;
-		NullCheck(L_90);
-		String_t* L_92;
-		L_92 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_90, L_91, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_93;
-		L_93 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_92, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B36_0 = L_89;
-		if (L_93)
-		{
-			G_B37_0 = L_89;
-			goto IL_0204;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_94 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_95 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCostCurrency_16;
-		NullCheck(L_94);
-		String_t* L_96;
-		L_96 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_94, L_95, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B38_0 = L_96;
-		G_B38_1 = G_B36_0;
-		goto IL_0205;
-	}
-
-IL_0204:
-	{
-		G_B38_0 = ((String_t*)(NULL));
-		G_B38_1 = G_B37_0;
-	}
-
-IL_0205:
-	{
-		NullCheck(G_B38_1);
-		AdjustAttribution_set_costCurrency_m4C83141F90E118ADEA5CCA620335B9FDD0C38D51_inline(G_B38_1, G_B38_0, NULL);
-		// adjustAttribution.fbInstallReferrer = attribution.Get<string>(AdjustUtils.KeyFbInstallReferrer) == "" ?
-		//     null : attribution.Get<string>(AdjustUtils.KeyFbInstallReferrer);
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_97 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_98 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_99 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyFbInstallReferrer_17;
-		NullCheck(L_98);
-		String_t* L_100;
-		L_100 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_98, L_99, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_101;
-		L_101 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_100, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B39_0 = L_97;
-		if (L_101)
-		{
-			G_B40_0 = L_97;
-			goto IL_022f;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_102 = ___0_attribution;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_103 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyFbInstallReferrer_17;
-		NullCheck(L_102);
-		String_t* L_104;
-		L_104 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_102, L_103, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B41_0 = L_104;
-		G_B41_1 = G_B39_0;
-		goto IL_0230;
-	}
-
-IL_022f:
-	{
-		G_B41_0 = ((String_t*)(NULL));
-		G_B41_1 = G_B40_0;
-	}
-
-IL_0230:
-	{
-		NullCheck(G_B41_1);
-		AdjustAttribution_set_fbInstallReferrer_m03CE43EE59FB3D653CB09AB9BD1DE86EE11D292D_inline(G_B41_1, G_B41_0, NULL);
-		// callback(adjustAttribution);
-		Action_1_t83467CFE2946B43E2165628FC88E344E881C620C* L_105 = __this->___callback_4;
-		AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* L_106 = V_0;
-		NullCheck(L_105);
-		Action_1_Invoke_m19F5C2FCEDAF544F9CA8919E78C830EE1F0B4D46_inline(L_105, L_106, NULL);
-		// }
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void com.adjust.sdk.AdjustAndroid/DeferredDeeplinkListener::.ctor(System.Action`1<System.String>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeferredDeeplinkListener__ctor_m9AFF50C9019C550FE14B914675EE675B36EE0582 (DeferredDeeplinkListener_tA916B993050D1BEB933F0B0D1803DB56ADD897F3* __this, Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___0_pCallback, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE2125008434118F883C13DC3E9E546986B6C92FE);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// public DeferredDeeplinkListener(Action<string> pCallback) : base("com.adjust.sdk.OnDeeplinkResponseListener")
-		il2cpp_codegen_runtime_class_init_inline(AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D_il2cpp_TypeInfo_var);
-		AndroidJavaProxy__ctor_m2832886A0E1BBF6702653A7C6A4609F11FB712C7(__this, _stringLiteralE2125008434118F883C13DC3E9E546986B6C92FE, NULL);
-		// this.callback = pCallback;
-		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_0 = ___0_pCallback;
-		__this->___callback_4 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___callback_4), (void*)L_0);
-		// }
-		return;
-	}
-}
-// System.Boolean com.adjust.sdk.AdjustAndroid/DeferredDeeplinkListener::launchReceivedDeeplink(UnityEngine.AndroidJavaObject)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DeferredDeeplinkListener_launchReceivedDeeplink_mE6D35176E2C2AADC10C881FF8F3927AB528C5F3B (DeferredDeeplinkListener_tA916B993050D1BEB933F0B0D1803DB56ADD897F3* __this, AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___0_deeplink, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AdjustAndroid_t828216DA4A4060A864C544105B2240B5AC9E4016_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral495DD512A2F1C21C6107D1EA689AF431C75A1C5A);
-		s_Il2CppMethodInitialized = true;
-	}
-	String_t* V_0 = NULL;
-	{
-		// if (callback == null)
-		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_0 = __this->___callback_4;
-		if (L_0)
-		{
-			goto IL_000e;
-		}
-	}
-	{
-		// return launchDeferredDeeplink;
-		il2cpp_codegen_runtime_class_init_inline(AdjustAndroid_t828216DA4A4060A864C544105B2240B5AC9E4016_il2cpp_TypeInfo_var);
-		bool L_1 = ((AdjustAndroid_t828216DA4A4060A864C544105B2240B5AC9E4016_StaticFields*)il2cpp_codegen_static_fields_for(AdjustAndroid_t828216DA4A4060A864C544105B2240B5AC9E4016_il2cpp_TypeInfo_var))->___launchDeferredDeeplink_1;
-		return L_1;
-	}
-
-IL_000e:
-	{
-		// string deeplinkURL = deeplink.Call<string>("toString");
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_2 = ___0_deeplink;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_3;
-		L_3 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-		NullCheck(L_2);
-		String_t* L_4;
-		L_4 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(L_2, _stringLiteral495DD512A2F1C21C6107D1EA689AF431C75A1C5A, L_3, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		V_0 = L_4;
-		// callback(deeplinkURL);
-		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_5 = __this->___callback_4;
-		String_t* L_6 = V_0;
-		NullCheck(L_5);
-		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(L_5, L_6, NULL);
-		// return launchDeferredDeeplink;
-		il2cpp_codegen_runtime_class_init_inline(AdjustAndroid_t828216DA4A4060A864C544105B2240B5AC9E4016_il2cpp_TypeInfo_var);
-		bool L_7 = ((AdjustAndroid_t828216DA4A4060A864C544105B2240B5AC9E4016_StaticFields*)il2cpp_codegen_static_fields_for(AdjustAndroid_t828216DA4A4060A864C544105B2240B5AC9E4016_il2cpp_TypeInfo_var))->___launchDeferredDeeplink_1;
-		return L_7;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void com.adjust.sdk.AdjustAndroid/EventTrackingSucceededListener::.ctor(System.Action`1<com.adjust.sdk.AdjustEventSuccess>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventTrackingSucceededListener__ctor_m2A4ED2670A9A651245F8D5E344BDBFB5B3E3D43D (EventTrackingSucceededListener_tFC976FD5B32EEC7DDA71D1414A7BF334A873588B* __this, Action_1_t0B174A8E9C08E244BBCBB2E6AFBC0F579FCD9ED1* ___0_pCallback, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA26D86D0E64FF78541F33B12225DBE76288D4B29);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// public EventTrackingSucceededListener(Action<AdjustEventSuccess> pCallback) : base("com.adjust.sdk.OnEventTrackingSucceededListener")
-		il2cpp_codegen_runtime_class_init_inline(AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D_il2cpp_TypeInfo_var);
-		AndroidJavaProxy__ctor_m2832886A0E1BBF6702653A7C6A4609F11FB712C7(__this, _stringLiteralA26D86D0E64FF78541F33B12225DBE76288D4B29, NULL);
-		// this.callback = pCallback;
-		Action_1_t0B174A8E9C08E244BBCBB2E6AFBC0F579FCD9ED1* L_0 = ___0_pCallback;
-		__this->___callback_4 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___callback_4), (void*)L_0);
-		// }
-		return;
-	}
-}
-// System.Void com.adjust.sdk.AdjustAndroid/EventTrackingSucceededListener::onFinishedEventTrackingSucceeded(UnityEngine.AndroidJavaObject)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventTrackingSucceededListener_onFinishedEventTrackingSucceeded_m202DFEA1323BD584F04E02C0A8323870A1959460 (EventTrackingSucceededListener_tFC976FD5B32EEC7DDA71D1414A7BF334A873588B* __this, AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___0_eventSuccessData, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral495DD512A2F1C21C6107D1EA689AF431C75A1C5A);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		s_Il2CppMethodInitialized = true;
-	}
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* V_0 = NULL;
-	String_t* V_1 = NULL;
-	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B6_0 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B5_0 = NULL;
-	String_t* G_B7_0 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B7_1 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B9_0 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B8_0 = NULL;
-	String_t* G_B10_0 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B10_1 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B12_0 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B11_0 = NULL;
-	String_t* G_B13_0 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B13_1 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B15_0 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B14_0 = NULL;
-	String_t* G_B16_0 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B16_1 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B18_0 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B17_0 = NULL;
-	String_t* G_B19_0 = NULL;
-	AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* G_B19_1 = NULL;
-	{
-		// if (callback == null)
-		Action_1_t0B174A8E9C08E244BBCBB2E6AFBC0F579FCD9ED1* L_0 = __this->___callback_4;
-		if (L_0)
-		{
-			goto IL_0009;
-		}
-	}
-	{
-		// return;
-		return;
-	}
-
-IL_0009:
-	{
-		// if (eventSuccessData == null)
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_1 = ___0_eventSuccessData;
-		if (L_1)
-		{
-			goto IL_000d;
-		}
-	}
-	{
-		// return;
-		return;
-	}
-
-IL_000d:
-	{
-		// AdjustEventSuccess adjustEventSuccess = new AdjustEventSuccess();
-		AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* L_2 = (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA*)il2cpp_codegen_object_new(AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA_il2cpp_TypeInfo_var);
-		NullCheck(L_2);
-		AdjustEventSuccess__ctor_m8E95350D1027E90E42E4A890D5D8F6C683C1388C(L_2, NULL);
-		V_0 = L_2;
-		// adjustEventSuccess.Adid = eventSuccessData.Get<string>(AdjustUtils.KeyAdid) == "" ?
-		//     null : eventSuccessData.Get<string>(AdjustUtils.KeyAdid);
-		AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* L_3 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_4 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_5 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyAdid_0;
-		NullCheck(L_4);
-		String_t* L_6;
-		L_6 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_4, L_5, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_7;
-		L_7 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_6, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B5_0 = L_3;
-		if (L_7)
-		{
-			G_B6_0 = L_3;
-			goto IL_0038;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_8 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_9 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyAdid_0;
-		NullCheck(L_8);
-		String_t* L_10;
-		L_10 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_8, L_9, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B7_0 = L_10;
-		G_B7_1 = G_B5_0;
-		goto IL_0039;
-	}
-
-IL_0038:
-	{
-		G_B7_0 = ((String_t*)(NULL));
-		G_B7_1 = G_B6_0;
-	}
-
-IL_0039:
-	{
-		NullCheck(G_B7_1);
-		AdjustEventSuccess_set_Adid_mF832EF6F1DC6FE8156A132AD42AA1060E539A7AD_inline(G_B7_1, G_B7_0, NULL);
-		// adjustEventSuccess.Message = eventSuccessData.Get<string>(AdjustUtils.KeyMessage) == "" ?
-		//     null : eventSuccessData.Get<string>(AdjustUtils.KeyMessage);
-		AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* L_11 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_12 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_13 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyMessage_1;
-		NullCheck(L_12);
-		String_t* L_14;
-		L_14 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_12, L_13, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_15;
-		L_15 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_14, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B8_0 = L_11;
-		if (L_15)
-		{
-			G_B9_0 = L_11;
-			goto IL_0063;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_16 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_17 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyMessage_1;
-		NullCheck(L_16);
-		String_t* L_18;
-		L_18 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_16, L_17, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B10_0 = L_18;
-		G_B10_1 = G_B8_0;
-		goto IL_0064;
-	}
-
-IL_0063:
-	{
-		G_B10_0 = ((String_t*)(NULL));
-		G_B10_1 = G_B9_0;
-	}
-
-IL_0064:
-	{
-		NullCheck(G_B10_1);
-		AdjustEventSuccess_set_Message_m38D9A47DB181615424C49B59C6E4A562B3E5F89F_inline(G_B10_1, G_B10_0, NULL);
-		// adjustEventSuccess.Timestamp = eventSuccessData.Get<string>(AdjustUtils.KeyTimestamp) == "" ?
-		//     null : eventSuccessData.Get<string>(AdjustUtils.KeyTimestamp);
-		AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* L_19 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_20 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_21 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyTimestamp_7;
-		NullCheck(L_20);
-		String_t* L_22;
-		L_22 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_20, L_21, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_23;
-		L_23 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_22, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B11_0 = L_19;
-		if (L_23)
-		{
-			G_B12_0 = L_19;
-			goto IL_008e;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_24 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_25 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyTimestamp_7;
-		NullCheck(L_24);
-		String_t* L_26;
-		L_26 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_24, L_25, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B13_0 = L_26;
-		G_B13_1 = G_B11_0;
-		goto IL_008f;
-	}
-
-IL_008e:
-	{
-		G_B13_0 = ((String_t*)(NULL));
-		G_B13_1 = G_B12_0;
-	}
-
-IL_008f:
-	{
-		NullCheck(G_B13_1);
-		AdjustEventSuccess_set_Timestamp_m0CCE0BEF1E47ACA8E07187A73BBE9ACFEEC6586B_inline(G_B13_1, G_B13_0, NULL);
-		// adjustEventSuccess.EventToken = eventSuccessData.Get<string>(AdjustUtils.KeyEventToken) == "" ?
-		//     null : eventSuccessData.Get<string>(AdjustUtils.KeyEventToken);
-		AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* L_27 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_28 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_29 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyEventToken_9;
-		NullCheck(L_28);
-		String_t* L_30;
-		L_30 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_28, L_29, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_31;
-		L_31 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_30, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B14_0 = L_27;
-		if (L_31)
-		{
-			G_B15_0 = L_27;
-			goto IL_00b9;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_32 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_33 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyEventToken_9;
-		NullCheck(L_32);
-		String_t* L_34;
-		L_34 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_32, L_33, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B16_0 = L_34;
-		G_B16_1 = G_B14_0;
-		goto IL_00ba;
-	}
-
-IL_00b9:
-	{
-		G_B16_0 = ((String_t*)(NULL));
-		G_B16_1 = G_B15_0;
-	}
-
-IL_00ba:
-	{
-		NullCheck(G_B16_1);
-		AdjustEventSuccess_set_EventToken_mAF539927077C6E4B98FC29622DE5D26C3A5F2C64_inline(G_B16_1, G_B16_0, NULL);
-		// adjustEventSuccess.CallbackId = eventSuccessData.Get<string>(AdjustUtils.KeyCallbackId) == "" ?
-		//     null : eventSuccessData.Get<string>(AdjustUtils.KeyCallbackId);
-		AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* L_35 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_36 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_37 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCallbackId_8;
-		NullCheck(L_36);
-		String_t* L_38;
-		L_38 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_36, L_37, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_39;
-		L_39 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_38, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B17_0 = L_35;
-		if (L_39)
-		{
-			G_B18_0 = L_35;
-			goto IL_00e4;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_40 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_41 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCallbackId_8;
-		NullCheck(L_40);
-		String_t* L_42;
-		L_42 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_40, L_41, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B19_0 = L_42;
-		G_B19_1 = G_B17_0;
-		goto IL_00e5;
-	}
-
-IL_00e4:
-	{
-		G_B19_0 = ((String_t*)(NULL));
-		G_B19_1 = G_B18_0;
-	}
-
-IL_00e5:
-	{
-		NullCheck(G_B19_1);
-		AdjustEventSuccess_set_CallbackId_mA49D8F4F34D8A1C9FB36A15EFB7572AC187A28C9_inline(G_B19_1, G_B19_0, NULL);
-	}
-	try
-	{// begin try (depth: 1)
-		// AndroidJavaObject ajoJsonResponse = eventSuccessData.Get<AndroidJavaObject>(AdjustUtils.KeyJsonResponse);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_43 = ___0_eventSuccessData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_44 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyJsonResponse_13;
-		NullCheck(L_43);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_45;
-		L_45 = AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843(L_43, L_44, AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843_RuntimeMethod_var);
-		// string jsonResponseString = ajoJsonResponse.Call<string>("toString");
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_46;
-		L_46 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-		NullCheck(L_45);
-		String_t* L_47;
-		L_47 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(L_45, _stringLiteral495DD512A2F1C21C6107D1EA689AF431C75A1C5A, L_46, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		V_1 = L_47;
-		// adjustEventSuccess.BuildJsonResponseFromString(jsonResponseString);
-		AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* L_48 = V_0;
-		String_t* L_49 = V_1;
-		NullCheck(L_48);
-		AdjustEventSuccess_BuildJsonResponseFromString_mB45093E3AE421B1E1C210318F2081EB7016C065C(L_48, L_49, NULL);
-		// }
-		goto IL_0111;
-	}// end try (depth: 1)
-	catch(Il2CppExceptionWrapper& e)
-	{
-		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
-		{
-			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_010e;
-		}
-		throw e;
-	}
-
-CATCH_010e:
-	{// begin catch(System.Exception)
-		// catch (Exception)
-		// }
-		IL2CPP_POP_ACTIVE_EXCEPTION();
-		goto IL_0111;
-	}// end catch (depth: 1)
-
-IL_0111:
-	{
-		// callback(adjustEventSuccess);
-		Action_1_t0B174A8E9C08E244BBCBB2E6AFBC0F579FCD9ED1* L_50 = __this->___callback_4;
-		AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* L_51 = V_0;
-		NullCheck(L_50);
-		Action_1_Invoke_mF62BCEC9DCD64C40821FE03ADEC2E222A89284EB_inline(L_50, L_51, NULL);
-		// }
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void com.adjust.sdk.AdjustAndroid/EventTrackingFailedListener::.ctor(System.Action`1<com.adjust.sdk.AdjustEventFailure>)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventTrackingFailedListener__ctor_m7D5E6FA8F17AAC33B50DFC25A1ACA5183FCE6545 (EventTrackingFailedListener_t6236AFA914021CB80116982BE82693AA0BF9ECD9* __this, Action_1_tC00A847A0DBA2606902B0EE754AD248DB31A720B* ___0_pCallback, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral942D5AF222C530757EB868EF023A5D2B55904966);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// public EventTrackingFailedListener(Action<AdjustEventFailure> pCallback) : base("com.adjust.sdk.OnEventTrackingFailedListener")
-		il2cpp_codegen_runtime_class_init_inline(AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D_il2cpp_TypeInfo_var);
-		AndroidJavaProxy__ctor_m2832886A0E1BBF6702653A7C6A4609F11FB712C7(__this, _stringLiteral942D5AF222C530757EB868EF023A5D2B55904966, NULL);
-		// this.callback = pCallback;
-		Action_1_tC00A847A0DBA2606902B0EE754AD248DB31A720B* L_0 = ___0_pCallback;
-		__this->___callback_4 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___callback_4), (void*)L_0);
-		// }
-		return;
-	}
-}
-// System.Void com.adjust.sdk.AdjustAndroid/EventTrackingFailedListener::onFinishedEventTrackingFailed(UnityEngine.AndroidJavaObject)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventTrackingFailedListener_onFinishedEventTrackingFailed_m4FB36E7E27EF57535C67940BC6F148293CF366C0 (EventTrackingFailedListener_t6236AFA914021CB80116982BE82693AA0BF9ECD9* __this, AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___0_eventFailureData, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Get_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m6F4712024377FBA61B40109CE304D4EA5C145016_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral495DD512A2F1C21C6107D1EA689AF431C75A1C5A);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		s_Il2CppMethodInitialized = true;
-	}
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* V_0 = NULL;
-	String_t* V_1 = NULL;
-	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B6_0 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B5_0 = NULL;
-	String_t* G_B7_0 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B7_1 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B9_0 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B8_0 = NULL;
-	String_t* G_B10_0 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B10_1 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B12_0 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B11_0 = NULL;
-	String_t* G_B13_0 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B13_1 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B15_0 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B14_0 = NULL;
-	String_t* G_B16_0 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B16_1 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B18_0 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B17_0 = NULL;
-	String_t* G_B19_0 = NULL;
-	AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* G_B19_1 = NULL;
-	{
-		// if (callback == null)
-		Action_1_tC00A847A0DBA2606902B0EE754AD248DB31A720B* L_0 = __this->___callback_4;
-		if (L_0)
-		{
-			goto IL_0009;
-		}
-	}
-	{
-		// return;
-		return;
-	}
-
-IL_0009:
-	{
-		// if (eventFailureData == null)
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_1 = ___0_eventFailureData;
-		if (L_1)
-		{
-			goto IL_000d;
-		}
-	}
-	{
-		// return;
-		return;
-	}
-
-IL_000d:
-	{
-		// AdjustEventFailure adjustEventFailure = new AdjustEventFailure();
-		AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* L_2 = (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26*)il2cpp_codegen_object_new(AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26_il2cpp_TypeInfo_var);
-		NullCheck(L_2);
-		AdjustEventFailure__ctor_m528922562AC18ADE49AC59EFECDF9DDDF06D9827(L_2, NULL);
-		V_0 = L_2;
-		// adjustEventFailure.Adid = eventFailureData.Get<string>(AdjustUtils.KeyAdid) == "" ?
-		//     null : eventFailureData.Get<string>(AdjustUtils.KeyAdid);
-		AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* L_3 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_4 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_5 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyAdid_0;
-		NullCheck(L_4);
-		String_t* L_6;
-		L_6 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_4, L_5, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_7;
-		L_7 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_6, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B5_0 = L_3;
-		if (L_7)
-		{
-			G_B6_0 = L_3;
-			goto IL_0038;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_8 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_9 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyAdid_0;
-		NullCheck(L_8);
-		String_t* L_10;
-		L_10 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_8, L_9, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B7_0 = L_10;
-		G_B7_1 = G_B5_0;
-		goto IL_0039;
-	}
-
-IL_0038:
-	{
-		G_B7_0 = ((String_t*)(NULL));
-		G_B7_1 = G_B6_0;
-	}
-
-IL_0039:
-	{
-		NullCheck(G_B7_1);
-		AdjustEventFailure_set_Adid_m1C9E862F9EE373D5F36B28D07F944581B4733FCC_inline(G_B7_1, G_B7_0, NULL);
-		// adjustEventFailure.Message = eventFailureData.Get<string>(AdjustUtils.KeyMessage) == "" ?
-		//     null : eventFailureData.Get<string>(AdjustUtils.KeyMessage);
-		AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* L_11 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_12 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_13 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyMessage_1;
-		NullCheck(L_12);
-		String_t* L_14;
-		L_14 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_12, L_13, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_15;
-		L_15 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_14, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B8_0 = L_11;
-		if (L_15)
-		{
-			G_B9_0 = L_11;
-			goto IL_0063;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_16 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_17 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyMessage_1;
-		NullCheck(L_16);
-		String_t* L_18;
-		L_18 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_16, L_17, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B10_0 = L_18;
-		G_B10_1 = G_B8_0;
-		goto IL_0064;
-	}
-
-IL_0063:
-	{
-		G_B10_0 = ((String_t*)(NULL));
-		G_B10_1 = G_B9_0;
-	}
-
-IL_0064:
-	{
-		NullCheck(G_B10_1);
-		AdjustEventFailure_set_Message_m67C166B4D02AD43A8835555633ED6A41B6470472_inline(G_B10_1, G_B10_0, NULL);
-		// adjustEventFailure.WillRetry = eventFailureData.Get<bool>(AdjustUtils.KeyWillRetry);
-		AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* L_19 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_20 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_21 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyWillRetry_6;
-		NullCheck(L_20);
-		bool L_22;
-		L_22 = AndroidJavaObject_Get_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m6F4712024377FBA61B40109CE304D4EA5C145016(L_20, L_21, AndroidJavaObject_Get_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m6F4712024377FBA61B40109CE304D4EA5C145016_RuntimeMethod_var);
-		NullCheck(L_19);
-		AdjustEventFailure_set_WillRetry_m4C79E145286998F97FFFC7106C792794C06669E9_inline(L_19, L_22, NULL);
-		// adjustEventFailure.Timestamp = eventFailureData.Get<string>(AdjustUtils.KeyTimestamp) == "" ?
-		//     null : eventFailureData.Get<string>(AdjustUtils.KeyTimestamp);
-		AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* L_23 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_24 = ___0_eventFailureData;
-		String_t* L_25 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyTimestamp_7;
-		NullCheck(L_24);
-		String_t* L_26;
-		L_26 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_24, L_25, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_27;
-		L_27 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_26, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B11_0 = L_23;
-		if (L_27)
-		{
-			G_B12_0 = L_23;
-			goto IL_009f;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_28 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_29 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyTimestamp_7;
-		NullCheck(L_28);
-		String_t* L_30;
-		L_30 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_28, L_29, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B13_0 = L_30;
-		G_B13_1 = G_B11_0;
-		goto IL_00a0;
-	}
-
-IL_009f:
-	{
-		G_B13_0 = ((String_t*)(NULL));
-		G_B13_1 = G_B12_0;
-	}
-
-IL_00a0:
-	{
-		NullCheck(G_B13_1);
-		AdjustEventFailure_set_Timestamp_m144FA4FAB62F3AE2D92C8A729A4D80C78129FC8F_inline(G_B13_1, G_B13_0, NULL);
-		// adjustEventFailure.EventToken = eventFailureData.Get<string>(AdjustUtils.KeyEventToken) == "" ?
-		//     null : eventFailureData.Get<string>(AdjustUtils.KeyEventToken);
-		AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* L_31 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_32 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_33 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyEventToken_9;
-		NullCheck(L_32);
-		String_t* L_34;
-		L_34 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_32, L_33, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_35;
-		L_35 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_34, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B14_0 = L_31;
-		if (L_35)
-		{
-			G_B15_0 = L_31;
-			goto IL_00ca;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_36 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_37 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyEventToken_9;
-		NullCheck(L_36);
-		String_t* L_38;
-		L_38 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_36, L_37, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B16_0 = L_38;
-		G_B16_1 = G_B14_0;
-		goto IL_00cb;
-	}
-
-IL_00ca:
-	{
-		G_B16_0 = ((String_t*)(NULL));
-		G_B16_1 = G_B15_0;
-	}
-
-IL_00cb:
-	{
-		NullCheck(G_B16_1);
-		AdjustEventFailure_set_EventToken_m0107E2C7300ECD415209E1F64A6B8AD04F33798E_inline(G_B16_1, G_B16_0, NULL);
-		// adjustEventFailure.CallbackId = eventFailureData.Get<string>(AdjustUtils.KeyCallbackId) == "" ?
-		//     null : eventFailureData.Get<string>(AdjustUtils.KeyCallbackId);
-		AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* L_39 = V_0;
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_40 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_41 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCallbackId_8;
-		NullCheck(L_40);
-		String_t* L_42;
-		L_42 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_40, L_41, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		bool L_43;
-		L_43 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_42, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		G_B17_0 = L_39;
-		if (L_43)
-		{
-			G_B18_0 = L_39;
-			goto IL_00f5;
-		}
-	}
-	{
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_44 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_45 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyCallbackId_8;
-		NullCheck(L_44);
-		String_t* L_46;
-		L_46 = AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030(L_44, L_45, AndroidJavaObject_Get_TisString_t_m1E165541E71E1CDCF224FC55CBD0955147BB9030_RuntimeMethod_var);
-		G_B19_0 = L_46;
-		G_B19_1 = G_B17_0;
-		goto IL_00f6;
-	}
-
-IL_00f5:
-	{
-		G_B19_0 = ((String_t*)(NULL));
-		G_B19_1 = G_B18_0;
-	}
-
-IL_00f6:
-	{
-		NullCheck(G_B19_1);
-		AdjustEventFailure_set_CallbackId_mE4D4EE9B87B3B947F952C7BC539A177AA609B0FD_inline(G_B19_1, G_B19_0, NULL);
-	}
-	try
-	{// begin try (depth: 1)
-		// AndroidJavaObject ajoJsonResponse = eventFailureData.Get<AndroidJavaObject>(AdjustUtils.KeyJsonResponse);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_47 = ___0_eventFailureData;
-		il2cpp_codegen_runtime_class_init_inline(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var);
-		String_t* L_48 = ((AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_StaticFields*)il2cpp_codegen_static_fields_for(AdjustUtils_t6E7EE6AEF4EAC64EA2764254CA559FA0012A256A_il2cpp_TypeInfo_var))->___KeyJsonResponse_13;
-		NullCheck(L_47);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_49;
-		L_49 = AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843(L_47, L_48, AndroidJavaObject_Get_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mA11B51F5C7C2B8DA16D22E862BB40BF7057B5843_RuntimeMethod_var);
-		// string jsonResponseString = ajoJsonResponse.Call<string>("toString");
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_50;
-		L_50 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-		NullCheck(L_49);
-		String_t* L_51;
-		L_51 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(L_49, _stringLiteral495DD512A2F1C21C6107D1EA689AF431C75A1C5A, L_50, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		V_1 = L_51;
-		// adjustEventFailure.BuildJsonResponseFromString(jsonResponseString);
-		AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* L_52 = V_0;
-		String_t* L_53 = V_1;
-		NullCheck(L_52);
-		AdjustEventFailure_BuildJsonResponseFromString_mFC779A74C66E513EC19EF86F780AE363B25A828A(L_52, L_53, NULL);
-		// }
-		goto IL_0122;
-	}// end try (depth: 1)
-	catch(Il2CppExceptionWrapper& e)
-	{
-		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
-		{
-			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_011f;
-		}
-		throw e;
-	}
-
-CATCH_011f:
-	{// begin catch(System.Exception)
-		// catch (Exception)
-		// }
-		IL2CPP_POP_ACTIVE_EXCEPTION();
-		goto IL_0122;
-	}// end catch (depth: 1)
-
-IL_0122:
-	{
-		// callback(adjustEventFailure);
-		Action_1_tC00A847A0DBA2606902B0EE754AD248DB31A720B* L_54 = __this->___callback_4;
-		AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* L_55 = V_0;
-		NullCheck(L_54);
-		Action_1_Invoke_m70436F814175E450B896367B05771F98512F9B8E_inline(L_54, L_55, NULL);
-		// }
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -12723,6 +11160,118 @@ IL_002a:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionSuccess_set_Adid_m4393AA9B18910CE351BB43D1C510132B4F971573_inline (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string Adid { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CAdidU3Ek__BackingField_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAdidU3Ek__BackingField_0), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionSuccess_set_Message_mD680D8861FD8EE269D0994D51498AC2210694E99_inline (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string Message { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CMessageU3Ek__BackingField_1 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMessageU3Ek__BackingField_1), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionSuccess_set_Timestamp_m2ED4611CC016044E197BF515B3A7C81C27B207EA_inline (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string Timestamp { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CTimestampU3Ek__BackingField_2 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CTimestampU3Ek__BackingField_2), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_Adid_m9D52E417E29F03D868D2A5C1BA50578FAE232BC7_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string Adid { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CAdidU3Ek__BackingField_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAdidU3Ek__BackingField_0), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_Message_m84D2E372880BCEAB77F55A2D5E3228A2D0179835_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string Message { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CMessageU3Ek__BackingField_1 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMessageU3Ek__BackingField_1), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_WillRetry_m891830EFFC0F200C979980F639EF51F2357E6BCF_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public bool WillRetry { get; set; }
+		bool L_0 = ___0_value;
+		__this->___U3CWillRetryU3Ek__BackingField_3 = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_Timestamp_m4620F96554EF0DBF543BF574C3B9E2CBEA0BF46E_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string Timestamp { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CTimestampU3Ek__BackingField_2 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CTimestampU3Ek__BackingField_2), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustConfig_setLaunchDeferredDeeplink_m8D6806307929E8E3AE2F01CE3C08BF96DDCD526F_inline (AdjustConfig_tD435777B1EC48602D9CE912CF174792E3039BB49* __this, bool ___0_launchDeferredDeeplink, const RuntimeMethod* method) 
+{
+	{
+		// this.launchDeferredDeeplink = launchDeferredDeeplink;
+		bool L_0 = ___0_launchDeferredDeeplink;
+		__this->___launchDeferredDeeplink_33 = L_0;
+		// }
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustConfig_setDefaultTracker_mA67C3195A19A5E9AA2B5AF9E071336CA9E1AB724_inline (AdjustConfig_tD435777B1EC48602D9CE912CF174792E3039BB49* __this, String_t* ___0_defaultTracker, const RuntimeMethod* method) 
+{
+	{
+		// this.defaultTracker = defaultTracker;
+		String_t* L_0 = ___0_defaultTracker;
+		__this->___defaultTracker_17 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___defaultTracker_17), (void*)L_0);
+		// }
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustConfig_setUrlStrategy_m43C184E9915977FC7955F22A086111B7836E2263_inline (AdjustConfig_tD435777B1EC48602D9CE912CF174792E3039BB49* __this, String_t* ___0_urlStrategy, const RuntimeMethod* method) 
+{
+	{
+		// this.urlStrategy = urlStrategy;
+		String_t* L_0 = ___0_urlStrategy;
+		__this->___urlStrategy_19 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___urlStrategy_19), (void*)L_0);
+		// }
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustConfig_setPreinstallFilePath_mF70F4E2F50F2E73E7EAF1DEAB6351F6AB6EB728A_inline (AdjustConfig_tD435777B1EC48602D9CE912CF174792E3039BB49* __this, String_t* ___0_preinstallFilePath, const RuntimeMethod* method) 
+{
+	{
+		// this.preinstallFilePath = preinstallFilePath;
+		String_t* L_0 = ___0_preinstallFilePath;
+		__this->___preinstallFilePath_47 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___preinstallFilePath_47), (void*)L_0);
+		// }
+		return;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_trackerName_m731697B9763F60A9FC502CC6A1A27BDBD2574876_inline (AdjustAttribution_t24DAB11C31009C51FDE3BAC78DDA6CB613AC783C* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -12842,6 +11391,83 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustAttribution_set_fbInst
 		return;
 	}
 }
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Adid_m1C9E862F9EE373D5F36B28D07F944581B4733FCC_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string Adid { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CAdidU3Ek__BackingField_0 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAdidU3Ek__BackingField_0), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Message_m67C166B4D02AD43A8835555633ED6A41B6470472_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string Message { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CMessageU3Ek__BackingField_1 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMessageU3Ek__BackingField_1), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Timestamp_m144FA4FAB62F3AE2D92C8A729A4D80C78129FC8F_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string Timestamp { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CTimestampU3Ek__BackingField_2 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CTimestampU3Ek__BackingField_2), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_EventToken_m0107E2C7300ECD415209E1F64A6B8AD04F33798E_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string EventToken { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CEventTokenU3Ek__BackingField_3 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CEventTokenU3Ek__BackingField_3), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_CallbackId_mE4D4EE9B87B3B947F952C7BC539A177AA609B0FD_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public string CallbackId { get; set; }
+		String_t* L_0 = ___0_value;
+		__this->___U3CCallbackIdU3Ek__BackingField_4 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CCallbackIdU3Ek__BackingField_4), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_WillRetry_m4C79E145286998F97FFFC7106C792794C06669E9_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public bool WillRetry { get; set; }
+		bool L_0 = ___0_value;
+		__this->___U3CWillRetryU3Ek__BackingField_5 = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_JsonResponse_mC129C66E6BD3773556DD9984F8A9B41987A480EE_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		// public Dictionary<string, object> JsonResponse { get; set; }
+		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_0 = ___0_value;
+		__this->___U3CJsonResponseU3Ek__BackingField_6 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CJsonResponseU3Ek__BackingField_6), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* AdjustEventFailure_get_JsonResponse_mB7A9E1270C3CA4F577552217E4FDB3CCFB32852A_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, const RuntimeMethod* method) 
+{
+	{
+		// public Dictionary<string, object> JsonResponse { get; set; }
+		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_0 = __this->___U3CJsonResponseU3Ek__BackingField_6;
+		return L_0;
+	}
+}
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_Adid_mF832EF6F1DC6FE8156A132AD42AA1060E539A7AD_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -12890,195 +11516,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_Callb
 		__this->___U3CCallbackIdU3Ek__BackingField_4 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CCallbackIdU3Ek__BackingField_4), (void*)L_0);
 		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Adid_m1C9E862F9EE373D5F36B28D07F944581B4733FCC_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string Adid { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CAdidU3Ek__BackingField_0 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAdidU3Ek__BackingField_0), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Message_m67C166B4D02AD43A8835555633ED6A41B6470472_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string Message { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CMessageU3Ek__BackingField_1 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMessageU3Ek__BackingField_1), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_WillRetry_m4C79E145286998F97FFFC7106C792794C06669E9_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, bool ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public bool WillRetry { get; set; }
-		bool L_0 = ___0_value;
-		__this->___U3CWillRetryU3Ek__BackingField_5 = L_0;
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_Timestamp_m144FA4FAB62F3AE2D92C8A729A4D80C78129FC8F_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string Timestamp { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CTimestampU3Ek__BackingField_2 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CTimestampU3Ek__BackingField_2), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_EventToken_m0107E2C7300ECD415209E1F64A6B8AD04F33798E_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string EventToken { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CEventTokenU3Ek__BackingField_3 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CEventTokenU3Ek__BackingField_3), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_CallbackId_mE4D4EE9B87B3B947F952C7BC539A177AA609B0FD_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string CallbackId { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CCallbackIdU3Ek__BackingField_4 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CCallbackIdU3Ek__BackingField_4), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionSuccess_set_Adid_m4393AA9B18910CE351BB43D1C510132B4F971573_inline (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string Adid { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CAdidU3Ek__BackingField_0 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAdidU3Ek__BackingField_0), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionSuccess_set_Message_mD680D8861FD8EE269D0994D51498AC2210694E99_inline (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string Message { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CMessageU3Ek__BackingField_1 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMessageU3Ek__BackingField_1), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionSuccess_set_Timestamp_m2ED4611CC016044E197BF515B3A7C81C27B207EA_inline (AdjustSessionSuccess_t38023C31D6F692A6AA57410490205C23F78AEB87* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string Timestamp { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CTimestampU3Ek__BackingField_2 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CTimestampU3Ek__BackingField_2), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_Adid_m9D52E417E29F03D868D2A5C1BA50578FAE232BC7_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string Adid { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CAdidU3Ek__BackingField_0 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CAdidU3Ek__BackingField_0), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_Message_m84D2E372880BCEAB77F55A2D5E3228A2D0179835_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string Message { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CMessageU3Ek__BackingField_1 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMessageU3Ek__BackingField_1), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_WillRetry_m891830EFFC0F200C979980F639EF51F2357E6BCF_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, bool ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public bool WillRetry { get; set; }
-		bool L_0 = ___0_value;
-		__this->___U3CWillRetryU3Ek__BackingField_3 = L_0;
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustSessionFailure_set_Timestamp_m4620F96554EF0DBF543BF574C3B9E2CBEA0BF46E_inline (AdjustSessionFailure_t0C189E7A2FDD75524F5DA714405D9812006ABF23* __this, String_t* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public string Timestamp { get; set; }
-		String_t* L_0 = ___0_value;
-		__this->___U3CTimestampU3Ek__BackingField_2 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CTimestampU3Ek__BackingField_2), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustConfig_setLaunchDeferredDeeplink_m8D6806307929E8E3AE2F01CE3C08BF96DDCD526F_inline (AdjustConfig_tD435777B1EC48602D9CE912CF174792E3039BB49* __this, bool ___0_launchDeferredDeeplink, const RuntimeMethod* method) 
-{
-	{
-		// this.launchDeferredDeeplink = launchDeferredDeeplink;
-		bool L_0 = ___0_launchDeferredDeeplink;
-		__this->___launchDeferredDeeplink_33 = L_0;
-		// }
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustConfig_setDefaultTracker_mA67C3195A19A5E9AA2B5AF9E071336CA9E1AB724_inline (AdjustConfig_tD435777B1EC48602D9CE912CF174792E3039BB49* __this, String_t* ___0_defaultTracker, const RuntimeMethod* method) 
-{
-	{
-		// this.defaultTracker = defaultTracker;
-		String_t* L_0 = ___0_defaultTracker;
-		__this->___defaultTracker_17 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___defaultTracker_17), (void*)L_0);
-		// }
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustConfig_setUrlStrategy_m43C184E9915977FC7955F22A086111B7836E2263_inline (AdjustConfig_tD435777B1EC48602D9CE912CF174792E3039BB49* __this, String_t* ___0_urlStrategy, const RuntimeMethod* method) 
-{
-	{
-		// this.urlStrategy = urlStrategy;
-		String_t* L_0 = ___0_urlStrategy;
-		__this->___urlStrategy_19 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___urlStrategy_19), (void*)L_0);
-		// }
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustConfig_setPreinstallFilePath_mF70F4E2F50F2E73E7EAF1DEAB6351F6AB6EB728A_inline (AdjustConfig_tD435777B1EC48602D9CE912CF174792E3039BB49* __this, String_t* ___0_preinstallFilePath, const RuntimeMethod* method) 
-{
-	{
-		// this.preinstallFilePath = preinstallFilePath;
-		String_t* L_0 = ___0_preinstallFilePath;
-		__this->___preinstallFilePath_47 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___preinstallFilePath_47), (void*)L_0);
-		// }
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventFailure_set_JsonResponse_mC129C66E6BD3773556DD9984F8A9B41987A480EE_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___0_value, const RuntimeMethod* method) 
-{
-	{
-		// public Dictionary<string, object> JsonResponse { get; set; }
-		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_0 = ___0_value;
-		__this->___U3CJsonResponseU3Ek__BackingField_6 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CJsonResponseU3Ek__BackingField_6), (void*)L_0);
-		return;
-	}
-}
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* AdjustEventFailure_get_JsonResponse_mB7A9E1270C3CA4F577552217E4FDB3CCFB32852A_inline (AdjustEventFailure_t97618DB30BE84909D82256E00C1B080C4C56AF26* __this, const RuntimeMethod* method) 
-{
-	{
-		// public Dictionary<string, object> JsonResponse { get; set; }
-		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_0 = __this->___U3CJsonResponseU3Ek__BackingField_6;
-		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AdjustEventSuccess_set_JsonResponse_mCA8F4E6DE391C1D4B8BCEEFB437BA5EE1E717D90_inline (AdjustEventSuccess_tE3BD5AB4EDB3700846430DB2CA3325E6867861DA* __this, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___0_value, const RuntimeMethod* method) 

@@ -43,9 +43,16 @@ public class RadialProgress : MonoBehaviour
         }
         else
         {
-            adsManager.ShowInterstitial();
-            //adsManager.I.ShowInterstitialAd();
-            grid.playerSaveGame_.saveGameOver = true;
+            if (score.currentScores_ >= score.bestScores_.score)
+            {
+                gameOverPopup.NewBestScoreActive();
+            }
+            else
+            {
+                gameOverPopup.GameOverActive();
+            }
+            //adsManager.ShowInterstitial();
+            //grid.playerSaveGame_.saveGameOver = true;
             ProgressIndicator.text = "0";
         }
 
@@ -54,7 +61,7 @@ public class RadialProgress : MonoBehaviour
 
     public void LoadRewardAds() {
         Time.timeScale = 0;
-        adsManager.ShowRewardedInterstitialAd();
-        //adsManager.I.ShowRewardAd();
+        adsManager.ShowRewardedAd();
+        gameOverPopup.RetryPopupDeactive();
     }
 }

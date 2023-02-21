@@ -44,8 +44,8 @@ public class FlurryStart : MonoBehaviour
                   .Build(FLURRY_API_KEY);
 
         // Example to get Flurry versions.
-        Debug.Log("AgentVersion: " + Flurry.GetAgentVersion());
-        Debug.Log("ReleaseVersion: " + Flurry.GetReleaseVersion());
+        //Debug.Log("AgentVersion: " + Flurry.GetAgentVersion());
+        //Debug.Log("ReleaseVersion: " + Flurry.GetReleaseVersion());
 
         // Set Flurry preferences.
         Flurry.SetLogEnabled(true);
@@ -66,27 +66,27 @@ public class FlurryStart : MonoBehaviour
         // Set Messaging listener only for customizing notification by the native SDK.
         // Flurry.SetMessagingListener(new MyMessagingListener());
 
-        Debug.Log("Flurry Publisher Segmentation Cache Data: " +
-            PrintData<string, string>(Flurry.PublisherSegmentation.GetData()));
+        //Debug.Log("Flurry Publisher Segmentation Cache Data: " +
+        //    PrintData<string, string>(Flurry.PublisherSegmentation.GetData()));
         Flurry.PublisherSegmentation.RegisterListener(new MyPublisherSegmentationListener());
         Flurry.PublisherSegmentation.Fetch();
 
         // Log Flurry events.
         Flurry.EventRecordStatus status = Flurry.LogEvent("Unity Event");
-        Debug.Log("Log Unity Event status: " + status);
+        //Debug.Log("Log Unity Event status: " + status);
 
         // Log Flurry timed events with parameters.
         IDictionary<string, string> parameters = new Dictionary<string, string>();
         parameters.Add("Author", "Flurry");
         parameters.Add("Status", "Registered");
         status = Flurry.LogEvent("Unity Event Params Timed", parameters, true);
-        Debug.Log("Log Unity Event with parameters timed status: " + status);
+        //Debug.Log("Log Unity Event with parameters timed status: " + status);
         // ...
         Flurry.EndTimedEvent("Unity Event Params Timed");
 
         // Log Flurry standard events.
         status = Flurry.LogEvent(Flurry.Event.APP_ACTIVATED);
-        Debug.Log("Log Unity Standard Event status: " + status);
+        //Debug.Log("Log Unity Standard Event status: " + status);
 
         Flurry.EventParams stdParams = new Flurry.EventParams()
             .PutDouble(Flurry.EventParam.TOTAL_AMOUNT, 34.99)
@@ -94,39 +94,39 @@ public class FlurryStart : MonoBehaviour
             .PutString(Flurry.EventParam.ITEM_NAME, "book 1")
             .PutString("note", "This is an awesome book to purchase !!!");
         status = Flurry.LogEvent(Flurry.Event.PURCHASED, stdParams);
-        Debug.Log("Log Unity Standard Event with parameters status: " + status);
+        //Debug.Log("Log Unity Standard Event with parameters status: " + status);
     }
 
     public class MyConfigListener : Flurry.IConfigListener
     {
         public void OnFetchSuccess()
         {
-            Debug.Log("Config Fetch Completed with state: Success");
+            //Debug.Log("Config Fetch Completed with state: Success");
             Flurry.Config.Activate();
         }
 
         public void OnFetchNoChange()
         {
-            Debug.Log("Config Fetch Completed with state: No Change");
+            //Debug.Log("Config Fetch Completed with state: No Change");
             complete();
         }
 
         public void OnFetchError(bool isRetrying)
         {
-            Debug.Log("Config Fetch Completed with state: Fail - " + (isRetrying ? "Retrying" : "End"));
+            //Debug.Log("Config Fetch Completed with state: Fail - " + (isRetrying ? "Retrying" : "End"));
             complete();
         }
 
         public void OnActivateComplete(bool isCache)
         {
-            Debug.Log("Config Fetch Completed with state: Activate Completed - " + (isCache ? "Cached" : "New"));
+            //Debug.Log("Config Fetch Completed with state: Activate Completed - " + (isCache ? "Cached" : "New"));
             complete();
         }
 
         private void complete()
         {
             string welcome_message = Flurry.Config.GetString("welcome_message", "Welcome!");
-            Debug.Log("Get Config Welcome message: " + welcome_message);
+            //Debug.Log("Get Config Welcome message: " + welcome_message);
         }
     }
 
@@ -136,35 +136,35 @@ public class FlurryStart : MonoBehaviour
         // you've handled it, and Flurry will not show the notification.
         public bool OnNotificationReceived(Flurry.FlurryMessage message)
         {
-            Debug.Log("Flurry Messaging Notification Received: "
-                + message.Title + ", " + message.Body + ", " + message.ClickAction
-                + PrintData<string, string>(message.Data));
+            //Debug.Log("Flurry Messaging Notification Received: "
+            //    + message.Title + ", " + message.Body + ", " + message.ClickAction
+            //    + PrintData<string, string>(message.Data));
             return false;
         }
 
         public bool OnNotificationClicked(Flurry.FlurryMessage message)
         {
-            Debug.Log("Flurry Messaging Notification Clicked: "
-                + message.Title + ", " + message.Body + ", " + message.ClickAction
-                + PrintData<string, string>(message.Data));
+            //Debug.Log("Flurry Messaging Notification Clicked: "
+            //    + message.Title + ", " + message.Body + ", " + message.ClickAction
+            //    + PrintData<string, string>(message.Data));
             return false;
         }
 
         public void OnNotificationCancelled(Flurry.FlurryMessage message)
         {
-            Debug.Log("Flurry Messaging Notification Cancelled: "
-                + message.Title + ", " + message.Body + ", " + message.ClickAction
-                + PrintData<string, string>(message.Data));
+            //Debug.Log("Flurry Messaging Notification Cancelled: "
+            //    + message.Title + ", " + message.Body + ", " + message.ClickAction
+            //    + PrintData<string, string>(message.Data));
         }
 
         public void OnTokenRefresh(string token)
         {
-            Debug.Log("Flurry Messaging Token Refresh: " + token);
+            //Debug.Log("Flurry Messaging Token Refresh: " + token);
         }
 
         public void OnNonFlurryNotificationReceived(IDisposable nonFlurryMessage)
         {
-            Debug.Log("Flurry Messaging Non-Flurry Notification.");
+            //Debug.Log("Flurry Messaging Non-Flurry Notification.");
         }
 
     }
@@ -173,8 +173,8 @@ public class FlurryStart : MonoBehaviour
     {
         public void OnFetched(IDictionary<string, string> data)
         {
-            Debug.Log("Flurry Publisher Segmentation Fetched: "
-                + PrintData<string, string>(data));
+            //Debug.Log("Flurry Publisher Segmentation Fetched: "
+            //    + PrintData<string, string>(data));
             Flurry.LogEvent("OnFetched() called in Unity");
         }
     }

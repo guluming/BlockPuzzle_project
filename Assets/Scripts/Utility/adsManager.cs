@@ -1,7 +1,7 @@
-using System.Collections;
+//using System.Collections;
 using System;
 using UnityEngine;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 using com.adjust.sdk;
 
 public class AdsManager : MonoBehaviour
@@ -10,8 +10,8 @@ public class AdsManager : MonoBehaviour
     private const string InterstitialAdUnitId = "eb5c3ec38e6b3e2e";
     private const string RewardedAdUnitId = "0c4068ea9c9617c8";
     private const string RewardedInterstitialAdUnitId = "0c4068ea9c9617c8";
-    private const string BannerAdUnitId = "81908975f1f1f889";
-    private const string MRecAdUnitId = "ENTER_MREC_AD_UNIT_ID_HERE";
+    private const string BannerAdUnitId = "81908975f1faf889";
+    //private const string MRecAdUnitId = "ENTER_MREC_AD_UNIT_ID_HERE";
 
     //public Button showInterstitialButton;
     //public Button showRewardedButton;
@@ -23,8 +23,8 @@ public class AdsManager : MonoBehaviour
     //public Text rewardedStatusText;
     //public Text rewardedInterstitialStatusText;
 
-    private bool isBannerShowing;
-    private bool isMRecShowing;
+    private bool isBannerShowing = true;
+    //private bool isMRecShowing;
 
     private int interstitialRetryAttempt;
     private int rewardedRetryAttempt;
@@ -39,50 +39,72 @@ public class AdsManager : MonoBehaviour
         //showMRecButton.onClick.AddListener(ToggleMRecVisibility);
         //mediationDebuggerButton.onClick.AddListener(MaxSdk.ShowMediationDebugger);
 
-        MaxSdkCallbacks.OnSdkInitializedEvent += sdkConfiguration =>
-        {
-            // AppLovin SDK is initialized, configure and start loading ads.
-            Debug.Log("MAX SDK Initialized");
+        //MaxSdkCallbacks.OnSdkInitializedEvent += sdkConfiguration =>
+        //{
+        //    // AppLovin SDK is initialized, configure and start loading ads.
+        //    Debug.Log("MAX SDK Initialized");
 
-            InitializeInterstitialAds();
-            InitializeRewardedAds();
-            InitializeRewardedInterstitialAds();
-            InitializeBannerAds();
-            InitializeMRecAds();
+        //    InitializeInterstitialAds();
+        //    InitializeRewardedAds();
+        //InitializeRewardedInterstitialAds();
+        //    InitializeBannerAds();
+        //    //InitializeMRecAds();
 
-            // Initialize Adjust SDK
-            AdjustConfig adjustConfig = new AdjustConfig("YourAppToken", AdjustEnvironment.Sandbox);
-            Adjust.start(adjustConfig);
-        };
+        //    // Initialize Adjust SDK
+        //    AdjustConfig adjustConfig = new AdjustConfig("YourAppToken", AdjustEnvironment.Sandbox);
+        //    Adjust.start(adjustConfig);
+
+        //    //StartCoroutine(startBanner());
+        //    //startBanner();
+        //    MaxSdk.ShowBanner(BannerAdUnitId);
+
+        //};
 
         MaxSdk.SetSdkKey(MaxSdkKey);
         MaxSdk.InitializeSdk();
 
-        StartCoroutine(startBanner());
+        InitializeInterstitialAds();
+        InitializeRewardedInterstitialAds();
+        InitializeRewardedAds();
+
+        if(isBannerShowing)
+        {
+            InitializeBannerAds();
+            MaxSdk.ShowBanner(BannerAdUnitId);
+            isBannerShowing = false;
+        }
+        
+        MaxSdk.StartBannerAutoRefresh(BannerAdUnitId);
     }
 
-    IEnumerator startBanner()
-    {
-        MaxSdk.ShowBanner(BannerAdUnitId);
-        yield return null;
-    }
+    //private static void startBanner()
+    //{
+    //    MaxSdk.LoadBanner(BannerAdUnitId);
+    //    MaxSdk.ShowBanner(BannerAdUnitId);
+    //}
+
+    //IEnumerator startBanner()
+    //{
+    //    MaxSdk.ShowBanner(BannerAdUnitId);
+    //    yield return null;
+    //}
 
     #region Interstitial Ad Methods
 
     private void InitializeInterstitialAds()
     {
         // Attach callbacks
-        MaxSdkCallbacks.Interstitial.OnAdLoadedEvent += OnInterstitialLoadedEvent;
-        MaxSdkCallbacks.Interstitial.OnAdLoadFailedEvent += OnInterstitialFailedEvent;
-        MaxSdkCallbacks.Interstitial.OnAdDisplayFailedEvent += InterstitialFailedToDisplayEvent;
-        MaxSdkCallbacks.Interstitial.OnAdHiddenEvent += OnInterstitialDismissedEvent;
-        MaxSdkCallbacks.Interstitial.OnAdRevenuePaidEvent += OnInterstitialRevenuePaidEvent;
+        //MaxSdkCallbacks.Interstitial.OnAdLoadedEvent += OnInterstitialLoadedEvent;
+        //MaxSdkCallbacks.Interstitial.OnAdLoadFailedEvent += OnInterstitialFailedEvent;
+        //MaxSdkCallbacks.Interstitial.OnAdDisplayFailedEvent += InterstitialFailedToDisplayEvent;
+        //MaxSdkCallbacks.Interstitial.OnAdHiddenEvent += OnInterstitialDismissedEvent;
+        //MaxSdkCallbacks.Interstitial.OnAdRevenuePaidEvent += OnInterstitialRevenuePaidEvent;
 
         // Load the first interstitial
         LoadInterstitial();
     }
 
-    void LoadInterstitial()
+    private void LoadInterstitial()
     {
         //interstitialStatusText.text = "Loading...";
         MaxSdk.LoadInterstitial(InterstitialAdUnitId);
@@ -127,14 +149,13 @@ public class AdsManager : MonoBehaviour
     {
         // Interstitial ad failed to display. We recommend loading the next ad
         Debug.Log("Interstitial failed to display with error code: " + errorInfo.Code);
-        LoadInterstitial();
+        //LoadInterstitial();
     }
 
     private void OnInterstitialDismissedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
     {
         // Interstitial ad is hidden. Pre-load the next ad
         Debug.Log("Interstitial dismissed");
-
         LoadInterstitial();
     }
 
@@ -162,14 +183,14 @@ public class AdsManager : MonoBehaviour
     private void InitializeRewardedAds()
     {
         // Attach callbacks
-        MaxSdkCallbacks.Rewarded.OnAdLoadedEvent += OnRewardedAdLoadedEvent;
-        MaxSdkCallbacks.Rewarded.OnAdLoadFailedEvent += OnRewardedAdFailedEvent;
-        MaxSdkCallbacks.Rewarded.OnAdDisplayFailedEvent += OnRewardedAdFailedToDisplayEvent;
-        MaxSdkCallbacks.Rewarded.OnAdDisplayedEvent += OnRewardedAdDisplayedEvent;
-        MaxSdkCallbacks.Rewarded.OnAdClickedEvent += OnRewardedAdClickedEvent;
-        MaxSdkCallbacks.Rewarded.OnAdHiddenEvent += OnRewardedAdDismissedEvent;
-        MaxSdkCallbacks.Rewarded.OnAdReceivedRewardEvent += OnRewardedAdReceivedRewardEvent;
-        MaxSdkCallbacks.Rewarded.OnAdRevenuePaidEvent += OnRewardedAdRevenuePaidEvent;
+        //MaxSdkCallbacks.Rewarded.OnAdLoadedEvent += OnRewardedAdLoadedEvent;
+        //MaxSdkCallbacks.Rewarded.OnAdLoadFailedEvent += OnRewardedAdFailedEvent;
+        //MaxSdkCallbacks.Rewarded.OnAdDisplayFailedEvent += OnRewardedAdFailedToDisplayEvent;
+        //MaxSdkCallbacks.Rewarded.OnAdDisplayedEvent += OnRewardedAdDisplayedEvent;
+        //MaxSdkCallbacks.Rewarded.OnAdClickedEvent += OnRewardedAdClickedEvent;
+        //MaxSdkCallbacks.Rewarded.OnAdHiddenEvent += OnRewardedAdDismissedEvent;
+        //MaxSdkCallbacks.Rewarded.OnAdReceivedRewardEvent += OnRewardedAdReceivedRewardEvent;
+        //MaxSdkCallbacks.Rewarded.OnAdRevenuePaidEvent += OnRewardedAdRevenuePaidEvent;
 
         // Load the first RewardedAd
         LoadRewardedAd();
@@ -187,6 +208,7 @@ public class AdsManager : MonoBehaviour
         {
             //rewardedStatusText.text = "Showing";
             MaxSdk.ShowRewardedAd(RewardedAdUnitId);
+
         }
         else
         {
@@ -199,7 +221,6 @@ public class AdsManager : MonoBehaviour
         // Rewarded ad is ready to be shown. MaxSdk.IsRewardedAdReady(rewardedAdUnitId) will now return 'true'
         //rewardedStatusText.text = "Loaded";
         Debug.Log("Rewarded ad loaded");
-
         // Reset retry attempt
         rewardedRetryAttempt = 0;
     }
@@ -225,6 +246,7 @@ public class AdsManager : MonoBehaviour
 
     private void OnRewardedAdDisplayedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
     {
+
         Debug.Log("Rewarded ad displayed");
     }
 
@@ -270,14 +292,14 @@ public class AdsManager : MonoBehaviour
     private void InitializeRewardedInterstitialAds()
     {
         // Attach callbacks
-        MaxSdkCallbacks.RewardedInterstitial.OnAdLoadedEvent += OnRewardedInterstitialAdLoadedEvent;
-        MaxSdkCallbacks.RewardedInterstitial.OnAdLoadFailedEvent += OnRewardedInterstitialAdFailedEvent;
-        MaxSdkCallbacks.RewardedInterstitial.OnAdDisplayFailedEvent += OnRewardedInterstitialAdFailedToDisplayEvent;
-        MaxSdkCallbacks.RewardedInterstitial.OnAdDisplayedEvent += OnRewardedInterstitialAdDisplayedEvent;
-        MaxSdkCallbacks.RewardedInterstitial.OnAdClickedEvent += OnRewardedInterstitialAdClickedEvent;
-        MaxSdkCallbacks.RewardedInterstitial.OnAdHiddenEvent += OnRewardedInterstitialAdDismissedEvent;
-        MaxSdkCallbacks.RewardedInterstitial.OnAdReceivedRewardEvent += OnRewardedInterstitialAdReceivedRewardEvent;
-        MaxSdkCallbacks.RewardedInterstitial.OnAdRevenuePaidEvent += OnRewardedInterstitialAdRevenuePaidEvent;
+        //MaxSdkCallbacks.RewardedInterstitial.OnAdLoadedEvent += OnRewardedInterstitialAdLoadedEvent;
+        //MaxSdkCallbacks.RewardedInterstitial.OnAdLoadFailedEvent += OnRewardedInterstitialAdFailedEvent;
+        //MaxSdkCallbacks.RewardedInterstitial.OnAdDisplayFailedEvent += OnRewardedInterstitialAdFailedToDisplayEvent;
+        //MaxSdkCallbacks.RewardedInterstitial.OnAdDisplayedEvent += OnRewardedInterstitialAdDisplayedEvent;
+        //MaxSdkCallbacks.RewardedInterstitial.OnAdClickedEvent += OnRewardedInterstitialAdClickedEvent;
+        //MaxSdkCallbacks.RewardedInterstitial.OnAdHiddenEvent += OnRewardedInterstitialAdDismissedEvent;
+        //MaxSdkCallbacks.RewardedInterstitial.OnAdReceivedRewardEvent += OnRewardedInterstitialAdReceivedRewardEvent;
+        //MaxSdkCallbacks.RewardedInterstitial.OnAdRevenuePaidEvent += OnRewardedInterstitialAdRevenuePaidEvent;
 
         // Load the first RewardedInterstitialAd
         LoadRewardedInterstitialAd();
@@ -352,6 +374,8 @@ public class AdsManager : MonoBehaviour
     {
         // Rewarded interstitial ad was displayed and user should receive the reward
         Debug.Log("Rewarded interstitial ad received reward");
+        
+        LoadRewardedInterstitialAd();
     }
 
     private void OnRewardedInterstitialAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
@@ -378,34 +402,35 @@ public class AdsManager : MonoBehaviour
     private void InitializeBannerAds()
     {
         // Attach Callbacks
-        MaxSdkCallbacks.Banner.OnAdLoadedEvent += OnBannerAdLoadedEvent;
-        MaxSdkCallbacks.Banner.OnAdLoadFailedEvent += OnBannerAdFailedEvent;
-        MaxSdkCallbacks.Banner.OnAdClickedEvent += OnBannerAdClickedEvent;
-        MaxSdkCallbacks.Banner.OnAdRevenuePaidEvent += OnBannerAdRevenuePaidEvent;
+        //MaxSdkCallbacks.Banner.OnAdLoadedEvent += OnBannerAdLoadedEvent;
+        //MaxSdkCallbacks.Banner.OnAdLoadFailedEvent += OnBannerAdFailedEvent;
+        //MaxSdkCallbacks.Banner.OnAdClickedEvent += OnBannerAdClickedEvent;
+        //MaxSdkCallbacks.Banner.OnAdRevenuePaidEvent += OnBannerAdRevenuePaidEvent;
 
         // Banners are automatically sized to 320x50 on phones and 728x90 on tablets.
         // You may use the utility method `MaxSdkUtils.isTablet()` to help with view sizing adjustments.
         MaxSdk.CreateBanner(BannerAdUnitId, MaxSdkBase.BannerPosition.BottomCenter);
+        MaxSdk.SetBannerExtraParameter(BannerAdUnitId, "adaptive_banner", "true");
 
         // Set background or background color for banners to be fully functional.
         MaxSdk.SetBannerBackgroundColor(BannerAdUnitId, Color.black);
     }
 
-    public void ToggleBannerVisibility()
-    {
-        if (!isBannerShowing)
-        {
-            MaxSdk.ShowBanner(BannerAdUnitId);
-            //showBannerButton.GetComponentInChildren<Text>().text = "Hide Banner";
-        }
-        else
-        {
-            MaxSdk.HideBanner(BannerAdUnitId);
-            //showBannerButton.GetComponentInChildren<Text>().text = "Show Banner";
-        }
+    //public void ToggleBannerVisibility()
+    //{
+    //    if (!isBannerShowing)
+    //    {
+    //        MaxSdk.ShowBanner(BannerAdUnitId);
+    //        //showBannerButton.GetComponentInChildren<Text>().text = "Hide Banner";
+    //    }
+    //    else
+    //    {
+    //        MaxSdk.HideBanner(BannerAdUnitId);
+    //        //showBannerButton.GetComponentInChildren<Text>().text = "Show Banner";
+    //    }
 
-        isBannerShowing = !isBannerShowing;
-    }
+    //    isBannerShowing = !isBannerShowing;
+    //}
 
     private void OnBannerAdLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
     {
@@ -444,72 +469,72 @@ public class AdsManager : MonoBehaviour
 
     #endregion
 
-    #region MREC Ad Methods
+    //#region MREC Ad Methods
 
-    private void InitializeMRecAds()
-    {
-        // Attach Callbacks
-        MaxSdkCallbacks.MRec.OnAdLoadedEvent += OnMRecAdLoadedEvent;
-        MaxSdkCallbacks.MRec.OnAdLoadFailedEvent += OnMRecAdFailedEvent;
-        MaxSdkCallbacks.MRec.OnAdClickedEvent += OnMRecAdClickedEvent;
-        MaxSdkCallbacks.MRec.OnAdRevenuePaidEvent += OnMRecAdRevenuePaidEvent;
+    //private void InitializeMRecAds()
+    //{
+    //    // Attach Callbacks
+    //    MaxSdkCallbacks.MRec.OnAdLoadedEvent += OnMRecAdLoadedEvent;
+    //    MaxSdkCallbacks.MRec.OnAdLoadFailedEvent += OnMRecAdFailedEvent;
+    //    MaxSdkCallbacks.MRec.OnAdClickedEvent += OnMRecAdClickedEvent;
+    //    MaxSdkCallbacks.MRec.OnAdRevenuePaidEvent += OnMRecAdRevenuePaidEvent;
 
-        // MRECs are automatically sized to 300x250.
-        MaxSdk.CreateMRec(MRecAdUnitId, MaxSdkBase.AdViewPosition.BottomCenter);
-    }
+    //    // MRECs are automatically sized to 300x250.
+    //    MaxSdk.CreateMRec(MRecAdUnitId, MaxSdkBase.AdViewPosition.BottomCenter);
+    //}
 
-    private void ToggleMRecVisibility()
-    {
-        if (!isMRecShowing)
-        {
-            MaxSdk.ShowMRec(MRecAdUnitId);
-            //showMRecButton.GetComponentInChildren<Text>().text = "Hide MREC";
-        }
-        else
-        {
-            MaxSdk.HideMRec(MRecAdUnitId);
-            //showMRecButton.GetComponentInChildren<Text>().text = "Show MREC";
-        }
+    //private void ToggleMRecVisibility()
+    //{
+    //    if (!isMRecShowing)
+    //    {
+    //        MaxSdk.ShowMRec(MRecAdUnitId);
+    //        //showMRecButton.GetComponentInChildren<Text>().text = "Hide MREC";
+    //    }
+    //    else
+    //    {
+    //        MaxSdk.HideMRec(MRecAdUnitId);
+    //        //showMRecButton.GetComponentInChildren<Text>().text = "Show MREC";
+    //    }
 
-        isMRecShowing = !isMRecShowing;
-    }
+    //    isMRecShowing = !isMRecShowing;
+    //}
 
-    private void OnMRecAdLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
-    {
-        // MRec ad is ready to be shown.
-        // If you have already called MaxSdk.ShowMRec(MRecAdUnitId) it will automatically be shown on the next MRec refresh.
-        Debug.Log("MRec ad loaded");
-    }
+    //private void OnMRecAdLoadedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
+    //{
+    //    // MRec ad is ready to be shown.
+    //    // If you have already called MaxSdk.ShowMRec(MRecAdUnitId) it will automatically be shown on the next MRec refresh.
+    //    Debug.Log("MRec ad loaded");
+    //}
 
-    private void OnMRecAdFailedEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo)
-    {
-        // MRec ad failed to load. MAX will automatically try loading a new ad internally.
-        Debug.Log("MRec ad failed to load with error code: " + errorInfo.Code);
-    }
+    //private void OnMRecAdFailedEvent(string adUnitId, MaxSdkBase.ErrorInfo errorInfo)
+    //{
+    //    // MRec ad failed to load. MAX will automatically try loading a new ad internally.
+    //    Debug.Log("MRec ad failed to load with error code: " + errorInfo.Code);
+    //}
 
-    private void OnMRecAdClickedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
-    {
-        Debug.Log("MRec ad clicked");
-    }
+    //private void OnMRecAdClickedEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
+    //{
+    //    Debug.Log("MRec ad clicked");
+    //}
 
-    private void OnMRecAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
-    {
-        // MRec ad revenue paid. Use this callback to track user revenue.
-        Debug.Log("MRec ad revenue paid");
+    //private void OnMRecAdRevenuePaidEvent(string adUnitId, MaxSdkBase.AdInfo adInfo)
+    //{
+    //    // MRec ad revenue paid. Use this callback to track user revenue.
+    //    Debug.Log("MRec ad revenue paid");
 
-        // Ad revenue
-        double revenue = adInfo.Revenue;
+    //    // Ad revenue
+    //    double revenue = adInfo.Revenue;
 
-        // Miscellaneous data
-        string countryCode = MaxSdk.GetSdkConfiguration().CountryCode; // "US" for the United States, etc - Note: Do not confuse this with currency code which is "USD"!
-        string networkName = adInfo.NetworkName; // Display name of the network that showed the ad (e.g. "AdColony")
-        string adUnitIdentifier = adInfo.AdUnitIdentifier; // The MAX Ad Unit ID
-        string placement = adInfo.Placement; // The placement this ad's postbacks are tied to
+    //    // Miscellaneous data
+    //    string countryCode = MaxSdk.GetSdkConfiguration().CountryCode; // "US" for the United States, etc - Note: Do not confuse this with currency code which is "USD"!
+    //    string networkName = adInfo.NetworkName; // Display name of the network that showed the ad (e.g. "AdColony")
+    //    string adUnitIdentifier = adInfo.AdUnitIdentifier; // The MAX Ad Unit ID
+    //    string placement = adInfo.Placement; // The placement this ad's postbacks are tied to
 
-        TrackAdRevenue(adInfo);
-    }
+    //    TrackAdRevenue(adInfo);
+    //}
 
-    #endregion
+    //#endregion
 
     private void TrackAdRevenue(MaxSdkBase.AdInfo adInfo)
     {

@@ -44,12 +44,6 @@ public class MenuButtons : MonoBehaviour
         Grid.gamemode = "";
     }
 
-    public void LoadRewardAds()
-    {
-        adsManager.ShowRewardedInterstitialAd();
-        //adsManager.I.ShowRewardAd();
-    }
-
     public void ReTryGame(string name)
     {
         SceneManager.LoadScene(name);
