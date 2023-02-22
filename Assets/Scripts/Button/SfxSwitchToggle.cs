@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class SfxSwitchToggle : MonoBehaviour
 {
     [SerializeField] RectTransform uiHandleRectTransform;
-    [SerializeField] Color backgroundActiveColor;
+    [SerializeField] Sprite backgroundActiveSprite;
     [SerializeField] Color handleActiveColor;
 
     Image backgroundImage, handleImage;
 
-    Color backgroundDefaultActiveColor, handleDefaultActiveColor;
+    Sprite backgroundDefaultActiveSprite;
+
+    Color handleDefaultActiveColor;
 
     Vector2 handlePosition;
 
@@ -29,7 +31,7 @@ public class SfxSwitchToggle : MonoBehaviour
         backgroundImage = uiHandleRectTransform.parent.GetComponent<Image>();
         handleImage = uiHandleRectTransform.GetComponent<Image>();
 
-        backgroundDefaultActiveColor = backgroundImage.color;
+        backgroundDefaultActiveSprite = backgroundImage.sprite;
         handleDefaultActiveColor = handleImage.color;
     }
 
@@ -42,8 +44,8 @@ public class SfxSwitchToggle : MonoBehaviour
     public void OnSFXSwitch()
     {
         audioManager.sfxsetting = toggle.isOn;
-        uiHandleRectTransform.anchoredPosition = audioManager.sfxsetting ? handlePosition : handlePosition * -1;
-        backgroundImage.color = audioManager.sfxsetting ? backgroundDefaultActiveColor : backgroundActiveColor;
+        uiHandleRectTransform.anchoredPosition = audioManager.sfxsetting ? new Vector2(handlePosition.x, handlePosition.y) : new Vector2((handlePosition.x * -1) -7, handlePosition.y);
+        backgroundImage.sprite = audioManager.sfxsetting ? backgroundDefaultActiveSprite : backgroundActiveSprite;
         handleImage.color = audioManager.sfxsetting ? handleDefaultActiveColor : handleActiveColor;
         sfxSource.SetActive(audioManager.sfxsetting);
         audioManager.saveGameSettings();
@@ -51,8 +53,8 @@ public class SfxSwitchToggle : MonoBehaviour
 
     public void OnSFXSwitchState(bool sfxsetting)
     {
-        uiHandleRectTransform.anchoredPosition = sfxsetting ? handlePosition : handlePosition * -1;
-        backgroundImage.color = sfxsetting ? backgroundDefaultActiveColor : backgroundActiveColor;
+        uiHandleRectTransform.anchoredPosition = sfxsetting ? new Vector2(handlePosition.x, handlePosition.y) : new Vector2((handlePosition.x * -1) - 7, handlePosition.y);
+        backgroundImage.sprite = sfxsetting ? backgroundDefaultActiveSprite : backgroundActiveSprite;
         handleImage.color = sfxsetting ? handleDefaultActiveColor : handleActiveColor;
     }
 }
