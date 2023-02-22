@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 1079169109518197826}
   - component: {fileID: 2538388746658412499}
   - component: {fileID: 8863092050395555412}
-  - component: {fileID: 1441223352048351767}
+  - component: {fileID: -1282574033223727222}
   - component: {fileID: 3024972988470650084}
   - component: {fileID: 6965611223858135722}
   - component: {fileID: 5918609946592658957}
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1441223352048351767
+--- !u!114 &-1282574033223727222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,12 +166,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1930666969404958526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cc74c474b179440084e61815ffae9fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 74ccba7d1a0704450b9f02a77aaacfba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SquareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
   jewelSquareTextureData: {fileID: 11400000, guid: dfe15e7ad38f640a4ad121c1440dbad7, type: 2}
-  updateImageOnRechedTreshold: 1
 --- !u!114 &3024972988470650084
 MonoBehaviour:
   m_ObjectHideFlags: 0

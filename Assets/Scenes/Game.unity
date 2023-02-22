@@ -2477,7 +2477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a219262c105248e5af9057b80d5333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adsManager: {fileID: 0}
+  grid: {fileID: 0}
   SettingsPopup: {fileID: 0}
 --- !u!1 &726592070
 GameObject:
@@ -2579,6 +2579,7 @@ MonoBehaviour:
   - {fileID: 1875494888}
   Shapes: {fileID: 2088004032}
   SquareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
+  jewelSquareTextureData: {fileID: 11400000, guid: dfe15e7ad38f640a4ad121c1440dbad7, type: 2}
   grid: {fileID: 1156734087}
   scores: {fileID: 1992078462}
   ComboObject: {fileID: 1227226045}
@@ -2731,7 +2732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a219262c105248e5af9057b80d5333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adsManager: {fileID: 0}
+  grid: {fileID: 0}
   SettingsPopup: {fileID: 0}
 --- !u!1 &747233300
 GameObject:
@@ -3601,7 +3602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a219262c105248e5af9057b80d5333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adsManager: {fileID: 0}
+  grid: {fileID: 1156734087}
   SettingsPopup: {fileID: 0}
 --- !u!1 &973725120
 GameObject:
@@ -4151,7 +4152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a219262c105248e5af9057b80d5333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adsManager: {fileID: 0}
+  grid: {fileID: 0}
   SettingsPopup: {fileID: 611936027}
 --- !u!1 &1067627596
 GameObject:
@@ -4608,6 +4609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPopup: {fileID: 427162090}
+  jewelSquareTextureData: {fileID: 11400000, guid: dfe15e7ad38f640a4ad121c1440dbad7, type: 2}
   squareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
   tutuorial: {fileID: 1152111175}
   shapeStorage: {fileID: 726592072}
@@ -5444,7 +5446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a219262c105248e5af9057b80d5333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adsManager: {fileID: 0}
+  grid: {fileID: 1156734087}
   SettingsPopup: {fileID: 0}
 --- !u!1 &1318982679
 GameObject:
@@ -6654,7 +6656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a219262c105248e5af9057b80d5333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adsManager: {fileID: 0}
+  grid: {fileID: 0}
   SettingsPopup: {fileID: 0}
 --- !u!1 &1596002404
 GameObject:
@@ -6709,7 +6711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a219262c105248e5af9057b80d5333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  adsManager: {fileID: 0}
+  grid: {fileID: 0}
   SettingsPopup: {fileID: 0}
 --- !u!114 &1596002407
 MonoBehaviour:

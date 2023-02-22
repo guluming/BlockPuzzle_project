@@ -21,16 +21,6 @@ public class RadialProgress : MonoBehaviour
         {
             Grid.Playerlife = 0;
         }
-        //else {
-        //    if (score.currentScores_ >= score.bestScores_.score)
-        //    {
-        //        gameOverPopup.NewBestScoreActive();
-        //    }
-        //    else
-        //    {
-        //        gameOverPopup.GameOverActive();
-        //    }
-        //}
     }
 
     void Update()
@@ -51,8 +41,6 @@ public class RadialProgress : MonoBehaviour
             {
                 gameOverPopup.GameOverActive();
             }
-            //adsManager.ShowInterstitial();
-            //grid.playerSaveGame_.saveGameOver = true;
             ProgressIndicator.text = "0";
         }
 

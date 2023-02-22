@@ -6,16 +6,10 @@ using UnityEngine.UI;
 public class ActiveSquareImageSelector : MonoBehaviour
 {
     public SquareTextureData SquareTextureData;
-    public JewelSquareTextureData jewelSquareTextureData;
 
     private void OnEnable()
     {
         UpdateSquareColorBaseOnCurrentPoints();
-    }
-
-    private void OnDisable()
-    {
-
     }
 
     private void UpdateSquareColorBaseOnCurrentPoints()

@@ -74,7 +74,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   squareShapeImage: {fileID: 1930666969404958526, guid: ece785fd6ba16417dba1be0af2af982f, type: 3}
-  jewelShapeImage: {fileID: 0}
+  jewelShapeImage: {fileID: 1930666969404958526, guid: cd6afb923436c48faa2a72c1da5fe449, type: 3}
   shapeSelectedScale: {x: 1, y: 1, z: 1}
   offset: {x: 0, y: 1000}
   CurrentShapeData: {fileID: 11400000, guid: 5fde3c373135344fc9036d7d1a252cbe, type: 2}

@@ -108,29 +108,48 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         CurrentShapeData = shapeData;
         TotalSquareNumber = GetNumberOfSquares(CurrentShapeData);
 
-        //if (Grid.gamemode == "ClassicGame") {
-        //    while (_currentShape.Count <= TotalSquareNumber)
-        //    {
-        //        _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
-        //    }
-        //} else if (Grid.gamemode == "ChallengeGame") {
-        //    for (int i=0; i <= TotalSquareNumber; i++) {
-        //        if (Random.Range(0, 5) == 0)
-        //        {
-        //            //보석이 들어가는 루트
-        //            Debug.Log("보석 생성");
-        //            _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
-        //        }
-        //        else {
-        //            _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
-        //        }
-        //    }
-        //}
-
-        while (_currentShape.Count <= TotalSquareNumber)
+        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame" || Grid.gamemode == "tutorial3")
         {
-            _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
+            while (_currentShape.Count <= TotalSquareNumber)
+            {
+                _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
+            }
         }
+        else if (Grid.gamemode == "ChallengeGame")
+        {
+            while (_currentShape.Count <= TotalSquareNumber)
+            {
+                if (Random.Range(0, 5) == 0)
+                {
+                    //보석이 들어가는 루트
+                    Debug.Log("보석 생성");
+                    _currentShape.Add(Instantiate(jewelShapeImage, transform) as GameObject);
+                }
+                else
+                {
+                    _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
+                }
+            }
+
+            //for (int i = 0; i <= TotalSquareNumber; i++)
+            //{
+            //    if (Random.Range(0, 5) == 0)
+            //    {
+            //        //보석이 들어가는 루트
+            //        Debug.Log("보석 생성");
+            //        _currentShape.Add(Instantiate(jewelShapeImage, transform) as GameObject);
+            //    }
+            //    else
+            //    {
+            //        _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
+            //    }
+            //}
+        }
+
+        //while (_currentShape.Count <= TotalSquareNumber)
+        //{
+        //    _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
+        //}
 
         foreach (var square in _currentShape) {
             square.gameObject.transform.position = Vector3.zero;
@@ -334,7 +353,9 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnDrag(PointerEventData eventData)
     {
+        //블록색깔 가져오는 곳
         seletedshapesprite = transform.GetChild(0).GetComponent<Image>().sprite;
+
         _transform.anchorMin = new Vector2(0.5f, 0.5f);
         _transform.anchorMax = new Vector2(0.5f, 0.5f);
         _transform.pivot = new Vector2(0.5f, 0.5f);

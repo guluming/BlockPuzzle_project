@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-    public AdsManager adsManager;
+    public Grid grid;
     public GameObject SettingsPopup;
 
     private void Awake()
@@ -35,6 +35,8 @@ public class MenuButtons : MonoBehaviour
 
     public void LoadReplayScene()
     {
+        grid.playerSaveGame_.saveGameOver = true;
+        grid.saveGame(true);
         SceneManager.LoadScene("Game");
     }
 

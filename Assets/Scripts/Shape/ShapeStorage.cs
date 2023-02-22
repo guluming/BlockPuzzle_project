@@ -15,6 +15,7 @@ public class ShapeStorage : MonoBehaviour
     public List<Shape> shapeList;
     public GameObject Shapes;
     public SquareTextureData SquareTextureData;
+    public JewelSquareTextureData jewelSquareTextureData;
     public Grid grid;
     public Scores scores;
     public GameObject ComboObject;
@@ -111,7 +112,10 @@ public class ShapeStorage : MonoBehaviour
             grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
             shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
             UpdateSquareColor();
+            UpdateJewelSquare();
         }
+
+        grid.saveGame(false);
     }
 
     private void LoadShapes()
@@ -126,7 +130,13 @@ public class ShapeStorage : MonoBehaviour
             else {
                 shapeList[i].RequestNewShape(shapeData[grid.playerSaveGame_.shapeDataIndexList[i]]);
                 UpdateSquareColor();
+                UpdateJewelSquare();
             }
+        }
+
+        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame")
+        {
+            grid.CheckIfPlayLost();
         }
     }
 
@@ -149,6 +159,7 @@ public class ShapeStorage : MonoBehaviour
             grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
             shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
             UpdateSquareColor();
+            UpdateJewelSquare();
         }
 
         if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame")
@@ -173,6 +184,7 @@ public class ShapeStorage : MonoBehaviour
         {
             shapeList[i].RequestNewShape(shapeData[0]);
             UpdateSquareColor();
+            UpdateJewelSquare();
         }
     }
 
@@ -345,6 +357,14 @@ public class ShapeStorage : MonoBehaviour
         if (GameEvents.UpdateSquareColor != null)
         {
             SquareTextureData.UpdateColors();
+        }
+    }
+
+    public void UpdateJewelSquare()
+    {
+        if (GameEvents.UpdateJewelSquare != null)
+        {
+            jewelSquareTextureData.UpdateJewels();
         }
     }
 }
