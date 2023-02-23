@@ -17,20 +17,20 @@ public class MenuButtons : MonoBehaviour
 
     public void LoadClassicGame(string name)
     {
-        SceneManager.LoadScene(name);
         Grid.gamemode = "ClassicGame";
+        SceneManager.LoadScene(name);
     }
 
     public void LoadChallengeGame(string name)
     {
-        SceneManager.LoadScene(name);
         Grid.gamemode = "ChallengeGame";
+        SceneManager.LoadScene(name);
     }
 
     public void LoadMainScene(string name)
     {
+        Grid.gamemode = "MainMenu";
         SceneManager.LoadScene(name);
-        Grid.gamemode = "";
     }
 
     public void LoadReplayScene()

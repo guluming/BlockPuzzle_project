@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class playerGameSettingData
@@ -42,6 +43,24 @@ public class audioManager : MonoBehaviour
 
         bgmSource.SetActive(bgmsetting);
         sfxSource.SetActive(sfxsetting);
+    }
+
+    private void Update()
+    {
+        if (Application.platform == RuntimePlatform.Android) {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (Grid.gamemode != "MainMenu")
+                {
+                    Grid.gamemode = "MainMenu";
+                    SceneManager.LoadScene("MainMenu");
+                }
+                else
+                {
+                    Application.Quit();
+                }
+            }
+        }
     }
 
     public void saveGameSettings()

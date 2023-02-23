@@ -38,7 +38,7 @@
     <file>Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-messaging-unity/10.4.0/firebase-messaging-unity-10.4.0.pom</file>
   </files>
   <settings>
-    <setting name="androidAbis" value="arm64-v8a,armeabi-v7a" />
+    <setting name="androidAbis" value="arm64-v8a,armeabi-v7a,x86_64" />
     <setting name="bundleId" value="block.puzzle.blast.x8.freegame.toy" />
     <setting name="explodeAars" value="True" />
     <setting name="gradleBuildEnabled" value="True" />
