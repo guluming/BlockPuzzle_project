@@ -8,6 +8,12 @@ public class GameOverPopup : MonoBehaviour
     public GameObject NewBestScore;
     public GameObject MaintainScore;
 
+    public Grid grid;
+    public ShapeStorage shapeStorage;
+    public AdsManager adsManager;
+
+    private string playerSaveGamekey = "playerSaveGame";
+
     void Start()
     {
         RetryPopup.SetActive(false);
@@ -22,18 +28,25 @@ public class GameOverPopup : MonoBehaviour
 
     public void NewBestScoreActive()
     {
-        adsManager.I.ShowInterstitialAd();
+        adsManager.ShowInterstitial();
+        grid.playerSaveGame_.saveGameOver = true;
+        string playerSaveGameData = JsonUtility.ToJson(grid.playerSaveGame_);
+        BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
         NewBestScore.SetActive(true);
     }
 
     public void GameOverActive()
     {
-        adsManager.I.ShowInterstitialAd();
+        adsManager.ShowInterstitial();
+        grid.playerSaveGame_.saveGameOver = true;
+        string playerSaveGameData = JsonUtility.ToJson(grid.playerSaveGame_);
+        BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
         MaintainScore.SetActive(true);
     }
 
     public void RetryPopupDeactive()
     {
+        shapeStorage.resurrectionNewShapes();
         RetryPopup.SetActive(false);
     }
 }

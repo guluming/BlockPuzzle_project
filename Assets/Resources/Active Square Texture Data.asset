@@ -13,25 +13,25 @@ MonoBehaviour:
   m_Name: Active Square Texture Data
   m_EditorClassIdentifier: 
   activeSquareTextures:
-  - texture: {fileID: 21300000, guid: 72bf5bcfd9c9040d6bdb01093c8ac889, type: 3}
-    color: {r: 0, g: 0.41176474, b: 0.67058825, a: 1}
+  - texture: {fileID: 21300000, guid: df8308a1f32bd40e6a3164917700e3d8, type: 3}
+    color: {r: 0.2627451, g: 0.3647059, b: 0.8705883, a: 1}
     squareColor: 2
-  - texture: {fileID: 21300000, guid: 8d715a113d2ac41c5bee5b361887233e, type: 3}
-    color: {r: 0.9450981, g: 0.59607846, b: 0.003921569, a: 1}
-    squareColor: 3
-  - texture: {fileID: 21300000, guid: 27ea78b07d5254de8852929e17f94c76, type: 3}
-    color: {r: 0.058823533, g: 0.67058825, b: 0.62352943, a: 1}
-    squareColor: 4
-  - texture: {fileID: 21300000, guid: 44fa79a4e088f465a883f02f1b53f187, type: 3}
-    color: {r: 0.97647065, g: 0.8078432, b: 0.1254902, a: 1}
-    squareColor: 5
-  - texture: {fileID: 21300000, guid: 7cacda0b6dccb4a0ba47bad3f6b0acbe, type: 3}
-    color: {r: 0.6117647, g: 0.7490196, b: 0.14117648, a: 1}
+  - texture: {fileID: 21300000, guid: 8af94525478ab4e22b87a4de5372676a, type: 3}
+    color: {r: 0.34117648, g: 0.87843144, b: 0.26666668, a: 1}
     squareColor: 6
-  - texture: {fileID: 21300000, guid: da5cd4e9c30944abc80216f97ccea7ec, type: 3}
-    color: {r: 0.86666673, g: 0.2784314, b: 0.5803922, a: 1}
-    squareColor: 7
-  - texture: {fileID: 21300000, guid: ecd05054126834e97a1dd8a7c3367589, type: 3}
-    color: {r: 0.5568628, g: 0.2392157, b: 0.5647059, a: 1}
+  - texture: {fileID: 21300000, guid: 7697092f978794e29baac68519f0870c, type: 3}
+    color: {r: 0.28235295, g: 0.8431373, b: 0.8862746, a: 1}
+    squareColor: 4
+  - texture: {fileID: 21300000, guid: 7e84c2ac26a5142dc9611e29bfe4d61f, type: 3}
+    color: {r: 0.62352943, g: 0.2509804, b: 0.86274517, a: 1}
     squareColor: 8
-  currentColor: 5
+  - texture: {fileID: 21300000, guid: b6775b06d48ce42c8a7023f074bea485, type: 3}
+    color: {r: 0.87843144, g: 0.7686275, b: 0.27450982, a: 1}
+    squareColor: 5
+  - texture: {fileID: 21300000, guid: 6f4ea19582ed047978286e1f1b510be6, type: 3}
+    color: {r: 0.8705883, g: 0.50980395, b: 0.25882354, a: 1}
+    squareColor: 3
+  - texture: {fileID: 21300000, guid: ce2169a9992ba430496ddae4624b2e01, type: 3}
+    color: {r: 0.86274517, g: 0.2509804, b: 0.33333334, a: 1}
+    squareColor: 1
+  currentColor: 3

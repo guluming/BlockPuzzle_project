@@ -15,6 +15,7 @@ public class ShapeStorage : MonoBehaviour
     public List<Shape> shapeList;
     public GameObject Shapes;
     public SquareTextureData SquareTextureData;
+    public JewelSquareTextureData jewelSquareTextureData;
     public Grid grid;
     public Scores scores;
     public GameObject ComboObject;
@@ -46,7 +47,6 @@ public class ShapeStorage : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(Grid.gamemode);
         if (BinaryDataStream.Exist(playerSaveGamekey))
         {
             string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
@@ -112,7 +112,10 @@ public class ShapeStorage : MonoBehaviour
             grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
             shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
             UpdateSquareColor();
+            UpdateJewelSquare();
         }
+
+        grid.saveGame(false);
     }
 
     private void LoadShapes()
@@ -127,17 +130,18 @@ public class ShapeStorage : MonoBehaviour
             else {
                 shapeList[i].RequestNewShape(shapeData[grid.playerSaveGame_.shapeDataIndexList[i]]);
                 UpdateSquareColor();
+                UpdateJewelSquare();
             }
+        }
+
+        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame")
+        {
+            grid.CheckIfPlayLost();
         }
     }
 
     private void RequestNewShapes()
     {
-        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame")
-        {
-            grid.CheckIfPlayLost();
-        }
-
         if (!isCombo)
         {
             ComboCount = 0;
@@ -155,13 +159,13 @@ public class ShapeStorage : MonoBehaviour
             grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
             shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
             UpdateSquareColor();
+            UpdateJewelSquare();
         }
 
-        //foreach (Shape shape in shapeList)
-        //{
-        //    int i = Random.Range(0, 4);
-        //    shape.transform.eulerAngles = new Vector3(0, 0, 90 * i);
-        //}
+        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame")
+        {
+            grid.CheckIfPlayLost();
+        }
     }
 
     public void resurrectionNewShapes()
@@ -180,6 +184,7 @@ public class ShapeStorage : MonoBehaviour
         {
             shapeList[i].RequestNewShape(shapeData[0]);
             UpdateSquareColor();
+            UpdateJewelSquare();
         }
     }
 
@@ -352,6 +357,14 @@ public class ShapeStorage : MonoBehaviour
         if (GameEvents.UpdateSquareColor != null)
         {
             SquareTextureData.UpdateColors();
+        }
+    }
+
+    public void UpdateJewelSquare()
+    {
+        if (GameEvents.UpdateJewelSquare != null)
+        {
+            jewelSquareTextureData.UpdateJewels();
         }
     }
 }

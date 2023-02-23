@@ -8,7 +8,6 @@ using System.Globalization;
 using System.Threading;
 
 using Newtonsoft.Json;
-using System;
 
 #if UNITY_5_3_OR_NEWER && UNITY_PURCHASING
 using UnityEngine.Purchasing;

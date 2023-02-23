@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
+    public Grid grid;
     public GameObject SettingsPopup;
 
     private void Awake()
@@ -16,24 +17,26 @@ public class MenuButtons : MonoBehaviour
 
     public void LoadClassicGame(string name)
     {
-        SceneManager.LoadScene(name);
         Grid.gamemode = "ClassicGame";
+        SceneManager.LoadScene(name);
     }
 
     public void LoadChallengeGame(string name)
     {
-        SceneManager.LoadScene(name);
         Grid.gamemode = "ChallengeGame";
+        SceneManager.LoadScene(name);
     }
 
     public void LoadMainScene(string name)
     {
+        Grid.gamemode = "MainMenu";
         SceneManager.LoadScene(name);
-        Grid.gamemode = "";
     }
 
     public void LoadReplayScene()
     {
+        grid.playerSaveGame_.saveGameOver = true;
+        grid.saveGame(true);
         SceneManager.LoadScene("Game");
     }
 
@@ -41,11 +44,6 @@ public class MenuButtons : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
         Grid.gamemode = "";
-    }
-
-    public static void LoadRewardAds()
-    {
-        adsManager.I.ShowRewardAd();
     }
 
     public void ReTryGame(string name)

@@ -8,6 +8,7 @@ public class RadialProgress : MonoBehaviour
     public Grid grid;
     public Scores score;
     public GameOverPopup gameOverPopup;
+    public AdsManager adsManager;
     public Text ProgressIndicator;
     public Image LoadingBar;
     float currentValue = 0;
@@ -19,16 +20,6 @@ public class RadialProgress : MonoBehaviour
         if (Grid.Playerlife > 0)
         {
             Grid.Playerlife = 0;
-        }
-        else {
-            if (score.currentScores_ >= score.bestScores_.score)
-            {
-                gameOverPopup.NewBestScoreActive();
-            }
-            else
-            {
-                gameOverPopup.GameOverActive();
-            }
         }
     }
 
@@ -42,8 +33,14 @@ public class RadialProgress : MonoBehaviour
         }
         else
         {
-            adsManager.I.ShowInterstitialAd();
-            grid.playerSaveGame_.saveGameOver = true;
+            if (score.currentScores_ >= score.bestScores_.score)
+            {
+                gameOverPopup.NewBestScoreActive();
+            }
+            else
+            {
+                gameOverPopup.GameOverActive();
+            }
             ProgressIndicator.text = "0";
         }
 
@@ -52,6 +49,7 @@ public class RadialProgress : MonoBehaviour
 
     public void LoadRewardAds() {
         Time.timeScale = 0;
-        adsManager.I.ShowRewardAd();
+        adsManager.ShowRewardedAd();
+        gameOverPopup.RetryPopupDeactive();
     }
 }

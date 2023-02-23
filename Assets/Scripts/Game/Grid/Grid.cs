@@ -14,12 +14,13 @@ public class playerGameData
     public int saveScore;
     public List<int> activeGridSquares;
     public List<string> activeGridSquareColors;
-    public int[] shapeDataIndexList;
+    public int[] shapeDataIndexList = new int[] { -1, -1, -1};
 }
 
 public class Grid : MonoBehaviour
 {
     public GameOverPopup gameOverPopup;
+    public JewelSquareTextureData jewelSquareTextureData;
     public SquareTextureData squareTextureData;
     public Tutuorial tutuorial;
     public ShapeStorage shapeStorage;
@@ -37,8 +38,10 @@ public class Grid : MonoBehaviour
     private List<GameObject> _gridSquares = new List<GameObject>();
     private LineIndicator _lineIndicator;
 
+    private Config.jewelSquare currentActiveJewelSquare_ = Config.jewelSquare.NotjewelSet;
     private Config.SquareColor currentActiveSquareColor_ = Config.SquareColor.NotSet;
     private string playerSaveGamekey = "playerSaveGame";
+    private string playerSaveChallengeGamekey = "playerSaveChallengeGame";
 
     [HideInInspector]
     public playerGameData playerSaveGame_ = new playerGameData();
@@ -50,12 +53,14 @@ public class Grid : MonoBehaviour
     {
         GameEvents.CheckIfShapeCanBePlaced += CheckIfShapeCanBePlaced;
         GameEvents.UpdateSquareColor += OnUpdateSquareColor;
+        GameEvents.UpdateJewelSquare += OnUpdateJewelSquare;
     }
 
     private void OnDisable()
     {
         GameEvents.CheckIfShapeCanBePlaced -= CheckIfShapeCanBePlaced;
         GameEvents.UpdateSquareColor -= OnUpdateSquareColor;
+        GameEvents.UpdateJewelSquare -= OnUpdateJewelSquare;
     }
 
     void Start()
@@ -106,12 +111,18 @@ public class Grid : MonoBehaviour
             tutuorial.tutuorial1();
             Playerlife = 1;
             currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
+            currentActiveJewelSquare_ = jewelSquareTextureData.activeJewelSquareTextures[0].jewelSquare;
         }
     }
 
     private void OnUpdateSquareColor(Config.SquareColor color)
     {
         currentActiveSquareColor_ = color;
+    }
+
+    private void OnUpdateJewelSquare(Config.jewelSquare jewel)
+    {
+        currentActiveJewelSquare_ = jewel;
     }
 
     private void CreateGrid()
@@ -244,7 +255,7 @@ public class Grid : MonoBehaviour
             }
 
             if (shapeLeft == 0) {
-                if (gamemode == "" || gamemode == "ClassicGame" || gamemode == "tutorial3")
+                if (gamemode == "" || gamemode == "ClassicGame" || gamemode == "ChallengeGame" || gamemode == "tutorial3")
                 {
                     GameEvents.RequestNewShapes();
                 }
@@ -257,6 +268,7 @@ public class Grid : MonoBehaviour
             }
 
             CheckIfAnyLineIsCompleted(currentSelectedShape.TotalSquareNumber);
+
         }
         else
         {
@@ -407,6 +419,33 @@ public class Grid : MonoBehaviour
             }
         }
 
+        //if (gamemode == "ClassicGame")
+        //{
+        //    Debug.Log("클래식게임 게임오버 체크");
+        //    if (validShapes == 0)
+        //    {
+        //        adsManager.I.ShowRewardAd();
+        //        GameEvents.GameOver(false);
+        //    }
+        //}
+        //else if (gamemode == "ChallengeGame")
+        //{
+        //    Debug.Log("챌린지게임 게임오버 체크");
+        //    if (validShapes == 0)
+        //    {
+        //        adsManager.I.ShowRewardAd();
+        //        GameEvents.GameOver(false);
+        //    }
+        //}
+        //else {
+        //    Debug.Log("테스트 게임오버 체크");
+        //    if (validShapes == 0)
+        //    {
+        //        adsManager.I.ShowRewardAd();
+        //        GameEvents.GameOver(false);
+        //    }
+        //}
+
         if (validShapes == 0)
         {
             if (Playerlife > 0 && score.bestScores_.score <= 800)
@@ -449,38 +488,47 @@ public class Grid : MonoBehaviour
         playerSaveGame_.saveComboCount = ShapeStorage.ComboCount;
 
         string playerSaveGameData = JsonUtility.ToJson(playerSaveGame_);
-        Debug.Log(playerSaveGameData);
-
-        if (gamemode == "" || gamemode == "ClassicGame") {
+        //Debug.Log(playerSaveGameData);
+        if (gamemode == "" || gamemode == "ClassicGame")
+        {
             BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
         }
+        else if (gamemode == "ChallengeGame")
+        {
+            BinaryDataStream.Save<string>(playerSaveGameData, playerSaveChallengeGamekey);
+        }
+    }
 
-        //if (gamemode == "ClassicGame")
-        //{
-        //    Debug.Log("클래식게임 게임오버 체크");
-        //    if (validShapes == 0)
-        //    {
-        //        adsManager.I.ShowRewardAd();
-        //        GameEvents.GameOver(false);
-        //    }
-        //}
-        //else if (gamemode == "ChallengeGame")
-        //{
-        //    Debug.Log("챌린지게임 게임오버 체크");
-        //    if (validShapes == 0)
-        //    {
-        //        adsManager.I.ShowRewardAd();
-        //        GameEvents.GameOver(false);
-        //    }
-        //}
-        //else {
-        //    Debug.Log("테스트 게임오버 체크");
-        //    if (validShapes == 0)
-        //    {
-        //        adsManager.I.ShowRewardAd();
-        //        GameEvents.GameOver(false);
-        //    }
-        //}
+    public void saveGame(bool resetGame)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            if (!shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf)
+            {
+                playerSaveGame_.shapeDataIndexList[i] = -1;
+            }
+        }
+
+        if (!resetGame) {
+            playerSaveGame_.activeGridSquares = CheckSaveActiveGridSquares();
+            playerSaveGame_.activeGridSquareColors = CheckSaveActiveGridSquaresColor();
+
+            playerSaveGame_.savePlayerlife = Playerlife;
+            playerSaveGame_.saveScore = score.currentScores_;
+            playerSaveGame_.saveisCombo = ShapeStorage.isCombo;
+            playerSaveGame_.saveComboCount = ShapeStorage.ComboCount;
+        }
+
+        string playerSaveGameData = JsonUtility.ToJson(playerSaveGame_);
+        //Debug.Log(playerSaveGameData);
+        if (gamemode == "" || gamemode == "ClassicGame")
+        {
+            BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
+        }
+        else if (gamemode == "ChallengeGame")
+        {
+            BinaryDataStream.Save<string>(playerSaveGameData, playerSaveChallengeGamekey);
+        }
     }
 
     private bool CheckIfShapeCanBePlacedOnGrid(Shape currentShape)

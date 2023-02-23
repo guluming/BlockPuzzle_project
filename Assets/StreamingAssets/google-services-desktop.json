@@ -7,6 +7,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1069488256925:android:939cc37c8f9d7706772174",
+        "android_client_info": {
+          "package_name": "block.puzzle.blast.x8.freegame.toy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069488256925-n7f7eudnjpb9cnqd8k1ukonp1d7l1sic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVMEinVfX9X58jqhHQrACGlrbtMM94TtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069488256925-n7f7eudnjpb9cnqd8k1ukonp1d7l1sic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1069488256925:android:087ffbd07ccc476b772174",
         "android_client_info": {
           "package_name": "com.SpartaCompany.BlockPuzzle"

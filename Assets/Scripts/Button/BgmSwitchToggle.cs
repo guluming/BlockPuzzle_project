@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class BgmSwitchToggle : MonoBehaviour
 {
     [SerializeField] RectTransform uiHandleRectTransform;
-    [SerializeField] Color backgroundActiveColor;
+    [SerializeField] Sprite backgroundActiveSprite;
     [SerializeField] Color handleActiveColor;
 
     Image backgroundImage, handleImage;
 
-    Color backgroundDefaultActiveColor, handleDefaultActiveColor;
+    Sprite backgroundDefaultActiveSprite;
+
+    Color handleDefaultActiveColor;
 
     Vector2 handlePosition;
 
@@ -29,7 +31,7 @@ public class BgmSwitchToggle : MonoBehaviour
         backgroundImage = uiHandleRectTransform.parent.GetComponent<Image>();
         handleImage = uiHandleRectTransform.GetComponent<Image>();
 
-        backgroundDefaultActiveColor = backgroundImage.color;
+        backgroundDefaultActiveSprite = backgroundImage.sprite;
         handleDefaultActiveColor = handleImage.color;
     }
 
@@ -42,8 +44,8 @@ public class BgmSwitchToggle : MonoBehaviour
     public void OnBGMSwitch()
     {
         audioManager.bgmsetting = toggle.isOn;
-        uiHandleRectTransform.anchoredPosition = audioManager.bgmsetting ? handlePosition : handlePosition * -1;
-        backgroundImage.color = audioManager.bgmsetting ? backgroundDefaultActiveColor : backgroundActiveColor;
+        uiHandleRectTransform.anchoredPosition = audioManager.bgmsetting ? new Vector2(handlePosition.x, handlePosition.y) : new Vector2((handlePosition.x * -1) - 7, handlePosition.y);
+        backgroundImage.sprite = audioManager.bgmsetting ? backgroundDefaultActiveSprite : backgroundActiveSprite;
         handleImage.color = audioManager.bgmsetting ? handleDefaultActiveColor : handleActiveColor;
         bgmSource.SetActive(audioManager.bgmsetting);
         audioManager.saveGameSettings();
@@ -51,8 +53,8 @@ public class BgmSwitchToggle : MonoBehaviour
 
     public void OnBGMSwitchState(bool bgmsetting)
     {
-        uiHandleRectTransform.anchoredPosition = bgmsetting ? handlePosition : handlePosition * -1;
-        backgroundImage.color = bgmsetting ? backgroundDefaultActiveColor : backgroundActiveColor;
+        uiHandleRectTransform.anchoredPosition = bgmsetting ? new Vector2(handlePosition.x, handlePosition.y) : new Vector2((handlePosition.x * -1) - 7, handlePosition.y);
+        backgroundImage.sprite = bgmsetting ? backgroundDefaultActiveSprite : backgroundActiveSprite;
         handleImage.color = bgmsetting ? handleDefaultActiveColor : handleActiveColor;
     }
 }

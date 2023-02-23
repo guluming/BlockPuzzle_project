@@ -21,6 +21,8 @@ public class GameEvents : MonoBehaviour
 
     public static Action<Config.SquareColor> UpdateSquareColor;
 
+    public static Action<Config.jewelSquare> UpdateJewelSquare;
+
     public static Action ShowAllLineCompletedWritings;
 
     public static Action<int> ShowLineCompletedWritings;
