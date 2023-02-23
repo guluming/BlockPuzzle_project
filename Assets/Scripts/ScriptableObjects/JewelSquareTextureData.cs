@@ -23,7 +23,7 @@ public class JewelSquareTextureData : ScriptableObject
     {
         var currentIndex = 0;
 
-        for (int index =0; index < activeJewelSquareTextures.Count; index++) {
+        for (int index = 0; index < activeJewelSquareTextures.Count; index++) {
             if (activeJewelSquareTextures[index].jewelSquare == currentjewel) {
                 currentIndex = index;
             }
@@ -34,7 +34,7 @@ public class JewelSquareTextureData : ScriptableObject
 
     public void UpdateJewels() {
         currentjewel = _nextJewel;
-        var currentColorIndex = GetCurrentJewelIndex();
+        //var currentColorIndex = GetCurrentJewelIndex();
 
         int index = Random.Range(0, activeJewelSquareTextures.Count);
         _nextJewel = activeJewelSquareTextures[index].jewelSquare;

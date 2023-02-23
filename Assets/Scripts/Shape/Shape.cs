@@ -130,20 +130,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                     _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
                 }
             }
-
-            //for (int i = 0; i <= TotalSquareNumber; i++)
-            //{
-            //    if (Random.Range(0, 5) == 0)
-            //    {
-            //        //보석이 들어가는 루트
-            //        Debug.Log("보석 생성");
-            //        _currentShape.Add(Instantiate(jewelShapeImage, transform) as GameObject);
-            //    }
-            //    else
-            //    {
-            //        _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
-            //    }
-            //}
         }
 
         //while (_currentShape.Count <= TotalSquareNumber)
