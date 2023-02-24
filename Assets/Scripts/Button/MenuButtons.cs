@@ -7,6 +7,7 @@ public class MenuButtons : MonoBehaviour
 {
     public Grid grid;
     public GameObject SettingsPopup;
+    public GameObject NoticePopup;
 
     private void Awake()
     {
@@ -59,5 +60,15 @@ public class MenuButtons : MonoBehaviour
     public void OffSettingsPopup()
     {
         SettingsPopup.SetActive(false);
+    }
+
+    public void OnNoticePopup()
+    {
+        NoticePopup.SetActive(true);
+    }
+
+    public void OffNoticePopup()
+    {
+        NoticePopup.SetActive(false);
     }
 }

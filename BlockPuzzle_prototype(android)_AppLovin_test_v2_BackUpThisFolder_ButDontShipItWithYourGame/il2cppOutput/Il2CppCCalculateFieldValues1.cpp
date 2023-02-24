@@ -17012,6 +17012,8 @@ struct MenuButtons_t1211D356D9361784E527816DDB55AC6240D85997  : public MonoBehav
 	Grid_t37B32D08A1358EBD823A43D75667D21355CE2922* ___grid_4;
 	// UnityEngine.GameObject MenuButtons::SettingsPopup
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___SettingsPopup_5;
+	// UnityEngine.GameObject MenuButtons::NoticePopup
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___NoticePopup_6;
 };
 
 // MessagingInit
@@ -26373,9 +26375,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3055[43] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3056[11] = 
 {
 	static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___uiHandleRectTransform_4)),static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___backgroundActiveSprite_5)),static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___handleActiveColor_6)),static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___backgroundImage_7)),static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___handleImage_8)),static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___backgroundDefaultActiveSprite_9)),static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___handleDefaultActiveColor_10)),static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___handlePosition_11)),static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___audioManager_12)),static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___bgmSource_13)),static_cast<int32_t>(offsetof(BgmSwitchToggle_tF010ABF278CB5704716FC91D6915F8619BFF9FF1, ___toggle_14)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3057[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3057[3] = 
 {
-	static_cast<int32_t>(offsetof(MenuButtons_t1211D356D9361784E527816DDB55AC6240D85997, ___grid_4)),static_cast<int32_t>(offsetof(MenuButtons_t1211D356D9361784E527816DDB55AC6240D85997, ___SettingsPopup_5)),};
+	static_cast<int32_t>(offsetof(MenuButtons_t1211D356D9361784E527816DDB55AC6240D85997, ___grid_4)),static_cast<int32_t>(offsetof(MenuButtons_t1211D356D9361784E527816DDB55AC6240D85997, ___SettingsPopup_5)),static_cast<int32_t>(offsetof(MenuButtons_t1211D356D9361784E527816DDB55AC6240D85997, ___NoticePopup_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3058[11] = 
 {
 	static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___uiHandleRectTransform_4)),static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___backgroundActiveSprite_5)),static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___handleActiveColor_6)),static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___backgroundImage_7)),static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___handleImage_8)),static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___backgroundDefaultActiveSprite_9)),static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___handleDefaultActiveColor_10)),static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___handlePosition_11)),static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___audioManager_12)),static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___sfxSource_13)),static_cast<int32_t>(offsetof(SfxSwitchToggle_t9C7DC8F0F08A693ECD0B9930B350F9CFC854BCF5, ___toggle_14)),};

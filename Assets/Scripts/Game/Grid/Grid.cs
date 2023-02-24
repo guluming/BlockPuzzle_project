@@ -30,7 +30,7 @@ public class Grid : MonoBehaviour
     public int columns = 0;
     public int rows = 0;
     public Vector2 startPosition = new Vector2(-461.5f, 461.5f);
-    public float squaresGap = 0.1f;
+    public float squaresGap = 0.0f;
     public float squareScale = 1.0f;
     public float everySquareOffset = 0.5f;
 

@@ -3827,6 +3827,8 @@ struct MenuButtons_t1211D356D9361784E527816DDB55AC6240D85997  : public MonoBehav
 	Grid_t37B32D08A1358EBD823A43D75667D21355CE2922* ___grid_4;
 	// UnityEngine.GameObject MenuButtons::SettingsPopup
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___SettingsPopup_5;
+	// UnityEngine.GameObject MenuButtons::NoticePopup
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___NoticePopup_6;
 };
 
 // MessagingInit
@@ -17015,6 +17017,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuButtons_OffSettingsPopup_m601EBF597E
 		return;
 	}
 }
+// System.Void MenuButtons::OnNoticePopup()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuButtons_OnNoticePopup_m13EC422A4AEE704496D16113DE81ABD536D3379B (MenuButtons_t1211D356D9361784E527816DDB55AC6240D85997* __this, const RuntimeMethod* method) 
+{
+	{
+		// NoticePopup.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___NoticePopup_6;
+		NullCheck(L_0);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
+		// }
+		return;
+	}
+}
+// System.Void MenuButtons::OffNoticePopup()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuButtons_OffNoticePopup_mAF810C5754B331D4A59006AAC3C6A57A8D8D8EC4 (MenuButtons_t1211D356D9361784E527816DDB55AC6240D85997* __this, const RuntimeMethod* method) 
+{
+	{
+		// NoticePopup.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___NoticePopup_6;
+		NullCheck(L_0);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
+		// }
+		return;
+	}
+}
 // System.Void MenuButtons::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuButtons__ctor_m8A70E65098A3B890D0AB2B9E3F84951495960C14 (MenuButtons_t1211D356D9361784E527816DDB55AC6240D85997* __this, const RuntimeMethod* method) 
 {
@@ -21039,8 +21065,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Grid__ctor_m0D659E4BC97ADC3217C7BB893929
 		memset((&L_0), 0, sizeof(L_0));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_0), (-461.5f), (461.5f), /*hidden argument*/NULL);
 		__this->___startPosition_14 = L_0;
-		// public float squaresGap = 0.1f;
-		__this->___squaresGap_15 = (0.100000001f);
 		// public float squareScale = 1.0f;
 		__this->___squareScale_16 = (1.0f);
 		// public float everySquareOffset = 0.5f;
