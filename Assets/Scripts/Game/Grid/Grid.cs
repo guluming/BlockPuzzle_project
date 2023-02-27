@@ -413,38 +413,42 @@ public class Grid : MonoBehaviour
 
         for (var index=0; index < shapeStorage.shapeList.Count; index++) {
             var isShapeActive = shapeStorage.shapeList[index].IsAnyOfShapeSqaureActive();
+
+            if (!CheckIfShapeCanBePlacedOnGrid(shapeStorage.shapeList[index]))
+            {
+                if (isShapeActive)
+                {
+                    Debug.Log("배치 불가능 블록 :" + index);
+                    Transform[] allChildren = shapes.transform.GetChild(index).GetComponentsInChildren<Transform>();
+                    foreach (Transform child in this.shapes.transform.GetChild(index))
+                    {
+                        Color color = child.GetComponent<Image>().color;
+                        color.a = 0.5f;
+                        child.GetComponent<Image>().color = color;
+                    }
+                }
+            }
+            else {
+                if (isShapeActive)
+                {
+                    Debug.Log("배치 가능 블록 :" + index);
+                    Transform[] allChildren = shapes.transform.GetChild(index).GetComponentsInChildren<Transform>();
+                    foreach (Transform child in this.shapes.transform.GetChild(index))
+                    {
+                        Color color = child.GetComponent<Image>().color;
+                        color.a = 1.0f;
+                        child.GetComponent<Image>().color = color;
+                    }
+                }
+            }
+
             if (CheckIfShapeCanBePlacedOnGrid(shapeStorage.shapeList[index]) && isShapeActive) {
                 shapeStorage.shapeList[index]?.ActivateShape();
                 validShapes++;
             }
         }
 
-        //if (gamemode == "ClassicGame")
-        //{
-        //    Debug.Log("클래식게임 게임오버 체크");
-        //    if (validShapes == 0)
-        //    {
-        //        adsManager.I.ShowRewardAd();
-        //        GameEvents.GameOver(false);
-        //    }
-        //}
-        //else if (gamemode == "ChallengeGame")
-        //{
-        //    Debug.Log("챌린지게임 게임오버 체크");
-        //    if (validShapes == 0)
-        //    {
-        //        adsManager.I.ShowRewardAd();
-        //        GameEvents.GameOver(false);
-        //    }
-        //}
-        //else {
-        //    Debug.Log("테스트 게임오버 체크");
-        //    if (validShapes == 0)
-        //    {
-        //        adsManager.I.ShowRewardAd();
-        //        GameEvents.GameOver(false);
-        //    }
-        //}
+
 
         if (validShapes == 0)
         {

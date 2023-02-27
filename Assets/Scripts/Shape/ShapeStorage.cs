@@ -134,10 +134,7 @@ public class ShapeStorage : MonoBehaviour
             }
         }
 
-        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame")
-        {
-            grid.CheckIfPlayLost();
-        }
+        grid.CheckIfPlayLost();
     }
 
     private void RequestNewShapes()
@@ -162,10 +159,7 @@ public class ShapeStorage : MonoBehaviour
             UpdateJewelSquare();
         }
 
-        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame")
-        {
-            grid.CheckIfPlayLost();
-        }
+        grid.CheckIfPlayLost();
     }
 
     public void resurrectionNewShapes()
@@ -186,6 +180,8 @@ public class ShapeStorage : MonoBehaviour
             UpdateSquareColor();
             UpdateJewelSquare();
         }
+
+        grid.CheckIfPlayLost();
     }
 
     private void ShapeIndexSeleted(List<int> shapeIndexList)
