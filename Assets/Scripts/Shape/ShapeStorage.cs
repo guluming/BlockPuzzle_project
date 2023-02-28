@@ -158,8 +158,9 @@ public class ShapeStorage : MonoBehaviour
             UpdateSquareColor();
             UpdateJewelSquare();
         }
-
-        grid.CheckIfPlayLost();
+        if (Grid.gamemode != "tutorial1" && Grid.gamemode != "tutorial2" && Grid.gamemode != "tutorial3") {
+            grid.CheckIfPlayLost();
+        }
     }
 
     public void resurrectionNewShapes()

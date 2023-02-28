@@ -5718,6 +5718,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: grid
+      value: 
+      objectReference: {fileID: 1156734087}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: shapeStorage
       value: 
       objectReference: {fileID: 726592072}
@@ -5914,6 +5918,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: grid
+      value: 
+      objectReference: {fileID: 1156734087}
     - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: shapeStorage
       value: 
@@ -8475,6 +8483,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: grid
+      value: 
+      objectReference: {fileID: 1156734087}
     - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: shapeStorage
       value: 

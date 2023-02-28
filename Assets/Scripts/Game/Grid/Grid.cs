@@ -351,7 +351,6 @@ public class Grid : MonoBehaviour
         } else if (gamemode == "tutorial3") {
 
             gamemode = "ClassicGame";
-
         }
         else {
             if (allClearCheck)
@@ -418,7 +417,7 @@ public class Grid : MonoBehaviour
             {
                 if (isShapeActive)
                 {
-                    Debug.Log("배치 불가능 블록 :" + index);
+                    //Debug.Log("배치 불가능 블록 :" + index);
                     Transform[] allChildren = shapes.transform.GetChild(index).GetComponentsInChildren<Transform>();
                     foreach (Transform child in this.shapes.transform.GetChild(index))
                     {
@@ -428,10 +427,11 @@ public class Grid : MonoBehaviour
                     }
                 }
             }
-            else {
+            else
+            {
                 if (isShapeActive)
                 {
-                    Debug.Log("배치 가능 블록 :" + index);
+                    //Debug.Log("배치 가능 블록 :" + index);
                     Transform[] allChildren = shapes.transform.GetChild(index).GetComponentsInChildren<Transform>();
                     foreach (Transform child in this.shapes.transform.GetChild(index))
                     {
@@ -447,8 +447,6 @@ public class Grid : MonoBehaviour
                 validShapes++;
             }
         }
-
-
 
         if (validShapes == 0)
         {
@@ -578,6 +576,83 @@ public class Grid : MonoBehaviour
         }
 
         return canBePlaced;
+    }
+
+    public void CheckIfShapeCanBePlacedOnGridOnlyOne(Shape currentShape)
+    {
+        ShapeData currentShapeData = currentShape.CurrentShapeData;
+        int shapeColumns = currentShapeData.columns;
+        int shapeRows = currentShapeData.rows;
+
+        List<int> originalShapeFilledUpSquares = new List<int>();
+        int squareIndex = 0;
+
+        for (var rowIndex = 0; rowIndex < shapeRows; rowIndex++)
+        {
+            for (var columnIndex = 0; columnIndex < shapeColumns; columnIndex++)
+            {
+                if (currentShapeData.board[rowIndex].column[columnIndex])
+                {
+                    originalShapeFilledUpSquares.Add(squareIndex);
+                }
+
+                squareIndex++;
+            }
+        }
+        Debug.Log(string.Join(",", originalShapeFilledUpSquares));
+        Debug.Log(squareIndex);
+
+        if (currentShape.TotalSquareNumber != originalShapeFilledUpSquares.Count)
+        {
+            Debug.LogError("Number of filled up squares are not the same as the original shape have");
+        }
+
+        List<int[]> sqaureList = GetAllSquaresCombination(shapeColumns, shapeRows);
+
+        //Debug.Log(sqaureList.Count);
+        //Debug.Log(string.Join("," , sqaureList[0]));
+
+        bool canBePlaced = false;
+
+        for (int i=0; i< sqaureList.Count; i++)
+        {
+            int[] number = sqaureList[i];
+
+            bool shapeCanBePlacedOnTheBoard = true;
+            foreach (int squareIndexToCheck in originalShapeFilledUpSquares)
+            {
+                GridSquare comp = _gridSquares[number[squareIndexToCheck]].GetComponent<GridSquare>();
+
+                if (comp.SquareOccupied)
+                {
+                    shapeCanBePlacedOnTheBoard = false;
+                }
+            }
+
+            if (shapeCanBePlacedOnTheBoard)
+            {
+                canBePlaced = true;
+            }
+        }
+
+        /*foreach (int[] number in sqaureList)
+        {
+            bool shapeCanBePlacedOnTheBoard = true;
+            foreach (int squareIndexToCheck in originalShapeFilledUpSquares)
+            {
+                GridSquare comp = _gridSquares[number[squareIndexToCheck]].GetComponent<GridSquare>();
+
+                if (comp.SquareOccupied)
+                {
+                    shapeCanBePlacedOnTheBoard = false;
+                }
+            }
+
+            if (shapeCanBePlacedOnTheBoard)
+            {
+                canBePlaced = true;
+            }
+        }*/
     }
 
     private List<int[]> GetAllSquaresCombination(int columns, int rows)

@@ -9,6 +9,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public AnimationCurve curve;
     public GameObject squareShapeImage;
     public GameObject jewelShapeImage;
+    public Grid grid;
     public Vector3 shapeSelectedScale;
     public Vector2 offset;
 
@@ -131,11 +132,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                 }
             }
         }
-
-        //while (_currentShape.Count <= TotalSquareNumber)
-        //{
-        //    _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
-        //}
 
         foreach (var square in _currentShape) {
             square.gameObject.transform.position = Vector3.zero;
@@ -329,7 +325,12 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         }
         
         GetComponent<RectTransform>().localScale = shapeSelectedScale;
-        
+
+        grid.CheckIfShapeCanBePlacedOnGridOnlyOne(this);
+        /*if ()
+        {
+            Debug.Log("놓을 곳이 한 곳 밖에 없습니다.");
+        }*/
     }
 
     public void OnBeginDrag(PointerEventData eventData)
