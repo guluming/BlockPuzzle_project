@@ -316,10 +316,14 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public void OnPointerUp(PointerEventData eventData)
     {
         GetComponent<RectTransform>().localScale = new Vector3(0.6f, 0.6f, 0.6f);
+
+        grid.AllGridSquareHooverImageOff();
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        seletedshapesprite = transform.GetChild(0).GetComponent<Image>().sprite;
+
         if (audioManager.sfxsetting) {
             GameEvents.blockDown();
         }
@@ -327,10 +331,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         GetComponent<RectTransform>().localScale = shapeSelectedScale;
 
         grid.CheckIfShapeCanBePlacedOnGridOnlyOne(this);
-        /*if ()
-        {
-            Debug.Log("놓을 곳이 한 곳 밖에 없습니다.");
-        }*/
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -341,7 +341,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public void OnDrag(PointerEventData eventData)
     {
         //블록색깔 가져오는 곳
-        seletedshapesprite = transform.GetChild(0).GetComponent<Image>().sprite;
+        //seletedshapesprite = transform.GetChild(0).GetComponent<Image>().sprite;
 
         _transform.anchorMin = new Vector2(0.5f, 0.5f);
         _transform.anchorMax = new Vector2(0.5f, 0.5f);

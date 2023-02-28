@@ -67,9 +67,15 @@ public class GridSquare : MonoBehaviour
     {
         if (SquareOccupied == false)
         {
-            Selected = true;
-            hooverImage.sprite = Shape.seletedshapesprite;
-            hooverImage.gameObject.SetActive(true);
+            if (hooverImage.gameObject.activeSelf)
+            {
+                Selected = true;
+            }
+            else {
+                Selected = true;
+                hooverImage.sprite = Shape.seletedshapesprite;
+                hooverImage.gameObject.SetActive(true);
+            }
         }
         else if (collision.GetComponent<ShapeSquare>() != null)
         {

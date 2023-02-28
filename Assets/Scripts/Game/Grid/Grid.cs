@@ -599,8 +599,6 @@ public class Grid : MonoBehaviour
                 squareIndex++;
             }
         }
-        Debug.Log(string.Join(",", originalShapeFilledUpSquares));
-        Debug.Log(squareIndex);
 
         if (currentShape.TotalSquareNumber != originalShapeFilledUpSquares.Count)
         {
@@ -609,11 +607,7 @@ public class Grid : MonoBehaviour
 
         List<int[]> sqaureList = GetAllSquaresCombination(shapeColumns, shapeRows);
 
-        //Debug.Log(sqaureList.Count);
-        //Debug.Log(string.Join("," , sqaureList[0]));
-
-        bool canBePlaced = false;
-
+        List<int[]> canBePlacedPosition = new List<int[]>();
         for (int i=0; i< sqaureList.Count; i++)
         {
             int[] number = sqaureList[i];
@@ -631,28 +625,35 @@ public class Grid : MonoBehaviour
 
             if (shapeCanBePlacedOnTheBoard)
             {
-                canBePlaced = true;
+                canBePlacedPosition.Add(number);
             }
         }
 
-        /*foreach (int[] number in sqaureList)
+        if (canBePlacedPosition.Count == 1)
         {
-            bool shapeCanBePlacedOnTheBoard = true;
-            foreach (int squareIndexToCheck in originalShapeFilledUpSquares)
-            {
-                GridSquare comp = _gridSquares[number[squareIndexToCheck]].GetComponent<GridSquare>();
-
-                if (comp.SquareOccupied)
+            int[] number = canBePlacedPosition[0];
+            for (int i=0; i< number.Length; i++) {
+                foreach (int squareIndexToCheck in originalShapeFilledUpSquares)
                 {
-                    shapeCanBePlacedOnTheBoard = false;
+                    GridSquare comp = _gridSquares[number[squareIndexToCheck]].GetComponent<GridSquare>();
+
+                    comp.hooverImage.sprite = Shape.seletedshapesprite;
+                    comp.hooverImage.gameObject.SetActive(true);
                 }
             }
+            Debug.Log("놓을 수 있는 곳이 1 곳 입니다.");
+        }
+        else {
+            Debug.Log("놓을 수 있는 곳이 여러 곳 입니다.");
+        }
+    }
 
-            if (shapeCanBePlacedOnTheBoard)
-            {
-                canBePlaced = true;
-            }
-        }*/
+    public void AllGridSquareHooverImageOff() 
+    {
+        for (int i=0; i < _gridSquares.Count; i++) {
+            GridSquare comp = _gridSquares[i].GetComponent<GridSquare>();
+            comp.hooverImage.gameObject.SetActive(false);
+        }
     }
 
     private List<int[]> GetAllSquaresCombination(int columns, int rows)
