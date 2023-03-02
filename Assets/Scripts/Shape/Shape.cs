@@ -351,6 +351,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.transform as RectTransform,
             eventData.position, Camera.main, out pos);
         _transform.localPosition = pos + offset;
+
+        grid.CheckIfShapeCanBePlacedOnGridOnlyOne(this);
     }
 
     public void OnEndDrag(PointerEventData eventData)

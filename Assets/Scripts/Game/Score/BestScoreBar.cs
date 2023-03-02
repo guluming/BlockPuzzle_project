@@ -20,7 +20,7 @@ public class BestScoreBar : MonoBehaviour
     private void UpdateBestScoreBar(int currentScore, int bestScore)
     {
         float currentPrecentage = (float)currentScore / (float)bestScore;
-        fillInImage.fillAmount = currentPrecentage;
+        //fillInImage.fillAmount = currentPrecentage;
         bestScoreText.text = bestScore.ToString();
     }
 }

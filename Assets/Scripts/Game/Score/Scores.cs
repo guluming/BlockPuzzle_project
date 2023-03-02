@@ -56,7 +56,6 @@ public class Scores : MonoBehaviour
             currentScores_ = 0;
         }
         
-        //newBestScore_ = false;
         SquareTextureData.SetStartColor();
         UpdateScoreText();
     }

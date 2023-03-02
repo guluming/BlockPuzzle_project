@@ -643,9 +643,6 @@ public class Grid : MonoBehaviour
             }
             Debug.Log("놓을 수 있는 곳이 1 곳 입니다.");
         }
-        else {
-            Debug.Log("놓을 수 있는 곳이 여러 곳 입니다.");
-        }
     }
 
     public void AllGridSquareHooverImageOff() 
