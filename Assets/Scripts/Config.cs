@@ -20,9 +20,10 @@ public class Config : MonoBehaviour
     public enum jewelSquare
     {
         NotjewelSet,
-        Diamond,
-        Ruby,
         Sapphire,
-        Emerald
+        Garnet,
+        Ruby,
+        topaz,
+        amethyst
     };
 }
