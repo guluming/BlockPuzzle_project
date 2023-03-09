@@ -22,12 +22,17 @@ public class Scores : MonoBehaviour
     public BestScoreData bestScores_ = new BestScoreData();
 
     private string playerSaveGamekey = "playerSaveGame";
+    private string playerSaveChallengeGamekey = "playerSaveChallengeGame";
     private string bestScoreKey_ = "blockpuzzlescore";
 
     private void Awake()
     {
-        if (BinaryDataStream.Exist(bestScoreKey_)) {
-            StartCoroutine(ReadDataFile());
+        if (Grid.gamemode == "ClassicGame")
+        {
+            if (BinaryDataStream.Exist(bestScoreKey_))
+            {
+                StartCoroutine(ReadDataFile());
+            }
         }
     }
 
@@ -40,20 +45,44 @@ public class Scores : MonoBehaviour
 
     void Start()
     {
-        if (BinaryDataStream.Exist(playerSaveGamekey))
+        if (Grid.gamemode == "ClassicGame")
         {
-            string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
-            grid.playerSaveGame_ = JsonUtility.FromJson<playerGameData>(jsonPlayerSaveGame_);
-            if (!grid.playerSaveGame_.saveGameOver)
+            if (BinaryDataStream.Exist(playerSaveGamekey))
             {
-                currentScores_ = grid.playerSaveGame_.saveScore;
+                string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
+                grid.playerSaveGame_ = JsonUtility.FromJson<playerClassicGameData>(jsonPlayerSaveGame_);
+                if (!grid.playerSaveGame_.saveGameOver)
+                {
+                    currentScores_ = grid.playerSaveGame_.saveScore;
+                }
+                else
+                {
+                    currentScores_ = 0;
+                }
             }
-            else {
+            else
+            {
                 currentScores_ = 0;
             }
-        }
-        else {
-            currentScores_ = 0;
+        } else if (Grid.gamemode == "ChallengeGame") 
+        {
+            if (BinaryDataStream.Exist(playerSaveChallengeGamekey))
+            {
+                string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveChallengeGamekey);
+                grid.playerSaveChallengeGame_ = JsonUtility.FromJson<playerChallengeGameData>(jsonPlayerSaveGame_);
+                if (!grid.playerSaveChallengeGame_.ChallengesaveGameOver)
+                {
+                    currentScores_ = grid.playerSaveChallengeGame_.ChallengesaveScore;
+                }
+                else
+                {
+                    currentScores_ = 0;
+                }
+            }
+            else
+            {
+                currentScores_ = 0;
+            }
         }
         
         SquareTextureData.SetStartColor();
@@ -79,15 +108,24 @@ public class Scores : MonoBehaviour
 
     private void AddScores(int scores)
     {
-        currentScores_ += scores;
-        if (currentScores_ > bestScores_.score) {
-            //newBestScore_ = true;
-            bestScores_.score = currentScores_;
-            SaveBestScores();
-        }
+        if (Grid.gamemode == "ClassicGame")
+        {
+            currentScores_ += scores;
+            if (currentScores_ > bestScores_.score)
+            {
+                //newBestScore_ = true;
+                bestScores_.score = currentScores_;
+                SaveBestScores();
+            }
 
-        GameEvents.UpdateBestScoreBar(currentScores_, bestScores_.score);
-        UpdateScoreText();
+            GameEvents.UpdateBestScoreBar(currentScores_, bestScores_.score);
+            UpdateScoreText();
+        } else if (Grid.gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Scoremode") 
+        {
+            currentScores_ += scores;
+            UpdateScoreText();
+        }
+        
     }
 
     private void UpdateScoreText()

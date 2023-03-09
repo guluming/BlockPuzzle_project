@@ -16,36 +16,47 @@ public class MenuButtons : MonoBehaviour
         }
     }
 
-    public void LoadClassicGame(string name)
+    public void LoadSeleteScene(string name)
     {
-        Grid.gamemode = "ClassicGame";
-        SceneManager.LoadScene(name);
-    }
+        if (name == "ClassicGame")
+        {
+            Grid.gamemode = "ClassicGame";
+        }
+        else if (name == "ChallengeGame")
+        {
+            Grid.gamemode = "ChallengeGame";
+        }
+        else
+        {
+            Grid.gamemode = "Menu";
+        }
 
-    public void LoadChallengeGame(string name)
-    {
-        Grid.gamemode = "ChallengeGame";
-        SceneManager.LoadScene(name);
-    }
-
-    public void LoadMainScene(string name)
-    {
-        Grid.gamemode = "MainMenu";
         SceneManager.LoadScene(name);
     }
 
     public void LoadReplayScene()
     {
-        grid.playerSaveGame_.saveGameOver = true;
-        grid.saveGame(true);
-        SceneManager.LoadScene("Game");
+        if (Grid.gamemode == "ClassicGame")
+        {
+            Grid.gamemode = "ClassicGame";
+            grid.playerSaveGame_.saveGameOver = true;
+            grid.saveGame(true);
+            SceneManager.LoadScene("ClassicGame");
+        }
+        else if (Grid.gamemode == "ChallengeGame")
+        {
+            Grid.gamemode = "ChallengeGame";
+            grid.playerSaveChallengeGame_.ChallengesaveGameOver = true;
+            grid.saveChallengeGame(true);
+            SceneManager.LoadScene("ChallengeGame");
+        }
     }
 
-    public static void LoadAdsMainScene()
+    /*public static void LoadAdsMainScene()
     {
         SceneManager.LoadScene("MainMenu");
         Grid.gamemode = "";
-    }
+    }*/
 
     public void ReTryGame(string name)
     {

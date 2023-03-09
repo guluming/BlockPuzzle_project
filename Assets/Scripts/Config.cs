@@ -24,6 +24,7 @@ public class Config : MonoBehaviour
         Garnet,
         Ruby,
         topaz,
-        amethyst
+        amethyst,
+        Emerald
     };
 }

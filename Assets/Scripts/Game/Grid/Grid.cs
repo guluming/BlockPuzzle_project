@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public class playerGameData
+public class playerClassicGameData
 {
     public bool saveGameOver;
     public bool saveisCombo;
@@ -16,6 +16,18 @@ public class playerGameData
     public List<string> activeGridSquareColors;
     public int[] shapeDataIndexList = new int[] { -1, -1, -1};
 }
+public class playerChallengeGameData
+{
+    public bool ChallengesaveGameOver;
+    public bool ChallengesaveisCombo;
+    public int ChallengesaveComboCount;
+    public int ChallengesavePlayerlife;
+    public int ChallengesaveScore;
+    public List<int> ChallengeactiveGridSquares;
+    public List<string> ChallengeactiveGridSquareColors;
+    public int[] ChallengeshapeDataIndexList = new int[] { -1, -1, -1 };
+    public int ChallengestartStage = 1;
+}
 
 public class Grid : MonoBehaviour
 {
@@ -23,6 +35,7 @@ public class Grid : MonoBehaviour
     public JewelSquareTextureData jewelSquareTextureData;
     public SquareTextureData squareTextureData;
     public Tutuorial tutuorial;
+    public ChallengeStage ChallengeStage;
     public ShapeStorage shapeStorage;
     public GameObject shapes;
     public Scores score;
@@ -44,10 +57,12 @@ public class Grid : MonoBehaviour
     private string playerSaveChallengeGamekey = "playerSaveChallengeGame";
 
     [HideInInspector]
-    public playerGameData playerSaveGame_ = new playerGameData();
+    public playerClassicGameData playerSaveGame_ = new playerClassicGameData();
+    public playerChallengeGameData playerSaveChallengeGame_ = new playerChallengeGameData();
 
     public static string gamemode;
     public static int Playerlife;
+    public static int startStage;
 
     private void OnEnable()
     {
@@ -68,50 +83,115 @@ public class Grid : MonoBehaviour
         _lineIndicator = GetComponent<LineIndicator>();
         CreateGrid();
 
-        if (BinaryDataStream.Exist(playerSaveGamekey)) {
-            Debug.Log("저장 파일이 있습니다.");
-
-            string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
-            playerSaveGame_ = JsonUtility.FromJson<playerGameData>(jsonPlayerSaveGame_);
-
-            if (!playerSaveGame_.saveGameOver)
+        if (gamemode == "ClassicGame")
+        {
+            if (BinaryDataStream.Exist(playerSaveGamekey))
             {
-                Debug.Log("저장 파일을 불러왔습니다.");
-                Playerlife = playerSaveGame_.savePlayerlife;
-                score.currentScores_ = playerSaveGame_.saveScore;
-                ShapeStorage.isCombo = playerSaveGame_.saveisCombo;
-                ShapeStorage.ComboCount = playerSaveGame_.saveComboCount;
+                Debug.Log("기본 모드 저장 파일이 있습니다.");
 
-                List<Sprite> saveActiveSquareTextures = new List<Sprite>();
-                for (int i = 0; i < playerSaveGame_.activeGridSquareColors.Count; i++)
+                string jsonPlayerSaveGame_ = BinaryDataStream.Read<string>(playerSaveGamekey);
+                playerSaveGame_ = JsonUtility.FromJson<playerClassicGameData>(jsonPlayerSaveGame_);
+
+                if (!playerSaveGame_.saveGameOver)
                 {
-                    for (int j = 0; j < squareTextureData.activeSquareTextures.Count; j++)
+                    Debug.Log("저장 파일을 불러왔습니다.");
+                    Playerlife = playerSaveGame_.savePlayerlife;
+                    score.currentScores_ = playerSaveGame_.saveScore;
+                    ShapeStorage.isCombo = playerSaveGame_.saveisCombo;
+                    ShapeStorage.ComboCount = playerSaveGame_.saveComboCount;
+
+                    List<Sprite> saveActiveSquareTextures = new List<Sprite>();
+                    for (int i = 0; i < playerSaveGame_.activeGridSquareColors.Count; i++)
                     {
-                        if (playerSaveGame_.activeGridSquareColors[i] == squareTextureData.activeSquareTextures[j].texture.ToString())
+                        for (int j = 0; j < squareTextureData.activeSquareTextures.Count; j++)
                         {
-                            saveActiveSquareTextures.Add(squareTextureData.activeSquareTextures[j].texture);
+                            if (playerSaveGame_.activeGridSquareColors[i] == squareTextureData.activeSquareTextures[j].texture.ToString())
+                            {
+                                saveActiveSquareTextures.Add(squareTextureData.activeSquareTextures[j].texture);
+                            }
                         }
                     }
-                }
 
-                for (int i = 0; i < playerSaveGame_.activeGridSquares.Count; i++)
+                    for (int i = 0; i < playerSaveGame_.activeGridSquares.Count; i++)
+                    {
+                        transform.GetChild(playerSaveGame_.activeGridSquares[i]).GetComponent<GridSquare>().ActivateSquare();
+                        transform.GetChild(playerSaveGame_.activeGridSquares[i]).GetComponent<GridSquare>().Selected = false;
+                        transform.GetChild(playerSaveGame_.activeGridSquares[i]).GetComponent<GridSquare>().SquareOccupied = true;
+                        transform.GetChild(playerSaveGame_.activeGridSquares[i]).transform.GetChild(2).GetComponent<Image>().sprite = saveActiveSquareTextures[i];
+                    }
+                }
+                else
                 {
-                    transform.GetChild(playerSaveGame_.activeGridSquares[i]).GetComponent<GridSquare>().ActivateSquare();
-                    transform.GetChild(playerSaveGame_.activeGridSquares[i]).GetComponent<GridSquare>().Selected = false;
-                    transform.GetChild(playerSaveGame_.activeGridSquares[i]).GetComponent<GridSquare>().SquareOccupied = true;
-                    transform.GetChild(playerSaveGame_.activeGridSquares[i]).transform.GetChild(2).GetComponent<Image>().sprite = saveActiveSquareTextures[i];
+                    Playerlife = 1;
                 }
             }
-            else {
+            else
+            {
+                Debug.Log("저장 파일이 없습니다.");
+
+                tutuorial.tutuorial1();
+                
                 Playerlife = 1;
+                currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
+                currentActiveJewelSquare_ = jewelSquareTextureData.activeJewelSquareTextures[0].jewelSquare;
             }
-        } else {
-            Debug.Log("저장 파일이 없습니다.");
-            
-            tutuorial.tutuorial1();
-            Playerlife = 1;
-            currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
-            currentActiveJewelSquare_ = jewelSquareTextureData.activeJewelSquareTextures[0].jewelSquare;
+        }
+        else if (gamemode == "ChallengeGame")
+        {
+            if (BinaryDataStream.Exist(playerSaveChallengeGamekey))
+            {
+                Debug.Log("도전 모드 저장 파일이 있습니다.");
+
+                string jsonPlayerSaveChallengeGame_ = BinaryDataStream.Read<string>(playerSaveChallengeGamekey);
+                playerSaveChallengeGame_ = JsonUtility.FromJson<playerChallengeGameData>(jsonPlayerSaveChallengeGame_);
+
+                if (!playerSaveChallengeGame_.ChallengesaveGameOver)
+                {
+                    Debug.Log("저장 파일을 불러왔습니다.");
+                    Playerlife = playerSaveChallengeGame_.ChallengesavePlayerlife;
+                    startStage = playerSaveChallengeGame_.ChallengestartStage;
+                    score.currentScores_ = playerSaveChallengeGame_.ChallengesaveScore;
+                    ShapeStorage.isCombo = playerSaveChallengeGame_.ChallengesaveisCombo;
+                    ShapeStorage.ComboCount = playerSaveChallengeGame_.ChallengesaveComboCount;
+
+                    List<Sprite> saveActiveSquareTextures = new List<Sprite>();
+                    for (int i = 0; i < playerSaveChallengeGame_.ChallengeactiveGridSquareColors.Count; i++)
+                    {
+                        for (int j = 0; j < squareTextureData.activeSquareTextures.Count; j++)
+                        {
+                            if (playerSaveChallengeGame_.ChallengeactiveGridSquareColors[i] == squareTextureData.activeSquareTextures[j].texture.ToString())
+                            {
+                                saveActiveSquareTextures.Add(squareTextureData.activeSquareTextures[j].texture);
+                            }
+                        }
+                    }
+
+                    for (int i = 0; i < playerSaveChallengeGame_.ChallengeactiveGridSquares.Count; i++)
+                    {
+                        transform.GetChild(playerSaveChallengeGame_.ChallengeactiveGridSquares[i]).GetComponent<GridSquare>().ActivateSquare();
+                        transform.GetChild(playerSaveChallengeGame_.ChallengeactiveGridSquares[i]).GetComponent<GridSquare>().Selected = false;
+                        transform.GetChild(playerSaveChallengeGame_.ChallengeactiveGridSquares[i]).GetComponent<GridSquare>().SquareOccupied = true;
+                        transform.GetChild(playerSaveChallengeGame_.ChallengeactiveGridSquares[i]).transform.GetChild(2).GetComponent<Image>().sprite = saveActiveSquareTextures[i];
+                    }
+
+                    ChallengeStage.ChallengeStageSelete(playerSaveChallengeGame_.ChallengestartStage);
+                }
+                else
+                {
+                    Playerlife = 1;
+                    ChallengeStage.ChallengeStageSelete(playerSaveChallengeGame_.ChallengestartStage);
+                }
+            }
+            else
+            {
+                Debug.Log("저장 파일이 없습니다.");
+
+                ChallengeStage.ChallengeStageSelete(1);
+
+                Playerlife = 1;
+                currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
+                currentActiveJewelSquare_ = jewelSquareTextureData.activeJewelSquareTextures[0].jewelSquare;
+            }
         }
     }
 
@@ -304,7 +384,7 @@ public class Grid : MonoBehaviour
 
         int completedLines = CheckIfSquaresAreCompleted(lines);
 
-        if (gamemode == "" || gamemode == "ClassicGame") {
+        if (gamemode == "ClassicGame" || (gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Scoremode")) {
             if (completedLines > 0)
             {
                 ShapeStorage.isCombo = true;
@@ -406,10 +486,34 @@ public class Grid : MonoBehaviour
         return linesCompleted;
     }
 
+    private bool CheckIfPlayChallengeGameWin()
+    {
+        if (ChallengeStage.challengemode == "Scoremode")
+        {
+            if (score.currentScores_ >= ChallengeStage.TargetScore)
+            {
+                Debug.Log("스테이지를 클리어 했습니다!");
+                startStage++;
+                ChallengeStage.TargetScoreText.gameObject.SetActive(false);
+                ChallengeStage.ScorecompleteCheck.SetActive(true);
+
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
+        else 
+        {
+            //보석 검사
+            return false;
+        }
+    }
+
     public void CheckIfPlayLost()
     {
         var validShapes = 0;
-
         for (var index=0; index < shapeStorage.shapeList.Count; index++) {
             var isShapeActive = shapeStorage.shapeList[index].IsAnyOfShapeSqaureActive();
 
@@ -448,57 +552,98 @@ public class Grid : MonoBehaviour
             }
         }
 
-        if (validShapes == 0)
+        if (gamemode == "ClassicGame")
         {
-            if (Playerlife > 0 && score.bestScores_.score <= 800)
+            if (validShapes == 0)
+            {
+                if (Playerlife > 0 && score.bestScores_.score <= 400)
+                {
+                    gameOverPopup.RetryPopupActive();
+                }
+                else if (Playerlife > 0 && score.currentScores_ >= 400)
+                {
+                    gameOverPopup.RetryPopupActive();
+                }
+                else if (score.currentScores_ >= score.bestScores_.score)
+                {
+                    playerSaveGame_.saveGameOver = true;
+                    gameOverPopup.NewBestScoreActive();
+                    GameEvents.GameOver();
+                }
+                else
+                {
+                    playerSaveGame_.saveGameOver = true;
+                    gameOverPopup.GameOverActive();
+                    GameEvents.GameOver();
+                }
+            }
+            else
+            {
+                playerSaveGame_.saveGameOver = false;
+            }
+
+            saveGame(false);
+        } 
+        else if (gamemode == "ChallengeGame")
+        {
+            if (CheckIfPlayChallengeGameWin())
+            {
+                gameOverPopup.SuccessPopupActive();
+            }
+            else 
+            {
+                if (validShapes == 0)
+                {
+                    playerSaveChallengeGame_.ChallengesaveGameOver = true;
+                    gameOverPopup.FailurePopupPopupActive();
+                }
+                else
+                {
+                    playerSaveChallengeGame_.ChallengesaveGameOver = false;
+                }
+
+                saveChallengeGame(false);
+            }
+        }
+
+        /*if (validShapes == 0)
+        {
+            if (Playerlife > 0 && score.bestScores_.score <= 400)
             {
                 gameOverPopup.RetryPopupActive();
             }
-            else if (Playerlife > 0 && score.currentScores_ >= 800)
+            else if (Playerlife > 0 && score.currentScores_ >= 400)
             {
                 gameOverPopup.RetryPopupActive();
             }
             else if (score.currentScores_ >= score.bestScores_.score)
             {
                 playerSaveGame_.saveGameOver = true;
+                playerSaveChallengeGame_.ChallengesaveGameOver = true;
                 gameOverPopup.NewBestScoreActive();
                 GameEvents.GameOver();
             }
             else
             {
                 playerSaveGame_.saveGameOver = true;
+                playerSaveChallengeGame_.ChallengesaveGameOver = true;
                 gameOverPopup.GameOverActive();
                 GameEvents.GameOver();
             }
         }
         else {
             playerSaveGame_.saveGameOver = false;
-
-            for (int i=0; i < 3; i++) {
-                if (!shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf) {
-                    playerSaveGame_.shapeDataIndexList[i] = -1;
-                }
-            }
-
-            playerSaveGame_.activeGridSquares = CheckSaveActiveGridSquares();
-            playerSaveGame_.activeGridSquareColors = CheckSaveActiveGridSquaresColor();
+            playerSaveChallengeGame_.ChallengesaveGameOver = false;
         }
 
-        playerSaveGame_.savePlayerlife = Playerlife;
-        playerSaveGame_.saveScore = score.currentScores_;
-        playerSaveGame_.saveisCombo = ShapeStorage.isCombo;
-        playerSaveGame_.saveComboCount = ShapeStorage.ComboCount;
-
-        string playerSaveGameData = JsonUtility.ToJson(playerSaveGame_);
-        //Debug.Log(playerSaveGameData);
-        if (gamemode == "" || gamemode == "ClassicGame")
+        if (gamemode == "ClassicGame")
         {
-            BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
+            saveGame(false);
         }
-        else if (gamemode == "ChallengeGame")
+        else if (gamemode == "ChallengeGame") 
         {
-            BinaryDataStream.Save<string>(playerSaveGameData, playerSaveChallengeGamekey);
-        }
+            saveChallengeGame(false);
+        }*/
     }
 
     public void saveGame(bool resetGame)
@@ -522,15 +667,38 @@ public class Grid : MonoBehaviour
         }
 
         string playerSaveGameData = JsonUtility.ToJson(playerSaveGame_);
-        //Debug.Log(playerSaveGameData);
-        if (gamemode == "" || gamemode == "ClassicGame")
+        Debug.Log(playerSaveGameData);
+        BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
+    }
+
+    public void saveChallengeGame(bool resetGame) 
+    {
+        Debug.Log(resetGame);
+
+        for (int i = 0; i < 3; i++)
         {
-            BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
+            Debug.Log(shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf);
+            if (!shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf)
+            {
+                playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = -1;
+            }
         }
-        else if (gamemode == "ChallengeGame")
+
+        if (!resetGame)
         {
-            BinaryDataStream.Save<string>(playerSaveGameData, playerSaveChallengeGamekey);
+            playerSaveChallengeGame_.ChallengeactiveGridSquares = CheckSaveActiveGridSquares();
+            playerSaveChallengeGame_.ChallengeactiveGridSquareColors = CheckSaveActiveGridSquaresColor();
+
+            playerSaveChallengeGame_.ChallengesavePlayerlife = Playerlife;
+            playerSaveChallengeGame_.ChallengesaveScore = score.currentScores_;
+            playerSaveChallengeGame_.ChallengesaveisCombo = ShapeStorage.isCombo;
+            playerSaveChallengeGame_.ChallengesaveComboCount = ShapeStorage.ComboCount;
+            playerSaveChallengeGame_.ChallengestartStage = startStage;
         }
+
+        string playerSaveGameData = JsonUtility.ToJson(playerSaveChallengeGame_);
+        Debug.Log(playerSaveGameData);
+        BinaryDataStream.Save<string>(playerSaveGameData, playerSaveChallengeGamekey);
     }
 
     private bool CheckIfShapeCanBePlacedOnGrid(Shape currentShape)
@@ -641,7 +809,7 @@ public class Grid : MonoBehaviour
                     comp.hooverImage.gameObject.SetActive(true);
                 }
             }
-            Debug.Log("놓을 수 있는 곳이 1 곳 입니다.");
+            //Debug.Log("놓을 수 있는 곳이 1 곳 입니다.");
         }
     }
 

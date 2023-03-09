@@ -116,7 +116,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                 _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
             }
         }
-        else if (Grid.gamemode == "ChallengeGame")
+        else if (Grid.gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Jewelmode")
         {
             while (_currentShape.Count <= TotalSquareNumber)
             {
@@ -130,6 +130,13 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                 {
                     _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
                 }
+            }
+        }
+        else
+        {
+            while (_currentShape.Count <= TotalSquareNumber)
+            {
+                _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
             }
         }
 
