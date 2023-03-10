@@ -605,45 +605,6 @@ public class Grid : MonoBehaviour
                 saveChallengeGame(false);
             }
         }
-
-        /*if (validShapes == 0)
-        {
-            if (Playerlife > 0 && score.bestScores_.score <= 400)
-            {
-                gameOverPopup.RetryPopupActive();
-            }
-            else if (Playerlife > 0 && score.currentScores_ >= 400)
-            {
-                gameOverPopup.RetryPopupActive();
-            }
-            else if (score.currentScores_ >= score.bestScores_.score)
-            {
-                playerSaveGame_.saveGameOver = true;
-                playerSaveChallengeGame_.ChallengesaveGameOver = true;
-                gameOverPopup.NewBestScoreActive();
-                GameEvents.GameOver();
-            }
-            else
-            {
-                playerSaveGame_.saveGameOver = true;
-                playerSaveChallengeGame_.ChallengesaveGameOver = true;
-                gameOverPopup.GameOverActive();
-                GameEvents.GameOver();
-            }
-        }
-        else {
-            playerSaveGame_.saveGameOver = false;
-            playerSaveChallengeGame_.ChallengesaveGameOver = false;
-        }
-
-        if (gamemode == "ClassicGame")
-        {
-            saveGame(false);
-        }
-        else if (gamemode == "ChallengeGame") 
-        {
-            saveChallengeGame(false);
-        }*/
     }
 
     public void saveGame(bool resetGame)
