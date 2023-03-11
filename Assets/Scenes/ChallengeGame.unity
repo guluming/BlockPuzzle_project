@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 31502551}
   - component: {fileID: 31502550}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TopazConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1001,6 +1001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a0aca94f01c3348a47c2be5da87a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jewels: []
+  jewelsCount: []
 --- !u!114 &106736418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3150,6 +3152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a0aca94f01c3348a47c2be5da87a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jewels: []
+  jewelsCount: []
 --- !u!114 &424185511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7169,6 +7173,8 @@ MonoBehaviour:
   scores: {fileID: 1992078462}
   jewels: {fileID: 2090399040}
   jewelSquareTextureData: {fileID: 11400000, guid: dfe15e7ad38f640a4ad121c1440dbad7, type: 2}
+  TargetActivateJewel: 
+  TargetActivateJewelCount: 
   TargetScore: 0
 --- !u!1 &872695396
 GameObject:
@@ -7709,7 +7715,7 @@ GameObject:
   - component: {fileID: 946977526}
   - component: {fileID: 946977525}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SapphireConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8781,7 +8787,7 @@ GameObject:
   - component: {fileID: 1010458757}
   - component: {fileID: 1010458756}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RubyConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8916,7 +8922,7 @@ GameObject:
   - component: {fileID: 1035992858}
   - component: {fileID: 1035992857}
   m_Layer: 5
-  m_Name: Text
+  m_Name: AmethystConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9897,6 +9903,7 @@ MonoBehaviour:
   shapeStorage: {fileID: 726592072}
   shapes: {fileID: 2088004032}
   score: {fileID: 1992078462}
+  jewel: {fileID: 2090399040}
   gridSquare: {fileID: 7841732357911365219, guid: ea6ed23b6bde7432fa7c8c1aba40ad69, type: 3}
   columns: 8
   rows: 8
@@ -11194,7 +11201,7 @@ GameObject:
   - component: {fileID: 1382180078}
   - component: {fileID: 1382180077}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GarnetConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16840,6 +16847,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a0aca94f01c3348a47c2be5da87a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jewels:
+  - {fileID: 2058509674}
+  - {fileID: 664008622}
+  - {fileID: 210930293}
+  - {fileID: 1289268118}
+  - {fileID: 2142092992}
+  - {fileID: 1706903748}
+  jewelsCount:
+  - {fileID: 946977523}
+  - {fileID: 1382180075}
+  - {fileID: 1010458754}
+  - {fileID: 31502548}
+  - {fileID: 1035992855}
+  - {fileID: 2107313026}
 --- !u!1 &2094762944
 GameObject:
   m_ObjectHideFlags: 0
@@ -17006,7 +17027,7 @@ GameObject:
   - component: {fileID: 2107313029}
   - component: {fileID: 2107313028}
   m_Layer: 5
-  m_Name: Text
+  m_Name: EmeraldConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

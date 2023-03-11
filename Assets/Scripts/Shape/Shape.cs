@@ -120,7 +120,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         {
             while (_currentShape.Count <= TotalSquareNumber)
             {
-                if (Random.Range(0, 5) == 0)
+                if (Random.Range(0, 6) == 0)
                 {
                     //보석이 들어가는 루트
                     Debug.Log("보석 생성");

@@ -39,6 +39,7 @@ public class Grid : MonoBehaviour
     public ShapeStorage shapeStorage;
     public GameObject shapes;
     public Scores score;
+    public Jewels jewel;
     public GameObject gridSquare;
     public int columns = 0;
     public int rows = 0;
@@ -463,23 +464,41 @@ public class Grid : MonoBehaviour
             }
         }
 
-        foreach (var line in completedLines) {
-            var completed = false;
+        foreach (int[] line in completedLines) {
+            bool completed = false;
 
             foreach (var squareIndex in line) {
-                var comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
+                GridSquare comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
                 comp.Deactivate();
 
                 completed = true;
             }
 
             foreach (var squareIndex in line) {
-                var comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
+                GridSquare comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
                 comp.ClearOccupied();
             }
 
             if (completed) {
-                linesCompleted++;
+                if (ChallengeStage.challengemode == "Jewelmode")
+                {
+                    foreach (int squareIndex in line)
+                    {
+                        GridSquare comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
+                        for (int i = 0; i < ChallengeStage.TargetActivateJewel.Count; i++)
+                        {
+                            if (comp.ActiveImage.GetComponent<Image>().sprite == jewel.jewels[ChallengeStage.TargetActivateJewel[i]].transform.GetChild(0).GetComponent<Image>().sprite)
+                            {
+                                Debug.Log("보석 카운팅 검사");
+                                jewel.jewelsCount[ChallengeStage.TargetActivateJewel[i]].GetComponent<Text>().text = (ChallengeStage.TargetActivateJewelCount[i] - 1).ToString();
+                                ChallengeStage.TargetActivateJewelCount[i] = ChallengeStage.TargetActivateJewelCount[i] - 1;
+                            }
+                        }
+                    }
+                }
+                else {
+                    linesCompleted++;
+                }
             }
         }
 
@@ -507,7 +526,21 @@ public class Grid : MonoBehaviour
         else 
         {
             //보석 검사
-            return false;
+            bool jewelClear = true;
+            for (int i=0; i< ChallengeStage.TargetActivateJewelCount.Count; i++) 
+            {
+                if (ChallengeStage.TargetActivateJewelCount[i] > 0) 
+                {
+                    jewelClear = false;
+                }
+            }
+
+            if (jewelClear)
+            {
+                startStage++;
+            }
+
+            return jewelClear;
         }
     }
 
@@ -634,11 +667,11 @@ public class Grid : MonoBehaviour
 
     public void saveChallengeGame(bool resetGame) 
     {
-        Debug.Log(resetGame);
+        //Debug.Log(resetGame);
 
         for (int i = 0; i < 3; i++)
         {
-            Debug.Log(shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf);
+            //Debug.Log(shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf);
             if (!shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf)
             {
                 playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = -1;
@@ -658,7 +691,7 @@ public class Grid : MonoBehaviour
         }
 
         string playerSaveGameData = JsonUtility.ToJson(playerSaveChallengeGame_);
-        Debug.Log(playerSaveGameData);
+        //Debug.Log(playerSaveGameData);
         BinaryDataStream.Save<string>(playerSaveGameData, playerSaveChallengeGamekey);
     }
 

@@ -16,6 +16,8 @@ public class ChallengeStage : MonoBehaviour
     public Scores scores;
     public Jewels jewels;
     public JewelSquareTextureData jewelSquareTextureData;
+    public List<int> TargetActivateJewel;
+    public List<int> TargetActivateJewelCount;
 
     [HideInInspector]
     public int TargetScore;
@@ -72,11 +74,16 @@ public class ChallengeStage : MonoBehaviour
 
         int[] activateSquareTexturesList = new int[] { 2, 2 };
         int[] activateSquareList = new int[] { 10, 13 };
-        int[] activateJewel = activateSquareTexturesList.Distinct().ToArray();
+        int[] activateJewel = new int[] { 2 };
+        int[] activateJewelCount = new int[] { 3 };
 
         for (int i = 0; i < activateJewel.Length; i++) 
         {
-            //JewelWindow.transform
+            jewels.jewels[activateJewel[i]].SetActive(true);
+            jewels.jewelsCount[activateJewel[i]].GetComponent<Text>().text = activateJewelCount[i].ToString();
+
+            TargetActivateJewel.Add(activateJewel[i]);
+            TargetActivateJewelCount.Add(activateJewelCount[i]);
         }
 
         for (int i = 0; i < activateSquareTexturesList.Length; i++)
@@ -107,6 +114,14 @@ public class ChallengeStage : MonoBehaviour
 
         int[] activateSquareTexturesList = new int[] { 2, 2, 3, 3 };
         int[] activateSquareList = new int[] { 11, 12, 19, 20 };
+        int[] activateJewel = new int[] { 2, 3 };
+        int[] activateJewelCount = new int[] { 2, 2 };
+
+        for (int i = 0; i < activateJewel.Length; i++)
+        {
+            jewels.jewels[activateJewel[i]].SetActive(true);
+            jewels.jewelsCount[activateJewel[i]].GetComponent<Text>().text = activateJewelCount[i].ToString();
+        }
 
         for (int i =0; i < activateSquareTexturesList.Length; i++) 
         {
@@ -127,6 +142,14 @@ public class ChallengeStage : MonoBehaviour
 
         int[] activateSquareTexturesList = new int[] { 1, 0, 1, 0 };
         int[] activateSquareList = new int[] { 11, 12, 19, 20 };
+        int[] activateJewel = new int[] { 1, 0 };
+        int[] activateJewelCount = new int[] { 2, 2 };
+
+        for (int i = 0; i < activateJewel.Length; i++)
+        {
+            jewels.jewels[activateJewel[i]].SetActive(true);
+            jewels.jewelsCount[activateJewel[i]].GetComponent<Text>().text = activateJewelCount[i].ToString();
+        }
 
         for (int i = 0; i < activateSquareTexturesList.Length; i++)
         {
@@ -147,6 +170,14 @@ public class ChallengeStage : MonoBehaviour
 
         int[] activateSquareTexturesList = new int[] { 2, 3, 0, 0, 3, 2 };
         int[] activateSquareList = new int[] { 24, 25, 26, 29, 30, 31 };
+        int[] activateJewel = new int[] { 2, 3, 0 };
+        int[] activateJewelCount = new int[] { 4, 4, 2 };
+
+        for (int i = 0; i < activateJewel.Length; i++)
+        {
+            jewels.jewels[activateJewel[i]].SetActive(true);
+            jewels.jewelsCount[activateJewel[i]].GetComponent<Text>().text = activateJewelCount[i].ToString();
+        }
 
         for (int i = 0; i < activateSquareTexturesList.Length; i++)
         {
@@ -176,6 +207,14 @@ public class ChallengeStage : MonoBehaviour
 
         int[] activateSquareTexturesList = new int[] { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 };
         int[] activateSquareList = new int[] { 18, 19, 20, 21, 26, 29, 34, 35,36, 37 };
+        int[] activateJewel = new int[] { 4 };
+        int[] activateJewelCount = new int[] { 10 };
+
+        for (int i = 0; i < activateJewel.Length; i++)
+        {
+            jewels.jewels[activateJewel[i]].SetActive(true);
+            jewels.jewelsCount[activateJewel[i]].GetComponent<Text>().text = activateJewelCount[i].ToString();
+        }
 
         for (int i = 0; i < activateSquareTexturesList.Length; i++)
         {
@@ -196,6 +235,14 @@ public class ChallengeStage : MonoBehaviour
 
         int[] activateSquareTexturesList = new int[] { 1, 1, 5, 4, 5, 4, 3, 3 };
         int[] activateSquareList = new int[] { 19, 20, 26, 29, 34, 37, 43, 44 };
+        int[] activateJewel = new int[] { 1, 3, 5, 4 };
+        int[] activateJewelCount = new int[] { 3, 3, 3, 3 };
+
+        for (int i = 0; i < activateJewel.Length; i++)
+        {
+            jewels.jewels[activateJewel[i]].SetActive(true);
+            jewels.jewelsCount[activateJewel[i]].GetComponent<Text>().text = activateJewelCount[i].ToString();
+        }
 
         for (int i = 0; i < activateSquareTexturesList.Length; i++)
         {
@@ -225,6 +272,14 @@ public class ChallengeStage : MonoBehaviour
 
         int[] activateSquareTexturesList = new int[] { 5, 0, 5, 0, 5, 0 };
         int[] activateSquareList = new int[] { 9, 14, 18, 21, 27, 28 };
+        int[] activateJewel = new int[] { 5, 0 };
+        int[] activateJewelCount = new int[] { 3, 3 };
+
+        for (int i = 0; i < activateJewel.Length; i++)
+        {
+            jewels.jewels[activateJewel[i]].SetActive(true);
+            jewels.jewelsCount[activateJewel[i]].GetComponent<Text>().text = activateJewelCount[i].ToString();
+        }
 
         for (int i = 0; i < activateSquareTexturesList.Length; i++)
         {
@@ -245,6 +300,14 @@ public class ChallengeStage : MonoBehaviour
 
         int[] activateSquareTexturesList = new int[] { 3, 3, 2, 2, 2, 2, 3, 2, 2, 3 };
         int[] activateSquareList = new int[] { 2, 5, 10, 13, 18, 21, 24, 25, 30, 31 };
+        int[] activateJewel = new int[] { 2, 3 };
+        int[] activateJewelCount = new int[] { 12, 8 };
+
+        for (int i = 0; i < activateJewel.Length; i++)
+        {
+            jewels.jewels[activateJewel[i]].SetActive(true);
+            jewels.jewelsCount[activateJewel[i]].GetComponent<Text>().text = activateJewelCount[i].ToString();
+        }
 
         for (int i = 0; i < activateSquareTexturesList.Length; i++)
         {
@@ -265,6 +328,14 @@ public class ChallengeStage : MonoBehaviour
 
         int[] activateSquareTexturesList = new int[] { 3, 3, 3, 4, 4, 4, 3, 4, 3, 4, 3, 3, 3, 4, 4, 4 };
         int[] activateSquareList = new int[] { 0, 1, 2, 5, 6, 7, 8, 15, 48, 55, 56, 57, 58, 61, 62, 63 };
+        int[] activateJewel = new int[] { 3, 4 };
+        int[] activateJewelCount = new int[] { 10, 10 };
+
+        for (int i = 0; i < activateJewel.Length; i++)
+        {
+            jewels.jewels[activateJewel[i]].SetActive(true);
+            jewels.jewelsCount[activateJewel[i]].GetComponent<Text>().text = activateJewelCount[i].ToString();
+        }
 
         for (int i = 0; i < activateSquareTexturesList.Length; i++)
         {
