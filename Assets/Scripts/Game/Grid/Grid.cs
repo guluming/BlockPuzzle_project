@@ -186,7 +186,7 @@ public class Grid : MonoBehaviour
             else
             {
                 Debug.Log("저장 파일이 없습니다.");
-
+                ChallengeStage.challengemode = "Jewelmode";
                 ChallengeStage.ChallengeStageSelete(1);
 
                 Playerlife = 1;
@@ -480,7 +480,7 @@ public class Grid : MonoBehaviour
             }
 
             if (completed) {
-                if (ChallengeStage.challengemode == "Jewelmode")
+                if (gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Jewelmode")
                 {
                     foreach (int squareIndex in line)
                     {

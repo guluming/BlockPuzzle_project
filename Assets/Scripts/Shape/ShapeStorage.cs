@@ -141,7 +141,7 @@ public class ShapeStorage : MonoBehaviour
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
-                shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
                 UpdateSquareColor();
             }
 
@@ -152,7 +152,7 @@ public class ShapeStorage : MonoBehaviour
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
-                shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
                 UpdateSquareColor();
             }
 
@@ -217,7 +217,7 @@ public class ShapeStorage : MonoBehaviour
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
-                shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+                shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
                 UpdateSquareColor();
             }
 
@@ -228,7 +228,7 @@ public class ShapeStorage : MonoBehaviour
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
-                shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+                shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
                 UpdateSquareColor();
                 UpdateJewelSquare();
             }
@@ -240,7 +240,7 @@ public class ShapeStorage : MonoBehaviour
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
-                shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+                shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
                 UpdateSquareColor();
             }
 

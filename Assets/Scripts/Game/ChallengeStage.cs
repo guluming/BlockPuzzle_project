@@ -22,7 +22,7 @@ public class ChallengeStage : MonoBehaviour
     [HideInInspector]
     public int TargetScore;
 
-    public static string challengemode = "Jewelmode";
+    public static string challengemode;
     public void ChallengeStageSelete(int stageIndex)
     {
         switch (stageIndex) {
