@@ -10,6 +10,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     public GameObject squareShapeImage;
     public GameObject jewelShapeImage;
     public Grid grid;
+    public ChallengeStage challengeStage;
     public Vector3 shapeSelectedScale;
     public Vector2 offset;
 
@@ -104,6 +105,45 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         CreateShape(shapeData);
     }
 
+    /*public void firstCreateShape(ShapeData shapeData) 
+    {
+        CurrentShapeData = shapeData;
+        TotalSquareNumber = GetNumberOfSquares(CurrentShapeData);
+
+        while (_currentShape.Count <= TotalSquareNumber)
+        {
+            _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
+        }
+
+        foreach (GameObject square in _currentShape)
+        {
+            square.gameObject.transform.position = Vector3.zero;
+            square.gameObject.SetActive(false);
+        }
+
+        var squareRect = squareShapeImage.GetComponent<RectTransform>();
+        var moveDistance = new Vector2(squareRect.rect.width * squareRect.localScale.x,
+            squareRect.rect.height * squareRect.localScale.y);
+
+        int currentIndexInList = 0;
+
+        for (var row = 0; row < shapeData.rows; row++)
+        {
+            for (var column = 0; column < shapeData.columns; column++)
+            {
+                if (shapeData.board[row].column[column])
+                {
+                    _currentShape[currentIndexInList].SetActive(true);
+                    _currentShape[currentIndexInList].GetComponent<RectTransform>().localPosition =
+                        new Vector2(GetXPositionForShapeSquare(shapeData, column, moveDistance),
+                        GetYPositionForShapeSquare(shapeData, row, moveDistance));
+
+                    currentIndexInList++;
+                }
+            }
+        }
+    }*/
+
     public void CreateShape(ShapeData shapeData)
     {
         CurrentShapeData = shapeData;
@@ -118,13 +158,15 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         }
         else if (Grid.gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Jewelmode")
         {
+            bool jewelShapeImageCheck = false;
+
             while (_currentShape.Count <= TotalSquareNumber)
             {
-                if (Random.Range(0, 6) == 0)
+                if (Random.Range(0, 5) == 0 && jewelShapeImageCheck == false)
                 {
-                    //보석이 들어가는 루트
                     Debug.Log("보석 생성");
                     _currentShape.Add(Instantiate(jewelShapeImage, transform) as GameObject);
+                    jewelShapeImageCheck = true;
                 }
                 else
                 {
@@ -140,7 +182,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             }
         }
 
-        foreach (var square in _currentShape) {
+        foreach (GameObject square in _currentShape) {
             square.gameObject.transform.position = Vector3.zero;
             square.gameObject.SetActive(false);
         }

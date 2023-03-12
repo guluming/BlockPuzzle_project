@@ -73,7 +73,7 @@ public class GridSquare : MonoBehaviour
             }
             else {
                 Selected = true;
-                hooverImage.sprite = Shape.seletedshapesprite;
+                hooverImage.sprite = collision.GetComponent<Image>().sprite;
                 hooverImage.gameObject.SetActive(true);
             }
         }
@@ -89,9 +89,9 @@ public class GridSquare : MonoBehaviour
 
         if (SquareOccupied == false)
         {
-            hooverImage.sprite = Shape.seletedshapesprite;
+            hooverImage.sprite = collision.GetComponent<Image>().sprite;
             hooverImage.gameObject.SetActive(true);
-            ActiveImage.sprite = Shape.seletedshapesprite;
+            ActiveImage.sprite = collision.GetComponent<Image>().sprite;
         }
         else if (collision.GetComponent<ShapeSquare>() != null)
         {

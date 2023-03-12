@@ -147,7 +147,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8af94525478ab4e22b87a4de5372676a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 526bedba084af1e41ab699a8c8e15f8e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jewelSquareTextureData: {fileID: 11400000, guid: dfe15e7ad38f640a4ad121c1440dbad7, type: 2}
+  challengeStage: {fileID: 0}
 --- !u!114 &3024972988470650084
 MonoBehaviour:
   m_ObjectHideFlags: 0

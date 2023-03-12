@@ -63,7 +63,7 @@ public class Grid : MonoBehaviour
 
     public static string gamemode;
     public static int Playerlife;
-    public static int startStage;
+    public static int startStage = 1;
 
     private void OnEnable()
     {

@@ -11462,6 +11462,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 726592072}
     - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: challengeStage
+      value: 
+      objectReference: {fileID: 870105426}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: CurrentShapeData
       value: 
       objectReference: {fileID: 11400000, guid: 5fde3c373135344fc9036d7d1a252cbe, type: 2}
@@ -11662,6 +11666,10 @@ PrefabInstance:
       propertyPath: shapeStorage
       value: 
       objectReference: {fileID: 726592072}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: challengeStage
+      value: 
+      objectReference: {fileID: 870105426}
     - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: CurrentShapeData
       value: 
@@ -17780,6 +17788,10 @@ PrefabInstance:
       propertyPath: shapeStorage
       value: 
       objectReference: {fileID: 726592072}
+    - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: challengeStage
+      value: 
+      objectReference: {fileID: 870105426}
     - target: {fileID: 2709470390310929026, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: CurrentShapeData
       value: 

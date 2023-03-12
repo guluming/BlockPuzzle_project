@@ -14,12 +14,16 @@ public class ActiveJewelImageSelector : MonoBehaviour
 
     private void UpdateJewelSquareBaseOnCurrentPoints()
     {
+        /*for (int i = 0; i < ChallengeStage.TargetActivateJewelSeleted.Count; i++)
+        {
+            GetComponent<Image>().sprite = jewelSquareTextureData.activeJewelSquareTextures[ChallengeStage.TargetActivateJewelSeleted[i]].texture;
+        }*/
+
         foreach (var jewelTexture in jewelSquareTextureData.activeJewelSquareTextures)
         {
             if (jewelSquareTextureData.currentjewel == jewelTexture.jewelSquare)
             {
                 GetComponent<Image>().sprite = jewelTexture.texture;
-
             }
         }
     }

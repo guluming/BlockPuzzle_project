@@ -48,8 +48,6 @@ public class ShapeStorage : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(Grid.gamemode);
-
         if (Grid.gamemode == "ClassicGame")
         {
             if (BinaryDataStream.Exist(playerSaveGamekey))
@@ -128,6 +126,9 @@ public class ShapeStorage : MonoBehaviour
 
     private void firstShapes()
     {
+        Debug.Log(Grid.gamemode);
+        Debug.Log(ChallengeStage.challengemode);
+
         isCombo = false;
         ComboCount = 0;
         IsComboObject();
@@ -146,14 +147,13 @@ public class ShapeStorage : MonoBehaviour
 
             grid.saveGame(false);
         }
-        else if (Grid.gamemode == "ChallengeGame") 
+        else
         {
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
                 shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
                 UpdateSquareColor();
-                UpdateJewelSquare();
             }
 
             grid.saveChallengeGame(false);
@@ -212,12 +212,39 @@ public class ShapeStorage : MonoBehaviour
         List<int> shapeIndexList = new List<int>();
         ShapeIndexSeleted(shapeIndexList);
 
-        for (int i = 0; i < shapeList.Count; i++)
+        if (Grid.gamemode == "ClassicGame")
         {
-            grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
-            shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
-            UpdateSquareColor();
-            UpdateJewelSquare();
+            for (int i = 0; i < shapeList.Count; i++)
+            {
+                grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+            }
+
+            grid.saveGame(false);
+        }
+        else if (Grid.gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Jewelmode")
+        {
+            for (int i = 0; i < shapeList.Count; i++)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+
+            grid.saveChallengeGame(false);
+        }
+        else
+        {
+            for (int i = 0; i < shapeList.Count; i++)
+            {
+                grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].CreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+            }
+
+            grid.saveGame(false);
         }
 
         if (Grid.gamemode != "tutorial1" && Grid.gamemode != "tutorial2" && Grid.gamemode != "tutorial3") {
@@ -239,6 +266,7 @@ public class ShapeStorage : MonoBehaviour
 
         for (int i = 0; i < shapeList.Count; i++)
         {
+            grid.playerSaveGame_.shapeDataIndexList[i] = 0;
             shapeList[i].RequestNewShape(shapeData[0]);
             UpdateSquareColor();
             UpdateJewelSquare();
