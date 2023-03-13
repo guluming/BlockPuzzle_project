@@ -63,6 +63,11 @@ public class GameOverPopup : MonoBehaviour
 
     public void SuccessPopupActive()
     {
+        if (Grid.startStage / 2 == 0 || Grid.startStage > 10)
+        {
+            adsManager.ShowInterstitial();
+        }
+
         if (ChallengeStage.challengemode == "Scoremode")
         {
             TargetScore.text = challengeStage.TargetScore.ToString();
@@ -87,6 +92,11 @@ public class GameOverPopup : MonoBehaviour
 
     public void FailurePopupPopupActive()
     {
+        if (Grid.startStage / 2 == 0 || Grid.startStage > 10)
+        {
+            adsManager.ShowInterstitial();
+        }
+
         if (ChallengeStage.challengemode == "Scoremode")
         {
             FailureScore.text = grid.score.currentScores_.ToString();
