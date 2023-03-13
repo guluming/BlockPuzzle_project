@@ -789,14 +789,14 @@ public class ChallengeStage : MonoBehaviour
 
     private void ChallengeStage27()
     {
-        Grid.startStage = 12;
+        Grid.startStage = 27;
         challengemode = "Jewelmode";
         JewelWindow.gameObject.SetActive(true);
 
-        int[] activateSquareTexturesList = new int[] { 3, 3, 3, 4, 4, 4, 3, 4, 3, 4, 3, 3, 3, 4, 4, 4 };
-        int[] activateSquareList = new int[] { 0, 1, 2, 5, 6, 7, 8, 15, 48, 55, 56, 57, 58, 61, 62, 63 };
-        int[] activateJewel = new int[] { 3, 4 };
-        int[] activateJewelCount = new int[] { 10, 10 };
+        int[] activateSquareTexturesList = new int[] { 3, 3, 3, 3, 2, 2, 2, 2, 3, 3, 3, 3 };
+        int[] activateSquareList = new int[] { 1, 2, 5, 6, 27, 28, 35, 36, 57, 58, 61, 62 };
+        int[] activateJewel = new int[] { 3, 2 };
+        int[] activateJewelCount = new int[] { 23, 23 };
 
         for (int i = 0; i < activateJewel.Length; i++)
         {
@@ -829,14 +829,14 @@ public class ChallengeStage : MonoBehaviour
 
     private void ChallengeStage29()
     {
-        Grid.startStage = 12;
+        Grid.startStage = 29;
         challengemode = "Jewelmode";
         JewelWindow.gameObject.SetActive(true);
 
-        int[] activateSquareTexturesList = new int[] { 3, 3, 3, 4, 4, 4, 3, 4, 3, 4, 3, 3, 3, 4, 4, 4 };
-        int[] activateSquareList = new int[] { 0, 1, 2, 5, 6, 7, 8, 15, 48, 55, 56, 57, 58, 61, 62, 63 };
-        int[] activateJewel = new int[] { 3, 4 };
-        int[] activateJewelCount = new int[] { 10, 10 };
+        int[] activateSquareTexturesList = new int[] { 3, 3, 2, 1, 2, 1, 5, 5 };
+        int[] activateSquareList = new int[] { 11, 12, 25, 30, 33, 38, 51, 52 };
+        int[] activateJewel = new int[] { 3, 2, 1, 5 };
+        int[] activateJewelCount = new int[] { 14, 14, 14, 14 };
 
         for (int i = 0; i < activateJewel.Length; i++)
         {
@@ -860,14 +860,14 @@ public class ChallengeStage : MonoBehaviour
 
     private void ChallengeStage30()
     {
-        Grid.startStage = 12;
+        Grid.startStage = 30;
         challengemode = "Jewelmode";
         JewelWindow.gameObject.SetActive(true);
 
-        int[] activateSquareTexturesList = new int[] { 3, 3, 3, 4, 4, 4, 3, 4, 3, 4, 3, 3, 3, 4, 4, 4 };
-        int[] activateSquareList = new int[] { 0, 1, 2, 5, 6, 7, 8, 15, 48, 55, 56, 57, 58, 61, 62, 63 };
-        int[] activateJewel = new int[] { 3, 4 };
-        int[] activateJewelCount = new int[] { 10, 10 };
+        int[] activateSquareTexturesList = new int[] { 2, 2, 2, 1, 1, 1, 2, 2, 2, 1, 1, 1 };
+        int[] activateSquareList = new int[] { 3, 4, 5, 21, 22, 23, 40, 41, 42, 58, 59, 60 };
+        int[] activateJewel = new int[] { 2, 1 };
+        int[] activateJewelCount = new int[] { 27, 27 };
 
         for (int i = 0; i < activateJewel.Length; i++)
         {
@@ -891,14 +891,14 @@ public class ChallengeStage : MonoBehaviour
 
     private void ChallengeStage31()
     {
-        Grid.startStage = 12;
+        Grid.startStage = 31;
         challengemode = "Jewelmode";
         JewelWindow.gameObject.SetActive(true);
 
-        int[] activateSquareTexturesList = new int[] { 3, 3, 3, 4, 4, 4, 3, 4, 3, 4, 3, 3, 3, 4, 4, 4 };
-        int[] activateSquareList = new int[] { 0, 1, 2, 5, 6, 7, 8, 15, 48, 55, 56, 57, 58, 61, 62, 63 };
-        int[] activateJewel = new int[] { 3, 4 };
-        int[] activateJewelCount = new int[] { 10, 10 };
+        int[] activateSquareTexturesList = new int[] { 0, 0, 4, 4, 4, 4, 3, 3 };
+        int[] activateSquareList = new int[] { 10, 13, 33, 34, 37, 38, 59, 60 };
+        int[] activateJewel = new int[] { 0, 4, 3 };
+        int[] activateJewelCount = new int[] { 20, 20, 20 };
 
         for (int i = 0; i < activateJewel.Length; i++)
         {
@@ -931,6 +931,7 @@ public class ChallengeStage : MonoBehaviour
 
     private void ChallengeStage33()
     {
+        //스테이지 기획서에 아무것도 없어서 임의로 삽입
         Grid.startStage = 33;
         TargetScore = 900;
         challengemode = "Scoremode";
@@ -949,14 +950,14 @@ public class ChallengeStage : MonoBehaviour
 
     private void ChallengeStage35()
     {
-        Grid.startStage = 12;
+        Grid.startStage = 35;
         challengemode = "Jewelmode";
         JewelWindow.gameObject.SetActive(true);
 
-        int[] activateSquareTexturesList = new int[] { 3, 3, 3, 4, 4, 4, 3, 4, 3, 4, 3, 3, 3, 4, 4, 4 };
-        int[] activateSquareList = new int[] { 0, 1, 2, 5, 6, 7, 8, 15, 48, 55, 56, 57, 58, 61, 62, 63 };
-        int[] activateJewel = new int[] { 3, 4 };
-        int[] activateJewelCount = new int[] { 10, 10 };
+        int[] activateSquareTexturesList = new int[] { 5, 5, 2, 2, 5, 5, 2, 2, 2, 2, 5, 5, 2, 2, 5, 5 };
+        int[] activateSquareList = new int[] { 9, 10, 13, 14, 17, 18, 21, 22, 41, 42, 45, 46, 49, 50, 53, 54 };
+        int[] activateJewel = new int[] { 5, 2 };
+        int[] activateJewelCount = new int[] { 33, 33 };
 
         for (int i = 0; i < activateJewel.Length; i++)
         {
