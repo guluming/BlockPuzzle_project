@@ -100,8 +100,11 @@ public class ShapeStorage : MonoBehaviour
             shapeList[1].RequestNewShape(shapeData[5]);
             shapeList[2].RequestNewShape(shapeData[0]);
 
-            Shapes.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
-            Shapes.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);
+            for (int i = 0; i< Shapes.transform.GetChild(0).transform.childCount; i++) 
+            {
+                Shapes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
+                Shapes.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(false);
+            }
         }
         else if (Grid.gamemode == "tutorial2")
         {
@@ -109,16 +112,28 @@ public class ShapeStorage : MonoBehaviour
             shapeList[1].RequestNewShape(shapeData[7]);
             shapeList[2].RequestNewShape(shapeData[0]);
 
-            Shapes.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
-            Shapes.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);
+            for (int i = 0; i < Shapes.transform.GetChild(0).transform.childCount; i++)
+            {
+                Shapes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
+                Shapes.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(false);
+            }
+
+            /*Shapes.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+            Shapes.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);*/
         }
         else {
             shapeList[0].CreateShape(shapeData[0]);
             shapeList[1].CreateShape(shapeData[6]);
             shapeList[2].CreateShape(shapeData[0]);
 
-            Shapes.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
-            Shapes.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);
+            for (int i = 0; i < Shapes.transform.GetChild(0).transform.childCount; i++)
+            {
+                Shapes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
+                Shapes.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(false);
+            }
+
+            /*Shapes.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
+            Shapes.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);*/
         }
         
         UpdateSquareColor();
@@ -126,9 +141,6 @@ public class ShapeStorage : MonoBehaviour
 
     private void firstShapes()
     {
-        Debug.Log(Grid.gamemode);
-        Debug.Log(ChallengeStage.challengemode);
-
         isCombo = false;
         ComboCount = 0;
         IsComboObject();
@@ -145,7 +157,7 @@ public class ShapeStorage : MonoBehaviour
                 UpdateSquareColor();
             }
 
-            grid.saveGame(false);
+            grid.saveGame();
         }
         else
         {
@@ -154,9 +166,10 @@ public class ShapeStorage : MonoBehaviour
                 grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
                 shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
                 UpdateSquareColor();
+                UpdateJewelSquare();
             }
 
-            grid.saveChallengeGame(false);
+            grid.saveChallengeGame();
         }
     }
 
@@ -200,6 +213,11 @@ public class ShapeStorage : MonoBehaviour
 
     private void RequestNewShapes()
     {
+        /*for (int i=0; i < shapeList.Count; i++) 
+        {
+            DeleteChilds(shapeList[i]);
+        }*/
+
         if (!isCombo)
         {
             ComboCount = 0;
@@ -220,10 +238,10 @@ public class ShapeStorage : MonoBehaviour
                 shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
                 UpdateSquareColor();
             }
-
-            grid.saveGame(false);
+            //Debug.Log("기본 저장");
+            grid.saveGame();
         }
-        else if (Grid.gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Jewelmode")
+        else
         {
             for (int i = 0; i < shapeList.Count; i++)
             {
@@ -232,23 +250,28 @@ public class ShapeStorage : MonoBehaviour
                 UpdateSquareColor();
                 UpdateJewelSquare();
             }
-
-            grid.saveChallengeGame(false);
-        }
-        else
-        {
-            for (int i = 0; i < shapeList.Count; i++)
-            {
-                grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
-                shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
-                UpdateSquareColor();
-            }
-
-            grid.saveGame(false);
+            //Debug.Log("도전 저장");
+            grid.saveChallengeGame();
         }
 
         if (Grid.gamemode != "tutorial1" && Grid.gamemode != "tutorial2" && Grid.gamemode != "tutorial3") {
             grid.CheckIfPlayLost();
+        }
+    }
+
+    private void DeleteChilds(Shape shape)
+    {
+        // child 에는 부모와 자식이 함께 설정 된다.
+        var children = shape.transform.GetComponentsInChildren<Transform>();
+
+        foreach (var child in children)
+        {
+            // 부모(this.gameObject)는 삭제 하지 않기 위한 처리
+            if (child != shape.transform)
+            {
+                child.parent = null;
+                Destroy(child.gameObject);
+            }
         }
     }
 

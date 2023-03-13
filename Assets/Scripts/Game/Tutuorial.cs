@@ -20,6 +20,7 @@ public class Tutuorial : MonoBehaviour
             }
 
             grid.transform.GetChild(i).GetComponent<GridSquare>().ActivateSquare();
+            grid.transform.GetChild(i).GetComponent<GridSquare>().transform.GetChild(2).GetComponent<Image>().sprite = grid.squareTextureData.activeSquareTextures[0].texture;
         }
     }
 
@@ -37,6 +38,7 @@ public class Tutuorial : MonoBehaviour
                 }
 
                 grid.transform.GetChild(j).GetComponent<GridSquare>().ActivateSquare();
+                grid.transform.GetChild(j).GetComponent<GridSquare>().transform.GetChild(2).GetComponent<Image>().sprite = grid.squareTextureData.activeSquareTextures[1].texture;
             }
         }
     }
@@ -52,7 +54,9 @@ public class Tutuorial : MonoBehaviour
             {
                 continue;
             }
+
             grid.transform.GetChild(i).GetComponent<GridSquare>().ActivateSquare();
+            grid.transform.GetChild(i).GetComponent<GridSquare>().transform.GetChild(2).GetComponent<Image>().sprite = grid.squareTextureData.activeSquareTextures[2].texture;
         }
 
         for (int i = 3; i < 5; i++) {
@@ -64,6 +68,7 @@ public class Tutuorial : MonoBehaviour
                 }
 
                 grid.transform.GetChild(j).GetComponent<GridSquare>().ActivateSquare();
+                grid.transform.GetChild(j).GetComponent<GridSquare>().transform.GetChild(2).GetComponent<Image>().sprite = grid.squareTextureData.activeSquareTextures[3].texture;
             }
         }
     }
