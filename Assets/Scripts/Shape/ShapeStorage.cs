@@ -213,11 +213,6 @@ public class ShapeStorage : MonoBehaviour
 
     private void RequestNewShapes()
     {
-        /*for (int i=0; i < shapeList.Count; i++) 
-        {
-            DeleteChilds(shapeList[i]);
-        }*/
-
         if (!isCombo)
         {
             ComboCount = 0;
@@ -241,7 +236,7 @@ public class ShapeStorage : MonoBehaviour
             //Debug.Log("기본 저장");
             grid.saveGame();
         }
-        else
+        else if (Grid.gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Jewelmode")
         {
             for (int i = 0; i < shapeList.Count; i++)
             {
@@ -253,25 +248,30 @@ public class ShapeStorage : MonoBehaviour
             //Debug.Log("도전 저장");
             grid.saveChallengeGame();
         }
+        else if (Grid.gamemode == "ChallengeGame")
+        {
+            for (int i = 0; i < shapeList.Count; i++)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+            }
+            //Debug.Log("도전 저장");
+            grid.saveChallengeGame();
+        }
+        else {
+            for (int i = 0; i < shapeList.Count; i++)
+            {
+                grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].RequestNewShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+            }
+            //Debug.Log("기본 저장");
+            grid.saveGame();
+        }
 
         if (Grid.gamemode != "tutorial1" && Grid.gamemode != "tutorial2" && Grid.gamemode != "tutorial3") {
             grid.CheckIfPlayLost();
-        }
-    }
-
-    private void DeleteChilds(Shape shape)
-    {
-        // child 에는 부모와 자식이 함께 설정 된다.
-        var children = shape.transform.GetComponentsInChildren<Transform>();
-
-        foreach (var child in children)
-        {
-            // 부모(this.gameObject)는 삭제 하지 않기 위한 처리
-            if (child != shape.transform)
-            {
-                child.parent = null;
-                Destroy(child.gameObject);
-            }
         }
     }
 

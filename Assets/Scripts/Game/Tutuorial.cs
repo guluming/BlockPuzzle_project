@@ -9,7 +9,6 @@ public class Tutuorial : MonoBehaviour
 
     public void tutuorial1()
     {
-        Grid.gamemode = "tutorial1";
         closeGrid(20, 28, 36, 44);
 
         for (int i = 16; i < 48; i++)

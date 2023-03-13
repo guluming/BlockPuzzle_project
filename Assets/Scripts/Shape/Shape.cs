@@ -223,7 +223,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             // 부모(this.gameObject)는 삭제 하지 않기 위한 처리
             if (child != this.transform)
             {
-                child.parent = null;
+                child.SetParent(null);
                 Destroy(child.gameObject);
             }
         }
@@ -393,7 +393,13 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        seletedshapesprite = transform.GetChild(0).GetComponent<Image>().sprite;
+        for (int i=0; i< transform.childCount; i++)
+        {
+            if (transform.GetChild(i).gameObject.activeSelf)
+            {
+                seletedshapesprite = transform.GetChild(i).GetComponent<Image>().sprite;
+            }
+        }
 
         if (audioManager.sfxsetting) {
             GameEvents.blockDown();

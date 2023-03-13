@@ -129,7 +129,7 @@ public class Grid : MonoBehaviour
             else
             {
                 Debug.Log("저장 파일이 없습니다.");
-
+                gamemode = "tutorial1";
                 tutuorial.tutuorial1();
                 
                 Playerlife = 1;
@@ -344,9 +344,8 @@ public class Grid : MonoBehaviour
             }
 
             if (shapeLeft == 0) {
-                if (gamemode == "" || gamemode == "ClassicGame" || gamemode == "ChallengeGame" || gamemode == "tutorial3")
+                if (gamemode == "ClassicGame" || gamemode == "ChallengeGame" || gamemode == "tutorial3")
                 {
-
                     GameEvents.RequestNewShapes();
                 }
                 else {
@@ -446,9 +445,9 @@ public class Grid : MonoBehaviour
         } else if (gamemode == "tutorial2") {
 
             tutuorial.tutuorial3();
-            
-        } else if (gamemode == "tutorial3") {
-
+        }
+        else if (gamemode == "tutorial3")
+        {
             gamemode = "ClassicGame";
         }
         else {
