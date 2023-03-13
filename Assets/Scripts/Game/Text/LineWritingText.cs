@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LineWritingText : MonoBehaviour
 {
-    public SquareTextureData squareTextureData;
+    /*public SquareTextureData squareTextureData;
 
     private void OnEnable()
     {
@@ -18,5 +18,5 @@ public class LineWritingText : MonoBehaviour
                 GetComponent<Text>().color = textureData.color;
             }
         }
-    }
+    }*/
 }

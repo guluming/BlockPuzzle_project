@@ -401,7 +401,16 @@ public class Grid : MonoBehaviour
                 ShapeStorage.ComboCount++;
             }
 
-            int totalScores = (10 * (1 + ShapeStorage.ComboCount) * completedLines);
+            int totalScores = 0;
+            if (ShapeStorage.ComboCount == 0)
+            {
+                totalScores = (10 * completedLines);
+            }
+            else
+            {
+                totalScores = (10 * (1 + ShapeStorage.ComboCount) * completedLines);
+            }
+            
             GameEvents.AddScores(currentSelectedShape + totalScores);
         }
 
