@@ -21,6 +21,7 @@ public class GameOverPopup : MonoBehaviour
     public ChallengeStage challengeStage;
     public Text TargetScore;
     public Text FailureScore;
+    public Sprite gameoverimg;
     public List<GameObject> FailureJewelcompleted;
     public List<Text> FailureJewelCount;
     public ShapeStorage shapeStorage;
@@ -131,5 +132,39 @@ public class GameOverPopup : MonoBehaviour
     {
         shapeStorage.resurrectionNewShapes();
         RetryPopup.SetActive(false);
+    }
+
+    public void RetryPopupDeactiveAndNewBestScoreActive()
+    {
+        RetryPopup.SetActive(false);
+        StartCoroutine(GameOverAin(1));
+    }
+
+    public void RetryPopupDeactiveAndGameOverActive()
+    { 
+        RetryPopup.SetActive(false);
+        StartCoroutine(GameOverAin(0));
+    }
+
+    IEnumerator GameOverAin(int index)
+    {
+        for (int i = 0; i < 57; i += 8)
+        {
+            for (int k = i; k < i + 8; k++)
+            {
+                grid.transform.GetChild(k).transform.GetChild(2).gameObject.GetComponent<Image>().sprite = gameoverimg;
+            }
+
+            yield return new WaitForSeconds(0.25f);
+        }
+
+        if (index == 0)
+        {
+            GameOverActive();
+        }
+        else
+        {
+            NewBestScoreActive();
+        }
     }
 }

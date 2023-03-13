@@ -630,6 +630,7 @@ MonoBehaviour:
   adsManager: {fileID: 1635335651}
   ProgressIndicator: {fileID: 1413481009}
   LoadingBar: {fileID: 747233302}
+  gameoverimg: {fileID: 21300000, guid: 4694eed20d8fa4a75952a72b11275035, type: 3}
 --- !u!1001 &298677950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -733,22 +734,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 92f173505a32ba9469c4564ca847eced, type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_Text
-      value: Unbelievable
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
 --- !u!1 &310275576
@@ -1258,6 +1243,7 @@ MonoBehaviour:
   challengeStage: {fileID: 0}
   TargetScore: {fileID: 0}
   FailureScore: {fileID: 0}
+  gameoverimg: {fileID: 21300000, guid: 4694eed20d8fa4a75952a72b11275035, type: 3}
   FailureJewelcompleted: []
   FailureJewelCount: []
   shapeStorage: {fileID: 726592072}
@@ -3711,22 +3697,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3c73fe0f1b012a8428b86c9b833ca7a6, type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_Text
-      value: Excellent
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
 --- !u!224 &974557304 stripped
@@ -4407,6 +4377,7 @@ MonoBehaviour:
   score: {fileID: 1992078462}
   jewel: {fileID: 0}
   gridSquare: {fileID: 7841732357911365219, guid: ea6ed23b6bde7432fa7c8c1aba40ad69, type: 3}
+  gameoverimg: {fileID: 21300000, guid: 4694eed20d8fa4a75952a72b11275035, type: 3}
   columns: 8
   rows: 8
   startPosition: {x: -434, y: 434}
@@ -7355,22 +7326,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 864e94ddf987ea449920c83a2a217a2f, type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_Text
-      value: Great
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
 --- !u!224 &2044672251 stripped
@@ -7874,22 +7829,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 29062cc2ce3b7454589b2417fe9bcd8f, type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 54f1634eba5664f0698b95248a9a7be8, type: 3}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}

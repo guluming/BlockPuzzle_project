@@ -35,11 +35,11 @@ public class RadialProgress : MonoBehaviour
         {
             if (score.currentScores_ >= score.bestScores_.score)
             {
-                gameOverPopup.NewBestScoreActive();
+                gameOverPopup.RetryPopupDeactiveAndNewBestScoreActive();
             }
             else
             {
-                gameOverPopup.GameOverActive();
+                gameOverPopup.RetryPopupDeactiveAndGameOverActive();
             }
             ProgressIndicator.text = "0";
         }

@@ -41,6 +41,7 @@ public class Grid : MonoBehaviour
     public Scores score;
     public Jewels jewel;
     public GameObject gridSquare;
+    public Sprite gameoverimg;
     public int columns = 0;
     public int rows = 0;
     public Vector2 startPosition = new Vector2(-461.5f, 461.5f);
@@ -622,14 +623,16 @@ public class Grid : MonoBehaviour
                 else if (score.currentScores_ >= score.bestScores_.score)
                 {
                     playerSaveGame_.saveGameOver = true;
-                    gameOverPopup.NewBestScoreActive();
                     GameEvents.GameOver();
+
+                    StartCoroutine(GameOverAin(1));
                 }
                 else
                 {
                     playerSaveGame_.saveGameOver = true;
-                    gameOverPopup.GameOverActive();
                     GameEvents.GameOver();
+
+                    StartCoroutine(GameOverAin(0));             
                 }
             }
             else
@@ -643,14 +646,15 @@ public class Grid : MonoBehaviour
         {
             if (CheckIfPlayChallengeGameWin())
             {
-                gameOverPopup.SuccessPopupActive();
+                StartCoroutine(GameOverAin(1));
+                //gameOverPopup.SuccessPopupActive();
             }
             else 
             {
                 if (validShapes == 0)
                 {
                     playerSaveChallengeGame_.ChallengesaveGameOver = true;
-                    gameOverPopup.FailurePopupPopupActive();
+                    StartCoroutine(GameOverAin(0));
                 }
                 else
                 {
@@ -660,6 +664,42 @@ public class Grid : MonoBehaviour
                 saveChallengeGame();
             }
         }
+    }
+
+    IEnumerator GameOverAin(int index)
+    {
+        for (int i=0; i<57; i+=8) 
+        {
+            for (int k = i; k < i+8; k++)
+            {
+                transform.GetChild(k).transform.GetChild(2).gameObject.GetComponent<Image>().sprite = gameoverimg;
+            }
+
+            yield return new WaitForSeconds(0.25f);
+        }
+        if (gamemode == "ClassicGame")
+        {
+            if (index == 0)
+            {
+                gameOverPopup.GameOverActive();
+            }
+            else
+            {
+                gameOverPopup.NewBestScoreActive();
+            }
+        }
+        else 
+        {
+            if (index == 0)
+            {
+                gameOverPopup.FailurePopupPopupActive();
+            }
+            else
+            {
+                gameOverPopup.SuccessPopupActive();
+            }
+        }
+        
     }
 
     public void saveGame()

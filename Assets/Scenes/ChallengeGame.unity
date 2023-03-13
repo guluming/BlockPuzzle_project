@@ -2207,6 +2207,7 @@ MonoBehaviour:
   adsManager: {fileID: 1635335651}
   ProgressIndicator: {fileID: 1413481009}
   LoadingBar: {fileID: 747233302}
+  gameoverimg: {fileID: 0}
 --- !u!1 &285302730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3238,6 +3239,7 @@ MonoBehaviour:
   challengeStage: {fileID: 870105426}
   TargetScore: {fileID: 1429494198}
   FailureScore: {fileID: 498621203}
+  gameoverimg: {fileID: 21300000, guid: 4694eed20d8fa4a75952a72b11275035, type: 3}
   FailureJewelcompleted:
   - {fileID: 1906714791}
   - {fileID: 253629467}
@@ -9889,6 +9891,7 @@ MonoBehaviour:
   score: {fileID: 1992078462}
   jewel: {fileID: 2090399040}
   gridSquare: {fileID: 7841732357911365219, guid: ea6ed23b6bde7432fa7c8c1aba40ad69, type: 3}
+  gameoverimg: {fileID: 21300000, guid: 4694eed20d8fa4a75952a72b11275035, type: 3}
   columns: 8
   rows: 8
   startPosition: {x: -434, y: 434}
