@@ -113,12 +113,75 @@ public class SwipeUI : MonoBehaviour
             case 12:
                 stagemode = "Jewelmode";
                 break;
-            /*case 13:
-                stagemode = "Jewelmode";
+            case 13:
+                stagemode = "Scoremode";
                 break;
             case 14:
                 stagemode = "Jewelmode";
-                break;*/
+                break;
+            case 15:
+                stagemode = "Jewelmode";
+                break;
+            case 16:
+                stagemode = "Scoremode";
+                break;
+            case 17:
+                stagemode = "Jewelmode";
+                break;
+            case 18:
+                stagemode = "Jewelmode";
+                break;
+            case 19:
+                stagemode = "Jewelmode";
+                break;
+            case 20:
+                stagemode = "Jewelmode";
+                break;
+            case 21:
+                stagemode = "Scoremode";
+                break;
+            case 22:
+                stagemode = "Jewelmode";
+                break;
+            case 23:
+                stagemode = "Scoremode";
+                break;
+            case 24:
+                stagemode = "Jewelmode";
+                break;
+            case 25:
+                stagemode = "Jewelmode";
+                break;
+            case 26:
+                stagemode = "Jewelmode";
+                break;
+            case 27:
+                stagemode = "Jewelmode";
+                break;
+            case 28:
+                stagemode = "Scoremode";
+                break;
+            case 29:
+                stagemode = "Jewelmode";
+                break;
+            case 30:
+                stagemode = "Jewelmode";
+                break;
+            case 31:
+                stagemode = "Jewelmode";
+                break;
+            case 32:
+                stagemode = "Scoremode";
+                break;
+            case 33:
+                stagemode = "Scoremode";
+                break;
+            case 34:
+                stagemode = "Scoremode";
+                break;
+            case 35:
+                stagemode = "Jewelmode";
+                break;
         }
 
         return stagemode;
