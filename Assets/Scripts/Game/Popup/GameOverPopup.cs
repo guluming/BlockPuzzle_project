@@ -21,6 +21,8 @@ public class GameOverPopup : MonoBehaviour
     public ChallengeStage challengeStage;
     public Text TargetScore;
     public Text FailureScore;
+    public List<GameObject> FailureJewelcompleted;
+    public List<Text> FailureJewelCount;
     public ShapeStorage shapeStorage;
     public AdsManager adsManager;
 
@@ -68,6 +70,11 @@ public class GameOverPopup : MonoBehaviour
         }
         else
         {
+            for (int i=0; i<challengeStage.TargetActivateJewel.Count; i++)
+            {
+                TargetJewelPopup.transform.GetChild(challengeStage.TargetActivateJewel[i]).gameObject.SetActive(true);
+            }
+
             TargetJewelPopup.SetActive(true);
         }
 
@@ -87,6 +94,19 @@ public class GameOverPopup : MonoBehaviour
         }
         else
         {
+            for (int i = 0; i < challengeStage.TargetActivateJewel.Count; i++)
+            {
+                FailureJewelPopup.transform.GetChild(challengeStage.TargetActivateJewel[i]).gameObject.SetActive(true);
+                if (challengeStage.TargetActivateJewelCount[i] <= 0)
+                {
+                    FailureJewelCount[challengeStage.TargetActivateJewel[i]].gameObject.SetActive(false);
+                    FailureJewelcompleted[challengeStage.TargetActivateJewel[i]].gameObject.SetActive(true);
+                }
+                else
+                {
+                    FailureJewelCount[challengeStage.TargetActivateJewel[i]].text = challengeStage.TargetActivateJewelCount[i].ToString();
+                }
+            }
             FailureJewelPopup.SetActive(true);
         }
 

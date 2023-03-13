@@ -146,6 +146,12 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void CreateShape(ShapeData shapeData)
     {
+        _currentShape.Clear();
+        DeleteChilds(_currentShape);
+
+        //Debug.Log(Grid.gamemode);
+        //Debug.Log(ChallengeStage.challengemode);
+
         CurrentShapeData = shapeData;
         TotalSquareNumber = GetNumberOfSquares(CurrentShapeData);
 
@@ -158,18 +164,19 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         }
         else if (Grid.gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Jewelmode")
         {
-            bool jewelShapeImageCheck = false;
+            bool jewelShapeImageCheck = true;
 
             while (_currentShape.Count <= TotalSquareNumber)
             {
-                if (Random.Range(0, 5) == 0 && jewelShapeImageCheck == false)
+                if (Random.Range(0, 3) == 0 && jewelShapeImageCheck)
                 {
-                    Debug.Log("보석 생성");
+                    //Debug.Log("보석 추가");
                     _currentShape.Add(Instantiate(jewelShapeImage, transform) as GameObject);
-                    jewelShapeImageCheck = true;
+                    jewelShapeImageCheck = false;
                 }
                 else
                 {
+                    //Debug.Log("일반 블록 추가");
                     _currentShape.Add(Instantiate(squareShapeImage, transform) as GameObject);
                 }
             }
@@ -192,7 +199,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             squareRect.rect.height * squareRect.localScale.y);
 
         int currentIndexInList = 0;
-
         for (var row = 0; row < shapeData.rows; row++) {
             for (var column = 0; column < shapeData.columns; column++) {
                 if (shapeData.board[row].column[column]) {
@@ -203,6 +209,22 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
                     currentIndexInList++;
                 }
+            }
+        }
+    }
+
+    private void DeleteChilds(List<GameObject> _currentShape)
+    {
+        // child 에는 부모와 자식이 함께 설정 된다.
+        var children = transform.GetComponentsInChildren<Transform>();
+
+        foreach (var child in children)
+        {
+            // 부모(this.gameObject)는 삭제 하지 않기 위한 처리
+            if (child != this.transform)
+            {
+                child.parent = null;
+                Destroy(child.gameObject);
             }
         }
     }

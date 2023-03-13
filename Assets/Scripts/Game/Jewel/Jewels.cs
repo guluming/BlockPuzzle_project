@@ -6,6 +6,7 @@ public class Jewels : MonoBehaviour
 {
     public List<GameObject> jewels;
     public List<GameObject> jewelsCount;
+    public List<GameObject> jewelCompletedCheck;
 
     void Awake()
     {

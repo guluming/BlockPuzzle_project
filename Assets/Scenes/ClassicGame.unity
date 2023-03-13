@@ -1244,7 +1244,16 @@ MonoBehaviour:
   RetryPopup: {fileID: 1746992155}
   NewBestScore: {fileID: 470601275}
   MaintainScore: {fileID: 75149017}
+  SuccessPopup: {fileID: 0}
+  FailurePopup: {fileID: 0}
+  TargetScorePopup: {fileID: 0}
+  TargetJewelPopup: {fileID: 0}
+  FailureScorePopup: {fileID: 0}
+  FailureJewelPopup: {fileID: 0}
   grid: {fileID: 1156734087}
+  challengeStage: {fileID: 0}
+  TargetScore: {fileID: 0}
+  FailureScore: {fileID: 0}
   shapeStorage: {fileID: 726592072}
   adsManager: {fileID: 1635335651}
 --- !u!1 &442347407
@@ -3576,7 +3585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxAudioSource: {fileID: 973725121}
-  blockDownSfx: {fileID: 8300000, guid: a123b8fe595644f628ab6f4cc73a7aa2, type: 3}
+  blockDownSfx: {fileID: 8300000, guid: 1b0b77ffb265dd74eb656b5912e94cea, type: 3}
   blockCompletedSfx: {fileID: 8300000, guid: 250603450ce664ec08081f999f0050f4, type: 3}
 --- !u!4 &973725123
 Transform:
@@ -4382,9 +4391,11 @@ MonoBehaviour:
   jewelSquareTextureData: {fileID: 11400000, guid: dfe15e7ad38f640a4ad121c1440dbad7, type: 2}
   squareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
   tutuorial: {fileID: 1152111175}
+  ChallengeStage: {fileID: 0}
   shapeStorage: {fileID: 726592072}
   shapes: {fileID: 2088004032}
   score: {fileID: 1992078462}
+  jewel: {fileID: 0}
   gridSquare: {fileID: 7841732357911365219, guid: ea6ed23b6bde7432fa7c8c1aba40ad69, type: 3}
   columns: 8
   rows: 8

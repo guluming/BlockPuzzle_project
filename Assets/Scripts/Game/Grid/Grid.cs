@@ -163,6 +163,15 @@ public class Grid : MonoBehaviour
                             if (playerSaveChallengeGame_.ChallengeactiveGridSquareColors[i] == squareTextureData.activeSquareTextures[j].texture.ToString())
                             {
                                 saveActiveSquareTextures.Add(squareTextureData.activeSquareTextures[j].texture);
+                            } 
+                            
+                        }
+
+                        for (int j = 0; j < jewelSquareTextureData.activeJewelSquareTextures.Count; j++)
+                        {
+                            if (playerSaveChallengeGame_.ChallengeactiveGridSquareColors[i] == jewelSquareTextureData.activeJewelSquareTextures[j].texture.ToString())
+                            {
+                                saveActiveSquareTextures.Add(squareTextureData.activeSquareTextures[j].texture);
                             }
                         }
                     }
@@ -186,7 +195,7 @@ public class Grid : MonoBehaviour
             else
             {
                 Debug.Log("저장 파일이 없습니다.");
-                ChallengeStage.challengemode = "Jewelmode";
+                Debug.Log(gamemode);
                 ChallengeStage.ChallengeStageSelete(1);
 
                 Playerlife = 1;
@@ -223,7 +232,6 @@ public class Grid : MonoBehaviour
                 _gridSquares[_gridSquares.Count - 1].GetComponent<GridSquare>().SquareIndex = square_index;
                 _gridSquares[_gridSquares.Count - 1].transform.SetParent(transform);
                 _gridSquares[_gridSquares.Count - 1].transform.localScale = new Vector3(squareScale, squareScale, squareScale);
-                //_gridSquares[_gridSquares.Count - 1].GetComponent<GridSquare>().SetImage(_lineIndicator.GetGridSquareIndex(square_index) / 2 == 0);
                 square_index++;
             }
         }
@@ -338,6 +346,7 @@ public class Grid : MonoBehaviour
             if (shapeLeft == 0) {
                 if (gamemode == "" || gamemode == "ClassicGame" || gamemode == "ChallengeGame" || gamemode == "tutorial3")
                 {
+
                     GameEvents.RequestNewShapes();
                 }
                 else {
@@ -489,7 +498,7 @@ public class Grid : MonoBehaviour
                         {
                             if (comp.ActiveImage.GetComponent<Image>().sprite == jewel.jewels[ChallengeStage.TargetActivateJewel[i]].transform.GetChild(0).GetComponent<Image>().sprite)
                             {
-                                Debug.Log("보석 카운팅 검사");
+                                //Debug.Log("보석 카운팅 검사");
                                 jewel.jewelsCount[ChallengeStage.TargetActivateJewel[i]].GetComponent<Text>().text = (ChallengeStage.TargetActivateJewelCount[i] - 1).ToString();
                                 ChallengeStage.TargetActivateJewelCount[i] = ChallengeStage.TargetActivateJewelCount[i] - 1;
                             }
@@ -529,9 +538,14 @@ public class Grid : MonoBehaviour
             bool jewelClear = true;
             for (int i=0; i< ChallengeStage.TargetActivateJewelCount.Count; i++) 
             {
-                if (ChallengeStage.TargetActivateJewelCount[i] > 0) 
+                if (ChallengeStage.TargetActivateJewelCount[i] > 0)
                 {
                     jewelClear = false;
+                }
+                else 
+                {
+                    jewel.jewelsCount[ChallengeStage.TargetActivateJewel[i]].SetActive(false);
+                    jewel.jewelCompletedCheck[ChallengeStage.TargetActivateJewel[i]].SetActive(true);
                 }
             }
 
@@ -615,7 +629,7 @@ public class Grid : MonoBehaviour
                 playerSaveGame_.saveGameOver = false;
             }
 
-            saveGame(false);
+            saveGame();
         } 
         else if (gamemode == "ChallengeGame")
         {
@@ -635,60 +649,73 @@ public class Grid : MonoBehaviour
                     playerSaveChallengeGame_.ChallengesaveGameOver = false;
                 }
 
-                saveChallengeGame(false);
+                saveChallengeGame();
             }
         }
     }
 
-    public void saveGame(bool resetGame)
+    public void saveGame()
     {
         for (int i = 0; i < 3; i++)
         {
-            if (!shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf)
+            bool useShapeCheck = true;
+            for (int j = 0; j < shapes.transform.GetChild(i).transform.childCount; j++)
+            {
+                if (shapes.transform.GetChild(i).transform.GetChild(j).gameObject.activeSelf)
+                {
+                    useShapeCheck = false;
+                }
+            }
+
+            if(useShapeCheck)
             {
                 playerSaveGame_.shapeDataIndexList[i] = -1;
             }
         }
 
-        if (!resetGame) {
-            playerSaveGame_.activeGridSquares = CheckSaveActiveGridSquares();
-            playerSaveGame_.activeGridSquareColors = CheckSaveActiveGridSquaresColor();
+        playerSaveGame_.activeGridSquares = CheckSaveActiveGridSquares();
+        playerSaveGame_.activeGridSquareColors = CheckSaveActiveGridSquaresColor();
 
-            playerSaveGame_.savePlayerlife = Playerlife;
-            playerSaveGame_.saveScore = score.currentScores_;
-            playerSaveGame_.saveisCombo = ShapeStorage.isCombo;
-            playerSaveGame_.saveComboCount = ShapeStorage.ComboCount;
-        }
+        playerSaveGame_.savePlayerlife = Playerlife;
+        playerSaveGame_.saveScore = score.currentScores_;
+        playerSaveGame_.saveisCombo = ShapeStorage.isCombo;
+        playerSaveGame_.saveComboCount = ShapeStorage.ComboCount;
 
         string playerSaveGameData = JsonUtility.ToJson(playerSaveGame_);
-        Debug.Log(playerSaveGameData);
+        //Debug.Log(playerSaveGameData);
         BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
     }
 
-    public void saveChallengeGame(bool resetGame) 
+    public void saveChallengeGame() 
     {
         //Debug.Log(resetGame);
 
         for (int i = 0; i < 3; i++)
         {
-            //Debug.Log(shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf);
-            if (!shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf)
+            bool useShapeCheck = true;
+            for (int j=0; j< shapes.transform.GetChild(i).transform.childCount; j++) 
+            {
+                if (shapes.transform.GetChild(i).transform.GetChild(j).gameObject.activeSelf)
+                {
+                    useShapeCheck = false;
+                }
+            }
+
+            if (useShapeCheck)
             {
                 playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = -1;
             }
+            //Debug.Log(shapes.transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf);
         }
+        playerSaveChallengeGame_.ChallengeactiveGridSquares = CheckSaveActiveGridSquares();
+        playerSaveChallengeGame_.ChallengeactiveGridSquareColors = CheckSaveActiveGridSquaresColor();
 
-        if (!resetGame)
-        {
-            playerSaveChallengeGame_.ChallengeactiveGridSquares = CheckSaveActiveGridSquares();
-            playerSaveChallengeGame_.ChallengeactiveGridSquareColors = CheckSaveActiveGridSquaresColor();
+        playerSaveChallengeGame_.ChallengesavePlayerlife = Playerlife;
+        playerSaveChallengeGame_.ChallengesaveScore = score.currentScores_;
+        playerSaveChallengeGame_.ChallengesaveisCombo = ShapeStorage.isCombo;
+        playerSaveChallengeGame_.ChallengesaveComboCount = ShapeStorage.ComboCount;
 
-            playerSaveChallengeGame_.ChallengesavePlayerlife = Playerlife;
-            playerSaveChallengeGame_.ChallengesaveScore = score.currentScores_;
-            playerSaveChallengeGame_.ChallengesaveisCombo = ShapeStorage.isCombo;
-            playerSaveChallengeGame_.ChallengesaveComboCount = ShapeStorage.ComboCount;
-            playerSaveChallengeGame_.ChallengestartStage = startStage;
-        }
+        playerSaveChallengeGame_.ChallengestartStage = startStage;
 
         string playerSaveGameData = JsonUtility.ToJson(playerSaveChallengeGame_);
         //Debug.Log(playerSaveGameData);

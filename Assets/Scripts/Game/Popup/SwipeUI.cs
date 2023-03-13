@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class SwipeUI : MonoBehaviour
 {
+    public List<GameObject> stageCheck;
+    public Text stagePlay;
+
     [SerializeField]
     private Scrollbar scrollbar;
     [SerializeField]
@@ -22,6 +25,10 @@ public class SwipeUI : MonoBehaviour
     private float endTouchX;
     private bool isSwipeMode = false;
     private float circleContentScale = 2.0f;
+    private string playerSaveChallengeGamekey = "playerSaveChallengeGame";
+
+    [HideInInspector]
+    public playerChallengeGameData playerSaveChallengeGame_ = new playerChallengeGameData();
 
     private void Awake()
     {
@@ -38,7 +45,83 @@ public class SwipeUI : MonoBehaviour
 
     private void Start()
     {
-        SetScrollBarValue(0);
+        if (BinaryDataStream.Exist(playerSaveChallengeGamekey))
+        {
+            Debug.Log("도전 모드 저장 파일이 있습니다.");
+
+            string jsonPlayerSaveChallengeGame_ = BinaryDataStream.Read<string>(playerSaveChallengeGamekey);
+            playerSaveChallengeGame_ = JsonUtility.FromJson<playerChallengeGameData>(jsonPlayerSaveChallengeGame_);
+
+            ChallengeStage.challengemode = SetChallengeStagemode(playerSaveChallengeGame_.ChallengestartStage);
+
+            for (int i=0; i < playerSaveChallengeGame_.ChallengestartStage - 1; i++) 
+            {
+                stageCheck[i].transform.GetChild(2).gameObject.SetActive(true);
+            }
+
+            stageCheck[playerSaveChallengeGame_.ChallengestartStage - 1].transform.GetChild(1).gameObject.SetActive(true);
+            SetScrollBarValue((playerSaveChallengeGame_.ChallengestartStage - 1) / 5);
+            stagePlay.text = "LEVEL. " + (((playerSaveChallengeGame_.ChallengestartStage - 1) / 5) + 1) + "-" + (playerSaveChallengeGame_.ChallengestartStage % 5);
+        }
+        else
+        {
+            Debug.Log("저장 파일이 없습니다.");
+            ChallengeStage.challengemode = "Jewelmode";
+            stageCheck[0].transform.GetChild(1).gameObject.SetActive(true);
+            SetScrollBarValue(0);
+        }
+    }
+
+    private string SetChallengeStagemode(int stage)
+    {
+        string stagemode = "";
+        switch (stage)
+        {
+            case 1:
+                stagemode = "Jewelmode";
+                break;
+            case 2:
+                stagemode = "Scoremode";
+                break;
+            case 3:
+                stagemode = "Jewelmode";
+                break;
+            case 4:
+                stagemode = "Jewelmode";
+                break;
+            case 5:
+                stagemode = "Jewelmode";
+                break;
+            case 6:
+                stagemode = "Scoremode";
+                break;
+            case 7:
+                stagemode = "Jewelmode";
+                break;
+            case 8:
+                stagemode = "Jewelmode";
+                break;
+            case 9:
+                stagemode = "Scoremode";
+                break;
+            case 10:
+                stagemode = "Jewelmode";
+                break;
+            case 11:
+                stagemode = "Jewelmode";
+                break;
+            case 12:
+                stagemode = "Jewelmode";
+                break;
+            /*case 13:
+                stagemode = "Jewelmode";
+                break;
+            case 14:
+                stagemode = "Jewelmode";
+                break;*/
+        }
+
+        return stagemode;
     }
 
     public void SetScrollBarValue(int index) 

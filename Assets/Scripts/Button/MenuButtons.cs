@@ -36,18 +36,19 @@ public class MenuButtons : MonoBehaviour
 
     public void LoadReplayScene()
     {
+        Debug.Log(Grid.gamemode);
         if (Grid.gamemode == "ClassicGame")
         {
             Grid.gamemode = "ClassicGame";
             grid.playerSaveGame_.saveGameOver = true;
-            grid.saveGame(true);
+            grid.saveGame();
             SceneManager.LoadScene("ClassicGame");
         }
         else if (Grid.gamemode == "ChallengeGame")
         {
             Grid.gamemode = "ChallengeGame";
             grid.playerSaveChallengeGame_.ChallengesaveGameOver = true;
-            grid.saveChallengeGame(true);
+            grid.saveChallengeGame();
             SceneManager.LoadScene("ChallengeGame");
         }
     }

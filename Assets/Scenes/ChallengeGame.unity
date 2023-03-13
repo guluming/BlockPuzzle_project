@@ -371,12 +371,12 @@ GameObject:
   - component: {fileID: 40543839}
   - component: {fileID: 40543838}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RubyConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &40543837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 60898062}
   - component: {fileID: 60898061}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: AmethystcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -898,7 +898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &103031750
 RectTransform:
   m_ObjectHideFlags: 0
@@ -918,7 +918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 915, y: -150}
+  m_AnchoredPosition: {x: 540, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103031751
@@ -955,7 +955,6 @@ GameObject:
   m_Component:
   - component: {fileID: 106736416}
   - component: {fileID: 106736418}
-  - component: {fileID: 106736417}
   m_Layer: 5
   m_Name: FailureJewel
   m_TagString: Untagged
@@ -989,20 +988,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -49.999996}
   m_SizeDelta: {x: 1080, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &106736417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106736415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a0aca94f01c3348a47c2be5da87a47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jewels: []
-  jewelsCount: []
 --- !u!114 &106736418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,7 +1104,7 @@ GameObject:
   - component: {fileID: 135451514}
   - component: {fileID: 135451513}
   m_Layer: 5
-  m_Name: Text
+  m_Name: EmeraldConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1323,7 +1308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &145824460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1343,7 +1328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 465, y: -150}
+  m_AnchoredPosition: {x: 540, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145824461
@@ -1536,12 +1521,12 @@ GameObject:
   - component: {fileID: 192965952}
   - component: {fileID: 192965951}
   m_Layer: 5
-  m_Name: Text
+  m_Name: EmeraldConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &192965950
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1714,10 +1699,10 @@ RectTransform:
   m_Father: {fileID: 2090399038}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 465, y: -150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &210930295
 MonoBehaviour:
@@ -1755,12 +1740,12 @@ GameObject:
   - component: {fileID: 237282771}
   - component: {fileID: 237282770}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: TopazcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &237282769
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1851,10 +1836,10 @@ RectTransform:
   m_Father: {fileID: 2142092993}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -135.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &239254390
 GameObject:
@@ -2021,12 +2006,12 @@ GameObject:
   - component: {fileID: 253629470}
   - component: {fileID: 253629469}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: GarnetcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &253629468
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2544,12 +2529,12 @@ GameObject:
   - component: {fileID: 340522458}
   - component: {fileID: 340522457}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: RubycompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &340522456
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3132,7 +3117,6 @@ GameObject:
   m_Component:
   - component: {fileID: 424185512}
   - component: {fileID: 424185511}
-  - component: {fileID: 424185510}
   m_Layer: 5
   m_Name: TargetJewel
   m_TagString: Untagged
@@ -3140,20 +3124,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &424185510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424185509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6a0aca94f01c3348a47c2be5da87a47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jewels: []
-  jewelsCount: []
 --- !u!114 &424185511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3268,6 +3238,20 @@ MonoBehaviour:
   challengeStage: {fileID: 870105426}
   TargetScore: {fileID: 1429494198}
   FailureScore: {fileID: 498621203}
+  FailureJewelcompleted:
+  - {fileID: 1906714791}
+  - {fileID: 253629467}
+  - {fileID: 340522455}
+  - {fileID: 237282768}
+  - {fileID: 1987733402}
+  - {fileID: 1671061072}
+  FailureJewelCount:
+  - {fileID: 2111233521}
+  - {fileID: 958487338}
+  - {fileID: 40543838}
+  - {fileID: 1765014424}
+  - {fileID: 775959604}
+  - {fileID: 192965951}
   shapeStorage: {fileID: 726592072}
   adsManager: {fileID: 1635335651}
 --- !u!1 &441464867
@@ -3286,7 +3270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &441464868
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3462,7 +3446,7 @@ GameObject:
   - component: {fileID: 452838695}
   - component: {fileID: 452838694}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: SapphirecompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3584,7 +3568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 38b497099656234419f91bff6211646c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5751bc3535b8cd84392b3e67d29059dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3692,7 +3676,7 @@ GameObject:
   - component: {fileID: 468067124}
   - component: {fileID: 468067123}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: EmeraldcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4315,10 +4299,10 @@ RectTransform:
   m_Father: {fileID: 210930294}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -135.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &519162767
 GameObject:
@@ -4574,7 +4558,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5751bc3535b8cd84392b3e67d29059dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38b497099656234419f91bff6211646c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5080,10 +5064,10 @@ RectTransform:
   m_Father: {fileID: 210930294}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -18.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &615077295
 MonoBehaviour:
@@ -5135,7 +5119,7 @@ GameObject:
   - component: {fileID: 617386006}
   - component: {fileID: 617386005}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: TopazcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5215,7 +5199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &626020595
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5235,7 +5219,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 465, y: -150}
+  m_AnchoredPosition: {x: 315, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &626020596
@@ -5450,10 +5434,10 @@ RectTransform:
   m_Father: {fileID: 2090399038}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 315, y: -150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664008624
 MonoBehaviour:
@@ -5495,7 +5479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &669312811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5515,7 +5499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 765, y: -150}
+  m_AnchoredPosition: {x: 465, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669312812
@@ -5575,10 +5559,10 @@ RectTransform:
   m_Father: {fileID: 664008623}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -18.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &683041897
 MonoBehaviour:
@@ -5600,7 +5584,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 38b497099656234419f91bff6211646c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5751bc3535b8cd84392b3e67d29059dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5843,7 +5827,7 @@ GameObject:
   - component: {fileID: 724657593}
   - component: {fileID: 724657592}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: TopazcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6029,7 +6013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &740812591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6049,7 +6033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 615, y: -150}
+  m_AnchoredPosition: {x: 690, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &740812592
@@ -6427,12 +6411,12 @@ GameObject:
   - component: {fileID: 775959605}
   - component: {fileID: 775959604}
   m_Layer: 5
-  m_Name: Text
+  m_Name: AmethystConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &775959603
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6507,7 +6491,7 @@ GameObject:
   - component: {fileID: 779253517}
   - component: {fileID: 779253516}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: GarnetcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6603,10 +6587,10 @@ RectTransform:
   m_Father: {fileID: 664008623}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -135.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &799106101
 GameObject:
@@ -6720,10 +6704,10 @@ RectTransform:
   m_Father: {fileID: 1706903749}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -135.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &813923416
 GameObject:
@@ -7051,7 +7035,7 @@ GameObject:
   - component: {fileID: 851812388}
   - component: {fileID: 851812387}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: SapphirecompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7635,7 +7619,7 @@ GameObject:
   - component: {fileID: 933163248}
   - component: {fileID: 933163247}
   m_Layer: 5
-  m_Name: Text
+  m_Name: AmethystConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7795,12 +7779,12 @@ GameObject:
   - component: {fileID: 958487339}
   - component: {fileID: 958487338}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GarnetConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &958487337
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8410,7 +8394,7 @@ GameObject:
   - component: {fileID: 991424539}
   - component: {fileID: 991424538}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: RubycompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8562,7 +8546,7 @@ GameObject:
   - component: {fileID: 1003346545}
   - component: {fileID: 1003346544}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: RubycompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9285,10 +9269,10 @@ RectTransform:
   m_Father: {fileID: 1706903749}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -18.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080007768
 MonoBehaviour:
@@ -9711,10 +9695,10 @@ RectTransform:
   m_Father: {fileID: 1289268119}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -135.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1141021353
 GameObject:
@@ -9728,7 +9712,7 @@ GameObject:
   - component: {fileID: 1141021356}
   - component: {fileID: 1141021355}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: GarnetcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10470,10 +10454,10 @@ RectTransform:
   m_Father: {fileID: 1289268119}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -18.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1248911629
 MonoBehaviour:
@@ -10495,7 +10479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5751bc3535b8cd84392b3e67d29059dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38b497099656234419f91bff6211646c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10525,7 +10509,7 @@ GameObject:
   - component: {fileID: 1259088244}
   - component: {fileID: 1259088243}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SapphireConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10703,10 +10687,10 @@ RectTransform:
   m_Father: {fileID: 2090399038}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 615, y: -150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289268120
 MonoBehaviour:
@@ -10765,10 +10749,10 @@ RectTransform:
   m_Father: {fileID: 2058509675}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -18.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1289750927
 MonoBehaviour:
@@ -12416,7 +12400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1518977512
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12436,7 +12420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 315, y: -150}
+  m_AnchoredPosition: {x: 240, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1518977513
@@ -12753,7 +12737,7 @@ GameObject:
   - component: {fileID: 1535119440}
   - component: {fileID: 1535119439}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TopazConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12837,7 +12821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1550208000
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12857,7 +12841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 765, y: -150}
+  m_AnchoredPosition: {x: 840, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550208001
@@ -12972,7 +12956,7 @@ GameObject:
   - component: {fileID: 1560233091}
   - component: {fileID: 1560233090}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: AmethystcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13698,10 +13682,10 @@ RectTransform:
   m_Father: {fileID: 2058509675}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -135.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1671061072
 GameObject:
@@ -13715,12 +13699,12 @@ GameObject:
   - component: {fileID: 1671061075}
   - component: {fileID: 1671061074}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: EmeraldcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1671061073
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13813,10 +13797,10 @@ RectTransform:
   m_Father: {fileID: 2090399038}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 915, y: -150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706903750
 MonoBehaviour:
@@ -14497,12 +14481,12 @@ GameObject:
   - component: {fileID: 1765014425}
   - component: {fileID: 1765014424}
   m_Layer: 5
-  m_Name: Text
+  m_Name: TopazConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1765014423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14623,7 +14607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 38b497099656234419f91bff6211646c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5751bc3535b8cd84392b3e67d29059dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14657,7 +14641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1773983801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14677,7 +14661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 615, y: -150}
+  m_AnchoredPosition: {x: 390, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1773983802
@@ -14720,7 +14704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1792013087
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15222,12 +15206,12 @@ GameObject:
   - component: {fileID: 1906714794}
   - component: {fileID: 1906714793}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: SapphirecompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1906714792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15302,7 +15286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1918388275
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15322,7 +15306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 315, y: -150}
+  m_AnchoredPosition: {x: 390, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918388276
@@ -15821,7 +15805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1982035211
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15841,7 +15825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 165, y: -150}
+  m_AnchoredPosition: {x: 240, y: -150}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1982035212
@@ -15880,12 +15864,12 @@ GameObject:
   - component: {fileID: 1987733405}
   - component: {fileID: 1987733404}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: AmethystcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1987733403
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16089,7 +16073,7 @@ GameObject:
   - component: {fileID: 2004075900}
   - component: {fileID: 2004075899}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GarnetConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16215,7 +16199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5751bc3535b8cd84392b3e67d29059dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38b497099656234419f91bff6211646c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16411,7 +16395,7 @@ GameObject:
   - component: {fileID: 2052110151}
   - component: {fileID: 2052110150}
   m_Layer: 5
-  m_Name: JewelcompleteCheck
+  m_Name: EmeraldcompleteCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16509,10 +16493,10 @@ RectTransform:
   m_Father: {fileID: 2090399038}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 165, y: -150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058509676
 MonoBehaviour:
@@ -16792,7 +16776,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2090399038
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16869,6 +16853,13 @@ MonoBehaviour:
   - {fileID: 31502548}
   - {fileID: 1035992855}
   - {fileID: 2107313026}
+  jewelCompletedCheck:
+  - {fileID: 851812386}
+  - {fileID: 1141021353}
+  - {fileID: 991424536}
+  - {fileID: 617386003}
+  - {fileID: 1560233088}
+  - {fileID: 2052110148}
 --- !u!1 &2094762944
 GameObject:
   m_ObjectHideFlags: 0
@@ -17115,12 +17106,12 @@ GameObject:
   - component: {fileID: 2111233522}
   - component: {fileID: 2111233521}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SapphireConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2111233520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17195,7 +17186,7 @@ GameObject:
   - component: {fileID: 2118759619}
   - component: {fileID: 2118759618}
   m_Layer: 5
-  m_Name: Text
+  m_Name: RubyConut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17374,10 +17365,10 @@ RectTransform:
   m_Father: {fileID: 2142092993}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 58.5, y: -18.5}
+  m_SizeDelta: {x: 117, y: 117}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2137225784
 MonoBehaviour:
@@ -17451,10 +17442,10 @@ RectTransform:
   m_Father: {fileID: 2090399038}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 765, y: -150}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2142092994
 MonoBehaviour:
