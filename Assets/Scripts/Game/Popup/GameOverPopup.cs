@@ -47,6 +47,8 @@ public class GameOverPopup : MonoBehaviour
     public void NewBestScoreActive()
     {
         adsManager.ShowInterstitial();
+
+        GameEvents.blockClassicGame();
         grid.playerSaveGame_.saveGameOver = true;
         string playerSaveGameData = JsonUtility.ToJson(grid.playerSaveGame_);
         BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
@@ -56,6 +58,8 @@ public class GameOverPopup : MonoBehaviour
     public void GameOverActive()
     {
         adsManager.ShowInterstitial();
+
+        GameEvents.blockClassicGame();
         grid.playerSaveGame_.saveGameOver = true;
         string playerSaveGameData = JsonUtility.ToJson(grid.playerSaveGame_);
         BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
@@ -68,6 +72,8 @@ public class GameOverPopup : MonoBehaviour
         {
             adsManager.ShowInterstitial();
         }
+
+        GameEvents.blockChallengeGame();
 
         if (ChallengeStage.challengemode == "Scoremode")
         {
@@ -97,6 +103,8 @@ public class GameOverPopup : MonoBehaviour
         {
             adsManager.ShowInterstitial();
         }
+
+        GameEvents.blockClassicGame();
 
         if (ChallengeStage.challengemode == "Scoremode")
         {
@@ -148,6 +156,8 @@ public class GameOverPopup : MonoBehaviour
 
     IEnumerator GameOverAin(int index)
     {
+        GameEvents.blockGameover();
+
         for (int i = 0; i < 57; i += 8)
         {
             for (int k = i; k < i + 8; k++)
