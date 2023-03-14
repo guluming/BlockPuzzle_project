@@ -1137,7 +1137,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1080, y: 2400}
+  m_SizeDelta: {x: 1400, y: 2400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403043794
 MonoBehaviour:
@@ -2403,17 +2403,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0192b36601bdd4fdda641b97ca80bc22, type: 2}
   - {fileID: 11400000, guid: e5cb3d4122a4f4fe4a75eae7ae2dbee8, type: 2}
   - {fileID: 11400000, guid: 747e73d7ae33a4cdbb7b252fdc387a21, type: 2}
+  - {fileID: 11400000, guid: 82cc35c0d01f04a0d8d051e734a140b7, type: 2}
+  - {fileID: 11400000, guid: 1d2bb55d0fd3842de8de882c850baef4, type: 2}
+  - {fileID: 11400000, guid: 0e2f0da2504624b8ea1ea264912ec7ff, type: 2}
   - {fileID: 11400000, guid: a4fc54949390b4dcaa5734d2c54eee37, type: 2}
   - {fileID: 11400000, guid: d9858b23ae64144a490cf5789c8f27f1, type: 2}
   - {fileID: 11400000, guid: e7813fcefeb27401e9ccbc7f3b2eef7b, type: 2}
   - {fileID: 11400000, guid: 547b31d13f6a64ebcbada69acbef06a7, type: 2}
-  - {fileID: 11400000, guid: 82cc35c0d01f04a0d8d051e734a140b7, type: 2}
   - {fileID: 11400000, guid: d4229b2be6b3546dab3ec8c11a70c079, type: 2}
   - {fileID: 11400000, guid: dbc8a4f678323429c877d67d7e7ac3e4, type: 2}
   - {fileID: 11400000, guid: 32f6d427d75b84713af95efcb7f47e71, type: 2}
   - {fileID: 11400000, guid: 960068abad88749feb6b60e058bdeb56, type: 2}
-  - {fileID: 11400000, guid: 1d2bb55d0fd3842de8de882c850baef4, type: 2}
-  - {fileID: 11400000, guid: 0e2f0da2504624b8ea1ea264912ec7ff, type: 2}
   - {fileID: 11400000, guid: 5ae0e0d5e0c104e6f8833bb03e50b2e2, type: 2}
   - {fileID: 11400000, guid: 3718ccefa862b41dea1e833ba9a9de09, type: 2}
   shapeList:
@@ -2428,6 +2428,8 @@ MonoBehaviour:
   ComboObject: {fileID: 1227226045}
   TwoRotationSquare: 010000000200000003000000040000000500000006000000080000000900000012000000130000001c0000001d0000002700000028000000290000002a000000
   FourRotationSquare: 0a0000000b0000000c0000000d0000000e0000000f00000010000000110000001400000015000000160000001700000018000000190000001a0000001b0000001e0000001f000000200000002100000023000000240000002500000026000000
+  firstShapeExistChallengeGame: 070000000b0000000c0000000e0000000f00000012000000130000001600000018000000190000001e0000002100000023000000
+  firstShapeExistChallengeGameList: 
 --- !u!1 &740974750
 GameObject:
   m_ObjectHideFlags: 0

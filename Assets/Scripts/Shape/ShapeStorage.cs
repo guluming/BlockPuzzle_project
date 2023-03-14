@@ -28,13 +28,20 @@ public class ShapeStorage : MonoBehaviour
 
     public int[] TwoRotationSquare = new int[]
     {
-         1,2, 3,4, 5,6, 8,9, 18,19, 28,29, 39,40, 41,42 
+         1,2, 3,4, 5,6, 8,9, 18,19, 28,29, 31,32, 41,42 
     };
 
     public int[] FourRotationSquare = new int[]
     {
-        10,11,12,13, 14,15,16,17, 20,21,22,23, 24,25,26,27, 30,31,32,33, 35,36,37,38
+        10,11,12,13, 14,15,16,17, 20,21,22,23, 24,25,26,27, 33,34,35,36, 37,38,39,40
     };
+    
+    public int[] firstShapeExistChallengeGame = new int[]
+    {
+        7, 11, 12, 14, 15, 18, 19, 22, 24, 25, 30, 33, 35
+    };
+
+    public List<int> firstShapeExistChallengeGameList = new List<int>();
 
     private void OnEnable()
     {
@@ -48,6 +55,7 @@ public class ShapeStorage : MonoBehaviour
 
     void Start()
     {
+        firstShapeExistChallengeGameList = new List<int>(firstShapeExistChallengeGame);
         if (Grid.gamemode == "ClassicGame")
         {
             if (BinaryDataStream.Exist(playerSaveGamekey))
@@ -80,6 +88,10 @@ public class ShapeStorage : MonoBehaviour
                 {
                     LoadChallengeShapes();
                 }
+                else if (grid.playerSaveChallengeGame_.ChallengesaveGameOver && firstShapeExistChallengeGameList.Contains(grid.playerSaveChallengeGame_.ChallengestartStage))
+                {
+                    firstChallengeShapesShapesSeleted(grid.playerSaveChallengeGame_.ChallengestartStage);
+                }
                 else
                 {
                     firstShapes();
@@ -90,6 +102,493 @@ public class ShapeStorage : MonoBehaviour
                 firstShapes();
             }
         }
+    }
+    
+    private void firstChallengeShapesShapesSeleted(int ChallengeGameStage)
+    {
+        switch (ChallengeGameStage) {
+            case 7:
+                ChallengeGamefirstShapes7();
+                break;
+            case 11:
+                ChallengeGamefirstShapes11();
+                break;
+            case 12:
+                ChallengeGamefirstShapes12();
+                break;
+            case 14:
+                ChallengeGamefirstShapes14();
+                break;
+            case 15:
+                ChallengeGamefirstShapes15();
+                break;
+            case 18:
+                ChallengeGamefirstShapes18();
+                break;
+            case 19:
+                ChallengeGamefirstShapes19();
+                break;
+            case 22:
+                ChallengeGamefirstShapes22();
+                break;
+            case 24:
+                ChallengeGamefirstShapes24();
+                break;
+            case 25:
+                ChallengeGamefirstShapes25();
+                break;
+            case 30:
+                ChallengeGamefirstShapes30();
+                break;
+            case 33:
+                ChallengeGamefirstShapes33();
+                break;
+            case 35:
+                ChallengeGamefirstShapes35();
+                break;
+        }
+    }
+
+    private void ChallengeGamefirstShapes7() 
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        List<int> shapeIndexList = new List<int>();
+
+        ChallengeShapeIndexSeleted(shapeIndexList);
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 1;
+                shapeList[i].firstCreateShape(shapeData[1]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else 
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes11()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 32;
+                shapeList[i].firstCreateShape(shapeData[32]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 1)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 32;
+                shapeList[i].firstCreateShape(shapeData[32]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 32;
+                shapeList[i].firstCreateShape(shapeData[32]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes12()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        List<int> shapeIndexList = new List<int>();
+
+        ChallengeShapeIndexSeleted(shapeIndexList);
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 7;
+                shapeList[i].firstCreateShape(shapeData[7]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 1) 
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 7;
+                shapeList[i].firstCreateShape(shapeData[7]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes14()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        List<int> shapeIndexList = new List<int>();
+
+        ChallengeShapeIndexSeleted(shapeIndexList);
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 5;
+                shapeList[i].firstCreateShape(shapeData[5]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 1) 
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 5;
+                shapeList[i].firstCreateShape(shapeData[5]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes15()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        List<int> shapeIndexList = new List<int>();
+
+        ChallengeShapeIndexSeleted(shapeIndexList);
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 19;
+                shapeList[i].firstCreateShape(shapeData[19]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 1)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 9;
+                shapeList[i].firstCreateShape(shapeData[9]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes18()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 8;
+                shapeList[i].firstCreateShape(shapeData[8]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 1)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 18;
+                shapeList[i].firstCreateShape(shapeData[18]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 7;
+                shapeList[i].firstCreateShape(shapeData[7]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes19()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        List<int> shapeIndexList = new List<int>();
+
+        ChallengeShapeIndexSeleted(shapeIndexList);
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 32;
+                shapeList[i].firstCreateShape(shapeData[32]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes22()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        List<int> shapeIndexList = new List<int>();
+
+        ChallengeShapeIndexSeleted(shapeIndexList);
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 5;
+                shapeList[i].firstCreateShape(shapeData[5]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 1)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 5;
+                shapeList[i].firstCreateShape(shapeData[5]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes24()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        List<int> shapeIndexList = new List<int>();
+
+        ChallengeShapeIndexSeleted(shapeIndexList);
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 20;
+                shapeList[i].firstCreateShape(shapeData[20]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 1)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 22;
+                shapeList[i].firstCreateShape(shapeData[22]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes25()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 20;
+                shapeList[i].firstCreateShape(shapeData[20]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 1)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 22;
+                shapeList[i].firstCreateShape(shapeData[22]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 1;
+                shapeList[i].firstCreateShape(shapeData[1]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes30()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        List<int> shapeIndexList = new List<int>();
+
+        ChallengeShapeIndexSeleted(shapeIndexList);
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 28;
+                shapeList[i].firstCreateShape(shapeData[28]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 28;
+                shapeList[i].firstCreateShape(shapeData[28]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes33()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 10;
+                shapeList[i].firstCreateShape(shapeData[10]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 1)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 13;
+                shapeList[i].firstCreateShape(shapeData[13]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 7;
+                shapeList[i].firstCreateShape(shapeData[7]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
+    }
+
+    private void ChallengeGamefirstShapes35()
+    {
+        isCombo = false;
+        ComboCount = 0;
+        IsComboObject();
+
+        List<int> shapeIndexList = new List<int>();
+
+        ChallengeShapeIndexSeleted(shapeIndexList);
+        for (int i = 0; i < shapeList.Count; i++)
+        {
+            if (i == 0)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 7;
+                shapeList[i].firstCreateShape(shapeData[7]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else if (i == 1)
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 7;
+                shapeList[i].firstCreateShape(shapeData[7]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+            else
+            {
+                grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
+                shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
+                UpdateSquareColor();
+                UpdateJewelSquare();
+            }
+        }
+        grid.saveChallengeGame();
     }
 
     public void tutorialShapes()
@@ -117,9 +616,6 @@ public class ShapeStorage : MonoBehaviour
                 Shapes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
                 Shapes.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(false);
             }
-
-            /*Shapes.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
-            Shapes.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);*/
         }
         else {
             shapeList[0].CreateShape(shapeData[0]);
@@ -131,9 +627,6 @@ public class ShapeStorage : MonoBehaviour
                 Shapes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
                 Shapes.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(false);
             }
-
-            /*Shapes.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(false);
-            Shapes.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(false);*/
         }
         
         UpdateSquareColor();
@@ -146,10 +639,10 @@ public class ShapeStorage : MonoBehaviour
         IsComboObject();
 
         List<int> shapeIndexList = new List<int>();
-        ShapeIndexSeleted(shapeIndexList);
-
+        
         if (Grid.gamemode == "ClassicGame")
         {
+            ShapeIndexSeleted(shapeIndexList);
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
@@ -161,6 +654,7 @@ public class ShapeStorage : MonoBehaviour
         }
         else
         {
+            ChallengeShapeIndexSeleted(shapeIndexList);
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
@@ -223,10 +717,10 @@ public class ShapeStorage : MonoBehaviour
         IsComboObject();
 
         List<int> shapeIndexList = new List<int>();
-        ShapeIndexSeleted(shapeIndexList);
-
+        
         if (Grid.gamemode == "ClassicGame")
         {
+            ShapeIndexSeleted(shapeIndexList);
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
@@ -238,6 +732,7 @@ public class ShapeStorage : MonoBehaviour
         }
         else if (Grid.gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Jewelmode")
         {
+            ChallengeShapeIndexSeleted(shapeIndexList);
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
@@ -250,6 +745,7 @@ public class ShapeStorage : MonoBehaviour
         }
         else if (Grid.gamemode == "ChallengeGame")
         {
+            ChallengeShapeIndexSeleted(shapeIndexList);
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
@@ -259,7 +755,9 @@ public class ShapeStorage : MonoBehaviour
             //Debug.Log("도전 저장");
             grid.saveChallengeGame();
         }
-        else {
+        else
+        {
+            ShapeIndexSeleted(shapeIndexList);
             for (int i = 0; i < shapeList.Count; i++)
             {
                 grid.playerSaveGame_.shapeDataIndexList[i] = shapeIndexList[i];
@@ -296,6 +794,75 @@ public class ShapeStorage : MonoBehaviour
         }
 
         grid.CheckIfPlayLost();
+    }
+
+    private void ChallengeShapeIndexSeleted(List<int> shapeIndexList)
+    {
+        while (shapeIndexList.Count <= 3)
+        {
+            int shapeIndex = 0;
+            shapeIndex = UnityEngine.Random.Range(0, 33);
+
+            if (!shapeIndexList.Contains(shapeIndex))
+            {
+                if (Array.Exists(TwoRotationSquare, i => i == shapeIndex))
+                {
+                    int temp = Array.IndexOf(TwoRotationSquare, shapeIndex);
+
+                    if (temp % 2 == 0)
+                    {
+                        if (!shapeIndexList.Contains(TwoRotationSquare[temp + 1]))
+                        {
+                            shapeIndexList.Add(shapeIndex);
+                        }
+                    }
+                    else if (temp % 2 == 1)
+                    {
+                        if (!shapeIndexList.Contains(TwoRotationSquare[temp - 1]))
+                        {
+                            shapeIndexList.Add(shapeIndex);
+                        }
+                    }
+                }
+                else if (Array.Exists(FourRotationSquare, i => i == shapeIndex))
+                {
+                    int temp = Array.IndexOf(FourRotationSquare, shapeIndex);
+
+                    if (temp % 4 == 0)
+                    {
+                        if (!shapeIndexList.Contains(FourRotationSquare[temp + 1]) && !shapeIndexList.Contains(FourRotationSquare[temp + 2]) && !shapeIndexList.Contains(FourRotationSquare[temp + 3]))
+                        {
+                            shapeIndexList.Add(shapeIndex);
+                        }
+                    }
+                    else if (temp % 4 == 1)
+                    {
+                        if (!shapeIndexList.Contains(FourRotationSquare[temp - 1]) && !shapeIndexList.Contains(FourRotationSquare[temp + 1]) && !shapeIndexList.Contains(FourRotationSquare[temp + 2]))
+                        {
+                            shapeIndexList.Add(shapeIndex);
+                        }
+                    }
+                    else if (temp % 4 == 2)
+                    {
+                        if (!shapeIndexList.Contains(FourRotationSquare[temp - 2]) && !shapeIndexList.Contains(FourRotationSquare[temp - 1]) && !shapeIndexList.Contains(FourRotationSquare[temp + 1]))
+                        {
+                            shapeIndexList.Add(shapeIndex);
+                        }
+                    }
+                    else if (temp % 4 == 3)
+                    {
+                        if (!shapeIndexList.Contains(FourRotationSquare[temp - 3]) && !shapeIndexList.Contains(FourRotationSquare[temp - 2]) && !shapeIndexList.Contains(FourRotationSquare[temp - 1]))
+                        {
+                            shapeIndexList.Add(shapeIndex);
+                        }
+                    }
+                }
+                else
+                {
+                    shapeIndexList.Add(shapeIndex);
+                }
+            }
+        }
     }
 
     private void ShapeIndexSeleted(List<int> shapeIndexList)

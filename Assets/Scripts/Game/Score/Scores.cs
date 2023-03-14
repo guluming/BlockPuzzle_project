@@ -113,7 +113,7 @@ public class Scores : MonoBehaviour
             currentScores_ += scores;
             if (currentScores_ > bestScores_.score)
             {
-                //newBestScore_ = true;
+                GameEvents.blockNewBestScore();
                 bestScores_.score = currentScores_;
                 SaveBestScores();
             }
