@@ -16,8 +16,8 @@ public class ChallengeStage : MonoBehaviour
     public Scores scores;
     public Jewels jewels;
     public JewelSquareTextureData jewelSquareTextureData;
-    public List<int> TargetActivateJewel;
-    public List<int> TargetActivateJewelCount;
+    public List<int> TargetActivateJewel = new List<int>();
+    public List<int> TargetActivateJewelCount = new List<int>();
 
     [HideInInspector]
     public int TargetScore;
@@ -703,7 +703,7 @@ public class ChallengeStage : MonoBehaviour
         int[] activateSquareTexturesList = new int[] { 1, 2, 5, 5, 1, 2, 5, 5, 1, 2 };
         int[] activateSquareList = new int[] { 10, 13, 17, 22, 26, 29, 33, 38, 42, 45 };
         int[] activateJewel = new int[] { 1, 2, 5 };
-        int[] activateJewelCount = new int[] { 4, 4, 4 };
+        int[] activateJewelCount = new int[] { 10, 10, 12 };
 
         for (int i = 0; i < activateJewel.Length; i++)
         {
@@ -931,12 +931,33 @@ public class ChallengeStage : MonoBehaviour
 
     private void ChallengeStage33()
     {
-        //스테이지 기획서에 아무것도 없어서 임의로 삽입
         Grid.startStage = 33;
-        TargetScore = 900;
-        challengemode = "Scoremode";
-        ScoreWindow.gameObject.SetActive(true);
-        UpdateTargetScoreText();
+        challengemode = "Jewelmode";
+        JewelWindow.gameObject.SetActive(true);
+
+        int[] activateSquareTexturesList = new int[] { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+        int[] activateSquareList = new int[] { 10, 13, 17, 19, 20, 22, 25, 30, 33, 38, 42, 45, 51, 52 };
+        int[] activateJewel = new int[] { 2 };
+        int[] activateJewelCount = new int[] { 55 };
+
+        for (int i = 0; i < activateJewel.Length; i++)
+        {
+            jewels.jewels[activateJewel[i]].SetActive(true);
+            jewels.jewelsCount[activateJewel[i]].GetComponent<Text>().text = activateJewelCount[i].ToString();
+
+            TargetActivateJewel.Add(activateJewel[i]);
+            TargetActivateJewelCount.Add(activateJewelCount[i]);
+        }
+
+        for (int i = 0; i < activateSquareTexturesList.Length; i++)
+        {
+            grid.transform.GetChild(activateSquareList[i]).transform.GetChild(2).GetComponent<Image>().sprite = jewelSquareTextureData.activeJewelSquareTextures[activateSquareTexturesList[i]].texture;
+        }
+
+        for (int i = 0; i < activateSquareList.Length; i++)
+        {
+            grid.transform.GetChild(activateSquareList[i]).GetComponent<GridSquare>().ActivateSquare();
+        }
     }
 
     private void ChallengeStage34()
