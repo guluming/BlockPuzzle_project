@@ -1,0 +1,565 @@
+﻿#include "pch-cpp.hpp"
+
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include <limits>
+
+
+
+// System.Byte[]
+struct ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031;
+// System.String
+struct String_t;
+
+
+
+IL2CPP_EXTERN_C_BEGIN
+IL2CPP_EXTERN_C_END
+
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.String
+struct String_t  : public RuntimeObject
+{
+	// System.Int32 System.String::_stringLength
+	int32_t ____stringLength_4;
+	// System.Char System.String::_firstChar
+	Il2CppChar ____firstChar_5;
+};
+
+// System.ValueType
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F  : public RuntimeObject
+{
+};
+// Native definition for P/Invoke marshalling of System.ValueType
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_pinvoke
+{
+};
+// Native definition for COM marshalling of System.ValueType
+struct ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F_marshaled_com
+{
+};
+
+// System.Char
+struct Char_t521A6F19B456D956AF452D926C32709DC03D6B17 
+{
+	// System.Char System.Char::m_value
+	Il2CppChar ___m_value_0;
+};
+
+// System.Int32
+struct Int32_t680FF22E76F6EFAD4375103CBBFFA0421349384C 
+{
+	// System.Int32 System.Int32::m_value
+	int32_t ___m_value_0;
+};
+
+// System.UInt32
+struct UInt32_t1833D51FFA667B18A5AA4B8D34DE284F8495D29B 
+{
+	// System.UInt32 System.UInt32::m_value
+	uint32_t ___m_value_0;
+};
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12
+struct __StaticArrayInitTypeSizeU3D12_t1BDD2193C3F925556BCD5FF35C0AC52DDB0CAB8F 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D12_t1BDD2193C3F925556BCD5FF35C0AC52DDB0CAB8F__padding[12];
+	};
+};
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16
+struct __StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23__padding[16];
+	};
+};
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=24
+struct __StaticArrayInitTypeSizeU3D24_t3464DA68B6CCAB9A0A43F94B3DB9AA7E7FDDB19A 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D24_t3464DA68B6CCAB9A0A43F94B3DB9AA7E7FDDB19A__padding[24];
+	};
+};
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=256
+struct __StaticArrayInitTypeSizeU3D256_tD03A67F7FF737E6BC9D67A9F479BD26FCEAD3898 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D256_tD03A67F7FF737E6BC9D67A9F479BD26FCEAD3898__padding[256];
+	};
+};
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32
+struct __StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069__padding[32];
+	};
+};
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40
+struct __StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3__padding[40];
+	};
+};
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48
+struct __StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE__padding[48];
+	};
+};
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64
+struct __StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88__padding[64];
+	};
+};
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=96
+struct __StaticArrayInitTypeSizeU3D96_tE962D346DA0011435482BCE5513DB1E0D88A8DEB 
+{
+	union
+	{
+		struct
+		{
+			union
+			{
+			};
+		};
+		uint8_t __StaticArrayInitTypeSizeU3D96_tE962D346DA0011435482BCE5513DB1E0D88A8DEB__padding[96];
+	};
+};
+
+// <PrivateImplementationDetails>
+struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA  : public RuntimeObject
+{
+};
+
+// System.String
+struct String_t_StaticFields
+{
+	// System.String System.String::Empty
+	String_t* ___Empty_6;
+};
+
+// System.String
+
+// System.ValueType
+
+// System.ValueType
+
+// System.Char
+struct Char_t521A6F19B456D956AF452D926C32709DC03D6B17_StaticFields
+{
+	// System.Byte[] System.Char::s_categoryForLatin1
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___s_categoryForLatin1_3;
+};
+
+// System.Char
+
+// System.Int32
+
+// System.Int32
+
+// System.UInt32
+
+// System.UInt32
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=24
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=24
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=256
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=256
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=96
+
+// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=96
+
+// <PrivateImplementationDetails>
+struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
+{
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::00D4BD228EE39102911FB655535F74516495CF8CD9E04B44BFF10E7E340C82D3
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___00D4BD228EE39102911FB655535F74516495CF8CD9E04B44BFF10E7E340C82D3_0;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::0493150EEC7B342734AF124E73372BED8511F311D1AFD09748D1DE6ECBAF4DC8
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___0493150EEC7B342734AF124E73372BED8511F311D1AFD09748D1DE6ECBAF4DC8_1;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16 <PrivateImplementationDetails>::0608CC71EA319A6BF9F358511D7E1206D7807F4836010140242797974307F291
+	__StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 ___0608CC71EA319A6BF9F358511D7E1206D7807F4836010140242797974307F291_2;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::0A192CBE1CD815E7C979E96E485578994D60388159F888BC3C1EED654312A4C2
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___0A192CBE1CD815E7C979E96E485578994D60388159F888BC3C1EED654312A4C2_3;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16 <PrivateImplementationDetails>::0B2F373E42EAC64CD0A1CAFBA1B826A1FA44F4C58025C104A0E9CE57A7DE7CC4
+	__StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 ___0B2F373E42EAC64CD0A1CAFBA1B826A1FA44F4C58025C104A0E9CE57A7DE7CC4_4;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=24 <PrivateImplementationDetails>::1494D974E7EA9488AB11BF61975A952BDBD41CAEA5F6742BC9949DBA5D722F10
+	__StaticArrayInitTypeSizeU3D24_t3464DA68B6CCAB9A0A43F94B3DB9AA7E7FDDB19A ___1494D974E7EA9488AB11BF61975A952BDBD41CAEA5F6742BC9949DBA5D722F10_5;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=24 <PrivateImplementationDetails>::19CC43A23BA97331C1AF89D85E20AC171473EA306BEA5B12BA4B94AF22028F94
+	__StaticArrayInitTypeSizeU3D24_t3464DA68B6CCAB9A0A43F94B3DB9AA7E7FDDB19A ___19CC43A23BA97331C1AF89D85E20AC171473EA306BEA5B12BA4B94AF22028F94_6;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::2153F35E04ABDCC0AF5414F2DDD59767941015158B8238E5FCB4EB0E1165EEB3
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___2153F35E04ABDCC0AF5414F2DDD59767941015158B8238E5FCB4EB0E1165EEB3_7;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32 <PrivateImplementationDetails>::281C01C2B926D43D7D37B1C739E00A5628A7343533BC0417A7A5F3F946465670
+	__StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069 ___281C01C2B926D43D7D37B1C739E00A5628A7343533BC0417A7A5F3F946465670_8;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16 <PrivateImplementationDetails>::2A0BF904C21C9A6EAE9865593CC7095DCC5CE3068879CFA7582B44CAECDE4EF7
+	__StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 ___2A0BF904C21C9A6EAE9865593CC7095DCC5CE3068879CFA7582B44CAECDE4EF7_9;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12 <PrivateImplementationDetails>::2AFC299AE2C44DBAD6B479482D2D7467D7DEFD66041659ED28CA5E8D83236E82
+	__StaticArrayInitTypeSizeU3D12_t1BDD2193C3F925556BCD5FF35C0AC52DDB0CAB8F ___2AFC299AE2C44DBAD6B479482D2D7467D7DEFD66041659ED28CA5E8D83236E82_10;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::3286580BD6F87E7C9C428B479CFC1924BEFB539138750641E6298307EE246C3B
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___3286580BD6F87E7C9C428B479CFC1924BEFB539138750641E6298307EE246C3B_11;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12 <PrivateImplementationDetails>::3783FB69B6B736ADC42ED678E95315363C531091CF9C361E8E08BFBAB5C07A59
+	__StaticArrayInitTypeSizeU3D12_t1BDD2193C3F925556BCD5FF35C0AC52DDB0CAB8F ___3783FB69B6B736ADC42ED678E95315363C531091CF9C361E8E08BFBAB5C07A59_12;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16 <PrivateImplementationDetails>::3BCD46262A904AE11C31DB3460B0A180966E84B1E13DEA6087025160DB8E8AD3
+	__StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 ___3BCD46262A904AE11C31DB3460B0A180966E84B1E13DEA6087025160DB8E8AD3_13;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=24 <PrivateImplementationDetails>::3DE8A3FBFF37F28E7FFD407B8DCF4CDEFE2A12DD2A456CDF09529967C218F801
+	__StaticArrayInitTypeSizeU3D24_t3464DA68B6CCAB9A0A43F94B3DB9AA7E7FDDB19A ___3DE8A3FBFF37F28E7FFD407B8DCF4CDEFE2A12DD2A456CDF09529967C218F801_14;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::3DFD990CC9D2700FB3809A1E3B1E99A3618687AE4F96F61BA33BC07AD5639B41
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___3DFD990CC9D2700FB3809A1E3B1E99A3618687AE4F96F61BA33BC07AD5639B41_15;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::433EFFD8359F9AAA15494A803ABA4C1063CD6708295785D6695CDCC7951D49FA
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___433EFFD8359F9AAA15494A803ABA4C1063CD6708295785D6695CDCC7951D49FA_16;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::46F3A4FAE6818DB456737CA25A249DAE1B96C8A57D1C49D24AC746C5D74ECA86
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___46F3A4FAE6818DB456737CA25A249DAE1B96C8A57D1C49D24AC746C5D74ECA86_17;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12 <PrivateImplementationDetails>::4D241BD3C3FC641B1EFC068EDF34AC9E2CEA3CDC4D21D68EE4666DBD6CB90815
+	__StaticArrayInitTypeSizeU3D12_t1BDD2193C3F925556BCD5FF35C0AC52DDB0CAB8F ___4D241BD3C3FC641B1EFC068EDF34AC9E2CEA3CDC4D21D68EE4666DBD6CB90815_18;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::500BC8012F14DB59363F5E3E3D335855E3930E9CB2A8C099208DDA412343B74C
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___500BC8012F14DB59363F5E3E3D335855E3930E9CB2A8C099208DDA412343B74C_19;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::521F60C48FBBE7B1B46978B097FA99EF1233F4A8767D7331DBC2096EFF42F162
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___521F60C48FBBE7B1B46978B097FA99EF1233F4A8767D7331DBC2096EFF42F162_20;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::5D9A00A8EA4EE7863754EAD1C940704AF7525E52A5ADB32DACAD6D8A79483887
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___5D9A00A8EA4EE7863754EAD1C940704AF7525E52A5ADB32DACAD6D8A79483887_21;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::621772E970F68144C113FF85430E9419433D6FC95A8697E93B462818430DE67D
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___621772E970F68144C113FF85430E9419433D6FC95A8697E93B462818430DE67D_22;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32 <PrivateImplementationDetails>::62ABD38917DB51823CFE0AA0F045585CC9383A96B975F82D77854FF4515A6F25
+	__StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069 ___62ABD38917DB51823CFE0AA0F045585CC9383A96B975F82D77854FF4515A6F25_23;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::67B9623EBB12670F09060D22E54A79A04E2F057A8CADDC7E21C98B167B815887
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___67B9623EBB12670F09060D22E54A79A04E2F057A8CADDC7E21C98B167B815887_24;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16 <PrivateImplementationDetails>::6DC1C586572D6873AC1BA4F7A07985F5485D70168C412DF7C421ECC1442CA561
+	__StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 ___6DC1C586572D6873AC1BA4F7A07985F5485D70168C412DF7C421ECC1442CA561_25;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::7230D0176F6605371DD7D8FAB6CC7DE9EFDF05C4EB02E54A4356D4E905C51AFE
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___7230D0176F6605371DD7D8FAB6CC7DE9EFDF05C4EB02E54A4356D4E905C51AFE_26;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::799687EF6A1CB577E8BA446E7E3FA0D56B016EB277D7480FEE0B3490689444FF
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___799687EF6A1CB577E8BA446E7E3FA0D56B016EB277D7480FEE0B3490689444FF_27;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::8391BA4F82A88240143837DADE9C00CE223BBE35308688BBCC9E0AD24D25315C
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___8391BA4F82A88240143837DADE9C00CE223BBE35308688BBCC9E0AD24D25315C_28;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::8555ACB2F95E88DAF5CDCAE723E9D17232AE5BB66816F1625DFD51F7227D0E20
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___8555ACB2F95E88DAF5CDCAE723E9D17232AE5BB66816F1625DFD51F7227D0E20_29;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12 <PrivateImplementationDetails>::8688D249E9D047B4FC2FB89CE05AFE9EC89252FFCCDD969DE6EEF260DD7FFB21
+	__StaticArrayInitTypeSizeU3D12_t1BDD2193C3F925556BCD5FF35C0AC52DDB0CAB8F ___8688D249E9D047B4FC2FB89CE05AFE9EC89252FFCCDD969DE6EEF260DD7FFB21_30;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::87B905D0612326492DE8697747080CE8EAA7932BD6E2B1FE0FE595147E5EC40F
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___87B905D0612326492DE8697747080CE8EAA7932BD6E2B1FE0FE595147E5EC40F_31;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12 <PrivateImplementationDetails>::8871E42B242AB4294A61F8C2EBF73549B2FE6C034B86D618F41F1A62287AF4A5
+	__StaticArrayInitTypeSizeU3D12_t1BDD2193C3F925556BCD5FF35C0AC52DDB0CAB8F ___8871E42B242AB4294A61F8C2EBF73549B2FE6C034B86D618F41F1A62287AF4A5_32;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::89E05074C5B6E4997CD4AF0B154DA11077F96191AD230C270D9195FD73562143
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___89E05074C5B6E4997CD4AF0B154DA11077F96191AD230C270D9195FD73562143_33;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::8CACA7897261DCBD9989CFB6CC76639A877FC18198CCE0346BCF3E04E2F24846
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___8CACA7897261DCBD9989CFB6CC76639A877FC18198CCE0346BCF3E04E2F24846_34;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32 <PrivateImplementationDetails>::8D9733EF6DF930978610C46FC2B76903E08F56D0001E55312E84F14136839228
+	__StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069 ___8D9733EF6DF930978610C46FC2B76903E08F56D0001E55312E84F14136839228_35;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::93C5FB69E2BFB352ABDAF69F99C905D38332D25B97D17859AF31A72EAF8B41B2
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___93C5FB69E2BFB352ABDAF69F99C905D38332D25B97D17859AF31A72EAF8B41B2_36;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::9779971F9B8E862868A3BB0DE22915A3E815A89EF2E518308737E4151A2BB26B
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___9779971F9B8E862868A3BB0DE22915A3E815A89EF2E518308737E4151A2BB26B_37;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16 <PrivateImplementationDetails>::9801A434AFC365499695E8422C91A4EB593D9236F21F2644E827FD78D7514043
+	__StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 ___9801A434AFC365499695E8422C91A4EB593D9236F21F2644E827FD78D7514043_38;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16 <PrivateImplementationDetails>::9BE031F5E0E450771E60068B5E9C8E91BDADCC4C649B79127BD768D7AC0E175B
+	__StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 ___9BE031F5E0E450771E60068B5E9C8E91BDADCC4C649B79127BD768D7AC0E175B_39;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::9C5A60BD34CD6BFA73BBA7F475A6CE83A88D43DED971A907D5A6DB505519A8A6
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___9C5A60BD34CD6BFA73BBA7F475A6CE83A88D43DED971A907D5A6DB505519A8A6_40;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32 <PrivateImplementationDetails>::9C6CB6ACE7A7A19DD02341D39CDF2F8365A18A38FDFF878599A346048EA046B5
+	__StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069 ___9C6CB6ACE7A7A19DD02341D39CDF2F8365A18A38FDFF878599A346048EA046B5_41;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::9DA15154E6819DD9A6931EC392A1194B6B016E518ACB46B26B78580D05E21D33
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___9DA15154E6819DD9A6931EC392A1194B6B016E518ACB46B26B78580D05E21D33_42;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::A13A05AFEEC482D12FEFF36B5A4250BF5E3A77A4EC9F55613478D2BABD0E3E62
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___A13A05AFEEC482D12FEFF36B5A4250BF5E3A77A4EC9F55613478D2BABD0E3E62_43;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16 <PrivateImplementationDetails>::A216A7ED62581BBBDCAB403B41D3D8DC72023A78304AFFCA54AD3C384CD1F060
+	__StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 ___A216A7ED62581BBBDCAB403B41D3D8DC72023A78304AFFCA54AD3C384CD1F060_44;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=24 <PrivateImplementationDetails>::AA3C86BEE6798A45B555EE2BDA580F2C2BAE73855638CA51299F99813F50DDA1
+	__StaticArrayInitTypeSizeU3D24_t3464DA68B6CCAB9A0A43F94B3DB9AA7E7FDDB19A ___AA3C86BEE6798A45B555EE2BDA580F2C2BAE73855638CA51299F99813F50DDA1_45;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16 <PrivateImplementationDetails>::AC41851410771D6BD547E42808B01C29335D6B96579AA534A896EB7737BA575E
+	__StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 ___AC41851410771D6BD547E42808B01C29335D6B96579AA534A896EB7737BA575E_46;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::AE11144411ED742635890BE642211FE970B2D95B1810977A3EB582BDC3E44BF3
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___AE11144411ED742635890BE642211FE970B2D95B1810977A3EB582BDC3E44BF3_47;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::AE12043E64531100568614A62FEB4A5E2494928804704E78FDAB015240F5D976
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___AE12043E64531100568614A62FEB4A5E2494928804704E78FDAB015240F5D976_48;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16 <PrivateImplementationDetails>::AF027571D9C7FDA2E4E5AF02E9EDEB7AFD87F7DFC156C1E1F43389FDB8C356BA
+	__StaticArrayInitTypeSizeU3D16_tFB2D94E174C3DFBC336BBEE6AD92E07462831A23 ___AF027571D9C7FDA2E4E5AF02E9EDEB7AFD87F7DFC156C1E1F43389FDB8C356BA_49;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32 <PrivateImplementationDetails>::B041F9106428624B06433734325B597693AC176B308733A4142268F4E01EFB96
+	__StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069 ___B041F9106428624B06433734325B597693AC176B308733A4142268F4E01EFB96_50;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::BA4918AD0FB646D7D70E74C81D75582EA4CA90B77CBA9A3BB6C785E27B72CD59
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___BA4918AD0FB646D7D70E74C81D75582EA4CA90B77CBA9A3BB6C785E27B72CD59_51;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=48 <PrivateImplementationDetails>::C144799375D001DDB73586CE089FB8F7A17844537CC5A4A50DA29637B45B2222
+	__StaticArrayInitTypeSizeU3D48_tB184AFC7E0116F4B6DAFA18B66C9B248A3A9F2FE ___C144799375D001DDB73586CE089FB8F7A17844537CC5A4A50DA29637B45B2222_52;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::C1DF27D86D17A9B413DCA0537C6DF6D26108DA3506C3E6A9A11B125D16508950
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___C1DF27D86D17A9B413DCA0537C6DF6D26108DA3506C3E6A9A11B125D16508950_53;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::C21CB42E82AE29786143762458CB549B4EC6FD9345E76B0ABD69CF8FE4350E19
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___C21CB42E82AE29786143762458CB549B4EC6FD9345E76B0ABD69CF8FE4350E19_54;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32 <PrivateImplementationDetails>::C63E433918BCBD4840D13D63E6E45B52525CFF3052569A9A3503F912CFF091D0
+	__StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069 ___C63E433918BCBD4840D13D63E6E45B52525CFF3052569A9A3503F912CFF091D0_55;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32 <PrivateImplementationDetails>::C794F9EBCF093A9A1390D3A4A334F2F59D82519095D40F5ECF937D6192772952
+	__StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069 ___C794F9EBCF093A9A1390D3A4A334F2F59D82519095D40F5ECF937D6192772952_56;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::D1537FE27F1EFBBB92271F6FDEE66360E5633712E7245DF2BB18BBC730A5BF21
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___D1537FE27F1EFBBB92271F6FDEE66360E5633712E7245DF2BB18BBC730A5BF21_57;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12 <PrivateImplementationDetails>::D9D70F873329BA811CD68B2FD454D17072E03E122C114D21046E80FBE7884323
+	__StaticArrayInitTypeSizeU3D12_t1BDD2193C3F925556BCD5FF35C0AC52DDB0CAB8F ___D9D70F873329BA811CD68B2FD454D17072E03E122C114D21046E80FBE7884323_58;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=96 <PrivateImplementationDetails>::E126EC00BD6160FE26A8904D1654A1E44E8D9E0C78E1F87963703E1CEE26E2B7
+	__StaticArrayInitTypeSizeU3D96_tE962D346DA0011435482BCE5513DB1E0D88A8DEB ___E126EC00BD6160FE26A8904D1654A1E44E8D9E0C78E1F87963703E1CEE26E2B7_59;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::E5FCA2DE6F1F5CA7A7AE38BEFCB8ECB431C80BD69AC37780CA3A1025F416C484
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___E5FCA2DE6F1F5CA7A7AE38BEFCB8ECB431C80BD69AC37780CA3A1025F416C484_60;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=64 <PrivateImplementationDetails>::EF7D78AC538DE0C3B2311911B7EBE72746E1BD6D567B3933E3A25A30960D49C8
+	__StaticArrayInitTypeSizeU3D64_tC5DCC92F71FF4937EDBB6F52C59AD832172ABE88 ___EF7D78AC538DE0C3B2311911B7EBE72746E1BD6D567B3933E3A25A30960D49C8_61;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32 <PrivateImplementationDetails>::F3E71B3CED39329A19A0946153F01BE95DEF16C5E97C8D178934F653ACCD1849
+	__StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069 ___F3E71B3CED39329A19A0946153F01BE95DEF16C5E97C8D178934F653ACCD1849_62;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::FB3FC0BF5680059D0A1B61BC161F53830DF9F36268D447C60C9BCFDC6BDC7CDF
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___FB3FC0BF5680059D0A1B61BC161F53830DF9F36268D447C60C9BCFDC6BDC7CDF_63;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=40 <PrivateImplementationDetails>::FCCA0643D7F9833656CA92FBC6D9FCB5258690E035C43BC53CD1850E44A6E177
+	__StaticArrayInitTypeSizeU3D40_t68A41E1D2BAA1C55857C26F7E0C26D1CFDB100B3 ___FCCA0643D7F9833656CA92FBC6D9FCB5258690E035C43BC53CD1850E44A6E177_64;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=256 <PrivateImplementationDetails>::FEA7B32778ECBDD7ADEE1941E98C89CF96BBC762F5F1BEB0BE24E36A456FBBC5
+	__StaticArrayInitTypeSizeU3D256_tD03A67F7FF737E6BC9D67A9F479BD26FCEAD3898 ___FEA7B32778ECBDD7ADEE1941E98C89CF96BBC762F5F1BEB0BE24E36A456FBBC5_65;
+	// <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32 <PrivateImplementationDetails>::FF1F6EE5D67458CFAC950F62E93042E21FCB867E2234DCC8721801231064AD40
+	__StaticArrayInitTypeSizeU3D32_tC3894D25C1E879699FE1C9BAB1BBF2787B405069 ___FF1F6EE5D67458CFAC950F62E93042E21FCB867E2234DCC8721801231064AD40_66;
+};
+
+// <PrivateImplementationDetails>
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+
+
+
+// System.Char System.String::get_Chars(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3 (String_t* __this, int32_t ___0_index, const RuntimeMethod* method) ;
+// System.Int32 System.String::get_Length()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) ;
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.UInt32 <PrivateImplementationDetails>::ComputeStringHash(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t U3CPrivateImplementationDetailsU3E_ComputeStringHash_m6EA1F233618497AEFF8902A5EDFA24C74E2F2876 (String_t* ___0_s, const RuntimeMethod* method) 
+{
+	uint32_t V_0 = 0;
+	int32_t V_1 = 0;
+	{
+		String_t* L_0 = ___0_s;
+		if (!L_0)
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		V_0 = ((int32_t)-2128831035);
+		V_1 = 0;
+		goto IL_0021;
+	}
+
+IL_000d:
+	{
+		String_t* L_1 = ___0_s;
+		int32_t L_2 = V_1;
+		NullCheck(L_1);
+		Il2CppChar L_3;
+		L_3 = String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3(L_1, L_2, NULL);
+		uint32_t L_4 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_multiply(((int32_t)((int32_t)L_3^(int32_t)L_4)), ((int32_t)16777619)));
+		int32_t L_5 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_5, 1));
+	}
+
+IL_0021:
+	{
+		int32_t L_6 = V_1;
+		String_t* L_7 = ___0_s;
+		NullCheck(L_7);
+		int32_t L_8;
+		L_8 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_7, NULL);
+		if ((((int32_t)L_6) < ((int32_t)L_8)))
+		{
+			goto IL_000d;
+		}
+	}
+
+IL_002a:
+	{
+		uint32_t L_9 = V_0;
+		return L_9;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->____stringLength_4;
+		return L_0;
+	}
+}

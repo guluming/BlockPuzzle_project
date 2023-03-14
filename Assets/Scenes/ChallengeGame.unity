@@ -2207,7 +2207,6 @@ MonoBehaviour:
   adsManager: {fileID: 1635335651}
   ProgressIndicator: {fileID: 1413481009}
   LoadingBar: {fileID: 747233302}
-  gameoverimg: {fileID: 0}
 --- !u!1 &285302730
 GameObject:
   m_ObjectHideFlags: 0
@@ -8240,8 +8239,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxAudioSource: {fileID: 973725121}
-  blockDownSfx: {fileID: 8300000, guid: a123b8fe595644f628ab6f4cc73a7aa2, type: 3}
-  blockCompletedSfx: {fileID: 8300000, guid: 250603450ce664ec08081f999f0050f4, type: 3}
+  blockDownSfx: {fileID: 8300000, guid: 1b0b77ffb265dd74eb656b5912e94cea, type: 3}
+  blockSeSuccessActiveSfx: {fileID: 8300000, guid: 67a559eee3fd67f43b7d0a9a61f2d31c, type: 3}
+  blockFailureActiveSfx: {fileID: 8300000, guid: 026d7bd4e6f78b343b3f66b3194f5ed1, type: 3}
+  blockCreateSfx: {fileID: 8300000, guid: 1e6c1869fdd236a48af2233b199ec783, type: 3}
+  blockCompletedSfx: {fileID: 8300000, guid: c5e37ef4818555143a32e3f4c11afbf0, type: 3}
+  block2CompletedSfx: {fileID: 8300000, guid: b8f9277cd330dde43920af89702b7506, type: 3}
+  block3CompletedSfx: {fileID: 8300000, guid: 9bbfbaeeb5a8ec64f9d9938d5de3de4c, type: 3}
+  block4CompletedSfx: {fileID: 8300000, guid: 7431927cb03ee2b4ea25f167c5debe5c, type: 3}
+  block5CompletedMoreSfx: {fileID: 8300000, guid: 7af521b1889a8b040a72000560073fcb, type: 3}
+  blockGameoverSfx: {fileID: 8300000, guid: 33eea1b52564bcb4d8d3da683318fb54, type: 3}
+  blockClassicGameSfx: {fileID: 8300000, guid: b649579c7e3d53046b91c643bf4c33b2, type: 3}
+  blockresurrectionCountSfx: {fileID: 8300000, guid: 686bab994603bbf42a7066edea91ffb1, type: 3}
+  blockNewBestScoreSfx: {fileID: 8300000, guid: d7f5220804e607a4aa0e645855063cc9, type: 3}
+  blockChallengeGameSfx: {fileID: 8300000, guid: df877ddceb21e104b8857a181b355001, type: 3}
 --- !u!4 &973725123
 Transform:
   m_ObjectHideFlags: 0
