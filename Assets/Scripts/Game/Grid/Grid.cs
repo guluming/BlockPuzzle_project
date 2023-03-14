@@ -32,6 +32,7 @@ public class playerChallengeGameData
 public class Grid : MonoBehaviour
 {
     public GameOverPopup gameOverPopup;
+    public InGamePopup inGamePopup;
     public JewelSquareTextureData jewelSquareTextureData;
     public SquareTextureData squareTextureData;
     public Tutuorial tutuorial;
@@ -693,7 +694,8 @@ public class Grid : MonoBehaviour
         {
             if (CheckIfPlayChallengeGameWin())
             {
-                StartCoroutine(GameOverAin(1));
+                inGamePopup.SuccessPopupActive();
+                //StartCoroutine(GameOverAin(1));
                 //gameOverPopup.SuccessPopupActive();
             }
             else 
@@ -753,10 +755,11 @@ public class Grid : MonoBehaviour
             {
                 gameOverPopup.FailurePopupPopupActive();
             }
-            else
+            /*else
             {
-                gameOverPopup.SuccessPopupActive();
-            }
+                inGamePopup.SuccessPopupActive();
+                //gameOverPopup.SuccessPopupActive();
+            }*/
         }
         
     }
