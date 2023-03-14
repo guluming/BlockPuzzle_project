@@ -694,6 +694,8 @@ public class Grid : MonoBehaviour
         {
             if (CheckIfPlayChallengeGameWin())
             {
+                playerSaveChallengeGame_.ChallengesaveGameOver = true;
+                saveChallengeGame();
                 inGamePopup.SuccessPopupActive();
                 //StartCoroutine(GameOverAin(1));
                 //gameOverPopup.SuccessPopupActive();

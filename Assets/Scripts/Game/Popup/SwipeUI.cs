@@ -61,7 +61,15 @@ public class SwipeUI : MonoBehaviour
 
             stageCheck[playerSaveChallengeGame_.ChallengestartStage - 1].transform.GetChild(1).gameObject.SetActive(true);
             SetScrollBarValue((playerSaveChallengeGame_.ChallengestartStage - 1) / 5);
-            stagePlay.text = "LEVEL. " + (((playerSaveChallengeGame_.ChallengestartStage - 1) / 5) + 1) + "-" + (playerSaveChallengeGame_.ChallengestartStage % 5);
+
+            if (playerSaveChallengeGame_.ChallengestartStage >= 36)
+            {
+                stagePlay.text = "All Clear";
+            } 
+            else
+            {
+                stagePlay.text = "LEVEL. " + (((playerSaveChallengeGame_.ChallengestartStage - 1) / 5) + 1) + "-" + (playerSaveChallengeGame_.ChallengestartStage % 5);
+            }
         }
         else
         {

@@ -26,6 +26,10 @@ public class MenuButtons : MonoBehaviour
         {
             Grid.gamemode = "ChallengeGame";
         }
+        else if (Grid.startStage >= 36)
+        {
+            name = "ChallengeMenu";
+        }
         else
         {
             Grid.gamemode = "Menu";
