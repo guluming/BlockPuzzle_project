@@ -196,7 +196,6 @@ public class Grid : MonoBehaviour
             else
             {
                 Debug.Log("저장 파일이 없습니다.");
-                Debug.Log(gamemode);
                 ChallengeStage.ChallengeStageSelete(1);
 
                 Playerlife = 1;
@@ -347,13 +346,25 @@ public class Grid : MonoBehaviour
             if (shapeLeft == 0) {
                 if (gamemode == "ClassicGame" || gamemode == "ChallengeGame" || gamemode == "tutorial3")
                 {
+                    if (audioManager.sfxsetting)
+                    {
+                        GameEvents.blockCreate();
+                    }
                     GameEvents.RequestNewShapes();
                 }
                 else {
+                    if (audioManager.sfxsetting)
+                    {
+                        GameEvents.blockCreate();
+                    }
                     shapeStorage.tutorialShapes();
                 }
             }
             else {
+                if (audioManager.sfxsetting)
+                {
+                    GameEvents.blockSeSuccessActive();
+                }
                 GameEvents.SetShapeInactive();
             }
 
@@ -362,6 +373,10 @@ public class Grid : MonoBehaviour
         }
         else
         {
+            if (audioManager.sfxsetting)
+            {
+                GameEvents.blockFailureActive();
+            }
             GameEvents.MoveShapeToStartPosition();
         }
     }
@@ -414,11 +429,43 @@ public class Grid : MonoBehaviour
             GameEvents.AddScores(currentSelectedShape + totalScores);
         }
 
-        if (completedLines >= 2)
+        if (completedLines > 0) 
         {
-            if (audioManager.sfxsetting) {
-                GameEvents.blockCompleted();
+            switch (completedLines) {
+                case 1:
+                    if (audioManager.sfxsetting)
+                    {
+                        GameEvents.blockCompleted();
+                    }
+                    break;
+                case 2:
+                    if (audioManager.sfxsetting)
+                    {
+                        GameEvents.block2Completed();
+                    }
+                    break;
+                case 3:
+                    if (audioManager.sfxsetting)
+                    {
+                        GameEvents.block3Completed();
+                    }
+                    break;
+                case 4:
+                    if (audioManager.sfxsetting)
+                    {
+                        GameEvents.block4Completed();
+                    }
+                    break;
             }
+
+            if (completedLines >= 5)
+            {
+                if (audioManager.sfxsetting)
+                {
+                    GameEvents.block5CompletedMore();
+                }
+            }
+
             GameEvents.ShowLineCompletedWritings(completedLines);
         }
 
@@ -614,24 +661,24 @@ public class Grid : MonoBehaviour
             {
                 if (Playerlife > 0 && score.bestScores_.score <= 400)
                 {
+                    StartCoroutine(RetryPopupCount());
                     gameOverPopup.RetryPopupActive();
                 }
                 else if (Playerlife > 0 && score.currentScores_ >= 400)
                 {
+                    StartCoroutine(RetryPopupCount());
                     gameOverPopup.RetryPopupActive();
                 }
                 else if (score.currentScores_ >= score.bestScores_.score)
                 {
                     playerSaveGame_.saveGameOver = true;
                     GameEvents.GameOver();
-
                     StartCoroutine(GameOverAin(1));
                 }
                 else
                 {
                     playerSaveGame_.saveGameOver = true;
                     GameEvents.GameOver();
-
                     StartCoroutine(GameOverAin(0));             
                 }
             }
@@ -666,8 +713,19 @@ public class Grid : MonoBehaviour
         }
     }
 
+    IEnumerator RetryPopupCount()
+    {
+        for (int i=0; i<5; i++) 
+        {
+            GameEvents.blockresurrectionCount();
+            yield return new WaitForSeconds(1.0f);
+        }
+    }
+
     IEnumerator GameOverAin(int index)
     {
+        GameEvents.blockGameover();
+
         for (int i=0; i<57; i+=8) 
         {
             for (int k = i; k < i+8; k++)
@@ -677,6 +735,7 @@ public class Grid : MonoBehaviour
 
             yield return new WaitForSeconds(0.25f);
         }
+
         if (gamemode == "ClassicGame")
         {
             if (index == 0)
