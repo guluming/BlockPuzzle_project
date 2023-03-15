@@ -4381,6 +4381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPopup: {fileID: 427162090}
+  inGamePopup: {fileID: 0}
   jewelSquareTextureData: {fileID: 11400000, guid: dfe15e7ad38f640a4ad121c1440dbad7, type: 2}
   squareTextureData: {fileID: 11400000, guid: d1aa110b8932640289b1d8405a358368, type: 2}
   tutuorial: {fileID: 1152111175}
@@ -6026,7 +6027,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1530594081}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 699124776}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: TermsOfServiceButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1530594081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7026,7 +7039,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1948477123}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 699124776}
+        m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
+        m_MethodName: PrivacyPolicyButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1948477123
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -226,7 +226,7 @@ public class SwipeUI : MonoBehaviour
             UpdateSwipe();
         }
 
-        /*if (Input.touchCount == 1) 
+        if (Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);
 
@@ -234,13 +234,13 @@ public class SwipeUI : MonoBehaviour
             {
                 startTouchX = touch.position.x;
             }
-            else if (touch.phase == TouchPhase.Ended) 
+            else if (touch.phase == TouchPhase.Ended)
             {
                 endTouchX = touch.position.x;
 
                 UpdateSwipe();
             }
-        }*/
+        }
     }
 
     private void UpdateSwipe()

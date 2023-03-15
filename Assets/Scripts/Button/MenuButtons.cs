@@ -87,4 +87,14 @@ public class MenuButtons : MonoBehaviour
     {
         NoticePopup.SetActive(false);
     }
+
+    public void TermsOfServiceButton() 
+    {
+        Application.OpenURL("https://forms.gle/1T21xFFbhXqpWbVC6");
+    }
+
+    public void PrivacyPolicyButton() 
+    {
+        Application.OpenURL("https://forms.gle/iXdwuQJdVW5aK76H7");
+    }
 }
