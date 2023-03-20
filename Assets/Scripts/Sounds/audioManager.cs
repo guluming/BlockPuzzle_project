@@ -28,6 +28,7 @@ public class audioManager : MonoBehaviour
     private void Awake()
     {
         Application.targetFrameRate = targetFrameRate;
+        Input.multiTouchEnabled = false;
 
         if (BinaryDataStream.Exist(playerGameSettingskey))
         {

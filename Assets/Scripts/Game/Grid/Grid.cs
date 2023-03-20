@@ -349,6 +349,7 @@ public class Grid : MonoBehaviour
                 {
                     if (audioManager.sfxsetting)
                     {
+                        GameEvents.blockSeSuccessActive();
                         GameEvents.blockCreate();
                     }
                     GameEvents.RequestNewShapes();
@@ -356,6 +357,7 @@ public class Grid : MonoBehaviour
                 else {
                     if (audioManager.sfxsetting)
                     {
+                        GameEvents.blockSeSuccessActive();
                         GameEvents.blockCreate();
                     }
                     shapeStorage.tutorialShapes();
@@ -737,7 +739,7 @@ public class Grid : MonoBehaviour
                 transform.GetChild(k).transform.GetChild(2).gameObject.GetComponent<Image>().sprite = gameoverimg;
             }
 
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0.125f);
         }
 
         if (gamemode == "ClassicGame")

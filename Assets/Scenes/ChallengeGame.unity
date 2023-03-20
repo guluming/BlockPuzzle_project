@@ -3052,11 +3052,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3122,6 +3122,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6830657503754942081, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 92f173505a32ba9469c4564ca847eced, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
 --- !u!1 &303370455
@@ -10864,7 +10868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &973725121
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11048,11 +11052,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 630
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11118,6 +11122,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6830657503754942081, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3c73fe0f1b012a8428b86c9b833ca7a6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
 --- !u!224 &974557304 stripped
@@ -13504,7 +13512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1237873818
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15064,15 +15072,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15269,15 +15277,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21327,11 +21335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 630
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21397,6 +21405,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6830657503754942081, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 864e94ddf987ea449920c83a2a217a2f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
 --- !u!224 &2044672251 stripped
@@ -23030,11 +23042,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 630
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2537563683754219853, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23100,6 +23112,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 54f1634eba5664f0698b95248a9a7be8, type: 3}
+    - target: {fileID: 6830657503754942081, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 29062cc2ce3b7454589b2417fe9bcd8f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5c821c03b79340ed9dc7b436e8e7e15, type: 3}
 --- !u!1001 &4305180758921205060
@@ -23151,15 +23167,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalPosition.x

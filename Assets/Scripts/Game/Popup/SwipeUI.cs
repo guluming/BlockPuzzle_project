@@ -25,6 +25,7 @@ public class SwipeUI : MonoBehaviour
     private float endTouchX;
     private bool isSwipeMode = false;
     private float circleContentScale = 2.0f;
+    private int stagenumber;
     private string playerSaveChallengeGamekey = "playerSaveChallengeGame";
 
     [HideInInspector]
@@ -68,7 +69,16 @@ public class SwipeUI : MonoBehaviour
             } 
             else
             {
-                stagePlay.text = "LEVEL. " + (((playerSaveChallengeGame_.ChallengestartStage - 1) / 5) + 1) + "-" + (playerSaveChallengeGame_.ChallengestartStage % 5);
+                if (playerSaveChallengeGame_.ChallengestartStage % 5 != 0)
+                {
+                    stagenumber = playerSaveChallengeGame_.ChallengestartStage % 5;
+                }
+                else
+                {
+                    stagenumber = 5;
+                }
+                
+                stagePlay.text = "LEVEL. " + (((playerSaveChallengeGame_.ChallengestartStage - 1) / 5) + 1) + "-" + (stagenumber);
             }
         }
         else
@@ -215,7 +225,7 @@ public class SwipeUI : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             startTouchX = Input.mousePosition.x;
         }
@@ -224,7 +234,7 @@ public class SwipeUI : MonoBehaviour
             endTouchX = Input.mousePosition.x;
 
             UpdateSwipe();
-        }
+        }*/
 
         if (Input.touchCount == 1)
         {
