@@ -953,7 +953,8 @@ public class Grid : MonoBehaviour
 
     public void AllGridSquareHooverImageOff() 
     {
-        for (int i=0; i < _gridSquares.Count; i++) {
+        for (int i=0; i < _gridSquares.Count; i++) 
+        {
             GridSquare comp = _gridSquares[i].GetComponent<GridSquare>();
             comp.hooverImage.gameObject.SetActive(false);
         }

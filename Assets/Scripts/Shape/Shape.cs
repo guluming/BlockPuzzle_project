@@ -42,6 +42,17 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         _shapeActive = true;
     }
 
+    private void Update()
+    {
+        for (int i = 0; i < transform.childCount - 1; i++)
+        {
+            if (transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf)
+            {
+                grid.AllGridSquareHooverImageOff();
+            }
+        }
+    }
+
     private void OnEnable()
     {
         GameEvents.MoveShapeToStartPosition += MoveShapeToStartPosition;
@@ -382,11 +393,12 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerClick(PointerEventData eventData)
     {
-
+        
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        seletedshapeglobalPosition = GetComponent<RectTransform>().position;
         GetComponent<RectTransform>().localScale = new Vector3(0.6f, 0.6f, 0.6f);
 
         GameEvents.CheckIfShapeCanBePlaced();
@@ -424,7 +436,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        
+
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -443,7 +455,6 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        seletedshapeglobalPosition = GetComponent<RectTransform>().position;
         GetComponent<RectTransform>().localScale = _shapeStartScale;
 
         GameEvents.CheckIfShapeCanBePlaced();
