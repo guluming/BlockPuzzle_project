@@ -66,6 +66,7 @@ public class Grid : MonoBehaviour
     public static string gamemode;
     public static int Playerlife;
     public static int startStage = 1;
+    public static int thisStage;
 
     private void OnEnable()
     {
@@ -126,6 +127,8 @@ public class Grid : MonoBehaviour
                 else
                 {
                     Playerlife = 1;
+                    SingularSDK.Event("classic_start");
+                    Firebase.Analytics.FirebaseAnalytics.LogEvent("classic_start");
                 }
             }
             else
@@ -137,6 +140,8 @@ public class Grid : MonoBehaviour
                 Playerlife = 1;
                 currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
                 currentActiveJewelSquare_ = jewelSquareTextureData.activeJewelSquareTextures[0].jewelSquare;
+                SingularSDK.Event("classic_start");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("classic_start");
             }
         }
         else if (gamemode == "ChallengeGame")
@@ -185,23 +190,28 @@ public class Grid : MonoBehaviour
                         transform.GetChild(playerSaveChallengeGame_.ChallengeactiveGridSquares[i]).GetComponent<GridSquare>().SquareOccupied = true;
                         transform.GetChild(playerSaveChallengeGame_.ChallengeactiveGridSquares[i]).transform.GetChild(2).GetComponent<Image>().sprite = saveActiveSquareTextures[i];
                     }
-
+                    thisStage = playerSaveChallengeGame_.ChallengestartStage;
                     ChallengeStage.ChallengeStageSelete(playerSaveChallengeGame_.ChallengestartStage);
                 }
                 else
                 {
                     Playerlife = 1;
+                    thisStage = playerSaveChallengeGame_.ChallengestartStage;
                     ChallengeStage.ChallengeStageSelete(playerSaveChallengeGame_.ChallengestartStage);
+                    SingularSDK.Event("challenge_start");
+                    Firebase.Analytics.FirebaseAnalytics.LogEvent("challenge_start");
                 }
             }
             else
             {
                 Debug.Log("저장 파일이 없습니다.");
-                ChallengeStage.ChallengeStageSelete(1);
-
                 Playerlife = 1;
+                thisStage = startStage;
+                ChallengeStage.ChallengeStageSelete(1);
                 currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
                 currentActiveJewelSquare_ = jewelSquareTextureData.activeJewelSquareTextures[0].jewelSquare;
+                SingularSDK.Event("challenge_start");
+                Firebase.Analytics.FirebaseAnalytics.LogEvent("challenge_start");
             }
         }
     }
@@ -699,8 +709,6 @@ public class Grid : MonoBehaviour
                 playerSaveChallengeGame_.ChallengesaveGameOver = true;
                 saveChallengeGame();
                 inGamePopup.SuccessPopupActive();
-                //StartCoroutine(GameOverAin(1));
-                //gameOverPopup.SuccessPopupActive();
             }
             else 
             {
@@ -759,11 +767,6 @@ public class Grid : MonoBehaviour
             {
                 gameOverPopup.FailurePopupPopupActive();
             }
-            /*else
-            {
-                inGamePopup.SuccessPopupActive();
-                //gameOverPopup.SuccessPopupActive();
-            }*/
         }
         
     }

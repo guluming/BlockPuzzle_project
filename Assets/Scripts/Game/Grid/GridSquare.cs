@@ -65,50 +65,60 @@ public class GridSquare : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (SquareOccupied == false)
+        if (collision.tag != "Shape") 
         {
-            if (hooverImage.gameObject.activeSelf)
+            if (SquareOccupied == false)
             {
-                Selected = true;
+                if (hooverImage.gameObject.activeSelf)
+                {
+                    Selected = true;
+                }
+                else
+                {
+                    Selected = true;
+                    hooverImage.sprite = collision.GetComponent<Image>().sprite;
+                    hooverImage.gameObject.SetActive(true);
+                }
             }
-            else {
-                Selected = true;
-                hooverImage.sprite = collision.GetComponent<Image>().sprite;
-                hooverImage.gameObject.SetActive(true);
+            else if (collision.GetComponent<ShapeSquare>() != null)
+            {
+                collision.GetComponent<ShapeSquare>().SetOccupied();
             }
-        }
-        else if (collision.GetComponent<ShapeSquare>() != null)
-        {
-            collision.GetComponent<ShapeSquare>().SetOccupied();
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Selected = true;
+        if (collision.tag != "Shape")
+        {
+            Selected = true;
 
-        if (SquareOccupied == false)
-        {
-            hooverImage.sprite = collision.GetComponent<Image>().sprite;
-            hooverImage.gameObject.SetActive(true);
-            ActiveImage.sprite = collision.GetComponent<Image>().sprite;
-        }
-        else if (collision.GetComponent<ShapeSquare>() != null)
-        {
-            collision.GetComponent<ShapeSquare>().SetOccupied();
+            if (SquareOccupied == false)
+            {
+                hooverImage.sprite = collision.GetComponent<Image>().sprite;
+                hooverImage.gameObject.SetActive(true);
+                ActiveImage.sprite = collision.GetComponent<Image>().sprite;
+            }
+            else if (collision.GetComponent<ShapeSquare>() != null)
+            {
+                collision.GetComponent<ShapeSquare>().SetOccupied();
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (SquareOccupied == false)
+        if (collision.tag != "Shape")
         {
-            Selected = false;
-            hooverImage.gameObject.SetActive(false);
-        }
-        else if (collision.GetComponent<ShapeSquare>() != null)
-        {
-            collision.GetComponent<ShapeSquare>().UnSetOccupied();
+            if (SquareOccupied == false)
+            {
+                Selected = false;
+                hooverImage.gameObject.SetActive(false);
+            }
+            else if (collision.GetComponent<ShapeSquare>() != null)
+            {
+                collision.GetComponent<ShapeSquare>().UnSetOccupied();
+            }
         }
     }
 }

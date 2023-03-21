@@ -7,12 +7,12 @@ public class SuccessPopup : MonoBehaviour
     public GameOverPopup GameOverPopup;
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             gameObject.SetActive(false);
             GameOverPopup.SuccessPopupActive();
             Debug.Log("터치 했다");
-        }
+        }*/
 
         if (Input.touchCount == 1)
         {

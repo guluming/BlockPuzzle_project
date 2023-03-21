@@ -4599,6 +4599,7 @@ MonoBehaviour:
   FailureScorePopup: {fileID: 498621201}
   FailureJewelPopup: {fileID: 106736415}
   grid: {fileID: 1156734087}
+  score: {fileID: 0}
   challengeStage: {fileID: 870105426}
   TargetScore: {fileID: 1429494198}
   FailureScore: {fileID: 498621203}
@@ -15034,6 +15035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shape2
       objectReference: {fileID: 0}
+    - target: {fileID: 657463995782099334, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: m_TagString
+      value: Shape
+      objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -15064,11 +15069,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.x
@@ -15239,6 +15244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shape3
       objectReference: {fileID: 0}
+    - target: {fileID: 657463995782099334, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: m_TagString
+      value: Shape
+      objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -15269,11 +15278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.x
@@ -23129,6 +23138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shape1
       objectReference: {fileID: 0}
+    - target: {fileID: 657463995782099334, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
+      propertyPath: m_TagString
+      value: Shape
+      objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -23159,11 +23172,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 300
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 300
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1833233115815955781, guid: 7503eddc454464da3ab5563dd7c95278, type: 3}
       propertyPath: m_LocalScale.x

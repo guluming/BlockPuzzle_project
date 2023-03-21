@@ -18,6 +18,7 @@ public class GameOverPopup : MonoBehaviour
     public GameObject FailureJewelPopup;
 
     public Grid grid;
+    public Scores score;
     public ChallengeStage challengeStage;
     public Text TargetScore;
     public Text FailureScore;
@@ -48,6 +49,8 @@ public class GameOverPopup : MonoBehaviour
     {
         adsManager.ShowInterstitial();
 
+        classicGameLogEvent();
+
         GameEvents.blockClassicGame();
         grid.playerSaveGame_.saveGameOver = true;
         string playerSaveGameData = JsonUtility.ToJson(grid.playerSaveGame_);
@@ -59,6 +62,8 @@ public class GameOverPopup : MonoBehaviour
     {
         adsManager.ShowInterstitial();
 
+        classicGameLogEvent();
+
         GameEvents.blockClassicGame();
         grid.playerSaveGame_.saveGameOver = true;
         string playerSaveGameData = JsonUtility.ToJson(grid.playerSaveGame_);
@@ -66,12 +71,53 @@ public class GameOverPopup : MonoBehaviour
         MaintainScore.SetActive(true);
     }
 
+    private void classicGameLogEvent() 
+    {
+        if (score.currentScores_ >= 300 && score.currentScores_ <= 499)
+        {
+            SingularSDK.Event("classic_complete_300");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("classic_complete_300");
+        }
+        else if (score.currentScores_ >= 500 && score.currentScores_ <= 699)
+        {
+            SingularSDK.Event("classic_complete_500");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("classic_complete_500");
+        }
+        else if (score.currentScores_ >= 700 && score.currentScores_ <= 999)
+        {
+            SingularSDK.Event("classic_complete_700");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("classic_complete_700");
+        }
+        else if (score.currentScores_ >= 1000 && score.currentScores_ <= 1399)
+        {
+            SingularSDK.Event("classic_complete_1000");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("classic_complete_1000");
+        }
+        else if (score.currentScores_ >= 1400 && score.currentScores_ <= 1999)
+        {
+            SingularSDK.Event("classic_complete_1400");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("classic_complete_1400");
+        }
+        else if (score.currentScores_ >= 2000)
+        {
+            SingularSDK.Event("classic_complete_2000");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("classic_complete_2000");
+        }
+    }
+
     public void SuccessPopupActive()
     {
-        if (Grid.startStage / 2 == 0 || Grid.startStage > 10)
+        if (Grid.thisStage % 2 == 0 || Grid.thisStage > 10)
         {
             adsManager.ShowInterstitial();
         }
+
+        SingularSDK.Event("challenge_complete", "set", ((Grid.thisStage - 1) / 5) + 1, "stage", Grid.thisStage);
+        Firebase.Analytics.Parameter[] challenge_completeParameters = {
+            new Firebase.Analytics.Parameter("set", ((Grid.thisStage - 1) / 5) + 1),
+            new Firebase.Analytics.Parameter("stage", Grid.thisStage)
+        };
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("challenge_complete", challenge_completeParameters);
 
         GameEvents.blockChallengeGame();
 
@@ -99,10 +145,17 @@ public class GameOverPopup : MonoBehaviour
 
     public void FailurePopupPopupActive()
     {
-        if (Grid.startStage / 2 == 0 || Grid.startStage > 10)
+        if (Grid.thisStage % 2 == 0 || Grid.thisStage > 10)
         {
             adsManager.ShowInterstitial();
         }
+
+        SingularSDK.Event("challenge_complete", "set", ((Grid.thisStage - 1) / 5) + 1, "stage", Grid.thisStage);
+        Firebase.Analytics.Parameter[] challenge_completeParameters = {
+            new Firebase.Analytics.Parameter("set", ((Grid.thisStage - 1) / 5) + 1),
+            new Firebase.Analytics.Parameter("stage", Grid.thisStage)
+        };
+        Firebase.Analytics.FirebaseAnalytics.LogEvent("challenge_complete", challenge_completeParameters);
 
         GameEvents.blockClassicGame();
 

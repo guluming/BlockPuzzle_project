@@ -146,8 +146,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void CreateShape(ShapeData shapeData)
     {
-        _currentShape.Clear();
         DeleteChilds(_currentShape);
+        _currentShape.Clear();
 
         //Debug.Log(Grid.gamemode);
         //Debug.Log(ChallengeStage.challengemode);
@@ -216,16 +216,17 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     private void DeleteChilds(List<GameObject> _currentShape)
     {
         // child 에는 부모와 자식이 함께 설정 된다.
-        var children = transform.GetComponentsInChildren<Transform>();
 
-        foreach (var child in children)
+        foreach (var child in _currentShape)
         {
-            // 부모(this.gameObject)는 삭제 하지 않기 위한 처리
-            if (child != this.transform)
-            {
-                child.SetParent(null);
-                Destroy(child.gameObject);
-            }
+            var childs = child.transform.GetComponentsInChildren<Transform>();
+            foreach (var children in childs)
+                // 부모(this.gameObject)는 삭제 하지 않기 위한 처리
+                if (children != this.transform)
+                {
+                    children.SetParent(null);
+                    Destroy(children.gameObject);
+                }
         }
     }
 
@@ -388,6 +389,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         GetComponent<RectTransform>().localScale = new Vector3(0.6f, 0.6f, 0.6f);
 
+        GameEvents.CheckIfShapeCanBePlaced();
+
         grid.AllGridSquareHooverImageOff();
     }
 
@@ -404,7 +407,16 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         if (audioManager.sfxsetting) {
             GameEvents.blockDown();
         }
-        
+
+        _transform.anchorMin = new Vector2(0.5f, 0.5f);
+        _transform.anchorMax = new Vector2(0.5f, 0.5f);
+        _transform.pivot = new Vector2(0.5f, 0.5f);
+
+        Vector2 pos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(_canvas.transform as RectTransform,
+            eventData.position, Camera.main, out pos);
+        _transform.localPosition = pos + offset;
+
         GetComponent<RectTransform>().localScale = shapeSelectedScale;
 
         grid.CheckIfShapeCanBePlacedOnGridOnlyOne(this);

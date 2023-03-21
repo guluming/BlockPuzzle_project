@@ -18,14 +18,6 @@ public class InGamePopup : MonoBehaviour
 
     public ChallengeStage challengeStage;
 
-    
-
-    // Start is called before the first frame update
-    private void Awake()
-    {
-        
-    }
-
     private void Start()
     {
         StartPopup.SetActive(true);

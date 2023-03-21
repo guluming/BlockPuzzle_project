@@ -691,14 +691,14 @@ public class ShapeStorage : MonoBehaviour
         {
             if (grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] == -1)
             {
-                shapeList[i].RequestNewShape(shapeData[0]);
+                shapeList[i].firstCreateShape(shapeData[0]);
                 Shapes.transform.GetChild(i).transform.GetChild(0).gameObject.SetActive(false);
             }
             else
             {
-                shapeList[i].RequestNewShape(shapeData[grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i]]);
+                shapeList[i].firstCreateShape(shapeData[grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i]]);
                 UpdateSquareColor();
-                UpdateJewelSquare();
+                /*UpdateJewelSquare();*/
             }
         }
 
@@ -993,7 +993,7 @@ public class ShapeStorage : MonoBehaviour
             }
         }
 
-        Debug.LogError("There is no shape selected");
+        /*Debug.LogError("There is no shape selected");*/
         return null;
     }
 

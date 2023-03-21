@@ -20,10 +20,14 @@ public class MenuButtons : MonoBehaviour
     {
         if (name == "ClassicGame")
         {
+            SingularSDK.Event("classic_session");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("classic_session");
             Grid.gamemode = "ClassicGame";
         }
         else if (name == "ChallengeGame")
         {
+            SingularSDK.Event("challenge_session");
+            Firebase.Analytics.FirebaseAnalytics.LogEvent("challenge_session");
             Grid.gamemode = "ChallengeGame";
         }
         else if (Grid.startStage >= 36)
@@ -40,7 +44,6 @@ public class MenuButtons : MonoBehaviour
 
     public void LoadReplayScene()
     {
-        Debug.Log(Grid.gamemode);
         if (Grid.gamemode == "ClassicGame")
         {
             Grid.gamemode = "ClassicGame";
