@@ -60,6 +60,7 @@ public class Grid : MonoBehaviour
     private string playerSaveChallengeGamekey = "playerSaveChallengeGame";
 
     [HideInInspector]
+    public Coroutine countCoroutine;
     public playerClassicGameData playerSaveGame_ = new playerClassicGameData();
     public playerChallengeGameData playerSaveChallengeGame_ = new playerChallengeGameData();
 
@@ -573,6 +574,7 @@ public class Grid : MonoBehaviour
                             }
                         }
                     }
+                    linesCompleted++;
                 }
                 else {
                     linesCompleted++;
@@ -674,23 +676,25 @@ public class Grid : MonoBehaviour
             {
                 if (Playerlife > 0 && score.bestScores_.score <= 400)
                 {
-                    StartCoroutine(RetryPopupCount());
+                    countCoroutine = StartCoroutine(RetryPopupCount());
+                    playerSaveGame_.saveGameOver = true;
+                    saveGame();
                     gameOverPopup.RetryPopupActive();
                 }
                 else if (Playerlife > 0 && score.currentScores_ >= 400)
                 {
-                    StartCoroutine(RetryPopupCount());
+                    countCoroutine = StartCoroutine(RetryPopupCount());
+                    playerSaveGame_.saveGameOver = true;
+                    saveGame();
                     gameOverPopup.RetryPopupActive();
                 }
                 else if (score.currentScores_ >= score.bestScores_.score)
                 {
-                    playerSaveGame_.saveGameOver = true;
                     GameEvents.GameOver();
                     StartCoroutine(GameOverAin(1));
                 }
                 else
                 {
-                    playerSaveGame_.saveGameOver = true;
                     GameEvents.GameOver();
                     StartCoroutine(GameOverAin(0));             
                 }
@@ -715,6 +719,7 @@ public class Grid : MonoBehaviour
                 if (validShapes == 0)
                 {
                     playerSaveChallengeGame_.ChallengesaveGameOver = true;
+                    saveChallengeGame();
                     StartCoroutine(GameOverAin(0));
                 }
                 else
@@ -727,7 +732,7 @@ public class Grid : MonoBehaviour
         }
     }
 
-    IEnumerator RetryPopupCount()
+    public IEnumerator RetryPopupCount()
     {
         for (int i=0; i<5; i++) 
         {
@@ -738,6 +743,7 @@ public class Grid : MonoBehaviour
 
     IEnumerator GameOverAin(int index)
     {
+        playerSaveGame_.saveGameOver = true;
         GameEvents.blockGameover();
 
         for (int i=0; i<57; i+=8) 
@@ -747,7 +753,7 @@ public class Grid : MonoBehaviour
                 transform.GetChild(k).transform.GetChild(2).gameObject.GetComponent<Image>().sprite = gameoverimg;
             }
 
-            yield return new WaitForSeconds(0.125f);
+            yield return new WaitForSeconds(0.075f);
         }
 
         if (gamemode == "ClassicGame")
@@ -884,7 +890,7 @@ public class Grid : MonoBehaviour
         return canBePlaced;
     }
 
-    public void CheckIfShapeCanBePlacedOnGridOnlyOne(Shape currentShape)
+    public List<int> CheckIfShapeCanBePlacedOnGridOnlyOne(Shape currentShape)
     {
         ShapeData currentShapeData = currentShape.CurrentShapeData;
         int shapeColumns = currentShapeData.columns;
@@ -935,20 +941,27 @@ public class Grid : MonoBehaviour
             }
         }
 
+        List<int> RealCanBePlacedPosition = new List<int>();
         if (canBePlacedPosition.Count == 1)
         {
             int[] number = canBePlacedPosition[0];
-            for (int i=0; i< number.Length; i++) {
+            for (int i = 0; i < number.Length; i++)
+            {
                 foreach (int squareIndexToCheck in originalShapeFilledUpSquares)
                 {
                     GridSquare comp = _gridSquares[number[squareIndexToCheck]].GetComponent<GridSquare>();
+
+                    RealCanBePlacedPosition.Add(number[squareIndexToCheck]);
 
                     comp.hooverImage.sprite = Shape.seletedshapesprite;
                     comp.hooverImage.gameObject.SetActive(true);
                 }
             }
             //Debug.Log("놓을 수 있는 곳이 1 곳 입니다.");
+            return RealCanBePlacedPosition.Distinct().ToList();
         }
+
+        return null;
     }
 
     public void AllGridSquareHooverImageOff() 
@@ -957,6 +970,28 @@ public class Grid : MonoBehaviour
         {
             GridSquare comp = _gridSquares[i].GetComponent<GridSquare>();
             comp.hooverImage.gameObject.SetActive(false);
+        }
+    }
+
+    public void onePlaceExceptGridSquareHooverImageOff(List<int> onePlace)
+    {
+        Debug.Log(onePlace.Count);
+        for (int i = 0; i < _gridSquares.Count; i++)
+        {
+            for (int k = 0; k < onePlace.Count; k++)
+            {
+                if (i != onePlace[k])
+                {
+                    GridSquare comp = _gridSquares[i].GetComponent<GridSquare>();
+                    comp.hooverImage.gameObject.SetActive(false);
+                }
+                else
+                {
+                    GridSquare comp = _gridSquares[i].GetComponent<GridSquare>();
+                    comp.hooverImage.gameObject.SetActive(true);
+                    break;
+                }
+            }
         }
     }
 

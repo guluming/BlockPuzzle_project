@@ -48,6 +48,9 @@ public class RadialProgress : MonoBehaviour
     }
 
     public void LoadRewardAds() {
+        StopCoroutine(grid.countCoroutine);
+        grid.playerSaveGame_.saveGameOver = false;
+        grid.saveGame();
         Time.timeScale = 0;
         adsManager.ShowRewardedAd();
         gameOverPopup.RetryPopupDeactive();

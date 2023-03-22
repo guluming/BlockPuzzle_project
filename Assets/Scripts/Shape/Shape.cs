@@ -50,7 +50,14 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             {
                 if (transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf)
                 {
-                    grid.AllGridSquareHooverImageOff();
+                    if (grid.CheckIfShapeCanBePlacedOnGridOnlyOne(this) != null)
+                    {
+                        grid.onePlaceExceptGridSquareHooverImageOff(grid.CheckIfShapeCanBePlacedOnGridOnlyOne(this));
+                    }
+                    else
+                    {
+                        grid.AllGridSquareHooverImageOff();
+                    }
                 }
             }
         }
@@ -472,7 +479,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         Vector3 targetPosition = _transform.transform.localPosition;
         float timer = 0.0f;
-        float duration = 0.8f;
+        float duration = 0.3f;
         float percentage;
         while (timer < duration)
         {

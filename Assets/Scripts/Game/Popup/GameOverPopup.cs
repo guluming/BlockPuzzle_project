@@ -209,6 +209,7 @@ public class GameOverPopup : MonoBehaviour
 
     IEnumerator GameOverAin(int index)
     {
+        grid.playerSaveGame_.saveGameOver = true;
         GameEvents.blockGameover();
 
         for (int i = 0; i < 57; i += 8)
@@ -218,7 +219,7 @@ public class GameOverPopup : MonoBehaviour
                 grid.transform.GetChild(k).transform.GetChild(2).gameObject.GetComponent<Image>().sprite = gameoverimg;
             }
 
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0.075f);
         }
 
         if (index == 0)
