@@ -6,11 +6,10 @@ public class StartPopup : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        /*if (Input.GetMouseButtonDown(0))
         {
             gameObject.SetActive(false);
-            Debug.Log("터치 했다");
-        }
+        }*/
 
         if (Input.touchCount == 1)
         {
@@ -19,7 +18,6 @@ public class StartPopup : MonoBehaviour
             if (touch.phase == TouchPhase.Began)
             {
                 gameObject.SetActive(false);
-                Debug.Log("터치 했다");
             }
         }
     }

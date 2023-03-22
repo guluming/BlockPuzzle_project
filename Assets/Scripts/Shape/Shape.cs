@@ -44,11 +44,14 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     private void Update()
     {
-        for (int i = 0; i < transform.childCount - 1; i++)
+        if (Input.touchCount == 1)
         {
-            if (transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf)
+            for (int i = 0; i < transform.childCount - 1; i++)
             {
-                grid.AllGridSquareHooverImageOff();
+                if (transform.GetChild(i).transform.GetChild(0).gameObject.activeSelf)
+                {
+                    grid.AllGridSquareHooverImageOff();
+                }
             }
         }
     }
