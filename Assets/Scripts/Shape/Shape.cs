@@ -30,7 +30,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     private Vector3 _shapeStartScale;
     private bool _shapeActive = true;
     private bool _shapeDraggable = true;
-    
+    private bool isMoving = false;
+
 
     public void Awake()
     {
@@ -481,12 +482,24 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         float timer = 0.0f;
         float duration = 0.3f;
         float percentage;
+
+        GetComponent<Image>().raycastTarget = false;
+        for (int i = 0; i < transform.childCount; i++) 
+        {
+            transform.GetChild(i).GetComponent<Image>().raycastTarget = false;
+        }
+
         while (timer < duration)
         {
             timer += Time.deltaTime;
             percentage = timer / duration;
             _transform.transform.localPosition = Vector3.Lerp(targetPosition, _startPosition, curve.Evaluate(percentage));
             yield return null;
+        }
+        GetComponent<Image>().raycastTarget = true;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            transform.GetChild(i).GetComponent<Image>().raycastTarget = true;
         }
     }
 }

@@ -21,12 +21,14 @@ public class Scores : MonoBehaviour
     public int currentScores_;
     public BestScoreData bestScores_ = new BestScoreData();
 
+    private bool bestScoreCheck;
     private string playerSaveGamekey = "playerSaveGame";
     private string playerSaveChallengeGamekey = "playerSaveChallengeGame";
     private string bestScoreKey_ = "blockpuzzlescore";
 
     private void Awake()
     {
+        bestScoreCheck = true;
         if (Grid.gamemode == "ClassicGame")
         {
             if (BinaryDataStream.Exist(bestScoreKey_))
@@ -113,7 +115,11 @@ public class Scores : MonoBehaviour
             currentScores_ += scores;
             if (currentScores_ > bestScores_.score)
             {
-                GameEvents.blockNewBestScore();
+                if (bestScoreCheck) 
+                {
+                    GameEvents.blockNewBestScore();
+                }
+                bestScoreCheck = false;
                 bestScores_.score = currentScores_;
                 SaveBestScores();
             }
