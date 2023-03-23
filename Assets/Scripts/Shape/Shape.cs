@@ -61,6 +61,12 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                     }
                 }
             }
+
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Ended)
+            {
+                grid.AllGridSquareHooverImageOff();
+            }
         }
     }
 

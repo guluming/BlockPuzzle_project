@@ -22,7 +22,6 @@ public class SuccessPopup : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 GameOverPopup.SuccessPopupActive();
-                Debug.Log("터치 했다");
             }
         }
     }
