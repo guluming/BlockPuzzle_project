@@ -500,8 +500,10 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             timer += Time.deltaTime;
             percentage = timer / duration;
             _transform.transform.localPosition = Vector3.Lerp(targetPosition, _startPosition, curve.Evaluate(percentage));
+            grid.AllGridSquareHooverImageOff();
             yield return null;
         }
+
         GetComponent<Image>().raycastTarget = true;
         for (int i = 0; i < transform.childCount; i++)
         {
