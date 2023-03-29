@@ -566,7 +566,7 @@ public class Grid : MonoBehaviour
                         GridSquare comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
                         for (int i = 0; i < ChallengeStage.TargetActivateJewel.Count; i++)
                         {
-                            if (comp.ActiveImage.GetComponent<Image>().sprite == jewel.jewels[ChallengeStage.TargetActivateJewel[i]].transform.GetChild(0).GetComponent<Image>().sprite)
+                            if (comp.ActiveImage.GetComponent<Image>().sprite == jewel.jewels[ChallengeStage.TargetActivateJewel[i]].transform.GetChild(1).GetComponent<Image>().sprite)
                             {
                                 //Debug.Log("보석 카운팅 검사");
                                 jewel.jewelsCount[ChallengeStage.TargetActivateJewel[i]].GetComponent<Text>().text = (ChallengeStage.TargetActivateJewelCount[i] - 1).ToString();
@@ -674,14 +674,14 @@ public class Grid : MonoBehaviour
         {
             if (validShapes == 0)
             {
-                if (Playerlife > 0 && score.bestScores_.score <= 400)
+                if (Playerlife > 0 && score.bestScores_.score <= 300)
                 {
                     countCoroutine = StartCoroutine(RetryPopupCount());
                     playerSaveGame_.saveGameOver = true;
                     saveGame();
                     gameOverPopup.RetryPopupActive();
                 }
-                else if (Playerlife > 0 && score.currentScores_ >= 400)
+                else if (Playerlife > 0 && score.currentScores_ >= 300)
                 {
                     countCoroutine = StartCoroutine(RetryPopupCount());
                     playerSaveGame_.saveGameOver = true;
@@ -975,7 +975,6 @@ public class Grid : MonoBehaviour
 
     public void onePlaceExceptGridSquareHooverImageOff(List<int> onePlace)
     {
-        Debug.Log(onePlace.Count);
         for (int i = 0; i < _gridSquares.Count; i++)
         {
             for (int k = 0; k < onePlace.Count; k++)

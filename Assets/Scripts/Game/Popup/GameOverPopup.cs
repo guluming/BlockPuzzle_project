@@ -107,7 +107,7 @@ public class GameOverPopup : MonoBehaviour
 
     public void SuccessPopupActive()
     {
-        if (Grid.thisStage % 2 == 0 || Grid.thisStage > 10)
+        if (Grid.thisStage >= 4)
         {
             adsManager.ShowInterstitial();
         }
@@ -145,7 +145,7 @@ public class GameOverPopup : MonoBehaviour
 
     public void FailurePopupPopupActive()
     {
-        if (Grid.thisStage % 2 == 0 || Grid.thisStage > 10)
+        if (Grid.thisStage >= 4)
         {
             adsManager.ShowInterstitial();
         }

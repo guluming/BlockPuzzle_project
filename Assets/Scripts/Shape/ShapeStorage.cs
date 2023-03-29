@@ -867,51 +867,119 @@ public class ShapeStorage : MonoBehaviour
 
     private void ShapeIndexSeleted(List<int> shapeIndexList)
     {
+        bool normalShape = false;
+        bool hardShape = false;
         while (shapeIndexList.Count <= 3)
         {
             int shapeIndex = 0;
-            if (scores.currentScores_ < 3000)
+
+            int activeGridSpuare = 0;
+            for (int i = 0; i < grid.transform.childCount; i++)
             {
-                int activeGridSpuare = 0;
-                for (int i=0; i< grid.transform.childCount; i++) {
-                    if (grid.transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf) {
-                        activeGridSpuare++;
+                if (grid.transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf)
+                {
+                    activeGridSpuare++;
+                }
+            }
+
+            if (Grid.gamemode == "ClassicGame") 
+            {
+                if (scores.currentScores_ >= 1500)
+                {
+                    if (normalShape && hardShape)
+                    {
+                        shapeIndex = UnityEngine.Random.Range(0, 24);
+                    }
+                    else if (!normalShape && hardShape)
+                    {
+                        if (activeGridSpuare >= 32)
+                        {
+                            //보통 제외
+                            shapeIndex = UnityEngine.Random.Range(0, 24);
+                        }
+                        else
+                        {
+                            shapeIndex = UnityEngine.Random.Range(0, 33);
+                        }
+                    }
+                    else if (normalShape && !hardShape)
+                    {
+                        if (UnityEngine.Random.Range(0, 2) == 0)
+                        {
+                            shapeIndex = UnityEngine.Random.Range(0, 24);
+                        }
+                        else 
+                        {
+                            shapeIndex = UnityEngine.Random.Range(33, shapeData.Count);
+                        }
+                    }
+                    else
+                    {
+                        if (activeGridSpuare >= 19)
+                        {
+                            //어려움 제외
+                            shapeIndex = UnityEngine.Random.Range(0, 33);
+                        }
+                        else if (activeGridSpuare >= 32)
+                        {
+                            //보통 제외
+                            shapeIndex = UnityEngine.Random.Range(0, 24);
+                        }
+                        else
+                        {
+                            shapeIndex = UnityEngine.Random.Range(0, shapeData.Count);
+                        }
                     }
                 }
-
-                if (activeGridSpuare < 25) {
-                    int temp = UnityEngine.Random.Range(0, 6);
-                    if (temp == 0)
-                    {
-                        shapeIndex = UnityEngine.Random.Range(24, 30);
-                    }
-                    else
+                else
+                {
+                    if (normalShape)
                     {
                         shapeIndex = UnityEngine.Random.Range(0, 24);
                     }
-                } else if (activeGridSpuare >= 25 && activeGridSpuare < 36) {
-                    int temp = UnityEngine.Random.Range(0, 3);
-                    if (temp == 0)
+                    else 
                     {
-                        shapeIndex = UnityEngine.Random.Range(24, 30);
-                    }
-                    else
-                    {
-                        shapeIndex = UnityEngine.Random.Range(0, 24);
-                    }
-                } else if (activeGridSpuare >= 36) {
-                    int temp = UnityEngine.Random.Range(0, 2);
-                    if (temp == 0)
-                    {
-                        shapeIndex = UnityEngine.Random.Range(24, 30);
-                    }
-                    else {
-                        shapeIndex = UnityEngine.Random.Range(0, 24);
+                        if (activeGridSpuare >= 32)
+                        {
+                            //보통 제외
+                            shapeIndex = UnityEngine.Random.Range(0, 24);
+                        }
+                        else
+                        {
+                            shapeIndex = UnityEngine.Random.Range(0, 33);
+                        }
                     }
                 }
             }
-            else {
-                shapeIndex = UnityEngine.Random.Range(0, shapeData.Count);
+
+            if (Grid.gamemode == "ChallengeGame")
+            {
+                if (normalShape)
+                {
+                    shapeIndex = UnityEngine.Random.Range(0, 24);
+                }
+                else
+                {
+                    if (activeGridSpuare >= 32)
+                    {
+                        //보통 제외
+                        shapeIndex = UnityEngine.Random.Range(0, 24);
+                    }
+                    else
+                    {
+                        shapeIndex = UnityEngine.Random.Range(0, 33);
+                    }
+                }
+            }
+
+            if (shapeIndex >= 24 && shapeIndex <= 32) 
+            {
+                normalShape = true;
+            }
+
+            if (shapeIndex >= 33 && shapeIndex <= shapeData.Count - 1) 
+            {
+                hardShape = true;
             }
 
             if (!shapeIndexList.Contains(shapeIndex))
@@ -968,10 +1036,12 @@ public class ShapeStorage : MonoBehaviour
                         }
                     }
                 }
-                else {
+                else 
+                {
                     shapeIndexList.Add(shapeIndex);
                 }
             }
+
         }
     }
 

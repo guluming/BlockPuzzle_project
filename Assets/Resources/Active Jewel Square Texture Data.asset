@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Active Jewel Square Texture Data
   m_EditorClassIdentifier: 
   activeJewelSquareTextures:
-  - texture: {fileID: 21300000, guid: 526bedba084af1e41ab699a8c8e15f8e, type: 3}
+  - texture: {fileID: 21300000, guid: 9d8d0a3292c144044b89e593ffcf506f, type: 3}
     jewelSquare: 1
-  - texture: {fileID: 21300000, guid: 5751bc3535b8cd84392b3e67d29059dc, type: 3}
+  - texture: {fileID: 21300000, guid: 479c32dfde7075148b0f71bcaf00cd78, type: 3}
     jewelSquare: 2
-  - texture: {fileID: 21300000, guid: fd084ceb89cd0de42a621012b4c095d8, type: 3}
+  - texture: {fileID: 21300000, guid: 0fabb72b5e6946e4ab4270f52cf5c776, type: 3}
     jewelSquare: 3
-  - texture: {fileID: 21300000, guid: 38b497099656234419f91bff6211646c, type: 3}
+  - texture: {fileID: 21300000, guid: dce53fe722c7acf41a00f392af3398d2, type: 3}
     jewelSquare: 4
-  - texture: {fileID: 21300000, guid: 5b6af4800861bfb42824d4b32ba50569, type: 3}
+  - texture: {fileID: 21300000, guid: f2ac26e6aceb33142af7e9f26c334344, type: 3}
     jewelSquare: 5
   - texture: {fileID: 21300000, guid: 98383ea1db7a3f94eafa4052995c6ca0, type: 3}
     jewelSquare: 6
-  currentjewel: 1
+  currentjewel: 5

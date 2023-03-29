@@ -2549,7 +2549,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxAudioSource: {fileID: 985591974}
   blockDownSfx: {fileID: 8300000, guid: a123b8fe595644f628ab6f4cc73a7aa2, type: 3}
+  blockSeSuccessActiveSfx: {fileID: 0}
+  blockFailureActiveSfx: {fileID: 0}
+  blockCreateSfx: {fileID: 0}
   blockCompletedSfx: {fileID: 8300000, guid: 250603450ce664ec08081f999f0050f4, type: 3}
+  block2CompletedSfx: {fileID: 0}
+  block3CompletedSfx: {fileID: 0}
+  block4CompletedSfx: {fileID: 0}
+  block5CompletedMoreSfx: {fileID: 0}
+  blockGameoverSfx: {fileID: 0}
+  blockClassicGameSfx: {fileID: 0}
+  blockresurrectionCountSfx: {fileID: 0}
+  blockNewBestScoreSfx: {fileID: 0}
+  blockChallengeGameSfx: {fileID: 0}
 --- !u!4 &985591976
 Transform:
   m_ObjectHideFlags: 0
@@ -2974,7 +2986,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0f47b429c42e8457ab3b9458fd9d855e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ec3f17ac97583444796bde3bc8ca91b3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
