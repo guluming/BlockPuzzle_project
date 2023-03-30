@@ -13,6 +13,7 @@ public class GridSquare : MonoBehaviour
     public List<Sprite> normalImages;
 
     private Vector3 startScale = new Vector3(1.0f, 1.0f, 1.0f);
+    private Vector3 destroyScale = new Vector3(2.0f, 2.0f, 2.0f);
     private Config.SquareColor currentSquareColor_ = Config.SquareColor.NotSet;
 
     public Config.SquareColor GetCurrentColor()

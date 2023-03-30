@@ -23,6 +23,6 @@ MonoBehaviour:
     jewelSquare: 4
   - texture: {fileID: 21300000, guid: f2ac26e6aceb33142af7e9f26c334344, type: 3}
     jewelSquare: 5
-  - texture: {fileID: 21300000, guid: 98383ea1db7a3f94eafa4052995c6ca0, type: 3}
+  - texture: {fileID: 21300000, guid: 325f719bd9728ee44830323ee27fbb33, type: 3}
     jewelSquare: 6
-  currentjewel: 5
+  currentjewel: 6
