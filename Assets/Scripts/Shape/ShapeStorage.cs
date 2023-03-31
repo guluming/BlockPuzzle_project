@@ -28,14 +28,14 @@ public class ShapeStorage : MonoBehaviour
 
     public int[] TwoRotationSquare = new int[]
     {
-         1,2, 3,4, 5,6, 8,9, 18,19, 28,29, 31,32, 41,42 
+         1,2, 3,4, 5,6, 8,9, 18,19, 28,29, 31,32, 41,42
     };
 
     public int[] FourRotationSquare = new int[]
     {
         10,11,12,13, 14,15,16,17, 20,21,22,23, 24,25,26,27, 33,34,35,36, 37,38,39,40
     };
-    
+
     public int[] firstShapeExistChallengeGame = new int[]
     {
         7, 11, 12, 14, 15, 18, 19, 22, 24, 25, 30, 33, 35
@@ -103,10 +103,11 @@ public class ShapeStorage : MonoBehaviour
             }
         }
     }
-    
+
     private void firstChallengeShapesShapesSeleted(int ChallengeGameStage)
     {
-        switch (ChallengeGameStage) {
+        switch (ChallengeGameStage)
+        {
             case 7:
                 ChallengeGamefirstShapes7();
                 break;
@@ -149,7 +150,7 @@ public class ShapeStorage : MonoBehaviour
         }
     }
 
-    private void ChallengeGamefirstShapes7() 
+    private void ChallengeGamefirstShapes7()
     {
         isCombo = false;
         ComboCount = 0;
@@ -167,7 +168,7 @@ public class ShapeStorage : MonoBehaviour
                 UpdateSquareColor();
                 UpdateJewelSquare();
             }
-            else 
+            else
             {
                 grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = shapeIndexList[i];
                 shapeList[i].firstCreateShape(shapeData[shapeIndexList[i]]);
@@ -229,7 +230,7 @@ public class ShapeStorage : MonoBehaviour
                 UpdateSquareColor();
                 UpdateJewelSquare();
             }
-            else if (i == 1) 
+            else if (i == 1)
             {
                 grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 7;
                 shapeList[i].firstCreateShape(shapeData[7]);
@@ -265,7 +266,7 @@ public class ShapeStorage : MonoBehaviour
                 UpdateSquareColor();
                 UpdateJewelSquare();
             }
-            else if (i == 1) 
+            else if (i == 1)
             {
                 grid.playerSaveChallengeGame_.ChallengeshapeDataIndexList[i] = 5;
                 shapeList[i].firstCreateShape(shapeData[5]);
@@ -595,17 +596,33 @@ public class ShapeStorage : MonoBehaviour
     {
         if (Grid.gamemode == "tutorial1")
         {
-            shapeList[0].RequestNewShape(shapeData[0]);
-            shapeList[1].RequestNewShape(shapeData[5]);
-            shapeList[2].RequestNewShape(shapeData[0]);
+            shapeList[0].CreateShape(shapeData[0]);
+            shapeList[1].CreateShape(shapeData[6]);
+            shapeList[2].CreateShape(shapeData[0]);
 
-            for (int i = 0; i< Shapes.transform.GetChild(0).transform.childCount; i++) 
+            for (int i = 0; i < Shapes.transform.GetChild(0).transform.childCount; i++)
             {
                 Shapes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
                 Shapes.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(false);
             }
+
+            UpdateSquareColor();
         }
         else if (Grid.gamemode == "tutorial2")
+        {
+            shapeList[0].RequestNewShape(shapeData[0]);
+            shapeList[1].RequestNewShape(shapeData[5]);
+            shapeList[2].RequestNewShape(shapeData[0]);
+
+            for (int i = 0; i < Shapes.transform.GetChild(0).transform.childCount; i++)
+            {
+                Shapes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
+                Shapes.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(false);
+            }
+
+            UpdateSquareColor();
+        }
+        else if (Grid.gamemode == "tutorial3")
         {
             shapeList[0].RequestNewShape(shapeData[0]);
             shapeList[1].RequestNewShape(shapeData[7]);
@@ -616,20 +633,9 @@ public class ShapeStorage : MonoBehaviour
                 Shapes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
                 Shapes.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(false);
             }
-        }
-        else {
-            shapeList[0].CreateShape(shapeData[0]);
-            shapeList[1].CreateShape(shapeData[6]);
-            shapeList[2].CreateShape(shapeData[0]);
 
-            for (int i = 0; i < Shapes.transform.GetChild(0).transform.childCount; i++)
-            {
-                Shapes.transform.GetChild(0).transform.GetChild(i).gameObject.SetActive(false);
-                Shapes.transform.GetChild(2).transform.GetChild(i).gameObject.SetActive(false);
-            }
+            UpdateSquareColor();
         }
-        
-        UpdateSquareColor();
     }
 
     private void firstShapes()
@@ -639,7 +645,7 @@ public class ShapeStorage : MonoBehaviour
         IsComboObject();
 
         List<int> shapeIndexList = new List<int>();
-        
+
         if (Grid.gamemode == "ClassicGame")
         {
             ShapeIndexSeleted(shapeIndexList);
@@ -676,7 +682,8 @@ public class ShapeStorage : MonoBehaviour
                 shapeList[i].RequestNewShape(shapeData[0]);
                 Shapes.transform.GetChild(i).transform.GetChild(0).gameObject.SetActive(false);
             }
-            else {
+            else
+            {
                 shapeList[i].RequestNewShape(shapeData[grid.playerSaveGame_.shapeDataIndexList[i]]);
                 UpdateSquareColor();
             }
@@ -711,13 +718,14 @@ public class ShapeStorage : MonoBehaviour
         {
             ComboCount = 0;
         }
-        else {
+        else
+        {
             isCombo = false;
         }
         IsComboObject();
 
         List<int> shapeIndexList = new List<int>();
-        
+
         if (Grid.gamemode == "ClassicGame")
         {
             ShapeIndexSeleted(shapeIndexList);
@@ -768,7 +776,8 @@ public class ShapeStorage : MonoBehaviour
             grid.saveGame();
         }
 
-        if (Grid.gamemode != "tutorial1" && Grid.gamemode != "tutorial2" && Grid.gamemode != "tutorial3") {
+        if (Grid.gamemode != "tutorial1" && Grid.gamemode != "tutorial2" && Grid.gamemode != "tutorial3")
+        {
             grid.CheckIfPlayLost();
         }
     }
@@ -882,7 +891,7 @@ public class ShapeStorage : MonoBehaviour
                 }
             }
 
-            if (Grid.gamemode == "ClassicGame") 
+            if (Grid.gamemode == "ClassicGame")
             {
                 if (scores.currentScores_ >= 1500)
                 {
@@ -908,7 +917,7 @@ public class ShapeStorage : MonoBehaviour
                         {
                             shapeIndex = UnityEngine.Random.Range(0, 24);
                         }
-                        else 
+                        else
                         {
                             shapeIndex = UnityEngine.Random.Range(33, shapeData.Count);
                         }
@@ -937,7 +946,7 @@ public class ShapeStorage : MonoBehaviour
                     {
                         shapeIndex = UnityEngine.Random.Range(0, 24);
                     }
-                    else 
+                    else
                     {
                         if (activeGridSpuare >= 32)
                         {
@@ -972,12 +981,12 @@ public class ShapeStorage : MonoBehaviour
                 }
             }
 
-            if (shapeIndex >= 24 && shapeIndex <= 32) 
+            if (shapeIndex >= 24 && shapeIndex <= 32)
             {
                 normalShape = true;
             }
 
-            if (shapeIndex >= 33 && shapeIndex <= shapeData.Count - 1) 
+            if (shapeIndex >= 33 && shapeIndex <= shapeData.Count - 1)
             {
                 hardShape = true;
             }
@@ -1036,7 +1045,7 @@ public class ShapeStorage : MonoBehaviour
                         }
                     }
                 }
-                else 
+                else
                 {
                     shapeIndexList.Add(shapeIndex);
                 }
@@ -1045,20 +1054,24 @@ public class ShapeStorage : MonoBehaviour
         }
     }
 
-    public void IsComboObject() {
+    public void IsComboObject()
+    {
         if (ComboCount > 0)
         {
             ComboObject.SetActive(true);
         }
-        else {
+        else
+        {
             ComboObject.SetActive(false);
         }
     }
 
     public Shape GetCurrentSelectedShape()
     {
-        foreach (var shape in shapeList) {
-            if (shape.IsOnStartPosition() == false && shape.IsAnyOfShapeSqaureActive()) {
+        foreach (var shape in shapeList)
+        {
+            if (shape.IsOnStartPosition() == false && shape.IsAnyOfShapeSqaureActive())
+            {
                 return shape;
             }
         }
@@ -1069,8 +1082,10 @@ public class ShapeStorage : MonoBehaviour
 
     public bool IsShapeStorageEmpty()
     {
-        foreach (var shape in shapeList) {
-            if (shape.IsAnyOfShapeSqaureActive()) {
+        foreach (var shape in shapeList)
+        {
+            if (shape.IsAnyOfShapeSqaureActive())
+            {
                 return false;
             }
         }

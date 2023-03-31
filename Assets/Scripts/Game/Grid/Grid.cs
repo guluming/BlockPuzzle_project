@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class playerClassicGameData
@@ -14,7 +15,7 @@ public class playerClassicGameData
     public int saveScore;
     public List<int> activeGridSquares;
     public List<string> activeGridSquareColors;
-    public int[] shapeDataIndexList = new int[] { -1, -1, -1};
+    public int[] shapeDataIndexList = new int[] { -1, -1, -1 };
 }
 public class playerChallengeGameData
 {
@@ -135,12 +136,11 @@ public class Grid : MonoBehaviour
             else
             {
                 Debug.Log("저장 파일이 없습니다.");
+                Playerlife = 1;
+                //gamemode = "ClassicGame";
                 gamemode = "tutorial1";
                 tutuorial.tutuorial1();
-                
-                Playerlife = 1;
-                currentActiveSquareColor_ = squareTextureData.activeSquareTextures[0].squareColor;
-                currentActiveJewelSquare_ = jewelSquareTextureData.activeJewelSquareTextures[0].jewelSquare;
+                shapeStorage.tutorialShapes();
                 SingularSDK.Event("classic_start");
                 Firebase.Analytics.FirebaseAnalytics.LogEvent("classic_start");
             }
@@ -171,8 +171,8 @@ public class Grid : MonoBehaviour
                             if (playerSaveChallengeGame_.ChallengeactiveGridSquareColors[i] == squareTextureData.activeSquareTextures[j].texture.ToString())
                             {
                                 saveActiveSquareTextures.Add(squareTextureData.activeSquareTextures[j].texture);
-                            } 
-                            
+                            }
+
                         }
 
                         for (int j = 0; j < jewelSquareTextureData.activeJewelSquareTextures.Count; j++)
@@ -237,8 +237,10 @@ public class Grid : MonoBehaviour
     {
         int square_index = 0;
 
-        for (var row = 0; row < rows; ++row) {
-            for (var column = 0; column < columns; ++column) {
+        for (var row = 0; row < rows; ++row)
+        {
+            for (var column = 0; column < columns; ++column)
+            {
                 _gridSquares.Add(Instantiate(gridSquare) as GameObject);
 
                 _gridSquares[_gridSquares.Count - 1].GetComponent<GridSquare>().SquareIndex = square_index;
@@ -260,8 +262,10 @@ public class Grid : MonoBehaviour
         _offset.x = square_rect.rect.width * square_rect.transform.localScale.x + everySquareOffset;
         _offset.y = square_rect.rect.height * square_rect.transform.localScale.y + everySquareOffset;
 
-        foreach (GameObject square in _gridSquares) {
-            if (column_number + 1 > columns) {
+        foreach (GameObject square in _gridSquares)
+        {
+            if (column_number + 1 > columns)
+            {
                 square_gap_number.x = 0;
                 column_number = 0;
                 row_number++;
@@ -271,12 +275,14 @@ public class Grid : MonoBehaviour
             var pos_x_offset = _offset.x * column_number + (square_gap_number.x * squaresGap);
             var pos_y_offset = _offset.y * row_number + (square_gap_number.y * squaresGap);
 
-            if (column_number > 0 && column_number % 3 == 0) {
+            if (column_number > 0 && column_number % 3 == 0)
+            {
                 square_gap_number.x++;
                 pos_x_offset += squaresGap;
             }
 
-            if (row_number > 0 && row_number % 3 ==0 && row_moved == false) {
+            if (row_number > 0 && row_number % 3 == 0 && row_moved == false)
+            {
                 row_moved = true;
                 square_gap_number.y++;
                 pos_y_offset += squaresGap;
@@ -312,7 +318,7 @@ public class Grid : MonoBehaviour
         {
             if (transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf)
             {
-                ActiveSquareColors.Add(transform.GetChild(i).transform.GetChild(2).GetComponent<Image>().sprite.ToString()); 
+                ActiveSquareColors.Add(transform.GetChild(i).transform.GetChild(2).GetComponent<Image>().sprite.ToString());
             }
         }
 
@@ -323,7 +329,8 @@ public class Grid : MonoBehaviour
     {
         var squareIndexes = new List<int>();
 
-        foreach (var square in _gridSquares) {
+        foreach (var square in _gridSquares)
+        {
             var gridSquare = square.GetComponent<GridSquare>();
 
             if (gridSquare.Selected && !gridSquare.SquareOccupied)
@@ -338,10 +345,10 @@ public class Grid : MonoBehaviour
         {
             return;
         }
-        
+
         if (currentSelectedShape.TotalSquareNumber == squareIndexes.Count)
         {
-            
+
             foreach (int squareIndex in squareIndexes)
             {
                 _gridSquares[squareIndex].GetComponent<GridSquare>().PlaceShapeOnBoard(currentActiveSquareColor_);
@@ -349,32 +356,44 @@ public class Grid : MonoBehaviour
 
             int shapeLeft = 0;
 
-            foreach (Shape shape in shapeStorage.shapeList) {
-                if (shape.IsOnStartPosition() && shape.IsAnyOfShapeSqaureActive()) {
+            foreach (Shape shape in shapeStorage.shapeList)
+            {
+                if (shape.IsOnStartPosition() && shape.IsAnyOfShapeSqaureActive())
+                {
                     shapeLeft++;
                 }
             }
 
-            if (shapeLeft == 0) {
-                if (gamemode == "ClassicGame" || gamemode == "ChallengeGame" || gamemode == "tutorial3")
+            CheckIfAnyLineIsCompleted(currentSelectedShape.TotalSquareNumber);
+
+            if (shapeLeft == 0)
+            {
+                if (gamemode == "ClassicGame" || gamemode == "ChallengeGame")
                 {
                     if (audioManager.sfxsetting)
                     {
                         GameEvents.blockSeSuccessActive();
                         GameEvents.blockCreate();
                     }
+
                     GameEvents.RequestNewShapes();
                 }
-                else {
+                else
+                {
                     if (audioManager.sfxsetting)
                     {
                         GameEvents.blockSeSuccessActive();
                         GameEvents.blockCreate();
                     }
-                    shapeStorage.tutorialShapes();
+
+                    if (gamemode == "tutorial2" || gamemode == "tutorial3")
+                    {
+                        shapeStorage.tutorialShapes();
+                    }
                 }
             }
-            else {
+            else
+            {
                 if (audioManager.sfxsetting)
                 {
                     GameEvents.blockSeSuccessActive();
@@ -382,7 +401,7 @@ public class Grid : MonoBehaviour
                 GameEvents.SetShapeInactive();
             }
 
-            CheckIfAnyLineIsCompleted(currentSelectedShape.TotalSquareNumber);
+            //CheckIfAnyLineIsCompleted(currentSelectedShape.TotalSquareNumber);
 
         }
         else
@@ -410,10 +429,10 @@ public class Grid : MonoBehaviour
             lines.Add(data.ToArray());
         }
 
-        for (var row=0; row < 8; row++)
+        for (var row = 0; row < 8; row++)
         {
             List<int> data = new List<int>(8);
-            for (var index=0; index < 8; index++)
+            for (var index = 0; index < 8; index++)
             {
                 data.Add(_lineIndicator.line_data[row, index]);
             }
@@ -422,8 +441,10 @@ public class Grid : MonoBehaviour
         }
 
         int completedLines = CheckIfSquaresAreCompleted(lines);
+        Debug.Log(completedLines);
 
-        if (gamemode == "ClassicGame" || (gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Scoremode")) {
+        if (gamemode == "ClassicGame" || (gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Scoremode"))
+        {
             if (completedLines > 0)
             {
                 ShapeStorage.isCombo = true;
@@ -439,88 +460,103 @@ public class Grid : MonoBehaviour
             {
                 totalScores = (10 * (1 + ShapeStorage.ComboCount) * completedLines);
             }
-            
+
             GameEvents.AddScores(currentSelectedShape + totalScores);
         }
 
-        if (completedLines > 0) 
+        switch (completedLines)
         {
-            switch (completedLines) {
-                case 1:
-                    if (audioManager.sfxsetting)
-                    {
-                        GameEvents.blockCompleted();
-                    }
-                    break;
-                case 2:
-                    if (audioManager.sfxsetting)
-                    {
-                        GameEvents.block2Completed();
-                    }
-                    break;
-                case 3:
-                    if (audioManager.sfxsetting)
-                    {
-                        GameEvents.block3Completed();
-                    }
-                    break;
-                case 4:
-                    if (audioManager.sfxsetting)
-                    {
-                        GameEvents.block4Completed();
-                    }
-                    break;
-            }
+            case 1:
+                if (audioManager.sfxsetting)
+                {
+                    GameEvents.blockCompleted();
+                }
+                GameEvents.ShowLineCompletedWritings(completedLines);
+                break;
+            case 2:
+                if (audioManager.sfxsetting)
+                {
+                    GameEvents.block2Completed();
+                }
+                GameEvents.ShowLineCompletedWritings(completedLines);
+                break;
+            case 3:
+                if (audioManager.sfxsetting)
+                {
+                    GameEvents.block3Completed();
+                }
+                GameEvents.ShowLineCompletedWritings(completedLines);
+                break;
+            case 4:
+                if (audioManager.sfxsetting)
+                {
+                    GameEvents.block4Completed();
+                }
+                GameEvents.ShowLineCompletedWritings(completedLines);
+                break;
+        }
 
+        if (AllBlockClear())
+        {
+            if (gamemode == "ClassicGame")
+            {
+                if (audioManager.sfxsetting)
+                {
+                    GameEvents.blockCompleted();
+                }
+                GameEvents.ShowAllLineCompletedWritings();
+                GameEvents.AddScores(300);
+            }
+            else if (gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Scoremode")
+            {
+                if (audioManager.sfxsetting)
+                {
+                    GameEvents.blockCompleted();
+                }
+                GameEvents.ShowAllLineCompletedWritings();
+                GameEvents.AddScores(300);
+            }
+            else if ((gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Jewelmode") || gamemode == "tutorial1" || gamemode == "tutorial2" || gamemode == "tutorial3")
+            {
+                if (audioManager.sfxsetting)
+                {
+                    GameEvents.blockCompleted();
+                }
+                GameEvents.ShowAllLineCompletedWritings();
+            }
+        }
+        else
+        {
             if (completedLines >= 5)
             {
                 if (audioManager.sfxsetting)
                 {
                     GameEvents.block5CompletedMore();
                 }
+                GameEvents.ShowLineCompletedWritings(completedLines);
             }
-
-            GameEvents.ShowLineCompletedWritings(completedLines);
         }
 
         shapeStorage.IsComboObject();
 
-        AllBlockClear();
+        //AllBlockClear();
 
         CheckIfPlayLost();
     }
 
-    private void AllBlockClear()
+    private bool AllBlockClear()
     {
         bool allClearCheck = true;
 
-        for (int i=0; i<63; i++) {
-            if (transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf) {
+        for (int i = 0; i < 63; i++)
+        {
+            if (transform.GetChild(i).transform.GetChild(2).gameObject.activeSelf)
+            {
                 allClearCheck = false;
             }
         }
 
-        if (gamemode == "tutorial1")
-        {
-            tutuorial.tutuorial2();
-
-        } else if (gamemode == "tutorial2") {
-
-            tutuorial.tutuorial3();
-        }
-        else if (gamemode == "tutorial3")
-        {
-            gamemode = "ClassicGame";
-        }
-        else {
-            if (allClearCheck)
-            {
-                GameEvents.blockCompleted();
-                GameEvents.ShowAllLineCompletedWritings();
-                GameEvents.AddScores(300);
-            }
-        }
-        
+        return allClearCheck;
     }
 
     private int CheckIfSquaresAreCompleted(List<int[]> data)
@@ -528,37 +564,45 @@ public class Grid : MonoBehaviour
         int linesCompleted = 0;
         List<int[]> completedLines = new List<int[]>();
 
-        foreach (int[] line in data) {
+        foreach (int[] line in data)
+        {
             bool lineCompleted = true;
 
-            foreach (int squareIndex in line) {
+            foreach (int squareIndex in line)
+            {
                 GridSquare comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
-                if (comp.SquareOccupied == false) {
+                if (comp.SquareOccupied == false)
+                {
                     lineCompleted = false;
                 }
             }
 
-            if (lineCompleted) {
+            if (lineCompleted)
+            {
                 completedLines.Add(line);
             }
         }
 
-        foreach (int[] line in completedLines) {
+        foreach (int[] line in completedLines)
+        {
             bool completed = false;
 
-            foreach (var squareIndex in line) {
+            foreach (var squareIndex in line)
+            {
                 GridSquare comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
                 comp.Deactivate();
 
                 completed = true;
             }
 
-            foreach (var squareIndex in line) {
+            foreach (var squareIndex in line)
+            {
                 GridSquare comp = _gridSquares[squareIndex].GetComponent<GridSquare>();
                 comp.ClearOccupied();
             }
 
-            if (completed) {
+            if (completed)
+            {
                 if (gamemode == "ChallengeGame" && ChallengeStage.challengemode == "Jewelmode")
                 {
                     foreach (int squareIndex in line)
@@ -576,7 +620,8 @@ public class Grid : MonoBehaviour
                     }
                     linesCompleted++;
                 }
-                else {
+                else
+                {
                     linesCompleted++;
                 }
             }
@@ -598,22 +643,22 @@ public class Grid : MonoBehaviour
 
                 return true;
             }
-            else 
+            else
             {
                 return false;
             }
         }
-        else 
+        else
         {
             //보석 검사
             bool jewelClear = true;
-            for (int i=0; i< ChallengeStage.TargetActivateJewelCount.Count; i++) 
+            for (int i = 0; i < ChallengeStage.TargetActivateJewelCount.Count; i++)
             {
                 if (ChallengeStage.TargetActivateJewelCount[i] > 0)
                 {
                     jewelClear = false;
                 }
-                else 
+                else
                 {
                     jewel.jewelsCount[ChallengeStage.TargetActivateJewel[i]].SetActive(false);
                     jewel.jewelCompletedCheck[ChallengeStage.TargetActivateJewel[i]].SetActive(true);
@@ -632,7 +677,8 @@ public class Grid : MonoBehaviour
     public void CheckIfPlayLost()
     {
         var validShapes = 0;
-        for (var index=0; index < shapeStorage.shapeList.Count; index++) {
+        for (var index = 0; index < shapeStorage.shapeList.Count; index++)
+        {
             var isShapeActive = shapeStorage.shapeList[index].IsAnyOfShapeSqaureActive();
 
             if (!CheckIfShapeCanBePlacedOnGrid(shapeStorage.shapeList[index]))
@@ -664,7 +710,8 @@ public class Grid : MonoBehaviour
                 }
             }
 
-            if (CheckIfShapeCanBePlacedOnGrid(shapeStorage.shapeList[index]) && isShapeActive) {
+            if (CheckIfShapeCanBePlacedOnGrid(shapeStorage.shapeList[index]) && isShapeActive)
+            {
                 shapeStorage.shapeList[index]?.ActivateShape();
                 validShapes++;
             }
@@ -696,7 +743,7 @@ public class Grid : MonoBehaviour
                 else
                 {
                     GameEvents.GameOver();
-                    StartCoroutine(GameOverAin(0));             
+                    StartCoroutine(GameOverAin(0));
                 }
             }
             else
@@ -705,7 +752,7 @@ public class Grid : MonoBehaviour
             }
 
             saveGame();
-        } 
+        }
         else if (gamemode == "ChallengeGame")
         {
             if (CheckIfPlayChallengeGameWin())
@@ -714,7 +761,7 @@ public class Grid : MonoBehaviour
                 saveChallengeGame();
                 inGamePopup.SuccessPopupActive();
             }
-            else 
+            else
             {
                 if (validShapes == 0)
                 {
@@ -730,11 +777,42 @@ public class Grid : MonoBehaviour
                 saveChallengeGame();
             }
         }
+        else if (gamemode == "tutorial1")
+        {
+            //tutuorial.tutuorial2();
+            gamemode = "tutorial2";
+            StartCoroutine(tutorial2Start());
+        }
+        else if (gamemode == "tutorial2")
+        {
+            //tutuorial.tutuorial3();
+            gamemode = "tutorial3";
+            StartCoroutine(tutorial3Start());
+        }
+        else
+        {
+            gamemode = "ClassicGame";
+        }
+    }
+
+    IEnumerator tutorial2Start()
+    {
+        yield return new WaitForSeconds(0.36f);
+
+        tutuorial.tutuorial2();
+    }
+
+    IEnumerator tutorial3Start()
+    {
+        yield return new WaitForSeconds(0.36f);
+
+        tutuorial.tutuorial3();
+
     }
 
     public IEnumerator RetryPopupCount()
     {
-        for (int i=0; i<5; i++) 
+        for (int i = 0; i < 5; i++)
         {
             GameEvents.blockresurrectionCount();
             yield return new WaitForSeconds(1.0f);
@@ -746,9 +824,9 @@ public class Grid : MonoBehaviour
         playerSaveGame_.saveGameOver = true;
         GameEvents.blockGameover();
 
-        for (int i=0; i<57; i+=8) 
+        for (int i = 0; i < 57; i += 8)
         {
-            for (int k = i; k < i+8; k++)
+            for (int k = i; k < i + 8; k++)
             {
                 transform.GetChild(k).transform.GetChild(2).gameObject.GetComponent<Image>().sprite = gameoverimg;
             }
@@ -767,14 +845,14 @@ public class Grid : MonoBehaviour
                 gameOverPopup.NewBestScoreActive();
             }
         }
-        else 
+        else
         {
             if (index == 0)
             {
                 gameOverPopup.FailurePopupPopupActive();
             }
         }
-        
+
     }
 
     public void saveGame()
@@ -790,7 +868,7 @@ public class Grid : MonoBehaviour
                 }
             }
 
-            if(useShapeCheck)
+            if (useShapeCheck)
             {
                 playerSaveGame_.shapeDataIndexList[i] = -1;
             }
@@ -809,14 +887,14 @@ public class Grid : MonoBehaviour
         BinaryDataStream.Save<string>(playerSaveGameData, playerSaveGamekey);
     }
 
-    public void saveChallengeGame() 
+    public void saveChallengeGame()
     {
         //Debug.Log(resetGame);
 
         for (int i = 0; i < 3; i++)
         {
             bool useShapeCheck = true;
-            for (int j=0; j< shapes.transform.GetChild(i).transform.childCount; j++) 
+            for (int j = 0; j < shapes.transform.GetChild(i).transform.childCount; j++)
             {
                 if (shapes.transform.GetChild(i).transform.GetChild(j).gameObject.activeSelf)
                 {
@@ -854,9 +932,12 @@ public class Grid : MonoBehaviour
         List<int> originalShapeFilledUpSquares = new List<int>();
         int squareIndex = 0;
 
-        for (var rowIndex=0; rowIndex < shapeRows; rowIndex++) {
-            for (var columnIndex=0; columnIndex < shapeColumns; columnIndex++) {
-                if (currentShapeData.board[rowIndex].column[columnIndex]) {
+        for (var rowIndex = 0; rowIndex < shapeRows; rowIndex++)
+        {
+            for (var columnIndex = 0; columnIndex < shapeColumns; columnIndex++)
+            {
+                if (currentShapeData.board[rowIndex].column[columnIndex])
+                {
                     originalShapeFilledUpSquares.Add(squareIndex);
                 }
 
@@ -864,7 +945,8 @@ public class Grid : MonoBehaviour
             }
         }
 
-        if (currentShape.TotalSquareNumber != originalShapeFilledUpSquares.Count) {
+        if (currentShape.TotalSquareNumber != originalShapeFilledUpSquares.Count)
+        {
             Debug.LogError("Number of filled up squares are not the same as the original shape have");
         }
 
@@ -872,17 +954,21 @@ public class Grid : MonoBehaviour
 
         bool canBePlaced = false;
 
-        foreach (var number in sqaureList) {
+        foreach (var number in sqaureList)
+        {
             bool shapeCanBePlacedOnTheBoard = true;
-            foreach (var squareIndexToCheck in originalShapeFilledUpSquares) {
+            foreach (var squareIndexToCheck in originalShapeFilledUpSquares)
+            {
                 var comp = _gridSquares[number[squareIndexToCheck]].GetComponent<GridSquare>();
 
-                if (comp.SquareOccupied) {
+                if (comp.SquareOccupied)
+                {
                     shapeCanBePlacedOnTheBoard = false;
                 }
             }
 
-            if (shapeCanBePlacedOnTheBoard) {
+            if (shapeCanBePlacedOnTheBoard)
+            {
                 canBePlaced = true;
             }
         }
@@ -920,7 +1006,7 @@ public class Grid : MonoBehaviour
         List<int[]> sqaureList = GetAllSquaresCombination(shapeColumns, shapeRows);
 
         List<int[]> canBePlacedPosition = new List<int[]>();
-        for (int i=0; i< sqaureList.Count; i++)
+        for (int i = 0; i < sqaureList.Count; i++)
         {
             int[] number = sqaureList[i];
 
@@ -964,9 +1050,9 @@ public class Grid : MonoBehaviour
         return null;
     }
 
-    public void AllGridSquareHooverImageOff() 
+    public void AllGridSquareHooverImageOff()
     {
-        for (int i=0; i < _gridSquares.Count; i++) 
+        for (int i = 0; i < _gridSquares.Count; i++)
         {
             GridSquare comp = _gridSquares[i].GetComponent<GridSquare>();
             comp.hooverImage.gameObject.SetActive(false);
@@ -1002,11 +1088,14 @@ public class Grid : MonoBehaviour
 
         int safeIndex = 0;
 
-        while (lastRowIndex + (rows - 1) < 8) {
+        while (lastRowIndex + (rows - 1) < 8)
+        {
             var rowData = new List<int>();
 
-            for (var row = lastRowIndex; row < lastRowIndex + rows; row++) {
-                for (var column = lastColumnIndex; column < lastColumnIndex + columns; column++) {
+            for (var row = lastRowIndex; row < lastRowIndex + rows; row++)
+            {
+                for (var column = lastColumnIndex; column < lastColumnIndex + columns; column++)
+                {
                     rowData.Add(_lineIndicator.line_data[row, column]);
                 }
             }
@@ -1015,14 +1104,16 @@ public class Grid : MonoBehaviour
 
             lastColumnIndex++;
 
-            if (lastColumnIndex + (columns - 1) >= 8) {
+            if (lastColumnIndex + (columns - 1) >= 8)
+            {
                 lastRowIndex++;
                 lastColumnIndex = 0;
             }
 
             safeIndex++;
 
-            if (safeIndex > 100) {
+            if (safeIndex > 100)
+            {
                 break;
             }
         }

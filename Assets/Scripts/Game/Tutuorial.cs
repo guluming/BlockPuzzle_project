@@ -25,10 +25,10 @@ public class Tutuorial : MonoBehaviour
 
     public void tutuorial2()
     {
-        Grid.gamemode = "tutorial2";
         closeGrid(34, 35, 36, 37);
 
-        for (int i = 2; i < 6; i++) {
+        for (int i = 2; i < 6; i++)
+        {
             for (int j = i; j < 62; j += 8)
             {
                 if (j == 34 || j == 35 || j == 36 || j == 37)
@@ -44,7 +44,6 @@ public class Tutuorial : MonoBehaviour
 
     public void tutuorial3()
     {
-        Grid.gamemode = "tutorial3";
         closeGrid(27, 28, 35, 36);
 
         for (int i = 24; i < 40; i++)
@@ -58,7 +57,8 @@ public class Tutuorial : MonoBehaviour
             grid.transform.GetChild(i).GetComponent<GridSquare>().transform.GetChild(2).GetComponent<Image>().sprite = grid.squareTextureData.activeSquareTextures[2].texture;
         }
 
-        for (int i = 3; i < 5; i++) {
+        for (int i = 3; i < 5; i++)
+        {
             for (int j = i; j < 62; j += 8)
             {
                 if (j == 27 || j == 28 || j == 35 || j == 36)
@@ -81,7 +81,7 @@ public class Tutuorial : MonoBehaviour
                 continue;
             }
 
-            grid.transform.GetChild(i).GetComponent<GridSquare>().Selected = false;
+            grid.transform.GetChild(i).GetComponent<GridSquare>().Selected = true;
             grid.transform.GetChild(i).GetComponent<GridSquare>().SquareOccupied = true;
         }
     }

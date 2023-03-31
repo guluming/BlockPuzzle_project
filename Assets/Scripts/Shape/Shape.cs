@@ -89,8 +89,10 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public bool IsAnyOfShapeSqaureActive()
     {
-        foreach (var square in _currentShape) {
-            if (square.gameObject.activeSelf) {
+        foreach (var square in _currentShape)
+        {
+            if (square.gameObject.activeSelf)
+            {
                 return true;
             }
         }
@@ -100,8 +102,10 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void DeactivateShape()
     {
-        if (_shapeActive) {
-            foreach (var square in _currentShape) {
+        if (_shapeActive)
+        {
+            foreach (var square in _currentShape)
+            {
                 square?.GetComponent<ShapeSquare>().DeactivateShape();
             }
         }
@@ -110,8 +114,10 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     private void SetShapeInactive()
     {
-        if (IsOnStartPosition() == false && IsAnyOfShapeSqaureActive()) {
-            foreach (var square in _currentShape) {
+        if (IsOnStartPosition() == false && IsAnyOfShapeSqaureActive())
+        {
+            foreach (var square in _currentShape)
+            {
                 square.gameObject.SetActive(false);
             }
         }
@@ -119,8 +125,10 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void ActivateShape()
     {
-        if (!_shapeActive) {
-            foreach (var square in _currentShape) {
+        if (!_shapeActive)
+        {
+            foreach (var square in _currentShape)
+            {
                 square?.GetComponent<ShapeSquare>().ActivateShape();
             }
         }
@@ -183,7 +191,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         CurrentShapeData = shapeData;
         TotalSquareNumber = GetNumberOfSquares(CurrentShapeData);
 
-        if (Grid.gamemode == "" || Grid.gamemode == "ClassicGame" || Grid.gamemode == "tutorial3")
+        if (Grid.gamemode == "ClassicGame" || Grid.gamemode == "tutorial3")
         {
             while (_currentShape.Count <= TotalSquareNumber)
             {
@@ -217,7 +225,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             }
         }
 
-        foreach (GameObject square in _currentShape) {
+        foreach (GameObject square in _currentShape)
+        {
             square.gameObject.transform.position = Vector3.zero;
             square.gameObject.SetActive(false);
         }
@@ -227,9 +236,12 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             squareRect.rect.height * squareRect.localScale.y);
 
         int currentIndexInList = 0;
-        for (var row = 0; row < shapeData.rows; row++) {
-            for (var column = 0; column < shapeData.columns; column++) {
-                if (shapeData.board[row].column[column]) {
+        for (var row = 0; row < shapeData.rows; row++)
+        {
+            for (var column = 0; column < shapeData.columns; column++)
+            {
+                if (shapeData.board[row].column[column])
+                {
                     _currentShape[currentIndexInList].SetActive(true);
                     _currentShape[currentIndexInList].GetComponent<RectTransform>().localPosition =
                         new Vector2(GetXPositionForShapeSquare(shapeData, column, moveDistance),
@@ -309,7 +321,9 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                     shiftOnY *= multiplier;
                 }
             }
-        } else if (shapeData.rows > 3) {
+        }
+        else if (shapeData.rows > 3)
+        {
             var basicYpoint = moveDistance.y;
 
             if (row % 2 == 0)
@@ -376,7 +390,9 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
                     shiftOnX *= multiplier;
                 }
             }
-        } else if (shapeData.columns > 3) {
+        }
+        else if (shapeData.columns > 3)
+        {
             var basicYpoint = moveDistance.x;
 
             if (column % 2 == 0)
@@ -397,9 +413,12 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
     {
         int number = 0;
 
-        foreach (var rowData in shapeData.board) {
-            foreach (var active in rowData.column) {
-                if (active) {
+        foreach (var rowData in shapeData.board)
+        {
+            foreach (var active in rowData.column)
+            {
+                if (active)
+                {
                     number++;
                 }
             }
@@ -410,7 +429,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        
+
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -425,7 +444,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        for (int i=0; i< transform.childCount; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).gameObject.activeSelf)
             {
@@ -433,7 +452,8 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
             }
         }
 
-        if (audioManager.sfxsetting) {
+        if (audioManager.sfxsetting)
+        {
             GameEvents.blockDown();
         }
 
@@ -490,7 +510,7 @@ public class Shape : MonoBehaviour, IPointerClickHandler, IPointerUpHandler, IPo
         float percentage;
 
         GetComponent<Image>().raycastTarget = false;
-        for (int i = 0; i < transform.childCount; i++) 
+        for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<Image>().raycastTarget = false;
         }

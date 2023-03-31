@@ -33,7 +33,13 @@ public class LineCompletedWritings : MonoBehaviour
             ShowThreeLineCompletedWritings();
         }
 
-        if (completedLines >= 4) {
+        if (completedLines == 4)
+        {
+            ShowFourLineCompletedWritings();
+        }
+
+        if (completedLines >= 5)
+        {
             ShowFourLineCompletedWritings();
         }
     }
@@ -43,7 +49,7 @@ public class LineCompletedWritings : MonoBehaviour
         childIndex = 0;
         GetComponent<RectTransform>().position = Shape.seletedshapeglobalPosition;
         Linewritings[0].SetActive(true);
-        
+
         Invoke("DeactivateWritings", 1.5f);
     }
 
@@ -52,7 +58,7 @@ public class LineCompletedWritings : MonoBehaviour
         childIndex = 1;
         GetComponent<RectTransform>().position = Shape.seletedshapeglobalPosition;
         Linewritings[1].SetActive(true);
-        
+
         Invoke("DeactivateWritings", 1.5f);
     }
 
@@ -61,7 +67,7 @@ public class LineCompletedWritings : MonoBehaviour
         childIndex = 2;
         GetComponent<RectTransform>().position = Shape.seletedshapeglobalPosition;
         Linewritings[2].SetActive(true);
-        
+
         Invoke("DeactivateWritings", 1.5f);
     }
 
